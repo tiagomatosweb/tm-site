@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'tiagomatos-bio',
+    title: 'Tiago Matos Bio',
     htmlAttrs: {
       lang: 'en',
     },
