@@ -1,12 +1,22 @@
 <template>
-    <div class="card bg-blue-gray-400 border border-opacity-25">
+    <Component
+        :is="tag"
+        class="card bg-blue-gray-400 border border-opacity-25 bg-opacity-25"
+    >
         <slot />
-    </div>
+    </Component>
 </template>
 
 <script>
     export default {
         name: 'Card',
+
+        props: {
+            tag: {
+                type: String,
+                default: 'div',
+            },
+        },
 
         data() {
             return {};
