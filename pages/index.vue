@@ -32,7 +32,7 @@
         background: radial-gradient(41.76% 41.76% at 50% 50%, #6583fe 0%, rgba(38, 38, 188, 0) 100%);
         height: 891px;
         opacity: 0.2;
-        position: absolute;
+        position: fixed;
         right: -400px;
         top: -397px;
         width: 890px;
