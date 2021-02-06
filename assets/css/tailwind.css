@@ -1,0 +1,26 @@
+@import 'typeface-inter';
+
+/* stylelint-disable */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        @apply h-full;
+    }
+    body {
+        @apply text-blue-gray-50 h-auto font-light py-10;
+        background: linear-gradient(254.12deg, #12152f 0%, #191f41 57.57%, #1f264e 100%) fixed;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        @apply mb-5;
+    }
+}
+
+.laravel-api-gradient {
+    background: linear-gradient(to right, #dc3126 12%,#d5dda8 36%,#72b884 68%);
+    /*background: linear-gradient(45deg, #09009f, #00ff95 80%);*/
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
