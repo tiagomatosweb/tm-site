@@ -1,7 +1,7 @@
 <template>
     <Component
         :is="tag"
-        class="card bg-blue-gray-400 border border-opacity-25 bg-opacity-25"
+        class="card bg-blue-gray-400 border border-opacity-15 bg-opacity-15"
     >
         <slot />
     </Component>
