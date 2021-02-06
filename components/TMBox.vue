@@ -12,7 +12,7 @@
 
         <div>
             <div>
-                <span class="text-white text-lg md:text-2xl"><span class="font-light">Olá, eu sou</span> <b class="font-bold">Tiago Matos 👋🏼</b></span>
+                <span class="text-white text-base md:text-2xl"><span class="font-light">Olá, eu sou</span> <b class="font-bold">Tiago Matos 👋🏼</b></span>
             </div>
 
             <div class="mt-1 te">

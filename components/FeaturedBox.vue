@@ -14,7 +14,7 @@
                 CURSO
             </div>
 
-            <div class="laravel-api-gradient font-bold text-2xl mb-2">
+            <div class="laravel-api-gradient inline-block font-bold text-xl md:text-2xl mb-2">
                 Laravel<span class="font-normal">[API]</span> Vue.js<span class="font-normal">{SPA}</span>
             </div>
 
