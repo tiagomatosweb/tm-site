@@ -1,9 +1,6 @@
 <template>
     <Card class="flex items-center space-x-4 rounded-2xl py-5 px-4">
-        <Card
-            class="flex-none flex items-center justify-center rounded-full p-3"
-            style="height: 85px; width: 85px;"
-        >
+        <Card class="flex-none flex items-center justify-center rounded-full p-2 sm:p-3 w-16 h-16 sm:w-20 sm:h-20">
             <img
                 src="@/assets/img/avatar.png"
                 alt="Tiago Matos"
