@@ -53,7 +53,7 @@
             start() {
                 // eslint-disable-next-line
                 gapi.client.init({
-                    apiKey: 'AIzaSyBt8O2CmvF0VE2_Ao1943C0_Ioq7NMz8MU',
+                    apiKey: this.$config.youtubeApiKey,
                 }).then(() => {
                     // eslint-disable-next-line
                     return gapi.client.request({

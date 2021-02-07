@@ -1,4 +1,8 @@
 export default {
+    publicRuntimeConfig: {
+        youtubeApiKey: process.env.YOUTUBE_API_KEY,
+    },
+
     // Global page headers: https://go.nuxtjs.dev/config-head
     head: {
         title: 'Tiago Matos Bio',
