@@ -1,7 +1,8 @@
 <template>
     <Component
         :is="tag"
-        class="card bg-blue-gray-400 border border-opacity-15 bg-opacity-15"
+        class="card bg-blue-gray-400 border"
+        :class="{ 'border-opacity-25': !noBorderOpacity, 'bg-opacity-50': !noBgOpacity }"
     >
         <slot />
     </Component>
@@ -16,13 +17,15 @@
                 type: String,
                 default: 'div',
             },
+            noBorderOpacity: {
+                type: Boolean,
+                default: false,
+            },
+            noBgOpacity: {
+                type: Boolean,
+                default: false,
+            },
         },
-
-        data() {
-            return {};
-        },
-
-        methods: {},
     };
 </script>
 

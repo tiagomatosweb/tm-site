@@ -3,8 +3,9 @@
         <Card
             class="absolute top-0 left-0 -mt-6 ml-4 flex items-center justify-center rounded-full"
             style="height: 55px; width: 55px;"
+            no-bg-opacity
         >
-            <div class="-ml-1 -mt-1">
+            <div class="-ml-0.5 -mt-1">
                 <span class="text-sm">🔥</span>
             </div>
         </Card>

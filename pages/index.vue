@@ -1,30 +1,38 @@
 <template>
-    <div class="container mx-auto px-4">
+    <div>
         <div class="radial1" />
-        <div class="lg:flex lg:items-stretch lg:space-x-8">
-            <div class="w-full lg:w-2/3 flex flex-col">
-                <TMBox />
+        <div class="container mx-auto px-4">
+            <div class="lg:flex lg:items-stretch lg:space-x-8">
+                <div class="w-full lg:w-2/3 flex flex-col">
+                    <TMBox />
 
-                <LinksBox class="mt-10 lg:mt-auto" />
+                    <LinksBox class="mt-10 lg:mt-auto" />
+                </div>
+
+                <div class="flex-grow mt-12 lg:mt-0">
+                    <FeaturedBox />
+                </div>
             </div>
 
-            <div class="flex-grow mt-12 lg:mt-0">
-                <FeaturedBox />
-            </div>
+            <br>
+
+            <Courses />
+
+            <br>
+
+            <Youtube />
         </div>
-
-        <br>
-
-        <Comingsoon />
-
-        <br>
-
-        <Youtube />
     </div>
 </template>
 
 <script>
-    export default {};
+    export default {
+        // mounted() {
+        //     const div = document.createElement('div');
+        //     div.classList = 'radial1';
+        //     document.body.append(div);
+        // },
+    };
 </script>
 
 <style lang="scss" scoped>
@@ -36,5 +44,6 @@
         right: -400px;
         top: -397px;
         width: 890px;
+        z-index: -1;
     }
 </style>

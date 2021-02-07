@@ -1,8 +1,8 @@
 <template>
     <div>
         <Heading tag="h2">
-            <span>Coming soon</span>
-            <span>⏳</span>
+            <span>Em breve</span>
+            <span>⚡️</span>
         </Heading>
 
         <div class="grid grid-cols-2 md:grid-cols-1 gap-3 md:gap-0 md:flex md:items-center md:space-x-3">
@@ -30,7 +30,10 @@
                     </div>
                 </div>
 
-                <a class="flex items-center justify-center space-x-2 text-white bg-blue-gray-200 bg-opacity-50 rounded-md py-2 px-4 text-xs font-medium tracking-widest">
+                <a
+                    href=""
+                    class="flex items-center justify-center space-x-2 text-white bg-blue-gray-200 bg-opacity-50 rounded-md py-2 px-4 text-xs font-medium tracking-widest"
+                >
                     <span>ME AVISE</span>
 
                     <svg
@@ -55,14 +58,14 @@
 
 <script>
     export default {
-        name: 'Comingsoon',
+        name: 'Courses',
 
         data() {
             return {
                 courses: [
                     { label: 'Laravel[PRO]', link: '', icon: require('@/assets/img/laravel-pro-icon.svg') },
-                    { label: 'Vue.js[PRO]', link: '', icon: require('@/assets/img/vuejs-pro-icon.svg') },
-                    { label: 'Nuxt.js[PRO]', link: '', icon: require('@/assets/img/nuxtjs-pro-icon.svg') },
+                    { label: 'Vue.js{PRO}', link: '', icon: require('@/assets/img/vuejs-pro-icon.svg') },
+                    { label: 'Nuxt.js{PRO}', link: '', icon: require('@/assets/img/nuxtjs-pro-icon.svg') },
                 ],
             };
         },
