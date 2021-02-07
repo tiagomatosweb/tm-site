@@ -11,6 +11,15 @@
         "lint:style": "stylelint \"**/*.{vue,css}\" --ignore-path .gitignore",
         "lint": "yarn lint:js && yarn lint:style"
     },
+    "lint-staged": {
+        "*.{js,vue}": "eslint",
+        "*.{css,vue}": "stylelint"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
     "dependencies": {
         "core-js": "^3.8.3",
         "nuxt": "^2.14.12",
