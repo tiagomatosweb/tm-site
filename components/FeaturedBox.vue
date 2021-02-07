@@ -11,7 +11,10 @@
         </Card>
 
         <div class="mt-5">
-            <div class="tracking-widest text-xs">
+            <div
+                class="tracking-widest"
+                style="font-size: 10px;"
+            >
                 CURSO
             </div>
 
