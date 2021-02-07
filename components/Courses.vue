@@ -5,11 +5,11 @@
             <span>⚡️</span>
         </Heading>
 
-        <div class="grid grid-cols-2 md:grid-cols-1 gap-3 md:gap-0 md:flex md:items-center md:space-x-3">
+        <div class="grid grid-cols-2 md:grid-cols-1 gap-3 md:gap-0 md:flex md:space-x-3">
             <Card
                 v-for="course in courses"
                 :key="course.label"
-                class="flex-grow flex flex-col space-y-4 rounded-xl px-4 py-4"
+                class="flex-1 flex flex-col space-y-4 rounded-xl px-4 py-4"
             >
                 <div>
                     <img
@@ -25,7 +25,7 @@
                     >
                         CURSO
                     </div>
-                    <div class="text-white leading-5 font-medium text-lg mb-2">
+                    <div class="text-white leading-5 font-medium text-lg mb-2 truncate">
                         {{ course.label }}
                     </div>
                 </div>
@@ -66,6 +66,7 @@
                     { label: 'Laravel[PRO]', link: '', icon: require('@/assets/img/laravel-pro-icon.svg') },
                     { label: 'Vue.js{PRO}', link: '', icon: require('@/assets/img/vuejs-pro-icon.svg') },
                     { label: 'Nuxt.js{PRO}', link: '', icon: require('@/assets/img/nuxtjs-pro-icon.svg') },
+                    { label: 'Frontend<RAIZ>', link: '', icon: require('@/assets/img/nuxtjs-pro-icon.svg') },
                 ],
             };
         },
