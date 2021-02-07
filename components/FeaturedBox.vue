@@ -1,5 +1,5 @@
 <template>
-    <Card class="relative rounded-2xl p-8">
+    <Card class="relative rounded-2xl p-6 md:p-8">
         <Card
             class="absolute top-0 left-0 -mt-6 ml-4 flex items-center justify-center rounded-full"
             style="height: 55px; width: 55px;"
@@ -15,7 +15,7 @@
                 CURSO
             </div>
 
-            <div class="laravel-api-gradient inline-block font-bold text-xl md:text-2xl mb-2">
+            <div class="laravel-api-gradient inline-block font-bold text-2xl md:text-2xl mb-2">
                 Laravel<span class="font-normal">[API]</span> Vue.js<span class="font-normal">{SPA}</span>
             </div>
 
