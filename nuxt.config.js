@@ -1,6 +1,9 @@
 export default {
     publicRuntimeConfig: {
         youtubeApiKey: process.env.YOUTUBE_API_KEY,
+        googleAnalytics: {
+            id: process.env.GOOGLE_ANALYTICS_ID,
+        },
     },
 
     // Global page headers: https://go.nuxtjs.dev/config-head
@@ -47,6 +50,7 @@ export default {
         '@nuxtjs/stylelint-module',
         // https://go.nuxtjs.dev/tailwindcss
         '@nuxtjs/tailwindcss',
+        '@nuxtjs/google-analytics',
     ],
 
     // Modules: https://go.nuxtjs.dev/config-modules
