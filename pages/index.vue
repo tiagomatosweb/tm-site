@@ -25,40 +25,55 @@
             <br>
 
             <Youtube />
+
+            <hr class="border-blue-gray-200 border-opacity-75 mt-12 mb-8">
+
+            <div class="text-center">
+                <a
+                    href="https://tiagomatos.com"
+                    target="_blank"
+                >
+                    <img
+                        src="@/assets/img/tiagomatos-logo.svg"
+                        alt="Tiago Matos"
+                        width="120"
+                        class="inline-block"
+                    >
+                </a>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
-    export default {
-    };
+    export default {};
 </script>
 
 <style
     lang="scss"
     scoped
 >
-.light {
-    background: radial-gradient(41.76% 41.76% at 50% 50%, #6583fe 0%, rgba(38, 38, 188, 0) 100%);
-    height: 890px;
-    opacity: 0.2;
-    position: fixed;
-    width: 890px;
-    z-index: -1;
-}
+    .light {
+        background: radial-gradient(41.76% 41.76% at 50% 50%, #6583fe 0%, rgba(38, 38, 188, 0) 100%);
+        height: 890px;
+        opacity: 0.2;
+        position: fixed;
+        width: 890px;
+        z-index: -1;
+    }
 
-.light-1 {
-    right: -400px;
-    top: -397px;
-}
+    .light-1 {
+        right: -400px;
+        top: -397px;
+    }
 
-.light-2 {
-    left: -448px;
-    top: 2px;
-}
+    .light-2 {
+        left: -448px;
+        top: 2px;
+    }
 
-.light-3 {
-    bottom: -400px;
-    right: -400px;
-}
+    .light-3 {
+        bottom: -400px;
+        right: -400px;
+    }
 </style>
