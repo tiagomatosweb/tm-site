@@ -25,13 +25,13 @@
 
                 <div class="flex items-center space-x-3">
                     <div class="flex items-center space-x-1 text-sm">
-                        <div>🦘</div>
-                        <div>Australia</div>
+                        <div>🏝</div>
+                        <div>Brasil</div>
                     </div>
 
                     <div class="flex items-center space-x-1 text-sm">
-                        <div>🏝</div>
-                        <div>Brasil</div>
+                        <div>🦘</div>
+                        <div>Australia</div>
                     </div>
                 </div>
             </div>
