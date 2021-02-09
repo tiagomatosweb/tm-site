@@ -33,6 +33,7 @@
                 <a
                     href=""
                     class="flex items-center justify-center space-x-2 text-white bg-blue-gray-200 bg-opacity-50 rounded-md py-2 px-4 text-xs font-medium tracking-widest"
+                    @click.stop.prevent="courseToModal = course"
                 >
                     <span>ME AVISE</span>
 
@@ -53,6 +54,12 @@
                 </a>
             </Card>
         </div>
+
+        <NotifyMeModal
+            v-if="courseToModal"
+            :course="courseToModal"
+            @close="courseToModal = null"
+        />
     </div>
 </template>
 
@@ -62,6 +69,7 @@
 
         data() {
             return {
+                courseToModal: null,
                 courses: [
                     { label: 'Laravel[PRO]', link: '', icon: require('@/assets/img/laravel-pro-icon.svg') },
                     { label: 'Vue.js{PRO}', link: '', icon: require('@/assets/img/vuejs-pro-icon.svg') },

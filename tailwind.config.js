@@ -1,8 +1,9 @@
 const brand = {
     primary: {
-        50: '#004C92',
+        50: '#3CA1FF',
         100: '#007AEA',
-        200: '#3CA1FF',
+        200: '#004C92',
+        300: '#1F264E',
     },
     gray: {
         50: '#E2E7EC',
@@ -41,8 +42,8 @@ module.exports = {
         },
     },
     plugins: [
-        // require('@tailwindcss/forms'),
-        // require('@tailwindcss/aspect-ratio'),
-        // require('@tailwindcss/typography'),
+        require('@tailwindcss/forms'),
+        require('@tailwindcss/aspect-ratio'),
+        require('@tailwindcss/typography'),
     ],
 };

@@ -1,8 +1,11 @@
 <template>
     <div>
         <div class="light light-1" />
+
         <div class="light light-2" />
+
         <div class="light light-3" />
+
         <div class="container mx-auto px-4">
             <div class="lg:flex lg:items-stretch lg:space-x-8">
                 <div class="w-full lg:w-2/3 flex flex-col">
@@ -16,10 +19,10 @@
                 </div>
             </div>
 
-            <br>
-            <br>
+            <!--            <br>-->
+            <!--            <br>-->
 
-            <Courses />
+            <!--            <Courses />-->
 
             <br>
             <br>
