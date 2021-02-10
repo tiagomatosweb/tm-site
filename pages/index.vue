@@ -4,8 +4,6 @@
 
         <div class="light light-2" />
 
-        <div class="light light-3" />
-
         <div class="container mx-auto px-4">
             <div class="lg:flex lg:items-stretch lg:space-x-8">
                 <div class="w-full lg:w-2/3 flex flex-col">
@@ -19,10 +17,10 @@
                 </div>
             </div>
 
-            <!--            <br>-->
-            <!--            <br>-->
+            <br>
+            <br>
 
-            <!--            <Courses />-->
+            <Courses />
 
             <br>
             <br>
@@ -57,7 +55,7 @@
     scoped
 >
     .light {
-        background: radial-gradient(41.76% 41.76% at 50% 50%, #6583fe 0%, rgba(38, 38, 188, 0) 100%);
+        background: radial-gradient(41.76% 41.76% at 50% 50%, #095dff 0%, rgba(9, 93, 255, 0) 100%);
         height: 890px;
         opacity: 0.2;
         position: fixed;
@@ -71,12 +69,7 @@
     }
 
     .light-2 {
-        left: -448px;
-        top: 2px;
-    }
-
-    .light-3 {
         bottom: -400px;
-        right: -400px;
+        left: -400px;
     }
 </style>

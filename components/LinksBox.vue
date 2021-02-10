@@ -39,9 +39,9 @@
                     { label: 'Insta', img: require('@/assets/img/instagram.svg'), img_alt: 'Instagram @tiagomatosweb', href: 'https://www.instagram.com/tiagomatosweb/' },
                     { label: 'YT', img: require('@/assets/img/youtube.svg'), img_alt: 'Youtube /tiagomatosweb', href: 'https://www.youtube.com/tiagomatosweb' },
                     { label: 'Face', img: require('@/assets/img/facebook-f.svg'), img_alt: 'Facebook /tiagomatosweb', href: 'https://www.facebook.com/tiagomatosweb' },
-                    { label: 'Blog', img: require('@/assets/img/laptop.svg'), img_alt: 'Blog blog.tiagomatos.com', href: 'http://blog.tiagomatos.com/' },
-                    { label: 'Site', img: require('@/assets/img/laptop.svg'), img_alt: 'Site tiagomatos.com', href: 'http://tiagomatos.com/' },
-                    { label: 'Discord', img: require('@/assets/img/discord.svg'), img_alt: 'Discord discord.tiagomatos.com', href: 'http://discord.tiagomatos.com/' },
+                    { label: 'Blog', img: require('@/assets/img/laptop.svg'), img_alt: 'Blog blog.tiagomatos.com', href: 'https://blog.tiagomatos.com/' },
+                    { label: 'Site', img: require('@/assets/img/globe.svg'), img_alt: 'Site tiagomatos.com', href: 'https://tiagomatos.com/' },
+                    { label: 'Discord', img: require('@/assets/img/discord.svg'), img_alt: 'Discord discord.tiagomatos.com', href: 'https://discord.gg/HXGwssB8S4' },
                 ],
             };
         },

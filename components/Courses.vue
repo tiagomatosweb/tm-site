@@ -71,10 +71,10 @@
             return {
                 courseToModal: null,
                 courses: [
-                    { label: 'Laravel[PRO]', link: '', icon: require('@/assets/img/laravel-pro-icon.svg') },
-                    { label: 'Vue.js{PRO}', link: '', icon: require('@/assets/img/vuejs-pro-icon.svg') },
-                    { label: 'Nuxt.js{PRO}', link: '', icon: require('@/assets/img/nuxtjs-pro-icon.svg') },
-                    { label: 'Frontend<RAIZ>', link: '', icon: require('@/assets/img/nuxtjs-pro-icon.svg') },
+                    { label: 'Laravel[PRO]', link: '', icon: require('@/assets/img/laravel-pro-icon.svg'), slug: 'laravel-pro' },
+                    { label: 'Vue.js{PRO}', link: '', icon: require('@/assets/img/vuejs-pro-icon.svg'), slug: 'vuejs-pro' },
+                    { label: 'Nuxt.js{PRO}', link: '', icon: require('@/assets/img/nuxtjs-pro-icon.svg'), slug: 'nuxtjs-pro' },
+                    // { label: 'Frontend<RAIZ>', link: '', icon: require('@/assets/img/nuxtjs-pro-icon.svg'), slug: 'frontend-raiz' },
                 ],
             };
         },
