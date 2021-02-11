@@ -49,64 +49,80 @@
                                 Me avise 🚀
                             </h3>
 
-                            <div class="mb-5">
-                                <p class="text-sm">
-                                    Informe seu nome e email que vou te enviar novidades sobre o curso <b class="font-bold">{{ course.label }}</b>.
-                                </p>
+                            <div
+                                v-if="response.status === 'success'"
+                                class="rounded-md bg-green-100 mb-5 p-3 text-green-800"
+                            >
+                                Seu cadastro foi efetuado com sucesso. Em breve vou te enviar novidades sobre o curso <b class="font-bold">{{ course.label }}</b>
                             </div>
 
-                            <div class="space-y-3">
-                                <ValidationProvider
-                                    v-slot="{ errors }"
-                                    name="Primeiro nome"
-                                    rules="required"
-                                    tag="div"
+                            <template v-else>
+                                <div class="mb-5">
+                                    <p class="text-sm">
+                                        Informe seu nome e email que vou te enviar novidades sobre o curso <b class="font-bold">{{ course.label }}</b>.
+                                    </p>
+                                </div>
+
+                                <div
+                                    v-if="response.status === 'danger'"
+                                    class="rounded-md bg-red-100 mb-5 p-3 text-red-800"
                                 >
-                                    <input
-                                        v-model="firstName"
-                                        type="text"
-                                        placeholder="Primeiro nome"
-                                        class="block w-full bg-primary-300 focus:ring-primary-100 focus:border-primary-100 border-blue-gray-300 rounded-full px-6 py-3"
-                                    >
+                                    Oops! Alguma coisa deu errado.
+                                </div>
 
-                                    <div
-                                        v-if="!!errors[0]"
-                                        class="text-sm text-red-400 mt-1"
+                                <div class="space-y-3">
+                                    <ValidationProvider
+                                        v-slot="{ errors }"
+                                        name="Primeiro nome"
+                                        rules="required"
+                                        tag="div"
                                     >
-                                        {{ errors[0] }}
-                                    </div>
-                                </ValidationProvider>
+                                        <input
+                                            v-model="firstName"
+                                            type="text"
+                                            placeholder="Primeiro nome"
+                                            class="block w-full bg-primary-300 focus:ring-primary-100 focus:border-primary-100 border-blue-gray-300 rounded-full px-6 py-3"
+                                        >
 
-                                <ValidationProvider
-                                    v-slot="{ errors }"
-                                    name="E-mail"
-                                    rules="required|email"
-                                    tag="div"
-                                >
-                                    <input
-                                        v-model="email"
-                                        type="email"
-                                        placeholder="E-mail"
-                                        class="block w-full bg-primary-300 focus:ring-primary-100 focus:border-primary-100 border-blue-gray-300 rounded-full px-6 py-3"
+                                        <div
+                                            v-if="!!errors[0]"
+                                            class="text-sm text-red-400 mt-1"
+                                        >
+                                            {{ errors[0] }}
+                                        </div>
+                                    </ValidationProvider>
+
+                                    <ValidationProvider
+                                        v-slot="{ errors }"
+                                        name="E-mail"
+                                        rules="required|email"
+                                        tag="div"
                                     >
+                                        <input
+                                            v-model="email"
+                                            type="email"
+                                            placeholder="E-mail"
+                                            class="block w-full bg-primary-300 focus:ring-primary-100 focus:border-primary-100 border-blue-gray-300 rounded-full px-6 py-3"
+                                        >
 
-                                    <div
-                                        v-if="!!errors[0]"
-                                        class="text-sm text-red-400 mt-1"
+                                        <div
+                                            v-if="!!errors[0]"
+                                            class="text-sm text-red-400 mt-1"
+                                        >
+                                            {{ errors[0] }}
+                                        </div>
+                                    </ValidationProvider>
+
+                                    <button
+                                        type="submit"
+                                        class="tracking-widest w-full px-4 py-3 border border-primary-100 hover:border-primary-200 text-sm font-medium rounded-full text-white bg-primary-100 hover:bg-primary-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-50"
+                                        :class="{ 'opacity-25': spinner.submit }"
+                                        :disabled="spinner.submit"
                                     >
-                                        {{ errors[0] }}
-                                    </div>
-                                </ValidationProvider>
-
-                                <button
-                                    type="submit"
-                                    class="tracking-widest w-full px-4 py-3 border border-primary-100 hover:border-primary-200 text-sm font-medium rounded-full text-white bg-primary-100 hover:bg-primary-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-50"
-                                    :class="{ 'opacity-25': spinner.submit }"
-                                    :disabled="spinner.submit"
-                                >
-                                    CADASTRAR
-                                </button>
-                            </div>
+                                        CADASTRAR
+                                    </button>
+                                </div>
+                            </template>
                         </ValidationObserver>
                     </div>
                 </div>
@@ -137,6 +153,9 @@
             return {
                 firstName: '',
                 email: '',
+                response: {
+                    status: '',
+                },
                 spinner: {
                     submit: false,
                 },
@@ -150,7 +169,6 @@
 
             async submit() {
                 const validator = await this.$refs.form.validate();
-                console.log(validator);
                 if (!validator) {
                     return;
                 }
@@ -160,6 +178,13 @@
                     email: this.email,
                     first_name: this.firstName,
                     course: this.course.slug,
+                }).then((response) => {
+                    const status = response?.status;
+                    if (status === 400 || status === 401 || status === 404) {
+                        this.response.status = 'danger';
+                    } else {
+                        this.response.status = 'success';
+                    }
                 }).finally(() => {
                     this.spinner.submit = false;
                 });
