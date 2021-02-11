@@ -26,7 +26,6 @@ const brand = {
 };
 
 module.exports = {
-
     theme: {
         colors: {
             black: '#000',
