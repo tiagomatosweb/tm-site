@@ -28,14 +28,42 @@
                     <div class="text-white leading-5 font-medium text-lg mb-2 truncate">
                         {{ course.label }}
                     </div>
+
+                    <div class="text-xs font-bold">
+                        {{ course.description }}
+                    </div>
                 </div>
 
                 <a
+                    v-if="course.link"
+                    :href="course.link"
+                    target="_blank"
+                    class="flex items-center justify-center space-x-2 text-white bg-blue-gray-200 bg-opacity-50 rounded-md py-2 px-3 text-xs font-medium tracking-widest"
+                >
+                    <span>{{ course.btn_label }}</span>
+
+                    <svg
+                        class="w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                    ><path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                    /></svg>
+                </a>
+
+                <a
+                    v-else
                     href=""
-                    class="flex items-center justify-center space-x-2 text-white bg-blue-gray-200 bg-opacity-50 rounded-md py-2 px-4 text-xs font-medium tracking-widest"
+                    target="_blank"
+                    class="flex items-center justify-center space-x-2 text-white bg-blue-gray-200 bg-opacity-50 rounded-md py-2 px-3 text-xs font-medium tracking-widest"
                     @click.stop.prevent="courseToModal = course"
                 >
-                    <span>ME AVISE</span>
+                    <span>{{ course.btn_label }}</span>
 
                     <svg
                         class="w-3 h-3"
@@ -71,9 +99,16 @@
             return {
                 courseToModal: null,
                 courses: [
-                    { label: 'Laravel[PRO]', link: '', icon: require('@/assets/img/laravel-pro-icon.svg'), slug: 'laravel-pro' },
-                    { label: 'Vue.js{PRO}', link: '', icon: require('@/assets/img/vuejs-pro-icon.svg'), slug: 'vuejs-pro' },
-                    { label: 'Nuxt.js{PRO}', link: '', icon: require('@/assets/img/nuxtjs-pro-icon.svg'), slug: 'nuxtjs-pro' },
+                    {
+                        label: 'Laravel[PRO]',
+                        description: 'Baixe e-book grátis',
+                        btn_label: 'SAIBA MAIS',
+                        link: 'https://pro.tiagomatos.com/curso-laravel-pro/',
+                        icon: require('@/assets/img/laravel-pro-icon.svg'),
+                        slug: 'laravel-pro',
+                    },
+                    { label: 'Vue.js{PRO}', btn_label: 'ME AVISE', link: '', icon: require('@/assets/img/vuejs-pro-icon.svg'), slug: 'vuejs-pro' },
+                    { label: 'Nuxt.js{PRO}', btn_label: 'ME AVISE', link: '', icon: require('@/assets/img/nuxtjs-pro-icon.svg'), slug: 'nuxtjs-pro' },
                     // { label: 'Frontend<RAIZ>', link: '', icon: require('@/assets/img/nuxtjs-pro-icon.svg'), slug: 'frontend-raiz' },
                 ],
             };
