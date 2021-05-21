@@ -1,12 +1,13 @@
 <template>
     <Card class="flex items-center space-x-4 rounded-2xl py-5 px-4">
         <Card
-            class="flex-none flex items-center justify-center rounded-full p-2 sm:p-3 w-16 h-16 sm:w-20 sm:h-20"
+            class="flex-none flex items-center justify-center rounded-full w-16 h-16 sm:w-20 sm:h-20"
             no-bg-opacity
         >
             <img
                 src="@/assets/img/avatar.png"
                 alt="Tiago Matos"
+                class="rounded-full"
             >
         </Card>
 
