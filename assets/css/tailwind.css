@@ -26,6 +26,7 @@
 }
 
 .tm-gradient {
+    display: inline-block;
     background-image: linear-gradient(90deg, rgba(0,122,234,1) 15%, rgba(12,172,206,1) 50%, rgba(23,216,181,1) 85%);
     background-size: cover;
     -webkit-background-clip: text;

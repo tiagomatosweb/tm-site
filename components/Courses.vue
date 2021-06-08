@@ -34,8 +34,10 @@
                             {{ course.label }}
                         </div>
 
-                        <div class="tm-gradient inline-flex text-xs font-bold">
-                            {{ course.description }}
+                        <div class="inline-flex text-xs font-bold">
+                            <div class="tm-gradient">
+                                {{ course.description }}
+                            </div>
                         </div>
                     </div>
 
