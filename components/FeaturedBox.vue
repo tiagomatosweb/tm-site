@@ -5,7 +5,7 @@
             style="height: 55px; width: 55px;"
             no-bg-opacity
         >
-            <div class="-ml-0.5 -mt-1">
+            <div class="-ml-1 -mt-1">
                 <span class="text-sm">🔥</span>
             </div>
         </Card>
@@ -18,16 +18,16 @@
                 CURSO
             </div>
 
-            <div class="laravel-api-gradient inline-block font-bold text-2xl md:text-2xl mb-2">
-                Laravel<span class="font-normal">[API]</span> Vue.js<span class="font-normal">{SPA}</span>
+            <div class="tm-gradient inline-block font-bold text-2xl md:text-2xl mb-2">
+                Full Stack LaraVue
             </div>
 
             <p class="leading-relaxed mb-5">
-                Domine a arquitetura Laravel API e ganhe mais tempo e dinheiro nos seus projetos.
+                Aprenda a desenvolvedor projetos modernos utilizando os dois frameworks que mais crescem no mercado atual – Laravel e Vue.js.
             </p>
 
             <a
-                href="https://pro.tiagomatos.com/laravel-api-vuejs-spa/"
+                href="https://pro.tiagomatos.com/curso-full-stack-laravue/"
                 target="_blank"
                 class="flex items-center justify-center space-x-2 text-white bg-blue-gray-300 bg-opacity-50 rounded-full py-3 text-sm font-medium tracking-widest"
             >

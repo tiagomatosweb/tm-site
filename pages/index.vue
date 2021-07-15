@@ -7,18 +7,22 @@
         <div class="container mx-auto px-4">
             <TMBox />
 
+            <br><br>
+
+            <FeaturedBox />
+
             <br>
 
             <LinksBox />
 
             <br>
 
-            <Courses />
-
-            <br>
-            <br>
-
             <Youtube />
+
+            <br>
+            <br>
+
+            <Courses />
 
             <hr class="border-blue-gray-200 border-opacity-75 mt-12 mb-8">
 
