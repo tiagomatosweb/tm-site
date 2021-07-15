@@ -6,7 +6,6 @@
         </Heading>
 
         <div class="grid grid-cols-2 md:grid-cols-1 gap-3 md:gap-0 md:flex md:space-x-3">
-            <!--            @click.stop.prevent="courseToModal = course"-->
             <Card
                 v-for="course in courses"
                 :key="course.label"
