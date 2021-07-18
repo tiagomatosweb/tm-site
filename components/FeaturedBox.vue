@@ -23,7 +23,7 @@
             </div>
 
             <p class="leading-relaxed mb-5">
-                Aprenda a desenvolvedor projetos modernos utilizando os dois frameworks que mais crescem no mercado atual – Laravel e Vue.js.
+                Aprenda a desenvolver projetos modernos utilizando os dois frameworks que mais crescem no mercado atual – Laravel e Vue.js.
             </p>
 
             <a
