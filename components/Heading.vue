@@ -1,7 +1,7 @@
 <template>
     <Component
         :is="tag"
-        class="flex items-center space-x-3 text-lg font-medium text-white"
+        class="flex items-center space-x-3 font-bold text-gray-50"
     >
         <slot />
     </Component>

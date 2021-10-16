@@ -10,11 +10,10 @@
         @apply h-full;
     }
     body {
-        @apply text-blue-gray-50 h-auto font-light py-10;
-        background: linear-gradient(254.12deg, #12152f 0%, #191f41 57.57%, #1f264e 100%) fixed;
+        @apply bg-brand-dark-200 text-gray-50 h-auto font-light py-10;
     }
     h1, h2, h3, h4, h5, h6 {
-        @apply mb-5;
+        @apply mb-4;
     }
 }
 

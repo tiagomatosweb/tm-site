@@ -13,10 +13,10 @@
 
         <div>
             <div>
-                <span class="text-white text-base md:text-2xl"><span class="font-light">Olá, eu sou</span> <b class="font-bold">Tiago Matos 👋🏼</b></span>
+                <span class="text-gray-100 text-base md:text-2xl"><span class="font-light">Olá, eu sou</span> <b class="font-bold">Tiago Matos 👋🏼</b></span>
             </div>
 
-            <div class="mt-1 md:flex md:items-center md:space-x-3 space-y-1 md:space-y-0">
+            <div class="mt-1 md:flex md:items-center md:space-x-3 space-y-1 md:space-y-0 text-gray-400">
                 <div class="flex items-center space-x-2 text-sm">
                     <div>👨🏻‍💻</div>
                     <div class="truncate">

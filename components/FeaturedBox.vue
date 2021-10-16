@@ -22,14 +22,14 @@
                 Full Stack LaraVue
             </div>
 
-            <p class="leading-relaxed mb-5">
+            <p class="leading-relaxed text-gray-400 mb-5">
                 Aprenda a desenvolver projetos modernos utilizando os dois frameworks que mais crescem no mercado atual – Laravel e Vue.js.
             </p>
 
             <a
                 href="https://pro.tiagomatos.com/curso-full-stack-laravue/"
                 target="_blank"
-                class="flex items-center justify-center space-x-2 text-white bg-blue-gray-300 bg-opacity-50 rounded-full py-3 text-sm font-medium tracking-widest"
+                class="flex items-center justify-center space-x-2 text-gray-50 bg-brand-dark-400 rounded-full py-3 text-sm font-medium tracking-widest"
             >
                 <span>SAIBA MAIS</span>
 

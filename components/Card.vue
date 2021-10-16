@@ -1,8 +1,7 @@
 <template>
     <Component
         :is="tag"
-        class="card bg-blue-gray-400 border"
-        :class="{ 'border-opacity-25': !noBorderOpacity, 'bg-opacity-50': !noBgOpacity }"
+        class="card bg-brand-dark-100 border border-blue-900"
     >
         <slot />
     </Component>
