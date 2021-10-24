@@ -22,16 +22,20 @@
                 Full Stack LaraVue
             </div>
 
+            <!--            <p class="leading-relaxed text-gray-400 mb-5">-->
+            <!--                Aprenda a desenvolver projetos modernos utilizando os dois frameworks que mais crescem no mercado atual – <strong class="font-bold text-gray-50">Laravel</strong> e <strong class="font-bold text-gray-50">Vue.js</strong>.-->
+            <!--            </p>-->
+
             <p class="leading-relaxed text-gray-400 mb-5">
-                Aprenda a desenvolver projetos modernos utilizando os dois frameworks que mais crescem no mercado atual – <strong class="font-bold text-gray-50">Laravel</strong> e <strong class="font-bold text-gray-50">Vue.js</strong>.
+                Entre para a lista de espera para a última turma do ano do Curso Full Stack LaraVue - <strong class="font-bold text-gray-200">a Turma Black</strong>.
             </p>
 
             <a
-                href="https://pro.tiagomatos.com/curso-full-stack-laravue/"
+                href="https://t.me/joinchat/GpS0-mFpf_AK4kM_"
                 target="_blank"
                 class="flex items-center justify-center space-x-2 text-gray-50 bg-brand-dark-400 rounded-full py-3 text-sm font-medium tracking-widest"
             >
-                <span>SAIBA MAIS</span>
+                <span>QUERO ENTRAR</span>
 
                 <svg
                     class="w-4 h-4"

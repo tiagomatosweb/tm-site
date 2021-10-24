@@ -62,13 +62,17 @@
                         params: {
                             part: 'snippet',
                             playlistId: 'UUXUWGUoYNwtRxaRPoB4KocA',
+                            // playlistId: 'PLcoYAcR89n-qbO7YAVj5S0alABLis_QVU',
                             maxResults: 2,
                         },
                     });
+                    // Playlist live
+                    // PLcoYAcR89n-qbO7YAVj5S0alABLis_QVU
                 }).then((response) => {
+                    // console.log(response.result);
                     this.videos = response.result.items.map(o => o.snippet);
                 }, function(reason) {
-                    console.log('Error: ' + reason.result.error.message);
+                    console.log('Error:', reason);
                 });
             },
         },
