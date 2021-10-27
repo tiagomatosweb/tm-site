@@ -1,6 +1,6 @@
 <template>
     <Card class="flex items-center space-x-4 rounded-xl mb-7">
-        <div class="flex-none flex items-center justify-center rounded-full w-20 h-20 border border-gray-200 dark:border-brand-blue-900">
+        <div class="flex-none flex items-center justify-center rounded-full w-16 h-16 border border-gray-200 dark:border-brand-blue-900">
             <img
                 src="@/assets/img/avatar.png"
                 alt="Tiago Matos"

@@ -8,14 +8,14 @@
             <a
                 href="https://lp.laravue.com.br/ebook-laravel"
                 target="_blank"
-                class="flex items-center justify-between rounded py-2 px-3 bg-gray-50 dark:bg-brand-dark-100 border border-gray-200 dark:border-brand-blue-900 text-lg text-gray-700 dark:text-gray-50 font-medium"
+                class="flex items-center justify-between rounded py-2 px-1 bg-gray-50 dark:bg-brand-dark-100 border border-gray-200 dark:border-brand-blue-900 text-lg text-gray-700 dark:text-gray-50 font-medium"
             >
                 <div class="flex items-center">
                     <img
                         src="@/assets/img/laravel-ebook-mockup.png"
                         alt="E-book Laravel"
-                        class="-ml-2"
-                        width="80"
+                        class="-ml-3"
+                        width="70"
                     > Laravel
                 </div>
 
@@ -36,13 +36,14 @@
             <a
                 href="https://lp.laravue.com.br/ebook-vue"
                 target="_blank"
-                class="flex items-center justify-between rounded py-1 px-3 bg-gray-50 dark:bg-brand-dark-100 border border-gray-200 dark:border-brand-blue-900 text-lg text-gray-700 dark:text-gray-50 font-medium"
+                class="flex items-center justify-between rounded py-2 px-1 bg-gray-50 dark:bg-brand-dark-100 border border-gray-200 dark:border-brand-blue-900 text-lg text-gray-700 dark:text-gray-50 font-medium"
             >
                 <div class="flex items-center">
                     <img
                         src="@/assets/img/vue-ebook-mockup.png"
                         alt="E-book Vue.js"
-                        width="80"
+                        class="-ml-2"
+                        width="70"
                     > Vue.js
                 </div>
 
