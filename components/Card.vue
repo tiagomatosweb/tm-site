@@ -1,7 +1,7 @@
 <template>
     <Component
         :is="tag"
-        class="card bg-brand-dark-100 border border-blue-900"
+        class="p-5 bg-gray-50 dark:bg-brand-dark-300 border border-gray-200 dark:border-brand-blue-900"
     >
         <slot />
     </Component>
@@ -16,23 +16,6 @@
                 type: String,
                 default: 'div',
             },
-            noBorderOpacity: {
-                type: Boolean,
-                default: false,
-            },
-            noBgOpacity: {
-                type: Boolean,
-                default: false,
-            },
         },
     };
 </script>
-
-<style
-    lang="scss"
-    scoped
->
-    .card {
-        border-color: #293167;
-    }
-</style>

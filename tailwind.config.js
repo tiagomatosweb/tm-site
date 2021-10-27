@@ -1,6 +1,7 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
+    darkMode: 'media',
     theme: {
         fontFamily: {
             sans: ['Inter'],
@@ -13,16 +14,20 @@ module.exports = {
                         900: '#1A3761',
                     },
                     dark: {
-                        100: '#091528',
-                        200: '#0B192F',
-                        300: '#152642',
-                        400: '#2F4562',
+                        100: '#152642',
+                        200: '#091528',
+                        300: '#030C1B',
                     },
                 },
             },
             opacity: {
                 80: '0.8',
             },
+        },
+    },
+    variants: {
+        extend: {
+            display: ['hover', 'focus', 'dark'],
         },
     },
     plugins: [

@@ -1,29 +1,20 @@
 <template>
     <div>
         <div class="container mx-auto px-4">
-            <TMBox />
+            <About />
 
-            <br><br>
+            <Ebooks />
+
+            <br>
 
             <FeaturedBox />
 
             <br>
 
-            <Ebooks />
-
-            <br><br>
-
-            <!--            <Live />-->
-
-            <!--            <br><br>-->
-
             <Youtube />
-
-            <br>
-            <br>
         </div>
 
-        <hr class="border border-brand-dark-300 mt-12 mb-8">
+        <hr class="border border-gray-200 dark:border-brand-dark-100 mt-12 mb-8">
 
         <div class="text-center">
             <a
@@ -31,10 +22,17 @@
                 target="_blank"
             >
                 <img
-                    src="@/assets/img/tiagomatos-logo.svg"
+                    src="@/assets/img/tiagomatos-logo-dark.svg"
                     alt="Tiago Matos"
                     width="120"
-                    class="inline-block"
+                    class="inline-block dark:hidden"
+                >
+
+                <img
+                    src="@/assets/img/tiagomatos-logo-white.svg"
+                    alt="Tiago Matos"
+                    width="120"
+                    class="hidden dark:inline-block"
                 >
             </a>
         </div>

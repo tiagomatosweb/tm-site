@@ -26,9 +26,9 @@
             <a
                 href="https://www.youtube.com/tiagomatosweb?sub_confirmation=1"
                 target="_blank"
-                class="inline-flex items-center justify-center text-gray-50 bg-brand-dark-400 rounded-md py-3 px-10 text-xs font-medium tracking-widest"
+                class="bg-tm-gradient flex items-center justify-center space-x-2 text-gray-50 rounded py-3.5 text-sm font-medium tracking-widest"
             >
-                <span>INSCREVA-SE 🚀</span>
+                INSCREVA-SE 🚀
             </a>
         </div>
     </div>

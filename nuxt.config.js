@@ -10,7 +10,7 @@ export default {
     head: {
         title: 'Tiago Matos Bio',
         htmlAttrs: {
-            lang: 'en',
+            lang: 'pt-br',
         },
         meta: [
             { charset: 'utf-8' },

@@ -1,13 +1,25 @@
 <template>
-    <Card class="py-5 bg-brand-dark-300 -mx-4">
-        <div class="text-center text-sm font-black">
-            AULÃO AO VIVO
-        </div>
+    <div class="bg-tm-gradient rounded-xl p-px">
+        <div class="p-5 bg-gray-50 dark:bg-brand-dark-300 rounded-xl">
+            <div class="text-center text-sm font-black">
+                <div class="tm-gradient">
+                    AULÃO AO VIVO
+                </div>
+            </div>
 
-        <div class="text-center">
-            Quinta-feira às 18h30
+            <div class="text-center text-lg font-bold text-gray-900 dark:text-gray-50">
+                Hoje às 18h30
+            </div>
+
+            <div>
+                Vídeo
+            </div>
+
+            <div class="text-gray-700 dark:text-gray-300">
+                Saiba como fazer um deploy com Laravel Forge
+            </div>
         </div>
-    </Card>
+    </div>
 </template>
 
 <script>
