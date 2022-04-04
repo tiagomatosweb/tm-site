@@ -1,7 +1,7 @@
 <template>
     <Component
         :is="tag"
-        class="p-5 bg-gray-50 dark:bg-gray-800"
+        class="p-5 bg-gray-200 dark:bg-gray-800"
     >
         <slot />
     </Component>

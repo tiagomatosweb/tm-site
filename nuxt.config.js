@@ -30,7 +30,7 @@ export default {
             { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
         ],
         bodyAttrs: {
-            class: 'bg-gray-50 dark:bg-gray-900 antialiased text-gray-700 dark:text-gray-300 p-4',
+            class: 'bg-gray-50 dark:bg-gray-900 antialiased text-gray-700 dark:text-gray-300 p-4 md:p-9',
         },
     },
 

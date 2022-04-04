@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="space-y-9">
+        <div class="max-w-2xl mx-auto space-y-9">
             <About />
 
             <LinksBox />
@@ -8,9 +8,9 @@
             <Ebooks />
 
             <Youtube />
-
-            <hr class="border border-gray-300 dark:border-gray-700 -mx-4">
         </div>
+
+        <hr class="border border-gray-200 dark:border-gray-800 -mx-4 mt-9">
 
         <div class="text-center py-6">
             <a

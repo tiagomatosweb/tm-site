@@ -1,18 +1,19 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-    darkMode: 'media',
+    darkMode: 'class',
     theme: {
         fontFamily: {
             sans: ['Inter'],
         },
         extend: {
             colors: {
-                gray: colors.coolGray,
+                gray: colors.blueGray,
                 brand: {
                     'light-blue': '#009EE2',
                     'dark-blue': '#1A3761',
                 },
+                teal: colors.teal,
             },
         },
     },

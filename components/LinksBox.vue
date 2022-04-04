@@ -13,6 +13,7 @@
                 :href="link.href"
                 target="_blank"
                 class="flex items-center space-x-3 rounded-lg px-3 py-3"
+                :class="{ 'bg-teal-300': link.label === 'Escola LaraVue' }"
             >
                 <div class="flex-none flex items-center justify-center w-8 h-8">
                     <img
