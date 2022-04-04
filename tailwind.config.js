@@ -10,18 +10,9 @@ module.exports = {
             colors: {
                 gray: colors.coolGray,
                 brand: {
-                    blue: {
-                        900: '#1A3761',
-                    },
-                    dark: {
-                        100: '#152642',
-                        200: '#091528',
-                        300: '#030C1B',
-                    },
+                    'light-blue': '#009EE2',
+                    'dark-blue': '#1A3761',
                 },
-            },
-            opacity: {
-                80: '0.8',
             },
         },
     },

@@ -1,22 +1,18 @@
 <template>
     <div>
-        <div class="container mx-auto px-4">
+        <div class="space-y-9">
             <About />
+
+            <LinksBox />
 
             <Ebooks />
 
-            <br>
-
-            <FeaturedBox />
-
-            <br>
-
             <Youtube />
+
+            <hr class="border border-gray-300 dark:border-gray-700 -mx-4">
         </div>
 
-        <hr class="border border-gray-200 dark:border-brand-dark-100 mt-12 mb-8">
-
-        <div class="text-center">
+        <div class="text-center py-6">
             <a
                 href="https://tiagomatos.com"
                 target="_blank"
@@ -38,8 +34,3 @@
         </div>
     </div>
 </template>
-
-<script>
-    export default {
-    };
-</script>

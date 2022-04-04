@@ -29,6 +29,9 @@ export default {
             { rel: 'manifest', href: '/site.webmanifest' },
             { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
         ],
+        bodyAttrs: {
+            class: 'bg-gray-50 dark:bg-gray-900 antialiased text-gray-700 dark:text-gray-300 p-4',
+        },
     },
 
     target: 'static',
@@ -38,7 +41,6 @@ export default {
 
     // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
     plugins: [
-        '@/plugins/veevalidate',
     ],
 
     // Auto import components: https://go.nuxtjs.dev/config-components
@@ -57,13 +59,13 @@ export default {
 
     // Modules: https://go.nuxtjs.dev/config-modules
     modules: [
-        '@nuxtjs/axios',
+        // '@nuxtjs/axios',
     ],
 
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {
         transpile: [
-            'vee-validate/dist/rules',
+            // 'vee-validate/dist/rules',
         ],
     },
 };

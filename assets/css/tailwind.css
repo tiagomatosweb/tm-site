@@ -6,14 +6,8 @@
 @tailwind utilities;
 
 @layer base {
-    html {
-        @apply h-full;
-    }
-    body {
-        @apply bg-gray-100 dark:bg-brand-dark-200 text-gray-50 h-auto font-light py-10;
-    }
     h1, h2, h3, h4, h5, h6 {
-        @apply mb-3;
+        @apply mb-4;
     }
 }
 

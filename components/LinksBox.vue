@@ -5,14 +5,14 @@
             <span>🔗</span>
         </Heading>
 
-        <div class="grid grid-cols-3 gap-2">
+        <div class="grid grid-cols-2 gap-4">
             <Card
                 v-for="link in links"
                 :key="link.label"
                 tag="a"
                 :href="link.href"
                 target="_blank"
-                class="flex flex-col md:flex-row items-center md:space-x-3 space-y-3 md:space-y-0 rounded-lg px-3 py-3"
+                class="flex items-center space-x-3 rounded-lg px-3 py-3"
             >
                 <div class="flex-none flex items-center justify-center w-8 h-8">
                     <img
@@ -41,7 +41,9 @@
                     // { label: 'Face', img: require('@/assets/img/facebook-f.svg'), img_alt: 'Facebook /tiagomatosweb', href: 'https://www.facebook.com/tiagomatosweb' },
                     // { label: 'Blog', img: require('@/assets/img/laptop.svg'), img_alt: 'Blog blog.tiagomatos.com', href: 'https://blog.tiagomatos.com/' },
                     // { label: 'Site', img: require('@/assets/img/globe.svg'), img_alt: 'Site tiagomatos.com', href: 'https://tiagomatos.com/' },
-                    { label: 'Discord', img: require('@/assets/img/discord.svg'), img_alt: 'Discord discord.tiagomatos.com', href: 'https://discord.gg/HXGwssB8S4' },
+                    { label: 'LaraVue Discord', img: require('@/assets/img/discord.svg'), img_alt: 'LaraVue Discord', href: 'https://discord.gg/HXGwssB8S4' },
+                    { label: 'LaraVue Telegram', img: require('@/assets/img/telegram.svg'), img_alt: 'LaraVue Telegram', href: 'https://t.me/+YhayoHB107AK4kM_' },
+                    { label: 'Escola LaraVue', img: require('@/assets/img/lv.svg'), img_alt: 'Escola LaraVue', href: 'https://escola.laravue.com.br/' },
                 ],
             };
         },
