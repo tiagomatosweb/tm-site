@@ -11,7 +11,7 @@
                 class="bg-gray-800 rounded-lg"
             >
                 <img
-                    src="@/assets/img/laravel-ebook-1200x630.png"
+                    src="@/assets/img/laravel-ebook-1200x630.webp"
                     alt="Laravel e-book"
                 >
             </a>
@@ -22,7 +22,7 @@
                 class="bg-gray-800 rounded-lg"
             >
                 <img
-                    src="@/assets/img/vue-ebook-1200x630.png"
+                    src="@/assets/img/vue-ebook-1200x630.webp"
                     alt="Vue.js e-book"
                 >
             </a>

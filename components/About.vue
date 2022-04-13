@@ -13,7 +13,7 @@
 
         <div class="flex-none flex items-center justify-center rounded-full w-16 h-16 mr-4">
             <img
-                src="@/assets/img/avatar.png"
+                src="@/assets/img/avatar.webp"
                 alt="Tiago Matos"
                 class="rounded-full"
             >
