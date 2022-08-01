@@ -1,8 +1,8 @@
 export default {
     publicRuntimeConfig: {
         youtubeApiKey: process.env.YOUTUBE_API_KEY,
-        googleAnalytics: {
-            id: process.env.GOOGLE_ANALYTICS_ID,
+        gtm: {
+            id: process.env.GOOGLE_TAG_MANAGER_ID,
         },
     },
 
@@ -50,7 +50,7 @@ export default {
     buildModules: [
         '@nuxtjs/eslint-module',
         '@nuxtjs/tailwindcss',
-        '@nuxtjs/google-analytics',
+        '@nuxtjs/gtm',
     ],
 
     // Modules: https://go.nuxtjs.dev/config-modules
