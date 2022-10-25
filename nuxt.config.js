@@ -16,7 +16,6 @@ export default {
             { charset: 'utf-8' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
             { hid: 'description', name: 'description', content: 'Sou engenheiro de software independente e sou apaixonado por novas tecnologias em special por Vue.js, PWA e Laravel. Eu ajudo programadores de todos os níveis a se tornarem grandes referências no mercado de desenvolvimento de softwares. Eu escrevo artigos e eventualmente dou palestras.' },
-            { hid: 'msapplication-TileColor', name: 'msapplication-TileColor', content: '#da532c' },
             { hid: 'theme-color', name: 'theme-color', content: '#ffffff' },
         ],
         script: [
