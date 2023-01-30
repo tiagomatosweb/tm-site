@@ -22,7 +22,9 @@
         <div>
             <div>
                 <span class="text-gray-900 dark:text-gray-50">👋🏼 <span class="font-light">Olá, eu sou</span> <b class="font-bold">Tiago Matos</b></span>
-                <div class="text-sm">🚀 Ajudo devs a decolarem com Laravel e Vue.js</div>
+                <div class="text-sm">
+                    🚀 Ajudo devs a decolarem com Laravel e Vue.js
+                </div>
             </div>
 
             <div class="mt-1 md:flex md:items-center md:space-x-3 space-y-1 md:space-y-0 text-gray-500 dark:text-gray-400">
