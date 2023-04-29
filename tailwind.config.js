@@ -2,10 +2,14 @@ const colors = require('tailwindcss/colors');
 
 module.exports = {
     darkMode: 'class',
+    content: [
+        './components/**/*.{js,vue,ts}',
+        './layouts/**/*.vue',
+        './pages/**/*.vue',
+        './plugins/**/*.{js,ts}',
+        './app.vue',
+    ],
     theme: {
-        fontFamily: {
-            sans: ['Inter'],
-        },
         extend: {
             colors: {
                 gray: {
@@ -19,12 +23,13 @@ module.exports = {
                     700: '#3D4148',
                     800: '#25272C',
                     900: '#17191C',
+                    1000: '#111213',
                 },
                 brand: {
                     'light-blue': '#009EE2',
                     'dark-blue': '#1A3761',
+                    'teal': '#00cabe',
                 },
-                teal: colors.teal,
             },
         },
     },
@@ -34,8 +39,6 @@ module.exports = {
         },
     },
     plugins: [
-        require('@tailwindcss/forms'),
-        require('@tailwindcss/aspect-ratio'),
         require('@tailwindcss/typography'),
     ],
 };

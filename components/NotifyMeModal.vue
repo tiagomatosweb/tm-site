@@ -132,7 +132,7 @@
 </template>
 
 <script>
-    import { ValidationObserver, ValidationProvider } from 'vee-validate';
+    // import { ValidationObserver, ValidationProvider } from 'vee-validate';
 
     export default {
         name: 'NotifyMeModal',

@@ -1,16 +1,15 @@
 <template>
     <div>
         <Heading tag="h2">
-            <span>Meus links</span>
-            <span>🔗</span>
+            🔗&nbsp;&nbsp;Meus links
         </Heading>
 
         <div class="grid grid-cols-2 gap-4">
             <Card
                 tag="a"
-                href="https://escola.laravue.com.br/"
+                href="https://laravue.com.br/"
                 target="_blank"
-                class="flex items-center space-x-3 rounded-lg px-3 py-3 text-teal-400 dark:text-teal-400 font-bold"
+                class="flex items-center space-x-3 rounded-lg px-3 py-3 text-brand-teal font-bold"
             >
                 <div class="flex-none flex items-center justify-center w-8 h-8">
                     <svg
@@ -39,7 +38,6 @@
                 :href="link.href"
                 target="_blank"
                 class="flex items-center space-x-3 rounded-lg px-3 py-3"
-                :class="{ 'text-teal-400 dark:text-teal-400 font-bold': link.label === 'Escola LaraVue' }"
             >
                 <div class="flex-none flex items-center justify-center w-8 h-8">
                     <img
@@ -56,25 +54,25 @@
     </div>
 </template>
 
-<script>
-    export default {
-        name: 'LinksBox',
+<script setup>
+import Heading from '@/components/Heading'
+import Card from '@/components/Card'
 
-        data() {
-            return {
-                links: [
-                    { label: 'LaraVue Discord', img: require('@/assets/img/discord.svg'), img_alt: 'LaraVue Discord', href: 'https://discord.gg/HXGwssB8S4' },
-                    { label: 'LaraVue Telegram', img: require('@/assets/img/telegram.svg'), img_alt: 'LaraVue Telegram', href: 'https://t.me/+YhayoHB107AK4kM_' },
-                    { label: 'Meu YouTube', img: require('@/assets/img/youtube.svg'), img_alt: 'Youtube /tiagomatosweb', href: 'https://www.youtube.com/tiagomatosweb?sub_confirmation=1' },
-                    { label: 'Meu Instagram', img: require('@/assets/img/instagram.svg'), img_alt: 'Instagram @tiagomatosweb', href: 'https://www.instagram.com/tiagomatosweb/' },
-                    { label: 'Meu Blog', img: require('@/assets/img/laptop.svg'), img_alt: 'Blog blog.tiagomatos.com', href: 'https://blog.tiagomatos.com/' },
-                    // { label: 'Face', img: require('@/assets/img/facebook-f.svg'), img_alt: 'Facebook /tiagomatosweb', href: 'https://www.facebook.com/tiagomatosweb' },
-                    // { label: 'Site', img: require('@/assets/img/globe.svg'), img_alt: 'Site tiagomatos.com', href: 'https://tiagomatos.com/' },
-                    // { label: 'Escola LaraVue', img: require('@/assets/img/lv.svg'), img_alt: 'Escola LaraVue', href: 'https://escola.laravue.com.br/' },
-                ],
-            };
-        },
+import discord from '@/assets/img/discord.svg'
+import telegram from '@/assets/img/telegram.svg'
+import youtube from '@/assets/img/youtube.svg'
+import instagram from '@/assets/img/instagram.svg'
+import laptop from '@/assets/img/laptop.svg'
 
-        methods: {},
-    };
+const links = [
+    { label: 'Laravue Discord', img: discord, img_alt: 'LaraVue Discord', href: 'https://discord.gg/HXGwssB8S4' },
+    { label: 'Laravue Telegram', img: telegram, img_alt: 'LaraVue Telegram', href: 'https://t.me/+YhayoHB107AK4kM_' },
+    { label: 'Meu YouTube', img: youtube, img_alt: 'Youtube /tiagomatosweb', href: 'https://www.youtube.com/tiagomatosweb?sub_confirmation=1' },
+    { label: 'Meu Instagram', img: instagram, img_alt: 'Instagram @tiagomatosweb', href: 'https://www.instagram.com/tiagomatosweb/' },
+    { label: 'Meu Blog', img: laptop, img_alt: 'Blog blog.tiagomatos.com', href: 'https://blog.tiagomatos.com/' },
+// { label: 'Face', img: '@/assets/img/facebook-f.svg', img_alt: 'Facebook /tiagomatosweb', href: 'https://www.facebook.com/tiagomatosweb' },
+// { label: 'Site', img: '@/assets/img/globe.svg', img_alt: 'Site tiagomatos.com', href: 'https://tiagomatos.com/' },
+// { label: 'Escola LaraVue', img: '@/assets/img/lv.svg', img_alt: 'Escola LaraVue', href: 'https://escola.laravue.com.br/' },
+];
+
 </script>

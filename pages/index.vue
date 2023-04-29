@@ -1,13 +1,11 @@
 <template>
     <div>
-        <div class="max-w-2xl mx-auto space-y-9">
+        <div class="space-y-9">
             <About />
-
-            <LinksBox />
 
             <Ebooks />
 
-            <Youtube />
+<!--            <Youtube />-->
         </div>
 
         <hr class="border border-gray-200 dark:border-gray-800 -mx-4 mt-9">
@@ -34,3 +32,16 @@
         </div>
     </div>
 </template>
+
+<script setup>
+import About from '@/components/About'
+import LinksBox from '@/components/LinksBox'
+import Ebooks from '@/components/Ebooks'
+
+import discord from '@/assets/img/discord.svg'
+import laravue from '@/assets/img/lv-logo.svg'
+import telegram from '@/assets/img/telegram.svg'
+import youtube from '@/assets/img/youtube.svg'
+import instagram from '@/assets/img/instagram.svg'
+import laptop from '@/assets/img/laptop.svg'
+</script>
