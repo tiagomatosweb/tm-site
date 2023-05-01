@@ -30,9 +30,6 @@
 
 <script setup>
 import { computed } from 'vue'
-import moon from '@/assets/img/moon.svg'
-import sun from '@/assets/img/sun.svg'
-
 
 const colorMode = useColorMode()
 
