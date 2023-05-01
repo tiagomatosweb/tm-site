@@ -1,1 +1,0 @@
-import{p as e,o,c as t,m as s,r as d,Z as n}from"./entry.5b969b65.js";const c={name:"Card",props:{tag:{type:String,default:"div"}}};function p(r,g,a,l,f,i){return o(),t(n(a.tag),{class:"bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg"},{default:s(()=>[d(r.$slots,"default")]),_:3})}const m=e(c,[["render",p]]);export{m as C};
