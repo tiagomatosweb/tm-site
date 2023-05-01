@@ -22,7 +22,7 @@
 import About from '@/components/About.vue'
 import Ebooks from '@/components/Ebooks.vue'
 import Aulao from '@/components/Aulao.vue';
-import BannerSaas from '@/components/BannerSaas.vue';
+// import BannerSaas from '@/components/BannerSaas.vue';
 // import dayjs from 'dayjs';
 //
 // const liveDay = computed(() => {
