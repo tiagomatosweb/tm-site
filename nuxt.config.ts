@@ -1,12 +1,11 @@
-import shiki from 'shiki'
-
 export default defineNuxtConfig({
-    // publicRuntimeConfig: {
-    //     youtubeApiKey: process.env.YOUTUBE_API_KEY,
-    //     gtm: {
-    //         id: process.env.GOOGLE_TAG_MANAGER_ID,
-    //     },
-    // },
+    runtimeConfig: {
+        public: {
+            appEnv: process.env.NODE_ENV,
+            youtubeApiKey: process.env.NUXT_PUBLIC_YOUTUBE_API_KEY,
+            gtm: process.env.NUXT_PUBLIC_GTM_ID,
+        },
+    },
 
     app: {
         head: {
@@ -33,11 +32,6 @@ export default defineNuxtConfig({
         },
     },
 
-    buildModules: [
-        // '@nuxtjs/eslint-module',
-        // '@nuxtjs/tailwindcss',
-        // '@nuxtjs/gtm',
-    ],
     modules: [
         '@nuxt/content',
         '@nuxtjs/tailwindcss',
@@ -48,17 +42,6 @@ export default defineNuxtConfig({
         highlight: {
             theme: 'material-palenight'
         },
-        markdown: {
-            // async highlighter() {
-            //     const highlighter = await shiki.getHighlighter({
-            //         // Complete themes: https://github.com/shikijs/shiki/tree/master/packages/themes
-            //         theme: 'nord'
-            //     })
-            //     return (rawCode, lang) => {
-            //         return highlighter.codeToHtml(rawCode, lang)
-            //     }
-            // }
-        }
     },
 
     colorMode: {

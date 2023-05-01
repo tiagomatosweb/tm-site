@@ -14,80 +14,14 @@
             </div>
         </div>
 
-        <div class="text-gray-600 dark:text-gray-400 leading-5 mt-4 space-y-4">
-            <p class="leading-6">Atuo como engenheiro de software no mercado australiano e dedico parte do seu tempo a entregar conteúdo de qualidade para programadores Laravel e Vue.</p>
+        <div class="text-gray-600 dark:text-gray-300 leading-5 mt-2 space-y-4">
+            <p class="leading-6">Atuo como engenheiro de software no mercado australiano e dedico parte do meu tempo a entregar conteúdo de qualidade para programadores Laravel e Vue.</p>
         </div>
 
-        <div class="flex items-center space-x-3 mt-6">
-            <Card
-                tag="a"
-                href="https://laravue.com.br"
-                target="_blank"
-                class="flex items-center justify-center aspect-square w-16"
-            >
-                <img
-                    :src="laravue"
-                    class="w-8"
-                    alt="Cursos de Laravel e Vue.js"
-                >
-            </Card>
-
-            <Card
-                tag="a"
-                href="https://discord.laravue.com.br"
-                target="_blank"
-                class="flex items-center justify-center aspect-square w-16"
-            >
-                <img
-                    :src="discord"
-                    alt="Discord"
-                >
-            </Card>
-
-            <Card
-                tag="a"
-                href="https://t.me/+YhayoHB107AK4kM"
-                target="_blank"
-                class="flex items-center justify-center aspect-square w-16"
-            >
-                <img
-                    :src="telegram"
-                    alt="Telegram"
-                >
-            </Card>
-
-            <Card
-                tag="a"
-                href="https://www.youtube.com/tiagomatosweb?sub_confirmation=1"
-                target="_blank"
-                class="flex items-center justify-center aspect-square w-16"
-            >
-                <img
-                    :src="youtube"
-                    alt="Youtube"
-                >
-            </Card>
-
-            <Card
-                tag="a"
-                href="https://www.instagram.com/tiagomatosweb/"
-                target="_blank"
-                class="flex items-center justify-center aspect-square w-16"
-            >
-                <img
-                    :src="instagram"
-                    alt="Instagram"
-                >
-            </Card>
-        </div>
+        <SocialMedia class="mt-6" />
     </div>
 </template>
 
 <script setup>
-import Card from '@/components/Card.vue'
-import laravue from 'assets/img/lv-logo.svg';
-import discord from 'assets/img/discord.svg';
-import telegram from 'assets/img/telegram.svg';
-import youtube from 'assets/img/youtube.svg';
-import instagram from 'assets/img/instagram.svg';
+import SocialMedia from '@/components/SocialMedia.vue';
 </script>

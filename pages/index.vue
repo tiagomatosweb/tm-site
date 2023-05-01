@@ -1,47 +1,40 @@
 <template>
-    <div>
-        <div class="space-y-9">
-            <About />
+    <div class="space-y-8">
+<!--        <BannerSaas />-->
 
-            <Ebooks />
+        <About />
 
-<!--            <Youtube />-->
+        <hr class="border-gray-200 dark:border-gray-800">
+
+        <div>
+            <Heading tag="h2">
+                👨🏻‍💻&nbsp;&nbsp;<span class="tm-gradient">Aprenda a construir seu produto SaaS Multi-Tenant com Laravel API e Vue SPA</span>
+            </Heading>
+            <div class="space-y-1">
+                <p>🚀 Do zero do deploy</p>
+                <p>🗓️ Aulas toda quinta às 19h</p>
+                <p>🎥 Ao vivo no YouTube</p>
+                <p>🔗 Toque aqui e ativa o sininho</p>
+            </div>
         </div>
 
-        <hr class="border border-gray-200 dark:border-gray-800 -mx-4 mt-9">
+        <hr class="border-gray-200 dark:border-gray-800">
 
-        <div class="text-center py-6">
-            <a
-                href="https://tiagomatos.com"
-                target="_blank"
-            >
-                <img
-                    src="@/assets/img/tiagomatos-logo-dark.svg"
-                    alt="Tiago Matos"
-                    width="120"
-                    class="inline-block dark:hidden"
-                >
+        <Youtube />
 
-                <img
-                    src="@/assets/img/tiagomatos-logo-white.svg"
-                    alt="Tiago Matos"
-                    width="120"
-                    class="hidden dark:inline-block"
-                >
-            </a>
-        </div>
+        <hr class="border-gray-200 dark:border-gray-800">
+
+        <Ebooks />
     </div>
 </template>
 
 <script setup>
-import About from '@/components/About'
-import LinksBox from '@/components/LinksBox'
-import Ebooks from '@/components/Ebooks'
-
-import discord from '@/assets/img/discord.svg'
-import laravue from '@/assets/img/lv-logo.svg'
-import telegram from '@/assets/img/telegram.svg'
-import youtube from '@/assets/img/youtube.svg'
-import instagram from '@/assets/img/instagram.svg'
-import laptop from '@/assets/img/laptop.svg'
+import About from '@/components/About.vue'
+import Ebooks from '@/components/Ebooks.vue'
+import BannerSaas from '@/components/BannerSaas.vue';
+// import dayjs from 'dayjs';
+//
+// const liveDay = computed(() => {
+//     return dayjs().format('dddd')
+// })
 </script>
