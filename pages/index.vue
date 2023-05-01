@@ -4,24 +4,24 @@
 
         <About />
 
-<!--        <hr class="border-gray-200 dark:border-gray-800">-->
+        <hr class="border-gray-200 dark:border-gray-800">
 
-<!--        <Aulao />-->
+        <Aulao />
 
-<!--        <hr class="border-gray-200 dark:border-gray-800">-->
+        <hr class="border-gray-200 dark:border-gray-800">
 
-<!--        <Youtube />-->
+        <Youtube />
 
-<!--        <hr class="border-gray-200 dark:border-gray-800">-->
+        <hr class="border-gray-200 dark:border-gray-800">
 
-<!--        <Ebooks />-->
+        <Ebooks />
     </div>
 </template>
 
 <script setup>
 import About from '@/components/About.vue'
-// import Ebooks from '@/components/Ebooks.vue'
-// import Aulao from '@/components/Aulao.vue';
+import Ebooks from '@/components/Ebooks.vue'
+import Aulao from '@/components/Aulao.vue';
 // import BannerSaas from '@/components/BannerSaas.vue';
 // import dayjs from 'dayjs';
 //
