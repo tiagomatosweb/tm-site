@@ -12,7 +12,7 @@
 
                 <NuxtLink
                     :to="post._path"
-                    class="text-lg font-bold text-gray-900 dark:text-gray-50 leading-tight"
+                    class="text-lg font-bold text-gray-900 dark:text-gray-50 leading-4"
                 >
                     {{ post.title }}
                 </NuxtLink>
@@ -20,11 +20,6 @@
                 <div class="mt-1">
                     <p class="text-sm text-gray-500">{{ post.description }}</p>
                 </div>
-
-                <!--            <NuxtLink-->
-                <!--                :to="post._path"-->
-                <!--                class="block font-semibold mt-6 text-brand-light-blue text-sm"-->
-                <!--            >Continue lendo</NuxtLink>-->
             </Card>
         </div>
     </div>

@@ -1,18 +1,25 @@
 export default defineNuxtConfig({
+    extends: [
+        'nuxt-seo-kit'
+    ],
     runtimeConfig: {
         public: {
             appEnv: process.env.NODE_ENV,
             youtubeApiKey: process.env.NUXT_PUBLIC_YOUTUBE_API_KEY,
             gtm: process.env.NUXT_PUBLIC_GTM_ID,
+            siteUrl: process.env.NUXT_PUBLIC_SITE_URL,
+            siteName: 'Tiago Matos',
+            siteDescription: 'Conteúdos diários sobre Laravel e Vue.js.',
+            language: 'pt-br',
         },
     },
 
     app: {
         head: {
-            title: 'Tiago Matos',
-            htmlAttrs: {
-                lang: 'pt-br',
-            },
+            // title: 'Tiago Matos',
+            // htmlAttrs: {
+            //     lang: 'pt-br',
+            // },
             meta: [
                 { charset: 'utf-8' },
                 { name: 'viewport', content: 'width=device-width, initial-scale=1' },
