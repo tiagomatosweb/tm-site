@@ -6,19 +6,19 @@
             <Card
                 v-for="post in data"
                 :key="post._path"
-                class="p-4"
+                class="relative p-4"
             >
+                <div class="text-xs text-gray-500 tracking-wide">{{ $dayjs(post.date).format('DD MMMM YYYY') }}</div>
+
                 <NuxtLink
                     :to="post._path"
-                    class="text-lg font-bold text-gray-900 dark:text-gray-50"
+                    class="text-lg font-bold text-gray-900 dark:text-gray-50 leading-tight"
                 >
                     {{ post.title }}
                 </NuxtLink>
 
-                <div class="text-xs">{{ post.date }}</div>
-
-                <div class="mt-3">
-                    <p>{{ post.description }}</p>
+                <div class="mt-1">
+                    <p class="text-sm text-gray-500">{{ post.description }}</p>
                 </div>
 
                 <!--            <NuxtLink-->
@@ -33,5 +33,7 @@
 <script setup>
 import Card from '@/components/Card.vue'
 import BackBtn from '~/components/BackBtn.vue';
-const { data } = await useAsyncData('blog', () => queryContent('/blog').find())
+const { data } = await useAsyncData('blog', () => queryContent('/blog')
+    .sort({ date: -1 })
+    .find())
 </script>
