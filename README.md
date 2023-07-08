@@ -1,4 +1,4 @@
-# tiagomatos-bio
+# tiagomatos.com
 
 ## Build Setup
 
