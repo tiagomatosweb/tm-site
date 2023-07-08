@@ -1237,14 +1237,14 @@
   integrity sha512-R6JDUfiZbJA9cMiguQ7jxALsgiprjBeHL5ikpXfJCH62pPHtI+JdJ5xWj6Ev73yXSlYl86+blXn1kZHQ7uElxw==
 
 "@vue-macros/common@^1.3.1":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@vue-macros/common/-/common-1.4.0.tgz#9b3cde2d868b1037f17769edd33ddf3b01aeb419"
-  integrity sha512-Wnpk6OVPYw7ZrrShOS7RZL5AINFbuQWfkNCVWVESSPY+8id75YOKGzMs4X5YcNayywdSGEvV7ntVJ2RQ+ez21A==
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/@vue-macros/common/-/common-1.4.1.tgz#f4891c65c2755f123d7e9d3ee3729104d5699288"
+  integrity sha512-guxdL0TrAPRaRtbR5iWMkX9ojcyQQ0NBVGvl9ZSxk9ugArQB1z3dCyTCirhHAo5GJZBFJ8FlrqNmpVspZV0MEw==
   dependencies:
-    "@babel/types" "^7.22.4"
+    "@babel/types" "^7.22.5"
     "@rollup/pluginutils" "^5.0.2"
     "@vue/compiler-sfc" "^3.3.4"
-    ast-kit "^0.6.2"
+    ast-kit "^0.6.6"
     local-pkg "^0.4.3"
     magic-string-ast "^0.1.2"
 
@@ -1609,7 +1609,7 @@ argparse@^2.0.1:
   resolved "https://registry.yarnpkg.com/argparse/-/argparse-2.0.1.tgz#246f50f3ca78a3240f6c997e8a9bd1eac49e4b38"
   integrity sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==
 
-ast-kit@^0.6.2, ast-kit@^0.6.5:
+ast-kit@^0.6.5:
   version "0.6.5"
   resolved "https://registry.yarnpkg.com/ast-kit/-/ast-kit-0.6.5.tgz#06157fcd2e3573a954dc3fd05f3ab32df12d6c66"
   integrity sha512-XCg0VWvmWU2T/6aMp8VRfJWZ6LZv1P0o8otWY7RAGtfKj0qGi45vtnKNkltJhu9tmbQNZxv+gJA4o7FtLDfmWg==
@@ -1617,6 +1617,15 @@ ast-kit@^0.6.2, ast-kit@^0.6.5:
     "@babel/parser" "^7.22.4"
     "@rollup/pluginutils" "^5.0.2"
     pathe "^1.1.0"
+
+ast-kit@^0.6.6:
+  version "0.6.6"
+  resolved "https://registry.yarnpkg.com/ast-kit/-/ast-kit-0.6.6.tgz#dd0705a0f5b586ef37bcc29d23d8239d84e3d60c"
+  integrity sha512-6ll5hw2+hcAlWQdccjiUuOCSCaMc5C1ySuhfu2gxKLK6VC9zaz3M7XGIr96bz6eCn7OU6Ax58M9UxbBum6Awbw==
+  dependencies:
+    "@babel/parser" "^7.22.7"
+    "@rollup/pluginutils" "^5.0.2"
+    pathe "^1.1.1"
 
 ast-walker-scope@^0.4.1:
   version "0.4.2"
@@ -2186,9 +2195,9 @@ css-color-keywords@^1.0.0:
   integrity sha512-FyyrDHZKEjXDpNJYvVsV960FiqQyXc/LlYmsxl2BcdMb2WPx0OGRVgTg55rPSyLSNMqP52R9r8geSp7apN3Ofg==
 
 css-declaration-sorter@^6.3.1:
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/css-declaration-sorter/-/css-declaration-sorter-6.4.0.tgz#630618adc21724484b3e9505bce812def44000ad"
-  integrity sha512-jDfsatwWMWN0MODAFuHszfjphEXfNw9JUAhmY4pLu3TyTU+ohUpsbVtbU+1MZn4a47D9kqh03i4eyOm+74+zew==
+  version "6.4.1"
+  resolved "https://registry.yarnpkg.com/css-declaration-sorter/-/css-declaration-sorter-6.4.1.tgz#28beac7c20bad7f1775be3a7129d7eae409a3a71"
+  integrity sha512-rtdthzxKuyq6IzqX6jEcIzQF/YqccluefyCYheovBOLhFT/drQA9zj/UbRAa9J7C0o6EG6u3E6g+vKkay7/k3g==
 
 css-loader@^5.0.0:
   version "5.2.7"
@@ -4601,7 +4610,7 @@ node-emoji@^1.11.0:
   dependencies:
     lodash "^4.17.21"
 
-node-fetch-native@^1.0.2, node-fetch-native@^1.1.1, node-fetch-native@^1.2.0:
+node-fetch-native@^1.0.2, node-fetch-native@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/node-fetch-native/-/node-fetch-native-1.2.0.tgz#13ec6df98f33168958dbfb6945f10aedf42e7ea8"
   integrity sha512-5IAMBTl9p6PaAjYCnMv5FmqIF6GcZnawAVnzaCG0rX2aYZJ4CxEkZNtVPuTRug7fL7wyM5BQYTlAzcyMPi6oTQ==
@@ -4794,7 +4803,7 @@ nuxt-unhead@^1.4.17:
     pathe "^1.1.0"
     unhead "^1.1.26"
 
-nuxt@^3.3.3:
+nuxt@^3.6.2:
   version "3.6.2"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-3.6.2.tgz#a4ce4766652aca7e198f3620f8ef4199409caeea"
   integrity sha512-nzxXEKyjBUjRIfP/vojFdZ9RbpaiVftatT+p5tzJGea8beocRB2XsZ0hcDtmMuOcF6glQjG3EIsVu2p9Ckz/Kg==
@@ -6431,15 +6440,15 @@ undici@^5.22.1:
     busboy "^1.6.0"
 
 unenv@^1.5.1:
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/unenv/-/unenv-1.5.1.tgz#4e34fc754544c8bc55e00ebf8697a3e960639eab"
-  integrity sha512-tQHlmQUPyIoyGc2bF8phugmQd6wVatkVe5FqxxhM1vHfmPKWTiogSVTHA0mO8gNztDKZLpBEJx3M3CJrTZyExg==
+  version "1.5.2"
+  resolved "https://registry.yarnpkg.com/unenv/-/unenv-1.5.2.tgz#e3ad4b5422ec992b79ae34f4a495010b3404cea8"
+  integrity sha512-fpQW0nx3hGx0q0wq/35+ng9Dm4m1/2V00UmU5Jxdr1woyrMbT4RydQn5eh/hZyM81HKAPzaf50TKX0XfYpBaqg==
   dependencies:
-    consola "^3.1.0"
+    consola "^3.2.3"
     defu "^6.1.2"
     mime "^3.0.0"
-    node-fetch-native "^1.1.1"
-    pathe "^1.1.0"
+    node-fetch-native "^1.2.0"
+    pathe "^1.1.1"
 
 unhead@1.1.30, unhead@^1.1.26:
   version "1.1.30"
