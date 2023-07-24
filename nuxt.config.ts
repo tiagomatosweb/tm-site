@@ -47,7 +47,7 @@ export default defineNuxtConfig({
 
     content: {
         highlight: {
-            theme: 'material-palenight'
+            theme: 'material-theme-palenight'
         },
     },
 
