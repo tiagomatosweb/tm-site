@@ -24,7 +24,7 @@
 
         <Card
             tag="a"
-            href="https://t.me/+YhayoHB107AK4kM"
+            href="https://t.me/+bl6K0OAwxrQ0NTg1"
             target="_blank"
             class="flex items-center justify-center aspect-square w-16 text-gray-700 dark:text-gray-100"
         >
