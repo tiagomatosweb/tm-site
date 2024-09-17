@@ -6,7 +6,6 @@ export default defineNuxtConfig({
     public: {
       appEnv: process.env.NODE_ENV,
       youtubeApiKey: process.env.NUXT_PUBLIC_YOUTUBE_API_KEY,
-      gtm: process.env.NUXT_PUBLIC_GTM_ID,
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL,
       siteName: 'Tiago Matos',
       siteDescription: 'Conteúdos diários sobre Laravel e Vue.js.',
