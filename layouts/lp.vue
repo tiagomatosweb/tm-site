@@ -3,7 +3,6 @@
     <div class="flex flex-col min-h-screen">
       <div class="text-center py-6">
         <TMLogo
-          logo-type="logo"
           logo-width="120"
         />
       </div>

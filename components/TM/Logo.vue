@@ -1,53 +1,37 @@
 <template>
-  <ClientOnly>
-    <NuxtLink
-      :to="{ name: 'index' }"
-      class="inline-flex"
-    >
-      <Component
-        :is="component"
-        :width="logoWidth"
-      />
-    </NuxtLink>
-  </ClientOnly>
+  <NuxtLink
+    :to="{ name: 'index' }"
+    class="inline-flex"
+  >
+    <Component
+      :is="component"
+      :width="logoWidth"
+      class="text-brand-dark-blue dark:text-white"
+    />
+  </NuxtLink>
 </template>
 
 <script setup>
-import TMIconBlue from './IconBlue.vue';
-import TMIconWhite from './IconWhite.vue';
-import TMLogoBlue from './LogoBlue.vue';
-import TMLogoWhite from './LogoWhite.vue';
+import LogoIcon from './Icon.vue'
+import LogoFull from './Full.vue'
 
 const props = defineProps({
   logoType: {
     type: String,
-    validator: value => ['logo', 'icon'].includes(value),
-    default: 'logo',
+    validator: value => ['full', 'icon'].includes(value),
+    default: 'full',
   },
   logoWidth: {
     type: String,
   },
 })
 
-const colorMode = useColorMode()
 const component = computed(() => {
-  if (props.logoType === 'logo') {
-    if (colorMode.value === 'dark') {
-      return TMLogoWhite;
-    } else {
-      return TMLogoBlue;
-    }
-  }
-
   if (props.logoType === 'icon') {
-    if (colorMode.value === 'dark') {
-      return TMIconWhite;
-    } else {
-      return TMIconBlue;
-    }
+    return LogoIcon
   }
 
-  return TMLogoBlue;
+  return LogoFull;
 })
 
 </script>
