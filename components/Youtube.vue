@@ -25,7 +25,7 @@
             <a
                 href="https://www.youtube.com/tiagomatosweb?sub_confirmation=1"
                 target="_blank"
-                class="flex items-center justify-center text-gray-900 dark:text-gray-50 p-3.5 text-sm font-semibold tracking-wider rounded-xl bg-gray-50 dark:bg-gray-1000"
+                class="flex items-center justify-center text-gray-900 dark:text-gray-50 p-3.5 text-sm font-semibold tracking-wider rounded-xl bg-gray-50 dark:bg-gray-950"
             >
                 INSCREVA-SE NO YOUTUBE 🚀
             </a>

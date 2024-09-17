@@ -12,9 +12,9 @@
 
         <Youtube />
 
-        <hr class="border-gray-200 dark:border-gray-800">
+<!--        <hr class="border-gray-200 dark:border-gray-800">-->
 
-        <Ebooks />
+<!--        <Ebooks />-->
     </div>
 </template>
 

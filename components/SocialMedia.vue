@@ -58,5 +58,5 @@
 </template>
 
 <script setup>
-import Card from '@/components/Card'
+import Card from '@/components/TMCard'
 </script>
