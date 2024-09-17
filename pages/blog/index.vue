@@ -26,7 +26,7 @@
 </template>
 
 <script setup>
-import Card from '@/components/Card.vue'
+import Card from '@/components/TMCard.vue'
 import BackBtn from '~/components/BackBtn.vue';
 const { data } = await useAsyncData('blog', () => queryContent('/blog')
     .sort({ date: -1 })
