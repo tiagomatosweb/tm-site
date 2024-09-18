@@ -2,7 +2,7 @@
   <div>
     <SectionHeroForm />
 
-<!--    <SectionTestimonial/>-->
+    <SectionTestimonial/>
 
     <SectionAbout wrap-class="max-w-2xl"/>
   </div>
