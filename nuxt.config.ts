@@ -41,7 +41,7 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@nuxt/content', '@nuxtjs/tailwindcss', '@nuxtjs/color-mode', 'shadcn-nuxt', '@zadigetvoltaire/nuxt-gtm', '@nuxtjs/google-fonts', 'nuxt-lucide-icons'],
+  modules: ['@nuxt/content', '@nuxtjs/tailwindcss', '@nuxtjs/color-mode', 'shadcn-nuxt', '@zadigetvoltaire/nuxt-gtm', '@nuxtjs/google-fonts', 'nuxt-lucide-icons', '@nuxt/image'],
 
   content: {
     highlight: {
