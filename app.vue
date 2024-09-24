@@ -1,10 +1,10 @@
 <template>
-<!--  <ConfigProvider :use-id="useIdFunction">-->
+  <ConfigProvider :use-id="useIdFunction">
     <NuxtLayout>
 <!--        <SeoKit />-->
         <NuxtPage />
     </NuxtLayout>
-<!--  </ConfigProvider>-->
+  </ConfigProvider>
 </template>
 <script setup>
 import { ConfigProvider } from 'radix-vue'
