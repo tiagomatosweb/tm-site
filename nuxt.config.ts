@@ -4,12 +4,7 @@ export default defineNuxtConfig({
   // ],
   runtimeConfig: {
     public: {
-      appEnv: process.env.NODE_ENV,
       youtubeApiKey: process.env.NUXT_PUBLIC_YOUTUBE_API_KEY,
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL,
-      siteName: 'Tiago Matos',
-      siteDescription: 'Conteúdos diários sobre Laravel e Vue.js.',
-      language: 'pt-br',
     },
   },
 
@@ -41,7 +36,14 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@nuxt/content', '@nuxtjs/tailwindcss', '@nuxtjs/color-mode', 'shadcn-nuxt', '@zadigetvoltaire/nuxt-gtm', '@nuxtjs/google-fonts', 'nuxt-lucide-icons', '@nuxt/image'],
+  modules: ['@nuxt/content', '@nuxtjs/tailwindcss', '@nuxtjs/color-mode', 'shadcn-nuxt', '@zadigetvoltaire/nuxt-gtm', '@nuxtjs/google-fonts', 'nuxt-lucide-icons', '@nuxt/image', '@nuxtjs/seo'],
+
+  site: {
+    url: process.env.NUXT_PUBLIC_SITE_URL,
+    name: 'Tiago Matos',
+    description: 'Conteúdos diários sobre Laravel e Vue.js.',
+    defaultLocale: 'pt-br',
+  },
 
   content: {
     highlight: {
