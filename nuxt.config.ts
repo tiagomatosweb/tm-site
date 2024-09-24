@@ -36,18 +36,18 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@nuxt/content', '@nuxtjs/tailwindcss', '@nuxtjs/color-mode', 'shadcn-nuxt', '@zadigetvoltaire/nuxt-gtm', '@nuxtjs/google-fonts', 'nuxt-lucide-icons', '@nuxt/image', '@nuxtjs/seo'],
+  modules: ['@nuxt/content', '@nuxtjs/tailwindcss', '@nuxtjs/color-mode', 'shadcn-nuxt', '@zadigetvoltaire/nuxt-gtm', '@nuxtjs/google-fonts', 'nuxt-lucide-icons', '@nuxt/image'],
 
-  site: {
-    url: process.env.NUXT_PUBLIC_SITE_URL,
-    name: 'Tiago Matos',
-    description: 'Conteúdos diários sobre Laravel e Vue.js.',
-    defaultLocale: 'pt-br',
-  },
+  // site: {
+  //   url: process.env.NUXT_PUBLIC_SITE_URL,
+  //   name: 'Tiago Matos',
+  //   description: 'Conteúdos diários sobre Laravel e Vue.js.',
+  //   defaultLocale: 'pt-br',
+  // },
 
-  routeRules: {
-    '/**/obrigado': { robots: false },
-  },
+  // routeRules: {
+  //   '/**/obrigado': { robots: false },
+  // },
 
   content: {
     highlight: {
