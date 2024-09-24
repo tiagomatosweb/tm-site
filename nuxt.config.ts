@@ -1,7 +1,4 @@
 export default defineNuxtConfig({
-  // extends: [
-  //   'nuxt-seo-kit',
-  // ],
   runtimeConfig: {
     public: {
       youtubeApiKey: process.env.NUXT_PUBLIC_YOUTUBE_API_KEY,
