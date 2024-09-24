@@ -9,7 +9,7 @@
 
     <h2
       v-if="props.title"
-      class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl lg:text-5xl">
+      class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl lg:text-5xl lg:leading-tight">
       {{ props.title }}
     </h2>
 
