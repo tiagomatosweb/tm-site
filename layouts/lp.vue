@@ -1,11 +1,11 @@
 <template>
   <div
     v-if="background"
-    class="z-0 fixed top-0 inset-x-0"
+    class="z-0 absolute top-0 inset-x-0"
   >
     <div
       class="inset-x-0 bottom-0 flex justify-center bg-gradient-to-t from-white pt-32 pb-8 pointer-events-none dark:from-gray-950 absolute"/>
-    <img :class="cn('opacity-40', props.backgroundClass)" :src="props.background" alt="">
+    <img :class="cn('w-full opacity-40', props.backgroundClass)" :src="props.background" alt="">
   </div>
 
   <div class="relative z-10">
