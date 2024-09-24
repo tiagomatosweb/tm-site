@@ -45,6 +45,10 @@ export default defineNuxtConfig({
     defaultLocale: 'pt-br',
   },
 
+  routeRules: {
+    '/**/obrigado': { robots: false },
+  },
+
   content: {
     highlight: {
       theme: 'material-theme-palenight',
