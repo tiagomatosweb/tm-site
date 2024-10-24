@@ -1,5 +1,5 @@
 <template>
-  <div :class="cn('py-24', props.rootClass)">
+  <div :class="cn('py-10 md:py-24', props.rootClass)">
     <div :class="cn('mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl', props.wrapClass)">
       <LandingSectionHeader
         v-if="props.headline || props.title || props.description"
