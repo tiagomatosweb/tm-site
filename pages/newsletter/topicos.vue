@@ -1,63 +1,54 @@
 <template>
   <div>
-      <LandingSection
-        v-if="isSuccess"
-        title="Boa jovem! Agora eu já sei o que você curte 👊"
-      />
+    <LandingSection
+      v-if="isSuccess"
+      headline="Boa Jovem 👊"
+      title="Agora eu já sei quais conteúdos você está ineressado"
+    />
 
-      <LandingSection
-        v-else
-        title="Receba só conteúdo relevante e que vale a pena!"
-        description="Escolhe o que faz sentido pra você e bora nessa! 🚀"
-      >
-        <div class="max-w-2xl mx-auto">
-          <div class="grid gap-2">
-            <Label
-              v-for="topic in topics"
-              :key="topic.id"
-              :for="topic.id"
-              class="cursor-pointer"
-            >
+    <LandingSection
+      v-else
+      title="Receba só conteúdo relevante e que vale a pena!"
+      description="Escolhe o que faz sentido pra você e bora nessa! 🚀"
+    >
+      <div class="max-w-2xl mx-auto">
+        <div class="grid gap-2">
+          <Label
+            v-for="topic in topics"
+            :key="topic.id"
+            :for="topic.id"
+            class="cursor-pointer"
+          >
             <Card>
               <CardContent>
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between sm:space-x-6 space-y-2 sm:space-y-0">
-                    <div
-                      class="shrink-0"
-                      :class="topic.selected ? 'text-brand-light-blue' : null"
-                    >
-                      <IconCircleCheckBig class="size-8" />
-                    </div>
-<!--                    <div class="shrink-0 size-8 border-2 border-brand-light-blue rounded-full p-1">-->
-<!--                      <div class="w-full h-full rounded-full bg-brand-light-blue" />-->
-<!--                    </div>-->
+                <div
+                  class="flex flex-col sm:flex-row sm:items-center justify-between sm:space-x-6 space-y-2 sm:space-y-0">
+                  <div class="flex flex-col space-y-1">
+                    <span class="text-base font-bold">{{ topic.title }}</span>
+                    <span class="font-normal leading-snug text-gray-400">{{ topic.description }}</span>
+                  </div>
 
-                    <div class="flex flex-col space-y-1">
-                      <span class="text-base font-bold">{{ topic.title }}</span>
-                      <span class="font-normal leading-snug text-gray-400">{{ topic.description }}</span>
-                    </div>
-                    <input type="checkbox" :checked="topic.selected" :id="topic.id">
-
-<!--                  <Switch-->
-<!--                    :checked="topic.selected"-->
-<!--                    :id="topic.id"-->
-<!--                    @update:checked="() => topic.selected = !topic.selected"-->
-<!--                  />-->
+                  <Switch
+                    :checked="topic.selected"
+                    :id="topic.id"
+                    @update:checked="() => topic.selected = !topic.selected"
+                  />
                 </div>
               </CardContent>
             </Card>
-            </Label>
+          </Label>
 
-            <Button
-              variant="marketing"
-              size="lg"
-              class="text-lg h-12 mt-2"
-              :loading="loading"
-              @click="storePreference"
-            >Salvar
-            </Button>
-          </div>
+          <Button
+            variant="marketing"
+            size="lg"
+            class="text-lg h-12 mt-2"
+            :loading="loading"
+            @click="storePreference"
+          >Salvar
+          </Button>
         </div>
-      </LandingSection>
+      </div>
+    </LandingSection>
   </div>
 </template>
 
@@ -77,7 +68,6 @@ definePageMeta({
 
 const route = useRoute()
 const email = route.query.email
-
 const topics = ref([
   {
     id: 'laravel',
@@ -111,6 +101,15 @@ const topics = ref([
 const loading = ref(false)
 const isSuccess = ref(false)
 
+const {data} = await useAsyncData('subscriber', () => leadAPI.getSubscriber(email).then(r => r.data))
+const originalGroups = data.value?.groups
+
+if (originalGroups) {
+  topics.value.forEach(o => {
+    o.selected = originalGroups.includes(o.mailerlite_group_id)
+  })
+}
+
 async function storePreference() {
   const groups = topics.value
     .filter(topic => topic.selected)
@@ -125,20 +124,6 @@ async function storePreference() {
     isSuccess.value = true
   } catch (e) {
     loading.value = false
-
   }
 }
-
-// const {data} = await useAsyncData(async () => {
-//     const response = await leadAPI.getSubscriber(email)
-//     const originalGroups = response?.data?.groups
-//
-//     if (originalGroups) {
-//       topics.value.forEach(o => {
-//         o.selected = originalGroups.includes(o.mailerlite_group_id)
-//       })
-//     }
-//     return response?.data
-//   },
-// )
 </script>
