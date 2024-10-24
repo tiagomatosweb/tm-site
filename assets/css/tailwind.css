@@ -7,7 +7,7 @@
     @apply bg-white dark:bg-gray-950 antialiased text-gray-700 dark:text-gray-300
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-poppins text-gray-900 dark:text-white mb-4;
+    @apply font-poppins text-gray-900 dark:text-white;
   }
   .heading-2 {
     @apply text-2xl md:text-4xl font-extrabold;

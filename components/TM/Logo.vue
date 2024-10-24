@@ -5,7 +5,7 @@
   >
     <Component
       :is="component"
-      :width="logoWidth"
+      :width="width"
       class="text-brand-dark-blue dark:text-white"
     />
   </NuxtLink>
@@ -32,6 +32,18 @@ const component = computed(() => {
   }
 
   return LogoFull;
+})
+
+const width = computed(() => {
+  if (props.logoWidth) {
+    return props.logoWidth
+  }
+
+  if (props.logoType === 'icon') {
+    return '40'
+  }
+
+  return '110';
 })
 
 </script>

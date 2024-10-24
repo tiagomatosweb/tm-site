@@ -82,7 +82,6 @@ const validationSchema =  object({
   name: string().required().label('Primeiro nome'),
   email: string().required().email().label('E-mail'),
   phone: string().label('WhatsApp'),
-  group_id: string().label('WhatsApp'),
 })
 const {handleSubmit, isSubmitting} = useForm({
   validationSchema,
@@ -90,7 +89,7 @@ const {handleSubmit, isSubmitting} = useForm({
     name: '',
     email: '',
     phone: '',
-    group_id: props.groupId ?? undefined,
+    groups: props.groupId ? [props.groupId] : undefined,
   }
 })
 
@@ -98,7 +97,7 @@ const {value: phone} = useField('phone')
 const submit = handleSubmit(async (values) => {
   loading.value = true
   try {
-    await leadAPI.storeLead(values)
+    await leadAPI.createSubscriber(values)
     emit('done')
   } catch (e) {
     loading.value = false
