@@ -16,8 +16,9 @@
         <div class="shrink-0 w-full lg:w-[500px] mt-16 lg:-mt-[150px]">
           <OfferPricing
             :full-price="offerFullPrice"
+            :offer-price="offerPrice"
             :installment-price="offerInstallmentPrice"
-            :benefits="benefits"
+            :benefits="offerBenefits"
           />
         </div>
       </div>
@@ -30,16 +31,10 @@ const props = defineProps({
   offerInviteTitle: String,
   offerInviteDescription: String,
   offerFullPrice: String,
+  offerPrice: String,
   offerInstallmentPrice: String,
+  offerBenefits: Array,
 })
 
-const benefits = [
-  { label: '1 ano de acesso ilimitado' },
-  { label: 'Acesso à todos os cursos da plataforma' },
-  { label: 'Comunidade exclusiva para alunos' },
-  { label: 'Suporte direto com o professor' },
-  { label: 'Certificado digital de conclusão de curso' },
-  { label: 'Acesso ao banco de Lives exclusivo' },
-  { label: 'Acesso a novos cursos' },
-]
+
 </script>

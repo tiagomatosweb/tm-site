@@ -27,8 +27,7 @@
 
     <div class="column-1 md:columns-2 lg:columns-3 xl:columns-4 gap-8 space-y-8 mt-24">
       <Card
-        v-for="item in testimonials"
-        :key="item.author"
+        v-for="item in items"
         class="break-inside-avoid"
       >
         <CardContent>
@@ -60,7 +59,8 @@ const props = defineProps({
     default: 'Mais de 1K alunos que alavancaram suas carreiras na programação'
   },
 })
-const testimonials = [
+
+const items = [
   {
     author: 'Mauricio Testa',
     comment: 'Faaaala irmão blza??? Gostaria de deixar aqui meu agradecimento pelas tuas aulas "VueJS do jeito ninja".. graças a elas hj estou consolidado em uma multinacional\n' +

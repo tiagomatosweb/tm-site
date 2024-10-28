@@ -21,33 +21,30 @@
       </template>
     </LandingHero>
 
-    <LpLaravelWhatIsIt/>
+    <LpLaravelOQueEJornadaLaravel/>
 
-    <LpLaravelWhoIsItFor/>
+    <LpLaravelParaQuemEEsteCurso/>
 
-    <LpLaravelWhatYouWillLearn/>
+<!--    <LpLaravelOQueVouAprender/>-->
 
-    <LpLaravelWhyWithMe/>
+    <LpLaravelModulos />
+
+    <LpLaravelPorqueAprenderLaravelComigo/>
 
     <SectionTestimonial
       title="Transforme sua carreira com a Jornada Laravel"
       description="Junte-se a mais de 1.000 alunos que mudaram suas vidas profissionais e alcançaram novos patamares na programação. Veja como eles se destacaram no mercado!"
     />
 
-    <LpLaravelWhatICanBuild />
+    <LpLaravelOQuePossoConstruir />
 
-    <LpLaravelPrerequisites />
+    <LpLaravelPrequisitos />
 
     <LpLaravelFaq />
 
-    <LpLaravelFreeLectures />
+    <LpLaravelAulasGratuitas />
 
-    <SectionOffer
-      offer-invite-title="Junte-se à Elite dos Devs Laravel"
-      offer-invite-description="Faça parte de mais dos mais de 2k de alunos que dominam Laravel. Aqui forjamos profissionais altamente qualificados para encarar o mercado."
-      offer-full-price="297"
-      offer-installment-price="43"
-    />
+    <LpLaravelOffer />
 
     <SectionAbout wrap-class="max-w-2xl"/>
 
