@@ -1,10 +1,31 @@
 <template>
   <LandingSection
-    headline="Depoimentos"
-    title="Milhares de carreiras transformadas"
-    description="Mais de 1K alunos que alavancaram suas carreiras na programação"
+    :headline="headline"
+    :title="title"
+    :description="description"
   >
-    <div class="column-1 md:columns-2 lg:columns-3 xl:columns-4 gap-8 space-y-8">
+    <div class="max-w-5xl mx-auto space-y-20">
+      <div class="flex flex-wrap items-center justify-center gap-8">
+        <iframe width="225" height="400" src="https://www.youtube.com/embed/9GNqY_uKyic?si=YMefGPPPyNGVG1tQ"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        <iframe width="225" height="400" src="https://www.youtube.com/embed/cHwk-k0NZMA?si=mcY1tw9o4U2omZMA"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        <iframe width="225" height="400" src="https://www.youtube.com/embed/ZvVkp1NinTc?si=C5VfUpQPykrX5HBK"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        <iframe width="225" height="400" src="https://www.youtube.com/embed/FeGSxHcM35k?si=NPoTPs6AVM3px6kS"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="column-1 md:columns-2 lg:columns-3 xl:columns-4 gap-8 space-y-8 mt-24">
       <Card
         v-for="item in testimonials"
         :key="item.author"
@@ -25,6 +46,20 @@
 </template>
 
 <script setup>
+const props = defineProps({
+  headline: {
+    type: String,
+    default: 'Depoimentos'
+  },
+  title: {
+    type: String,
+    default: 'Milhares de carreiras transformadas'
+  },
+  description: {
+    type: String,
+    default: 'Mais de 1K alunos que alavancaram suas carreiras na programação'
+  },
+})
 const testimonials = [
   {
     author: 'Mauricio Testa',

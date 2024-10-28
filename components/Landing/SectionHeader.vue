@@ -2,7 +2,7 @@
   <div class="text-center flex flex-col items-center mb-16 sm:mb-24">
     <div
       v-if="props.headline"
-      class="mb-2 text-sm tracking-wide font-semibold text-brand-light-blue uppercase"
+      class="mb-2 text-sm tracking-wide font-semibold text-primary uppercase"
     >
        {{ props.headline }}
     </div>

@@ -67,10 +67,6 @@ export default defineNuxtConfig({
     componentDir: './shadcn'
   },
 
-  lucide: {
-    namePrefix: 'Icon'
-  },
-
   colorMode: {
     classSuffix: '',
     storageKey: '_tm_theme',

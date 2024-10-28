@@ -1,0 +1,16 @@
+<template>
+  <svg class="inline-flex" width="46" height="46" viewBox="0 0 46 46" fill="none"
+       xmlns="http://www.w3.org/2000/svg">
+    <rect width="46" height="46" rx="5" fill="url(#paint0_linear_1060_8392)"/>
+    <path
+      d="M14 13L15.5938 31.5625L23 34L30.3594 31.5625L32 13H14ZM28.6719 16.75L28.4375 19L23.0469 21.2969H23H28.25L27.6406 28.1875L23.0469 29.5L18.4062 28.1406L18.125 24.6719H20.375L20.5625 26.5L23 27.1094L25.5781 26.4062L25.7656 23.5L17.9375 23.4531L17.7969 21.2969L23.0469 19.0938L23.3281 19H17.5625L17.2812 16.75H28.6719Z"
+      fill="white"/>
+    <defs>
+      <linearGradient id="paint0_linear_1060_8392" x1="4.7879" y1="35.6519" x2="24.9391" y2="0.95354"
+                      gradientUnits="userSpaceOnUse">
+        <stop offset="0.00318669" stop-color="#349EFE"/>
+        <stop offset="1" stop-color="#005BAE"/>
+      </linearGradient>
+    </defs>
+  </svg>
+</template>
