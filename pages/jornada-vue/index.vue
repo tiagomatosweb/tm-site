@@ -63,4 +63,11 @@
 definePageMeta({
   layout: false,
 })
+
+useHead({
+  title: 'Aprenda Vue.js: Torne-se um Especialista em Desenvolvimento de Aplicações Web',
+  meta: {
+    description: 'Descubra a Jornada Vue e desenvolva aplicações dinâmicas e interativas. Aulas práticas, projetos reais e uma comunidade engajada esperam por você para transformar suas habilidades em programação.'
+  }
+})
 </script>

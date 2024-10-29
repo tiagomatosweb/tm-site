@@ -330,4 +330,11 @@
 definePageMeta({
   layout: false,
 })
+
+useHead({
+  title: 'Domine o Laravel: Transforme sua Carreira em Desenvolvimento Web',
+  meta: {
+    description: 'Aprenda Laravel do zero ao avançado com a Jornada Laravel. Cursos práticos, suporte contínuo e projetos reais para impulsionar sua carreira como desenvolvedor.'
+  }
+})
 </script>
