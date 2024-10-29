@@ -15,10 +15,10 @@
 
         <div class="shrink-0 w-full lg:w-[500px] mt-16 lg:-mt-[150px]">
           <OfferPricing
-            :full-price="offerFullPrice"
-            :offer-price="offerPrice"
-            :installment-price="offerInstallmentPrice"
-            :benefits="offerBenefits"
+            :full-price="props.offerFullPrice"
+            :offer-price="props.offerPrice"
+            :installment-price="props.offerInstallmentPrice"
+            :benefits="props.offerBenefits"
           />
         </div>
       </div>

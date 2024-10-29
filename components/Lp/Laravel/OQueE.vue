@@ -43,15 +43,13 @@ const items = [
     title: 'Resultados rápidos',
     description: 'Nos primeiros módulos, você aprenderá o essencial para criar seu primeiro projeto, um dashboard simples com AdminLTE, permitindo que você veja resultados práticos rapidamente.',
   },
-
   {
     title: 'Construindo seu portfólio',
     description: 'Ao longo do curso, você vai construir aplicações que pode adicionar ao seu portfólio. Isso não só mostra suas habilidades, mas também impressiona possíveis empregadores.',
   },
-
   {
-    title: 'Suporte e comunidade',
-    description: 'Você não estará sozinho nessa jornada. Terá acesso a uma comunidade ativa de alunos e suporte direto, onde poderá tirar dúvidas e trocar experiências.',
+    title: 'Suporte e comunidade ativa',
+    description: 'Você terá acesso a uma comunidade exclusiva de alunos e a suporte direto, onde poderá tirar dúvidas e compartilhar experiências com outros desenvolvedores.',
   },
 ]
 </script>

@@ -1,7 +1,7 @@
 <template>
   <LandingSection
     headline="Por que aprender Laravel comigo?"
-    title="Descubra os motivos para escolher a mimha Jornada Laravel!"
+    title="Descubra os motivos para escolher a minha Jornada Laravel!"
     description="Aqui estão algumas razões que fazem da minha metodologia a escolha ideal para você dominar Laravel."
   >
     <div class="column-1 md:columns-2 lg:columns-3 gap-8 space-y-8">

@@ -2,7 +2,7 @@
   <NuxtLayout name="lp">
 
     <LandingHero
-      title="Jornada Laravel: Do Zero ao Mestre"
+      title="Jornada Laravel: do Zero ao Mestre"
       description="Desperte seu potencial em PHP e abra portas para novas oportunidades! Aprenda Laravel de forma prática e crie aplicações web rápidas e robustas."
     >
       <template #before-title>
@@ -10,6 +10,14 @@
       </template>
 
       <template #after-description>
+        <Button
+          variant="marketing"
+          type="submit"
+          size="lg"
+          class="h-16 mt-6 text-2xl font-bold rounded-xl"
+        >
+          Matricule-se agora
+        </Button>
         <!--        <div class="text-gray-600 dark:text-gray-400 mt-6">-->
         <!--          Aprenda conceitos fundamentais como MVC - Model View e Controller e também tópicos avançados como Arquitetura-->
         <!--          API, Autenticação, Fila, Query Builder e muito mais.-->
@@ -21,19 +29,20 @@
       </template>
     </LandingHero>
 
-    <LpLaravelOQueEJornadaLaravel/>
+    <LpLaravelOQueE/>
 
-    <LpLaravelParaQuemEEsteCurso/>
+    <LpLaravelParaQuemE/>
 
 <!--    <LpLaravelOQueVouAprender/>-->
 
     <LpLaravelModulos />
 
-    <LpLaravelPorqueAprenderLaravelComigo/>
+    <LpLaravelPorqueAprenderComigo/>
 
     <SectionTestimonial
+      headline="Histórias de Sucesso"
       title="Transforme sua carreira com a Jornada Laravel"
-      description="Junte-se a mais de 1.000 alunos que mudaram suas vidas profissionais e alcançaram novos patamares na programação. Veja como eles se destacaram no mercado!"
+      description="Junte-se a mais de 1k alunos que mudaram suas vidas profissionais e alcançaram novos patamares na programação. Veja como eles se destacaram no mercado!"
     />
 
     <LpLaravelOQuePossoConstruir />

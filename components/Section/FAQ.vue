@@ -1,13 +1,13 @@
 <template>
   <LandingSection
-    headline="FAQ"
-    title="Ficou alguma dúvida? 🤔"
-    description="Veja se a sua dúvida está entre as perguntas mais frequentes que recebemos."
+    :headline="props.headline"
+    :title="props.title"
+    :description="props.description"
   >
     <div class="max-w-4xl mx-auto">
       <div class="space-y-3">
         <Card
-          v-for="item in items"
+          v-for="item in props.items"
           :key="item.title"
         >
           <CardContent class="px-6 py-3">
@@ -50,6 +50,18 @@
 
 <script setup>
 const props = defineProps({
+  headline: {
+    type: String,
+    default: 'FAQ'
+  },
+  title: {
+    type: String,
+    default: 'Ficou alguma dúvida? 🤔'
+  },
+  description: {
+    type: String,
+    default: 'Veja se a sua dúvida está entre as perguntas mais frequentes que recebemos.'
+  },
   items: {
     type: Array,
     default: () => [],

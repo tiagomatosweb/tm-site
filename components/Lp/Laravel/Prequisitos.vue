@@ -2,7 +2,7 @@
   <LandingSection
     headline="Pré-requisitos"
     title="O que eu preciso saber antes de me matricular?"
-    description="O curso Laravue é para você que nunca mexeu nesses frameworks ou tem apenas um conhecimento básico."
+    description="Antes de iniciar sua Jornada Laravel, é importante que você tenha alguns fundamentos essenciais. Estes conhecimentos vão te ajudar a aproveitar ao máximo cada módulo do curso!"
   >
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <Card v-for="item in items">
@@ -26,14 +26,14 @@ import IconCode from '~/components/Icon/Code.vue';
 
 const items = [
   {
-    icon: IconCode,
-    title: 'Noções Básicas de Lógica de Programação',
-    description: 'É fundamental entender conceitos de lógica de programação, como estruturas condicionais, loops e funções. Isso ajudará você a acompanhar melhor o conteúdo e resolver problemas de forma mais eficiente.'
-  },
-  {
     icon: IconPhp,
     title: 'Conhecimento básico de PHP',
-    description: 'Você deve entender o básico de HTML para criar páginas simples e de CSS para deixar essas páginas com um visual agradável.',
+    description: 'É importante ter uma noção básica de PHP, incluindo variáveis, estruturas como if e foreach, funções e uma ideia de como usar classes e objetos.',
+  },
+  {
+    icon: IconDatabase,
+    title: 'Noções de Banco de Dados',
+    description: 'Conhecimentos básicos em SQL são desejáveis, como fazer consultas (SELECT), inserir (INSERT), atualizar (UPDATE) e apagar (DELETE) dados em um banco de dados relacional como MySQL.',
   },
   {
     icon: IconTerminal,
@@ -41,9 +41,9 @@ const items = [
     description: 'Familiaridade com o terminal ajuda bastante, pois você precisará navegar por pastas e rodar comandos básicos para configurar o Laravel e instalar dependências.',
   },
   {
-    icon: IconDatabase,
-    title: 'oções de Banco de Dados',
-    description: 'Conhecimentos básicos em SQL são essenciais, como fazer consultas (SELECT), inserir (INSERT), atualizar (UPDATE) e apagar (DELETE) dados em um banco de dados relacional como MySQL.',
+    icon: IconCode,
+    title: 'Noções Básicas de Lógica de Programação',
+    description: 'É fundamental entender conceitos de lógica de programação, como estruturas condicionais, loops e funções. Isso ajudará você a acompanhar melhor o conteúdo e resolver problemas de forma mais eficiente.'
   },
   {
     icon: IconHtml5,

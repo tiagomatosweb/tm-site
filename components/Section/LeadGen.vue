@@ -19,7 +19,7 @@
 
     <template #content-right>
       <LeadGenForm
-        :group-id="leadGroupId"
+        :group-id="props.leadGroupId"
         @done="emit('lead-done')"
       />
     </template>

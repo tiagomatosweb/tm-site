@@ -1,8 +1,8 @@
 <template>
   <LandingSection
-    :headline="headline"
-    :title="title"
-    :description="description"
+    :headline="props.headline"
+    :title="props.title"
+    :description="props.description"
   >
     <div class="max-w-5xl mx-auto space-y-20">
       <div class="flex flex-wrap items-center justify-center gap-8">

@@ -32,9 +32,9 @@
 </template>
 
 <script setup>
-import Junior from '@/assets/img/programador-junior.jpg'
-import Pleno from '@/assets/img/programador-pleno.jpg'
-import Senior from '@/assets/img/programador-senior.jpg'
+import Junior from 'assets/img/programador-junior.jpg'
+import Pleno from 'assets/img/programador-pleno.jpg'
+import Senior from 'assets/img/programador-senior.jpg'
 
 const items = [
   {
