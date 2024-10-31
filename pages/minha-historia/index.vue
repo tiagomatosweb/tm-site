@@ -31,12 +31,10 @@ import {leadAPI} from '~/api/lead';
 definePageMeta({
   layout: false,
   middleware: async (to) => {
-    const leadGroupId = mailerliteGroups.TM_MINHAHISTORIA
-
     if (to.query?.email) {
       const data = {
         email: to.query?.email,
-        groups: [leadGroupId],
+        groups: [mailerliteGroups.TM_MINHAHISTORIA],
       }
 
       await leadAPI.createSubscriber(data)
