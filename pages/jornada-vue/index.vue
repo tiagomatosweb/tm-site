@@ -1,5 +1,37 @@
 <template>
   <NuxtLayout name="lp">
+    <Dialog default-open>
+      <DialogContent class="max-w-3xl">
+        <div class="flex items-center gap-4">
+          <div class="text-5xl">
+            🎁
+          </div>
+
+          <h2 class="heading-2">Oferta Especial de Black Friday</h2>
+        </div>
+
+        <ul class="mt-2 ml-16 list-inside list-disc">
+          <li>Jornada Vue com um desconto de até 70%!</li>
+          <li>Bla bla bla shit</li>
+          <li>Bla bla bla shit</li>
+          <li>etc...</li>
+        </ul>
+
+        <div class="mt-6">
+          <Button
+            as="a"
+            href="https://chat.whatsapp.com/Lw8LQh3VA1j2Xdvconq6qj"
+            target="_blank"
+            variant="marketing"
+            size="lg"
+            class="w-full bg-gradient-to-r from-emerald-400 to-emerald-600 hover:bg-emerald-300 hover:shadow-emerald-500/50 py-8 text-xl font-bold"
+          >
+            <IconWhatsapp class="size-8 mr-2"/>
+            Entre para o grupo do WhatsApp
+          </Button>
+        </div>
+      </DialogContent>
+    </Dialog>
 
     <LandingHero
       title="Jornada Vue: da Raiz ao Avançado"
@@ -70,4 +102,5 @@ useHead({
     description: 'Descubra a Jornada Vue e desenvolva aplicações dinâmicas e interativas. Aulas práticas, projetos reais e uma comunidade engajada esperam por você para transformar suas habilidades em programação.'
   }
 })
+
 </script>
