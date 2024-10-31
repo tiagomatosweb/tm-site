@@ -2,6 +2,7 @@
   <NuxtLayout name="lp">
     <SectionLeadGen
       :lead-groups-id="[mailerliteGroups.LARAVEL_BFCM]"
+      title-class="text-4xl"
       lead-btn-text="Entrar para o grupo do WhatsApp"
       lead-btn-class="bg-gradient-to-r from-emerald-400 to-emerald-600 hover:bg-emerald-300 hover:shadow-emerald-500/50"
       :on-done="onDone"
@@ -11,12 +12,17 @@
       </template>
 
       <template #title>
-        Oferta especial de Black Friday
+        Black Friday da Jornada Laravel: Domine Laravel com até 70% de Desconto!
       </template>
 
       <template #description>
-        Junte-se a <span class="tm-gradient font-bold">4k+ leitores</span> e receba dicas, lições e insights retirados do campo de batalha de
-        quem respira programação web há mais de 2 décadas.
+        Aproveite o melhor preço do ano para aprender Laravel do zero ao avançado. Oferta por tempo limitado!
+      </template>
+
+      <template #after-description>
+        <p class="mt-8 text-gray-700 dark:text-gray-300">
+          Essa promoção especial de Black Friday só estará disponível pelo WhatsApp! Para garantir o desconto e receber todas as instruções, preencha o formulário ao lado e entre para o nosso grupo exclusivo no WhatsApp. Lá, você terá acesso à oferta imperdível e poderá tirar todas as suas dúvidas!
+        </p>
       </template>
     </SectionLeadGen>
 
