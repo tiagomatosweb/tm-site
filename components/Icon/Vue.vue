@@ -19,7 +19,7 @@ const props = defineProps({
 })
 
 const rootClass = computed(() => [
-  'flex items-center justify-center bg-emerald-500/20 rounded-lg p-2',
+  'inline-flex items-center justify-center bg-emerald-500/20 rounded-lg p-2',
   sizeClass.value
 ])
 

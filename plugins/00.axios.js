@@ -3,7 +3,6 @@ import axios from 'axios';
 
 export default defineNuxtPlugin((nuxtApp) => {
   const config = useRuntimeConfig().public
-  console.log(config)
 
   axios.defaults.baseURL = config.apiURL
   axios.defaults.withCredentials = true;

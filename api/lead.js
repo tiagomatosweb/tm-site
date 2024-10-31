@@ -1,9 +1,11 @@
 import axios from 'axios';
 
+const n8n = axios.create();
+
 export const leadAPI = {
   createSubscriber(data) {
     const {n8nUrl} = useRuntimeConfig().public
-    return axios.post(`${n8nUrl}/webhook/4f93a3cf-34fe-428a-a9bb-a08b81de3846`, data)
+    return n8n.post(`${n8nUrl}/webhook/4f93a3cf-34fe-428a-a9bb-a08b81de3846`, data)
   },
   storePreference(data) {
     const {n8nUrl} = useRuntimeConfig().public

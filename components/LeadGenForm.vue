@@ -51,10 +51,10 @@
           variant="marketing"
           type="submit"
           size="lg"
-          :loading="loading"
-          class="w-full h-16 mt-6 text-2xl font-bold rounded-xl"
+          :loading="isSubmitting"
+          :class="cn('w-full h-16 mt-6 text-2xl font-bold rounded-xl', props.btnClass)"
         >
-          Cadastrar
+          {{ props.btnText }}
         </Button>
       </div>
     </form>
@@ -72,12 +72,27 @@ import axios from 'axios';
 import intlTelInput from 'intl-tel-input';
 import {ref} from 'vue';
 import {leadAPI} from '~/api/lead';
+import {cn} from '~/lib/utils';
+import {buttonVariants} from '~/shadcn/button';
 
-const emit = defineEmits(['done'])
 const props = defineProps({
-  groupId: String
+  btnText: {
+    type: String,
+    default: 'Cadastrar'
+  },
+  btnClass: {
+    type: String,
+    default: null
+  },
+  groupsId: {
+    type: Array,
+    default: () => []
+  },
+  onDone: {
+    type: Function,
+    default: () => true
+  },
 })
-const loading = ref(false)
 const validationSchema =  object({
   name: string().required().label('Primeiro nome'),
   email: string().required().email().label('E-mail'),
@@ -89,18 +104,17 @@ const {handleSubmit, isSubmitting} = useForm({
     name: '',
     email: '',
     phone: '',
-    groups: props.groupId ? [props.groupId] : undefined,
+    groups: props.groupsId.length ? props.groupsId : undefined,
   }
 })
 
 const {value: phone} = useField('phone')
 const submit = handleSubmit(async (values) => {
-  loading.value = true
   try {
     await leadAPI.createSubscriber(values)
-    emit('done')
+    await props.onDone()
   } catch (e) {
-    loading.value = false
+    console.log(e)
   }
 })
 
