@@ -31,16 +31,15 @@ import {leadAPI} from '~/api/lead';
 definePageMeta({
   layout: false,
   middleware: async (to) => {
-    const leadGroupId = '133312048173942337'
+    const leadGroupId = mailerliteGroups.TM_MINHAHISTORIA
 
     if (to.query?.email) {
       const data = {
-        name: to.query?.name,
         email: to.query?.email,
-        group_id: leadGroupId,
+        groups: [leadGroupId],
       }
 
-      await leadAPI.storeLead(data)
+      await leadAPI.createSubscriber(data)
       return navigateTo({name: 'minha-historia-obrigado'})
     }
   },
