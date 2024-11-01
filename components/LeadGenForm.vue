@@ -52,7 +52,7 @@
           type="submit"
           size="lg"
           :loading="isSubmitting"
-          :class="cn('w-full h-16 mt-6 text-2xl font-bold rounded-xl', props.btnClass)"
+          :class="cn('w-full text-wrap min-h-16 h-auto mt-6 text-2xl font-bold rounded-xl', props.btnClass)"
         >
           {{ props.btnText }}
         </Button>
