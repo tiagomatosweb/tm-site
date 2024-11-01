@@ -112,10 +112,11 @@ const {value: phone} = useField('phone')
 const submit = handleSubmit(async (values) => {
   try {
     await leadAPI.createSubscriber(values)
-    await props.onDone()
   } catch (e) {
     console.log(e)
   }
+
+  await props.onDone()
 })
 
 watch(phone, (vl) => {
