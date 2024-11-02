@@ -56,6 +56,7 @@
 import {ref} from 'vue';
 import {leadAPI} from '~/common/api/lead';
 import LandingSection from '~/common/components/landing/LandingSection.vue';
+import {mailerliteGroups} from '~/common/utils/mailerlite-groups';
 
 definePageMeta({
   layout: 'lp',
@@ -72,28 +73,28 @@ const email = route.query.email
 const topics = ref([
   {
     id: 'laravel',
-    mailerlite_group_id: '135215804048213853',
+    mailerlite_group_id: mailerliteGroups.LARAVEL_INTERESSE,
     title: 'Laravel – Conteúdo técnico e de carreira',
     description: 'Se você quer se especializar em Laravel, eu vou te enviar tudo que você precisa para alavancar a sua carreira: dicas de código, boas práticas e estratégias de carreira.',
     selected: false,
   },
   {
     id: 'vue',
-    mailerlite_group_id: '136027254000977502',
+    mailerlite_group_id: mailerliteGroups.VUE_INTERESSE,
     title: 'Vue.js – Conteúdo técnico e de carreira',
     description: 'Se o seu foco é Vue.js, vou compartilhar desde o básico até hacks avançados pra você dominar essa tecnologia e criar projetos incríveis.',
     selected: false,
   },
   {
     id: 'story',
-    mailerlite_group_id: '133312048173942337',
+    mailerlite_group_id: mailerliteGroups.TM_MINHAHISTORIA,
     title: 'Minha História – Da Bahia para a Austrália com projetos de até 80 mil dólares',
     description: 'Quer saber como eu saí da correria dos ratos na Bahia e construí uma vida de sucesso na Austrália? Te conto tudo, sem filtro.',
     selected: false,
   },
   {
     id: 'tech',
-    mailerlite_group_id: '118070622771218165',
+    mailerlite_group_id: mailerliteGroups.TM_MUNDODEV,
     title: 'Mundo dos Devs – Dicas, novidades e tendências do universo tech',
     description: 'Pra quem quer ficar por dentro das últimas novidades e tendências no mercado de tecnologia e desenvolvimento.',
     selected: false,
