@@ -1,13 +1,14 @@
 <template>
   <ConfigProvider :use-id="useIdFunction">
     <NuxtLayout>
-<!--        <SeoKit />-->
-        <NuxtPage />
+      <!--        <SeoKit />-->
+      <NuxtPage/>
     </NuxtLayout>
   </ConfigProvider>
 </template>
 
 <script setup>
-import { ConfigProvider } from 'radix-vue'
+import {ConfigProvider} from 'radix-vue'
+
 const useIdFunction = () => useId()
 </script>

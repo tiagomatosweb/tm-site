@@ -12,7 +12,7 @@
     <div class="relative z-10">
       <div class="flex flex-col min-h-screen">
         <div class="text-center py-6">
-          <TMLogo
+          <AppLogo
             logo-width="120"
           />
         </div>
@@ -31,6 +31,8 @@
 import {cn} from '~/lib/utils';
 import type {PrimitiveProps} from 'radix-vue';
 import type {HTMLAttributes} from 'vue';
+import AppFooter from '~/common/components/app/AppFooter.vue';
+import AppLogo from '~/common/components/app/AppLogo.vue';
 
 interface Props extends PrimitiveProps {
   background?: string,

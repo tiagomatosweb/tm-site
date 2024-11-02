@@ -24,7 +24,7 @@
       </template>
 
       <template #content-right>
-        <CodeLaravel/>
+        <CodeSnippetLaravel/>
       </template>
     </LandingHero>
 
@@ -38,7 +38,7 @@
 
     <LpLaravelPorqueAprenderComigo/>
 
-    <SectionTestimonial
+    <TestimonialSection
       headline="Histórias de Sucesso"
       title="Transforme sua carreira com a Jornada Laravel"
       description="Junte-se a mais de 1k alunos que mudaram suas vidas profissionais e alcançaram novos patamares na programação. Veja como eles se destacaram no mercado!"
@@ -54,7 +54,7 @@
 
     <LpLaravelOffer/>
 
-    <SectionAbout wrap-class="max-w-2xl"/>
+    <AboutSection />
 
 
     <!--    <br><br><br>-->
@@ -326,6 +326,21 @@
 </template>
 
 <script setup>
+import LandingHero from '~/common/components/landing/LandingHero.vue';
+import IconLaravel from '~/common/components/icons/IconLaravel.vue';
+import CodeSnippetLaravel from '~/common/components/codesnippet/CodeSnippetLaravel.vue';
+import LpLaravelOQueE from '~/components/lp-laravel/LpLaravelOQueE.vue';
+import LpLaravelParaQuemE from '~/components/lp-laravel/LpLaravelParaQuemE.vue';
+import LpLaravelModulos from '~/components/lp-laravel/LpLaravelModulos.vue';
+import LpLaravelPorqueAprenderComigo from '~/components/lp-laravel/LpLaravelPorqueAprenderComigo.vue';
+import TestimonialSection from '~/components/testimonial/TestimonialSection.vue';
+import LpLaravelOQuePossoConstruir from '~/components/lp-laravel/LpLaravelOQuePossoConstruir.vue';
+import LpLaravelPrequisitos from '~/components/lp-laravel/LpLaravelPrequisitos.vue';
+import LpLaravelFaq from '~/components/lp-laravel/LpLaravelFaq.vue';
+import LpLaravelAulasGratuitas from '~/components/lp-laravel/LpLaravelAulasGratuitas.vue';
+import LpLaravelOffer from '~/components/lp-laravel/LpLaravelOffer.vue';
+import AboutSection from '~/components/about/AboutSection.vue';
+
 definePageMeta({
   layout: false,
 })

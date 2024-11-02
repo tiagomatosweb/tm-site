@@ -54,7 +54,8 @@
 
 <script setup>
 import {ref} from 'vue';
-import {leadAPI} from '~/api/lead';
+import {leadAPI} from '~/common/api/lead';
+import LandingSection from '~/common/components/landing/LandingSection.vue';
 
 definePageMeta({
   layout: 'lp',

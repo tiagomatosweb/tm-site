@@ -8,7 +8,10 @@ export default defineNuxtConfig({
   },
 
   components: {
-    dirs: ['~/components', '~/shadcn']
+    dirs: ['~/shadcn']
+  },
+  imports: {
+    // autoImport: false,
   },
   app: {
     head: {

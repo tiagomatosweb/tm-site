@@ -3,7 +3,7 @@
     name="lp"
     :background="operahouse"
   >
-    <SectionLeadGen
+    <LeadGenSection
       title-class="text-4xl"
       :lead-groups-id="[mailerliteGroups.TM_MINHAHISTORIA]"
       :on-done="onDone"
@@ -16,17 +16,21 @@
       <template #description>
         Saiba um pouco mais sobre a minha carreira como dev full stack.
       </template>
-    </SectionLeadGen>
+    </LeadGenSection>
 
-    <SectionTestimonial/>
+    <TestimonialSection/>
 
-    <SectionAbout wrap-class="max-w-2xl"/>
+    <AboutSection />
   </NuxtLayout>
 </template>
 
 <script setup>
 import operahouse from '@/assets/img/opera-house.webp'
-import {leadAPI} from '~/api/lead';
+import {leadAPI} from '~/common/api/lead';
+import AboutSection from '~/components/about/AboutSection.vue';
+import TestimonialSection from '~/components/testimonial/TestimonialSection.vue';
+import LeadGenSection from '~/components/leadgen/LeadGenSection.vue';
+import {mailerliteGroups} from '~/common/utils/mailerlite-groups';
 
 definePageMeta({
   layout: false,

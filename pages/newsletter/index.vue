@@ -1,6 +1,6 @@
 <template>
   <div>
-    <SectionLeadGen
+    <LeadGenSection
       title="Conteúdo dev direto na sua inbox!"
       :lead-groups-id="[mailerliteGroups.TM_MUNDODEV]"
       :on-done="onDone"
@@ -19,15 +19,20 @@
           <Badge class="border-0">Carreira</Badge>
         </div>
       </template>
-    </SectionLeadGen>
+    </LeadGenSection>
 
-    <SectionTestimonial/>
+    <TestimonialSection/>
 
-    <SectionAbout wrap-class="max-w-2xl"/>
+    <AboutSection />
   </div>
 </template>
 
 <script setup>
+import LeadGenSection from '~/components/leadgen/LeadGenSection.vue';
+import TestimonialSection from '~/components/testimonial/TestimonialSection.vue';
+import AboutSection from '~/components/about/AboutSection.vue';
+import {mailerliteGroups} from '~/common/utils/mailerlite-groups';
+
 definePageMeta({
   layout: 'lp',
 })

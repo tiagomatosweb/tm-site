@@ -29,6 +29,8 @@
 </template>
 
 <script setup>
+import LandingSection from '~/common/components/landing/LandingSection.vue';
+
 definePageMeta({
   layout: 'lp'
 })

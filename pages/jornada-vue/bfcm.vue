@@ -1,6 +1,6 @@
 <template>
   <NuxtLayout name="lp">
-    <SectionLeadGen
+    <LeadGenSection
       :lead-groups-id="[mailerliteGroups.VUE_BFCM]"
       title-class="text-4xl"
       lead-btn-text="Entrar para o grupo do WhatsApp"
@@ -24,15 +24,21 @@
           Essa promoção especial de Black Friday só estará disponível pelo WhatsApp! Para garantir o desconto e receber todas as instruções, preencha o formulário ao lado e entre para o nosso grupo exclusivo no WhatsApp. Lá, você terá acesso à oferta imperdível e poderá tirar todas as suas dúvidas!
         </p>
       </template>
-    </SectionLeadGen>
+    </LeadGenSection>
 
-    <SectionTestimonial />
+    <TestimonialSection />
 
-    <SectionAbout wrap-class="max-w-2xl"/>
+    <AboutSection/>
   </NuxtLayout>
 </template>
 
 <script setup>
+import LeadGenSection from '~/components/leadgen/LeadGenSection.vue';
+import {mailerliteGroups} from '~/common/utils/mailerlite-groups';
+import IconVue from '~/common/components/icons/IconVue.vue';
+import TestimonialSection from '~/components/testimonial/TestimonialSection.vue';
+import AboutSection from '~/components/about/AboutSection.vue';
+
 definePageMeta({
   layout: false,
 })

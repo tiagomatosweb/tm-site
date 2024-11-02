@@ -3,6 +3,7 @@ import type { HTMLAttributes } from 'vue'
 import { Primitive, type PrimitiveProps } from 'radix-vue'
 import { type ButtonVariants, buttonVariants } from '.'
 import { cn } from '@/lib/utils'
+import BaseSpinner from '~/common/components/ui/BaseSpinner.vue';
 
 interface Props extends PrimitiveProps {
   variant?: ButtonVariants['variant']
@@ -24,7 +25,7 @@ const props = withDefaults(defineProps<Props>(), {
     :class="cn(buttonVariants({ variant, size }), props.class)"
     :disabled="props.loading"
   >
-    <UiSpinner
+    <BaseSpinner
       v-if="loading"
       :class="cn('-ml-1 mr-3 h-4 w-4 text-gray-950/70', props.loadingClass)"
     />
