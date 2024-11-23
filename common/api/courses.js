@@ -1,8 +1,10 @@
 import axios from 'axios';
 
 export const coursesAPI = {
-  getFreeLectures() {
-    return axios.get('api/lectures/free')
+  getFreeLectures(params = {}) {
+    return axios.get('api/lectures/free', {
+      params
+    })
       .then(r => r.data)
   },
   getCourse(slug) {

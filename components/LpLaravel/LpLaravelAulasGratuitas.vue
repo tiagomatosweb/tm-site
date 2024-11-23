@@ -11,7 +11,9 @@
 import {coursesAPI} from '~/common/api/courses';
 import FreeLectureSection from '~/components/Lectures/FreeLectureSection.vue';
 
-const {data} = useLazyAsyncData(() => coursesAPI.getFreeLectures(), {
+const {data} = useLazyAsyncData(() => coursesAPI.getFreeLectures({
+  'filter[course_id]': 32
+}), {
   transform: r => r.data,
 })
 </script>
