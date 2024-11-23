@@ -9,14 +9,14 @@
       </template>
 
       <template #after-description>
-        <Button
-          variant="marketing"
-          type="submit"
-          size="lg"
-          class="h-16 mt-6 text-2xl font-bold rounded-xl"
-        >
-          Matricule-se agora
-        </Button>
+<!--        <Button-->
+<!--          variant="marketing"-->
+<!--          type="submit"-->
+<!--          size="lg"-->
+<!--          class="h-16 mt-6 text-2xl font-bold rounded-xl"-->
+<!--        >-->
+<!--          Matricule-se agora-->
+<!--        </Button>-->
       </template>
 
       <template #content-right>
@@ -55,20 +55,20 @@
 </template>
 
 <script setup>
-import LandingHero from '~/common/components/landing/LandingHero.vue';
-import IconVue from '~/common/components/icons/IconVue.vue';
-import CodeSnippetVue from '~/common/components/codesnippet/CodeSnippetVue.vue';
-import LpVueOQueE from '~/components/lp-vue/LpVueOQueE.vue';
-import LpVueParaQuemE from '~/components/lp-vue/LpVueParaQuemE.vue';
-import LpVueModulos from '~/components/lp-vue/LpVueModulos.vue';
-import LpVuePorqueAprenderComigo from '~/components/lp-vue/LpVuePorqueAprenderComigo.vue';
-import TestimonialSection from '~/components/testimonial/TestimonialSection.vue';
-import LpVueOQuePossoConstruir from '~/components/lp-vue/LpVueOQuePossoConstruir.vue';
-import LpVuePrequisitos from '~/components/lp-vue/LpVuePrequisitos.vue';
-import LpVueFaq from '~/components/lp-vue/LpVueFaq.vue';
-import LpVueAulasGratuitas from '~/components/lp-vue/LpVueAulasGratuitas.vue';
-import LpVueOffer from '~/components/lp-vue/LpVueOffer.vue';
-import AboutSection from '~/components/about/AboutSection.vue';
+import LandingHero from '~/common/components/Landing/LandingHero.vue';
+import IconVue from '~/common/components/Icons/IconVue.vue';
+import CodeSnippetVue from '~/common/components/Codesnippet/CodeSnippetVue.vue';
+import LpVueOQueE from '~/components/LpVue/LpVueOQueE.vue';
+import LpVueParaQuemE from '~/components/LpVue/LpVueParaQuemE.vue';
+import LpVueModulos from '~/components/LpVue/LpVueModulos.vue';
+import LpVuePorqueAprenderComigo from '~/components/LpVue/LpVuePorqueAprenderComigo.vue';
+import TestimonialSection from '~/components/Testimonial/TestimonialSection.vue';
+import LpVueOQuePossoConstruir from '~/components/LpVue/LpVueOQuePossoConstruir.vue';
+import LpVuePrequisitos from '~/components/LpVue/LpVuePrequisitos.vue';
+import LpVueFaq from '~/components/LpVue/LpVueFaq.vue';
+import LpVueAulasGratuitas from '~/components/LpVue/LpVueAulasGratuitas.vue';
+import LpVueOffer from '~/components/LpVue/LpVueOffer.vue';
+import AboutSection from '~/components/About/AboutSection.vue';
 
 definePageMeta({
   layout: false,

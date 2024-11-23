@@ -27,9 +27,9 @@
 <script setup>
 import operahouse from '@/assets/img/opera-house.webp'
 import {leadAPI} from '~/common/api/lead';
-import AboutSection from '~/components/about/AboutSection.vue';
-import TestimonialSection from '~/components/testimonial/TestimonialSection.vue';
-import LeadGenSection from '~/components/leadgen/LeadGenSection.vue';
+import AboutSection from '~/components/About/AboutSection.vue';
+import TestimonialSection from '~/components/Testimonial/TestimonialSection.vue';
+import LeadGenSection from '~/components/Leadgen/LeadGenSection.vue';
 import {mailerliteGroups} from '~/common/utils/mailerlite-groups';
 
 definePageMeta({

@@ -55,7 +55,7 @@
 <script setup>
 import {ref} from 'vue';
 import {leadAPI} from '~/common/api/lead';
-import LandingSection from '~/common/components/landing/LandingSection.vue';
+import LandingSection from '~/common/components/Landing/LandingSection.vue';
 import {mailerliteGroups} from '~/common/utils/mailerlite-groups';
 
 definePageMeta({

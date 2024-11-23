@@ -13,6 +13,6 @@
 </template>
 
 <script setup>
-import AppHeader from '~/common/components/app/AppHeader.vue';
-import AppFooter from '~/common/components/app/AppFooter.vue';
+import AppHeader from '~/common/components/App/AppHeader.vue';
+import AppFooter from '~/common/components/App/AppFooter.vue';
 </script>

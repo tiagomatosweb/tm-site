@@ -9,14 +9,7 @@
       </template>
 
       <template #after-description>
-        <Button
-          variant="marketing"
-          type="submit"
-          size="lg"
-          class="h-16 mt-6 text-2xl font-bold rounded-xl"
-        >
-          Matricule-se agora
-        </Button>
+
         <!--        <div class="text-gray-600 dark:text-gray-400 mt-6">-->
         <!--          Aprenda conceitos fundamentais como MVC - Model View e Controller e também tópicos avançados como Arquitetura-->
         <!--          API, Autenticação, Fila, Query Builder e muito mais.-->
@@ -326,20 +319,20 @@
 </template>
 
 <script setup>
-import LandingHero from '~/common/components/landing/LandingHero.vue';
-import IconLaravel from '~/common/components/icons/IconLaravel.vue';
-import CodeSnippetLaravel from '~/common/components/codesnippet/CodeSnippetLaravel.vue';
-import LpLaravelOQueE from '~/components/lp-laravel/LpLaravelOQueE.vue';
-import LpLaravelParaQuemE from '~/components/lp-laravel/LpLaravelParaQuemE.vue';
-import LpLaravelModulos from '~/components/lp-laravel/LpLaravelModulos.vue';
-import LpLaravelPorqueAprenderComigo from '~/components/lp-laravel/LpLaravelPorqueAprenderComigo.vue';
-import TestimonialSection from '~/components/testimonial/TestimonialSection.vue';
-import LpLaravelOQuePossoConstruir from '~/components/lp-laravel/LpLaravelOQuePossoConstruir.vue';
-import LpLaravelPrequisitos from '~/components/lp-laravel/LpLaravelPrequisitos.vue';
-import LpLaravelFaq from '~/components/lp-laravel/LpLaravelFaq.vue';
-import LpLaravelAulasGratuitas from '~/components/lp-laravel/LpLaravelAulasGratuitas.vue';
-import LpLaravelOffer from '~/components/lp-laravel/LpLaravelOffer.vue';
-import AboutSection from '~/components/about/AboutSection.vue';
+import LandingHero from '~/common/components/Landing/LandingHero.vue';
+import IconLaravel from '~/common/components/Icons/IconLaravel.vue';
+import CodeSnippetLaravel from '~/common/components/Codesnippet/CodeSnippetLaravel.vue';
+import LpLaravelOQueE from '~/components/LpLaravel/LpLaravelOQueE.vue';
+import LpLaravelParaQuemE from '~/components/LpLaravel/LpLaravelParaQuemE.vue';
+import LpLaravelModulos from '~/components/LpLaravel/LpLaravelModulos.vue';
+import LpLaravelPorqueAprenderComigo from '~/components/LpLaravel/LpLaravelPorqueAprenderComigo.vue';
+import TestimonialSection from '~/components/Testimonial/TestimonialSection.vue';
+import LpLaravelOQuePossoConstruir from '~/components/LpLaravel/LpLaravelOQuePossoConstruir.vue';
+import LpLaravelPrequisitos from '~/components/LpLaravel/LpLaravelPrequisitos.vue';
+import LpLaravelFaq from '~/components/LpLaravel/LpLaravelFaq.vue';
+import LpLaravelAulasGratuitas from '~/components/LpLaravel/LpLaravelAulasGratuitas.vue';
+import LpLaravelOffer from '~/components/LpLaravel/LpLaravelOffer.vue';
+import AboutSection from '~/components/About/AboutSection.vue';
 
 definePageMeta({
   layout: false,

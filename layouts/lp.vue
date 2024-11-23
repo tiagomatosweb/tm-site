@@ -31,8 +31,8 @@
 import {cn} from '~/lib/utils';
 import type {PrimitiveProps} from 'radix-vue';
 import type {HTMLAttributes} from 'vue';
-import AppFooter from '~/common/components/app/AppFooter.vue';
-import AppLogo from '~/common/components/app/AppLogo.vue';
+import AppFooter from '~/common/components/App/AppFooter.vue';
+import AppLogo from '~/common/components/App/AppLogo.vue';
 
 interface Props extends PrimitiveProps {
   background?: string,

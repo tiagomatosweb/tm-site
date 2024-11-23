@@ -42,13 +42,13 @@
 <script setup>
 // import Ebooks from '@/components/Ebooks.vue'
 // import Aulao from '@/components/Aulao.vue';
-import AboutGreetings from '~/components/about/AboutGreetings.vue';
-import AboutSocialMedia from '~/components/about/AboutSocialMedia.vue';
-import YoutubeLatestVideos from '~/components/youtube/YoutubeLatestVideos.vue';
-import LandingSection from '~/common/components/landing/LandingSection.vue';
-import IconLaravel from '~/common/components/icons/IconLaravel.vue';
-import IconVue from '~/common/components/icons/IconVue.vue';
-import AboutBioShort from '~/components/about/AboutBioShort.vue';
+import AboutGreetings from '~/components/About/AboutGreetings.vue';
+import AboutSocialMedia from '~/components/About/AboutSocialMedia.vue';
+import YoutubeLatestVideos from '~/components/Youtube/YoutubeLatestVideos.vue';
+import LandingSection from '~/common/components/Landing/LandingSection.vue';
+import IconLaravel from '~/common/components/Icons/IconLaravel.vue';
+import IconVue from '~/common/components/Icons/IconVue.vue';
+import AboutBioShort from '~/components/About/AboutBioShort.vue';
 // import BannerSaas from '@/components/BannerSaas.vue';
 // import dayjs from 'dayjs';
 //

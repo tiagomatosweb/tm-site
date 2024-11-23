@@ -28,9 +28,9 @@
 </template>
 
 <script setup>
-import LeadGenSection from '~/components/leadgen/LeadGenSection.vue';
-import TestimonialSection from '~/components/testimonial/TestimonialSection.vue';
-import AboutSection from '~/components/about/AboutSection.vue';
+import LeadGenSection from '~/components/Leadgen/LeadGenSection.vue';
+import TestimonialSection from '~/components/Testimonial/TestimonialSection.vue';
+import AboutSection from '~/components/About/AboutSection.vue';
 import {mailerliteGroups} from '~/common/utils/mailerlite-groups';
 
 definePageMeta({

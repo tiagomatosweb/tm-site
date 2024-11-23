@@ -33,11 +33,11 @@
 </template>
 
 <script setup>
-import LeadGenSection from '~/components/leadgen/LeadGenSection.vue';
+import LeadGenSection from '~/components/Leadgen/LeadGenSection.vue';
 import {mailerliteGroups} from '~/common/utils/mailerlite-groups';
-import IconVue from '~/common/components/icons/IconVue.vue';
-import TestimonialSection from '~/components/testimonial/TestimonialSection.vue';
-import AboutSection from '~/components/about/AboutSection.vue';
+import IconVue from '~/common/components/Icons/IconVue.vue';
+import TestimonialSection from '~/components/Testimonial/TestimonialSection.vue';
+import AboutSection from '~/components/About/AboutSection.vue';
 
 definePageMeta({
   layout: false,

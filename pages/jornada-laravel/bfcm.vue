@@ -34,10 +34,10 @@
 
 <script setup>
 import {mailerliteGroups} from '~/common/utils/mailerlite-groups';
-import LeadGenSection from '~/components/leadgen/LeadGenSection.vue';
-import IconLaravel from '~/common/components/icons/IconLaravel.vue';
-import TestimonialSection from '~/components/testimonial/TestimonialSection.vue';
-import AboutSection from '~/components/about/AboutSection.vue';
+import LeadGenSection from '~/components/Leadgen/LeadGenSection.vue';
+import IconLaravel from '~/common/components/Icons/IconLaravel.vue';
+import TestimonialSection from '~/components/Testimonial/TestimonialSection.vue';
+import AboutSection from '~/components/About/AboutSection.vue';
 
 definePageMeta({
   layout: false,
