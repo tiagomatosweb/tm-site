@@ -6,12 +6,18 @@
   >
     <div class="max-w-4xl mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Vimeo
+        <div
           v-for="lecture in props.lectures"
           :key="lecture.id"
-          :id="lecture.video_id"
-          class="shadow-2xl shadow-primary/10"
-        />
+        >
+          <Vimeo
+            :id="lecture.video_id"
+            class="shadow-2xl shadow-primary/10"
+          />
+
+          <h6 class="heading-6 mt-1">{{ lecture.title }}</h6>
+        </div>
+
       </div>
     </div>
   </LandingSection>
