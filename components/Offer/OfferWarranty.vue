@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col md:flex-row items-center gap-10">
-    <img src="@/assets/img/warranty-14-days.png">
+    <img src="@/assets/img/warranty-14-days.webp">
 
     <div>
       <h2 class="heading-4">
