@@ -9,7 +9,11 @@
       </template>
 
       <template #after-description>
-
+        <div class="flex justify-center lg:justify-start gap-6 mt-6">
+          <BadgeCourseCount :number="stats.courses_count"/>
+          <BadgeLectureCount :number="stats.lectures_count"/>
+          <BadgeDuration :duration="stats.duration" />
+        </div>
         <!--        <div class="text-muted mt-6">-->
         <!--          Aprenda conceitos fundamentais como MVC - Model View e Controller e também tópicos avançados como Arquitetura-->
         <!--          API, Autenticação, Fila, Query Builder e muito mais.-->
@@ -69,10 +73,18 @@ import LpLaravelAulasGratuitas from '~/components/LpLaravel/LpLaravelAulasGratui
 import LpLaravelOffer from '~/components/LpLaravel/LpLaravelOffer.vue';
 import AboutSection from '~/components/About/AboutSection.vue';
 import LpLaravelProjetosReais from '~/components/LpLaravel/LpLaravelProjetosReais.vue';
+import {journeyAPI} from '~/common/api/journey';
+import TagDuration from '~/common/components/Ui/TagDuration.vue';
+import TagLectureCount from '~/common/components/Ui/TagLectureCount.vue';
+import BadgeDuration from '~/common/components/Ui/BadgeDuration.vue';
+import BadgeLectureCount from '~/common/components/Ui/BadgeLectureCount.vue';
+import BadgeCourseCount from '~/common/components/Ui/BadgeCourseCount.vue';
 
 definePageMeta({
   layout: false,
 })
+
+const {data: stats} = useLazyAsyncData('laravel-journey-stats', () => journeyAPI.getStats('laravel'))
 
 useHead({
   title: 'Domine o Laravel: Transforme sua Carreira em Desenvolvimento Web',

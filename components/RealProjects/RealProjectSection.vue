@@ -30,8 +30,8 @@
             </h3>
 
             <div class="flex items-center gap-x-3 mt-1">
-              <LectureCountTag :number="course.lectures_count"/>
-              <DurationTag :duration="course.duration" hide-seconds/>
+              <TagLectureCount :number="course.lectures_count"/>
+              <TagDuration :duration="course.duration" hide-seconds/>
             </div>
 
             <div class="mt-3">
@@ -49,8 +49,8 @@
 <script setup>
 import LandingSection from '~/common/components/Landing/LandingSection.vue';
 import Headline from '~/common/components/Ui/Headline.vue';
-import LectureCountTag from '~/common/components/Ui/LectureCountTag.vue';
-import DurationTag from '~/common/components/Ui/DurationTag.vue';
+import TagLectureCount from '~/common/components/Ui/TagLectureCount.vue';
+import TagDuration from '~/common/components/Ui/TagDuration.vue';
 
 const props = defineProps({
   headline: {

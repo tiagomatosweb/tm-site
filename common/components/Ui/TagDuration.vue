@@ -9,7 +9,6 @@
 </template>
 
 <script setup>
-import {computed} from 'vue';
 import dayjs from 'dayjs';
 import dayjsDuration from 'dayjs/plugin/duration'
 

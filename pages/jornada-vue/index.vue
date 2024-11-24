@@ -9,6 +9,11 @@
       </template>
 
       <template #after-description>
+        <div class="flex justify-center lg:justify-start gap-6 mt-6">
+          <BadgeCourseCount :number="stats.courses_count"/>
+          <BadgeLectureCount :number="stats.lectures_count"/>
+          <BadgeDuration :duration="stats.duration" />
+        </div>
 <!--        <Button-->
 <!--          variant="marketing"-->
 <!--          type="submit"-->
@@ -72,10 +77,16 @@ import LpVueAulasGratuitas from '~/components/LpVue/LpVueAulasGratuitas.vue';
 import LpVueOffer from '~/components/LpVue/LpVueOffer.vue';
 import AboutSection from '~/components/About/AboutSection.vue';
 import LpVueProjetosReais from '~/components/LpVue/LpVueProjetosReais.vue';
+import BadgeCourseCount from '~/common/components/Ui/BadgeCourseCount.vue';
+import BadgeDuration from '~/common/components/Ui/BadgeDuration.vue';
+import BadgeLectureCount from '~/common/components/Ui/BadgeLectureCount.vue';
+import {journeyAPI} from '~/common/api/journey';
 
 definePageMeta({
   layout: false,
 })
+
+const {data: stats} = useLazyAsyncData('vue-journey-stats', () => journeyAPI.getStats('vue'))
 
 useHead({
   title: 'Aprenda Vue.js: Torne-se um Especialista em Desenvolvimento de Aplicações Web',
