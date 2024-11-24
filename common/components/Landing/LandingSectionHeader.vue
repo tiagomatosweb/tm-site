@@ -1,11 +1,11 @@
 <template>
   <div class="text-center flex flex-col items-center mb-16 sm:mb-24">
-    <div
+    <Headline
       v-if="props.headline"
-      class="mb-2 text-sm tracking-wide font-semibold text-primary uppercase"
+      class="mb-2"
     >
        {{ props.headline }}
-    </div>
+    </Headline>
 
     <h2
       v-if="props.title"
@@ -24,6 +24,7 @@
 
 <script setup lang="ts">
 import { type HTMLAttributes } from 'vue'
+import Headline from '~/common/components/Ui/Headline.vue';
 
 const props = defineProps<{
   class?: HTMLAttributes['class'],

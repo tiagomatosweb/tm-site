@@ -32,6 +32,8 @@
 
     <LpVueModulos />
 
+    <LpVueProjetosReais />
+
     <LpVuePorqueAprenderComigo/>
 
     <TestimonialSection
@@ -69,6 +71,7 @@ import LpVueFaq from '~/components/LpVue/LpVueFaq.vue';
 import LpVueAulasGratuitas from '~/components/LpVue/LpVueAulasGratuitas.vue';
 import LpVueOffer from '~/components/LpVue/LpVueOffer.vue';
 import AboutSection from '~/components/About/AboutSection.vue';
+import LpVueProjetosReais from '~/components/LpVue/LpVueProjetosReais.vue';
 
 definePageMeta({
   layout: false,

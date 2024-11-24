@@ -10,7 +10,7 @@
         class="break-inside-avoid"
       >
         <CardContent>
-          <span class="font-bold">{{ item.title }}:</span> <span class="text-gray-600 dark:text-gray-400">{{ item.description }}</span>
+          <span class="font-bold">{{ item.title }}:</span> <span class="text-muted">{{ item.description }}</span>
         </CardContent>
       </Card>
     </div>

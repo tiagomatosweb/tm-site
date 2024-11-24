@@ -3,7 +3,7 @@
     {{ props.title }}
   </h3>
 
-  <p class="text-description mt-2">
+  <p class="text-muted mt-2">
     {{ props.description }}
   </p>
 </template>

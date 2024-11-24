@@ -15,6 +15,20 @@
         </CardContent>
       </Card>
     </div>
+
+    <div class="flex flex-col items-center my-16">
+      <h3 class="heading-3">E mais isso aqui 👇👇👇</h3>
+
+      <ul class="column-1 md:columns-2 lg:columns-3 gap-8 space-y-2 mt-4">
+        <li
+          v-for="item in futureModules"
+          class="flex items-center gap-x-2"
+        >
+          <div class="bg-primary w-1.5 h-1.5 rounded-full"/>
+          {{ item }}
+        </li>
+      </ul>
+    </div>
   </LandingSection>
 </template>
 
@@ -25,4 +39,10 @@ import LandingSection from '~/common/components/Landing/LandingSection.vue';
 const {data: items} = useLazyAsyncData(() => coursesAPI.getCourse('vue-pro'), {
   transform: r => r.data,
 })
+
+const futureModules = [
+  'Vue Router',
+  'Pinia',
+  'Vuetify Cart',
+]
 </script>

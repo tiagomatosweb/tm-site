@@ -11,4 +11,8 @@ export const coursesAPI = {
     return axios.get(`api/courses/${slug}`)
       .then(r => r.data)
   },
+  getCourses(params) {
+    return axios.get('api/courses', {params})
+      .then(r => r.data)
+  },
 }
