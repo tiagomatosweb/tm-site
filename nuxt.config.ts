@@ -38,7 +38,14 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@nuxt/content', '@nuxtjs/tailwindcss', '@nuxtjs/color-mode', 'shadcn-nuxt', '@zadigetvoltaire/nuxt-gtm', '@nuxtjs/google-fonts', 'nuxt-lucide-icons', '@nuxt/image'],
+  modules: ['@nuxt/content', '@nuxtjs/tailwindcss', '@nuxtjs/color-mode', 'shadcn-nuxt', '@zadigetvoltaire/nuxt-gtm', '@nuxtjs/google-fonts', 'nuxt-lucide-icons', '@nuxt/image', 'dayjs-nuxt'],
+
+  dayjs: {
+    locales: ['pt-br'],
+    plugins: ['utc', 'timezone', 'isBetween', 'duration', 'relativeTime'],
+    defaultLocale: 'pt-br',
+    defaultTimezone: 'America/Sao_Paulo',
+  },
 
   // site: {
   //   url: process.env.NUXT_PUBLIC_SITE_URL,

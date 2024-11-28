@@ -14,14 +14,18 @@
           <BadgeLectureCount :number="stats.lectures_count"/>
           <BadgeDuration :duration="stats.duration" />
         </div>
-<!--        <Button-->
-<!--          variant="marketing"-->
-<!--          type="submit"-->
-<!--          size="lg"-->
-<!--          class="h-16 mt-6 text-2xl font-bold rounded-xl"-->
-<!--        >-->
-<!--          Matricule-se agora-->
-<!--        </Button>-->
+
+        <Button
+          v-if="checkout"
+          as="a"
+          variant="marketing"
+          size="lg"
+          class="h-16 text-2xl font-bold rounded-xl mt-10"
+          :href="checkout.link"
+          target="_blank"
+        >
+          {{ checkout.btn_label }}
+        </Button>
       </template>
 
       <template #content-right>
@@ -87,6 +91,55 @@ definePageMeta({
 })
 
 const {data: stats} = useLazyAsyncData('vue-journey-stats', () => journeyAPI.getStats('vue'))
+const dayjs = useDayjs()
+const bfcm = {
+  friday: {
+    link: 'https://pay.hotmart.com/U96627395Y?off=fydmwhbf&checkoutMode=10',
+    off: '70%',
+    btn_label: 'Matricule-se agora com 70% OFF'
+  },
+  weekend: {
+    link: 'https://pay.hotmart.com/U96627395Y?off=fvn169nf&checkoutMode=10',
+    off: '50%',
+    btn_label: 'Matricule-se agora com 50% OFF'
+  },
+  monday: {
+    link: 'https://pay.hotmart.com/U96627395Y?off=0eg2d35s&checkoutMode=10',
+    off: '40%',
+    btn_label: 'Matricule-se agora com 40% OFF'
+  },
+  full: {
+    link: 'https://pay.hotmart.com/U96627395Y?checkoutMode=10',
+    off: '0',
+    btn_label: 'Matricule-se agora'
+  },
+}
+
+const checkout = computed(() => {
+  const friday = '2024-11-29';
+  const saturday = '2024-11-30';
+  const sunday = '2024-12-01';
+  const monday = '2024-12-02';
+  const now = dayjs.utc().local().format('YYYY-MM-DD')
+
+  if (now < '2024-11-29') {
+    return false
+  }
+
+  if (now === friday) {
+    return bfcm.friday
+  }
+
+  if (now === saturday || now === sunday) {
+    return bfcm.weekend
+  }
+
+  if (now === monday) {
+    return bfcm.monday
+  }
+
+  return bfcm.full
+})
 
 useHead({
   title: 'Aprenda Vue.js: Torne-se um Especialista em Desenvolvimento de Aplicações Web',

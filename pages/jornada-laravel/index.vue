@@ -14,6 +14,18 @@
           <BadgeLectureCount :number="stats.lectures_count"/>
           <BadgeDuration :duration="stats.duration" />
         </div>
+
+        <Button
+          v-if="checkout"
+          as="a"
+          variant="marketing"
+          size="lg"
+          class="h-16 text-2xl font-bold rounded-xl mt-10"
+          :href="checkout.link"
+          target="_blank"
+        >
+          {{ checkout.btn_label }}
+        </Button>
         <!--        <div class="text-muted mt-6">-->
         <!--          Aprenda conceitos fundamentais como MVC - Model View e Controller e também tópicos avançados como Arquitetura-->
         <!--          API, Autenticação, Fila, Query Builder e muito mais.-->
@@ -74,8 +86,6 @@ import LpLaravelOffer from '~/components/LpLaravel/LpLaravelOffer.vue';
 import AboutSection from '~/components/About/AboutSection.vue';
 import LpLaravelProjetosReais from '~/components/LpLaravel/LpLaravelProjetosReais.vue';
 import {journeyAPI} from '~/common/api/journey';
-import TagDuration from '~/common/components/Ui/TagDuration.vue';
-import TagLectureCount from '~/common/components/Ui/TagLectureCount.vue';
 import BadgeDuration from '~/common/components/Ui/BadgeDuration.vue';
 import BadgeLectureCount from '~/common/components/Ui/BadgeLectureCount.vue';
 import BadgeCourseCount from '~/common/components/Ui/BadgeCourseCount.vue';
@@ -85,6 +95,56 @@ definePageMeta({
 })
 
 const {data: stats} = useLazyAsyncData('laravel-journey-stats', () => journeyAPI.getStats('laravel'))
+const dayjs = useDayjs()
+
+const bfcm = {
+  friday: {
+    link: 'https://pay.hotmart.com/S96627323M?off=7r29g2s3&checkoutMode=10',
+    off: '70%',
+    btn_label: 'Matricule-se agora com 70% OFF'
+  },
+  weekend: {
+    link: 'https://pay.hotmart.com/S96627323M?off=ymmquk5i&checkoutMode=10',
+    off: '50%',
+    btn_label: 'Matricule-se agora com 50% OFF'
+  },
+  monday: {
+    link: 'https://pay.hotmart.com/S96627323M?off=sc6334po&checkoutMode=10',
+    off: '40%',
+    btn_label: 'Matricule-se agora com 40% OFF'
+  },
+  full: {
+    link: 'https://pay.hotmart.com/S96627323M?checkoutMode=10',
+    off: '0',
+    btn_label: 'Matricule-se agora'
+  },
+}
+
+const checkout = computed(() => {
+  const friday = '2024-11-29';
+  const saturday = '2024-11-30';
+  const sunday = '2024-12-01';
+  const monday = '2024-12-02';
+  const now = dayjs.utc().local().format('YYYY-MM-DD')
+
+  if (now < '2024-11-29') {
+    return false
+  }
+
+  if (now === friday) {
+    return bfcm.friday
+  }
+
+  if (now === saturday || now === sunday) {
+    return bfcm.weekend
+  }
+
+  if (now === monday) {
+    return bfcm.monday
+  }
+
+  return bfcm.full
+})
 
 useHead({
   title: 'Domine o Laravel: Transforme sua Carreira em Desenvolvimento Web',

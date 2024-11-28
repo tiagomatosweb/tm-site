@@ -19,6 +19,7 @@
         "class-variance-authority": "^0.7.0",
         "clsx": "^2.1.1",
         "dayjs": "^1.11.13",
+        "dayjs-nuxt": "^2.1.11",
         "intl-tel-input": "^24.5.0",
         "nuxt": "^3.13.2",
         "nuxt-lucide-icons": "^1.0.5",
