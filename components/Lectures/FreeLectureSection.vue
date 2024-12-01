@@ -41,7 +41,7 @@ const props = defineProps({
     default: 'Assista a estas aulas gratuitas.'
   },
   lectures: {
-    type: Object,
+    type: Array,
     required: true,
   },
 })
