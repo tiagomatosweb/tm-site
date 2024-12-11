@@ -38,9 +38,13 @@ import {mailerliteGroups} from '~/common/utils/mailerlite-groups';
 import IconVue from '~/common/components/Icons/IconVue.vue';
 import TestimonialSection from '~/components/Testimonial/TestimonialSection.vue';
 import AboutSection from '~/components/About/AboutSection.vue';
+import {navigateTo} from '#app';
 
 definePageMeta({
   layout: false,
+  middleware: () => {
+    return navigateTo({ name: 'jornada-vue'})
+  }
 })
 
 useHead({
