@@ -9,7 +9,7 @@
       </template>
 
       <template #after-description>
-        <div class="flex justify-center lg:justify-start gap-6 mt-6">
+        <div class="flex justify-center flex-wrap lg:justify-start gap-6 mt-6">
           <BadgeCourseCount :number="stats.courses_count"/>
           <BadgeLectureCount :number="stats.lectures_count"/>
           <BadgeDuration :duration="stats.duration" />
