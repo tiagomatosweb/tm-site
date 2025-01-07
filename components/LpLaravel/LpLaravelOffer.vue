@@ -2,10 +2,11 @@
   <OfferSection
     offer-invite-title="Junte-se à Elite dos Devs Laravel"
     offer-invite-description="Faça parte de mais dos mais de 2k de alunos que dominam Laravel. Aqui forjamos profissionais altamente qualificados para encarar o mercado."
-    offer-full-price="397"
-    offer-price="297"
-    offer-installment-price="24,75"
+    offer-full-price="697"
+    offer-price="397"
+    offer-installment-price="39,62"
     :offer-benefits="benefits"
+    offer-link="https://pay.hotmart.com/S96627323M?off=394h1wy6&checkoutMode=10"
   />
 </template>
 

@@ -19,6 +19,7 @@
             :offer-price="props.offerPrice"
             :installment-price="props.offerInstallmentPrice"
             :benefits="props.offerBenefits"
+            :link="props.offerLink"
           />
         </div>
       </div>
@@ -39,5 +40,6 @@ const props = defineProps({
   offerPrice: String,
   offerInstallmentPrice: String,
   offerBenefits: Array,
+  offerLink: String,
 })
 </script>
