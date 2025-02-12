@@ -20,7 +20,7 @@
           variant="marketing"
           size="lg"
           class="h-16 text-2xl font-bold rounded-xl mt-10"
-          href="#offer"
+          href="https://pay.hotmart.com/U96627395Y?checkoutMode=10"
         >
           Matricule-se agora
         </Button>

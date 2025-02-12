@@ -6,7 +6,7 @@
     offer-price="397"
     offer-installment-price="39,62"
     :offer-benefits="benefits"
-    offer-link="https://pay.hotmart.com/S96627323M?off=394h1wy6&checkoutMode=10"
+    offer-link="https://pay.hotmart.com/S96627323M?checkoutMode=10"
   />
 </template>
 

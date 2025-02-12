@@ -35,7 +35,6 @@
     <div class="mt-8">
       <Button
         variant="marketing"
-        type="submit"
         size="lg"
         class="w-full h-16 mt-6 text-2xl font-bold rounded-xl"
         as="a"
