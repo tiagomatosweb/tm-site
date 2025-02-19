@@ -3,7 +3,7 @@
     <LandingSection
       v-if="isSuccess"
       headline="Boa Jovem 👊"
-      title="Agora eu já sei quais conteúdos você está ineressado"
+      title="Agora eu já sei quais conteúdos você está interessado"
     />
 
     <LandingSection
@@ -85,20 +85,20 @@ const topics = ref([
     description: 'Se o seu foco é Vue.js, vou compartilhar desde o básico até hacks avançados pra você dominar essa tecnologia e criar projetos incríveis.',
     selected: false,
   },
-  {
-    id: 'story',
-    mailerlite_group_id: mailerliteGroups.TM_MINHAHISTORIA,
-    title: 'Minha História – Da Bahia para a Austrália com projetos de até 80 mil dólares',
-    description: 'Quer saber como eu saí da correria dos ratos na Bahia e construí uma vida de sucesso na Austrália? Te conto tudo, sem filtro.',
-    selected: false,
-  },
-  {
-    id: 'tech',
-    mailerlite_group_id: mailerliteGroups.TM_MUNDODEV,
-    title: 'Mundo dos Devs – Dicas, novidades e tendências do universo tech',
-    description: 'Pra quem quer ficar por dentro das últimas novidades e tendências no mercado de tecnologia e desenvolvimento.',
-    selected: false,
-  },
+  // {
+  //   id: 'story',
+  //   mailerlite_group_id: mailerliteGroups.TM_MINHAHISTORIA,
+  //   title: 'Minha História – Da Bahia para a Austrália com projetos de até 80 mil dólares',
+  //   description: 'Quer saber como eu saí da correria dos ratos na Bahia e construí uma vida de sucesso na Austrália? Te conto tudo, sem filtro.',
+  //   selected: false,
+  // },
+  // {
+  //   id: 'tech',
+  //   mailerlite_group_id: mailerliteGroups.TM_MUNDODEV,
+  //   title: 'Mundo dos Devs – Dicas, novidades e tendências do universo tech',
+  //   description: 'Pra quem quer ficar por dentro das últimas novidades e tendências no mercado de tecnologia e desenvolvimento.',
+  //   selected: false,
+  // },
 ])
 const loading = ref(false)
 const isSuccess = ref(false)
