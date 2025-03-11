@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2 class="heading-5 mb-4">
-      🎥&nbsp;&nbsp;<span class="tm-gradient">Vídeos mais recentes</span>
+      🎥&nbsp;&nbsp;<span class="tm-gradient">Vídeos mais recentes no YouTube</span>
     </h2>
 
     <div class="grid sm:grid-cols-2 gap-6">

@@ -1,25 +1,22 @@
 <template>
   <div>
-    <BackBtn :to="{ name: 'index' }"/>
-
-    <div class="flex flex-col space-y-4">
+    <div class="flex flex-col space-y-6">
       <Card
         v-for="post in data"
-        :key="post._path"
-        class="relative p-4"
+        :key="post.path"
+        class="relative p-4 dark:bg-transparent dark:hover:bg-gray-800"
       >
-        <div class="text-xs text-gray-500 tracking-wide">{{ $dayjs(post.date).format('DD MMMM YYYY') }}</div>
+        <NuxtLink :to="post.path">
+          <div class="text-xs text-gray-500 tracking-wide">{{ $dayjs(post.date).format('DD MMMM YYYY') }}</div>
 
-        <NuxtLink
-          :to="post._path"
-          class="text-lg font-bold text-gray-900 dark:text-gray-50 leading-4"
-        >
-          {{ post.title }}
+          <div class="font-semibold text-gray-900 dark:text-gray-50 leading-4 mt-2">
+            {{ post.title }}
+          </div>
+
+          <div class="mt-2">
+            <p class="text-sm text-gray-500">{{ post.description }}</p>
+          </div>
         </NuxtLink>
-
-        <div class="mt-1">
-          <p class="text-sm text-gray-500">{{ post.description }}</p>
-        </div>
       </Card>
     </div>
   </div>
@@ -28,7 +25,6 @@
 <script setup>
 import BackBtn from '~/components/BackBtn.vue';
 
-const {data} = await useAsyncData('blog', () => queryContent('/blog')
-  .sort({date: -1})
-  .find())
+const {data} = await useAsyncData('blog', () => queryCollection('blog')
+  .all())
 </script>

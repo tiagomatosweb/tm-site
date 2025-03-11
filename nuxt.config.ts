@@ -8,7 +8,7 @@ export default defineNuxtConfig({
   },
 
   components: {
-    dirs: ['~/shadcn']
+    dirs: ['~/shadcn'],
   },
   imports: {
     // autoImport: false,
@@ -38,13 +38,17 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@nuxt/content', '@nuxtjs/tailwindcss', '@nuxtjs/color-mode', 'shadcn-nuxt', '@zadigetvoltaire/nuxt-gtm', '@nuxtjs/google-fonts', 'nuxt-lucide-icons', '@nuxt/image', 'dayjs-nuxt'],
+  modules: ['@nuxt/content', '@nuxtjs/tailwindcss', '@nuxtjs/color-mode', 'shadcn-nuxt', '@zadigetvoltaire/nuxt-gtm', '@nuxtjs/google-fonts', 'nuxt-lucide-icons', '@nuxt/image', 'dayjs-nuxt', 'nuxt-disqus'],
 
   dayjs: {
     locales: ['pt-br'],
     plugins: ['utc', 'timezone', 'isBetween', 'duration', 'relativeTime'],
     defaultLocale: 'pt-br',
     defaultTimezone: 'America/Sao_Paulo',
+  },
+
+  disqus: {
+    shortname: 'tiagomatosweb-blog',
   },
 
   // site: {
@@ -59,23 +63,30 @@ export default defineNuxtConfig({
   // },
 
   content: {
-    highlight: {
-      theme: 'material-theme-palenight',
+    build: {
+      markdown: {
+        highlight: {
+          // theme: 'github-light',
+          theme: 'material-theme-palenight',
+          // theme: 'github-dark',
+          langs: ['json', 'js', 'ts', 'html', 'css', 'vue', 'shell', 'php'],
+        },
+      },
     },
   },
 
   googleFonts: {
     families: {
-      Poppins: [400,500,600,700,800],
-    }
+      Poppins: [400, 500, 600, 700, 800],
+    },
   },
 
   gtm: {
-    id: 'GTM-PG5CMBN'
+    id: 'GTM-PG5CMBN',
   },
 
   shadcn: {
-    componentDir: './shadcn'
+    componentDir: './shadcn',
   },
 
   colorMode: {
@@ -83,5 +94,5 @@ export default defineNuxtConfig({
     storageKey: '_tm_theme',
   },
 
-  compatibilityDate: '2024-09-16',
+  compatibilityDate: '2025-03-05',
 });

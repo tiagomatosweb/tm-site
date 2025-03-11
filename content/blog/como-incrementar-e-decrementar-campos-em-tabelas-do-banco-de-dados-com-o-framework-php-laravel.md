@@ -1,7 +1,7 @@
 ---
 title: Como incrementar e decrementar campos em tabelas do banco de dados com o framework PHP Laravel
 description: Aprenda a utilizar os métodos increment() e decrement() do Laravel Eloquent para incrementar e decrementar campos de tabelas de forma fácil e rápida.
-date: '2023-05-12'
+date: '2025-03-08'
 ---
 
 Fala jovem! Hoje eu vou falar um pouco sobre como incrementar e decrementar campos da tabela com o framework PHP Laravel Eloquent. Essa é uma tarefa bem comum em projetos web, e o Eloquent torna esse processo muito mais fácil e rápido.
@@ -58,7 +58,7 @@ $product->decrement('quantity', 2);
 
 Nesse exemplo, o valor do campo quantity será decrementado em 2. Novamente, o segundo parâmetro indica a quantidade a ser decrementada.
 
-É importante lembrar que o segundo parâmetro dos métodos increment() e decrement() é opcional. Se ele não for informado, o valor do campo será incrementado ou decrementado em 1 por padrão.
+É importante lembrar que o segundo parâmetro dos métodos `increment()` e `decrement()` é opcional. Se ele não for informado, o valor do campo será incrementado ou decrementado em 1 por padrão.
 
 Por fim, é importante lembrar que os métodos increment() e decrement() são transações seguras. Isso significa que o Eloquent utiliza o conceito de transações do banco de dados para garantir que a operação seja executada de forma segura e consistente. Portanto, podemos utilizar esses métodos com tranquilidade em nossos projetos.
 

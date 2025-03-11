@@ -1,5 +1,5 @@
-const animate = require("tailwindcss-animate")
-const typography = require("@tailwindcss/typography")
+const animate = require('tailwindcss-animate')
+const typography = require('@tailwindcss/typography')
 
 const hexToRgb = (hex) => {
   hex = hex.replace('#', '')
@@ -12,21 +12,21 @@ const hexToRgb = (hex) => {
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ["class"],
+  darkMode: ['class'],
   content: [
     './pages/**/*.{ts,tsx,vue}',
     './common/**/*.{ts,tsx,vue}',
     './components/**/*.{ts,tsx,vue}',
-    './app/**/*.{ts,tsx,vue}',
     './src/**/*.{ts,tsx,vue}',
-	],
-  prefix: "",
+    './app/**/*.{ts,tsx,vue}',
+  ],
+  prefix: '',
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: '2rem',
       screens: {
-        "2xl": "1400px",
+        '2xl': '1400px',
       },
     },
     extend: {
@@ -54,58 +54,58 @@ module.exports = {
         },
       },
       keyframes: {
-        "accordion-down": {
-          from: { height: 0 },
-          to: { height: "var(--radix-accordion-content-height)" },
+        'accordion-down': {
+          from: {height: 0},
+          to: {height: 'var(--radix-accordion-content-height)'},
         },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: 0 },
+        'accordion-up': {
+          from: {height: 'var(--radix-accordion-content-height)'},
+          to: {height: 0},
         },
       },
       animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
       },
       typography: (theme) => ({
         gray: {
           css: {
-            '--tw-prose-body': theme('colors.gray.800'),
-            '--tw-prose-headings': theme('colors.gray.900'),
-            '--tw-prose-lead': theme('colors.gray.600'),
-            '--tw-prose-links': theme('colors.gray.900'),
-            '--tw-prose-bold': theme('colors.gray.900'),
-            '--tw-prose-counters': theme('colors.gray.500'),
-            '--tw-prose-bullets': theme('colors.gray.300'),
-            '--tw-prose-hr': theme('colors.gray.200'),
-            '--tw-prose-quotes': theme('colors.gray.900'),
-            '--tw-prose-quote-borders': theme('colors.gray.200'),
-            '--tw-prose-captions': theme('colors.gray.500'),
-            '--tw-prose-kbd': theme('colors.gray.900'),
-            '--tw-prose-kbd-shadows': hexToRgb(theme('colors.gray.900')),
-            '--tw-prose-code': theme('colors.gray.900'),
-            '--tw-prose-pre-code': theme('colors.gray.200'),
-            '--tw-prose-pre-bg': theme('colors.gray.700'),
-            '--tw-prose-th-borders': theme('colors.gray.300'),
-            '--tw-prose-td-borders': theme('colors.gray.200'),
-            '--tw-prose-invert-body': theme('colors.gray.50'),
-            '--tw-prose-invert-headings': theme('colors.gray.50'),
-            '--tw-prose-invert-lead': theme('colors.gray.400'),
-            '--tw-prose-invert-links': theme('colors.gray.50'),
-            '--tw-prose-invert-bold': theme('colors.gray.50'),
-            '--tw-prose-invert-counters': theme('colors.gray.400'),
-            '--tw-prose-invert-bullets': theme('colors.gray.600'),
-            '--tw-prose-invert-hr': theme('colors.gray.700'),
-            '--tw-prose-invert-quotes': theme('colors.gray.100'),
-            '--tw-prose-invert-quote-borders': theme('colors.gray.700'),
-            '--tw-prose-invert-captions': theme('colors.gray.400'),
-            '--tw-prose-invert-kbd': theme('colors.gray.50'),
-            '--tw-prose-invert-kbd-shadows': hexToRgb(theme('colors.gray.50')),
-            '--tw-prose-invert-code': theme('colors.gray.50'),
-            '--tw-prose-invert-pre-code': theme('colors.gray.300'),
-            '--tw-prose-invert-pre-bg': theme('colors.gray.950'),
-            '--tw-prose-invert-th-borders': theme('colors.gray.600'),
-            '--tw-prose-invert-td-borders': theme('colors.gray.700'),
+            // '--tw-prose-body': theme('colors.gray.800'),
+            // '--tw-prose-headings': theme('colors.gray.900'),
+            // '--tw-prose-lead': theme('colors.gray.600'),
+            // '--tw-prose-links': theme('colors.gray.900'),
+            // '--tw-prose-bold': theme('colors.gray.900'),
+            // '--tw-prose-counters': theme('colors.gray.500'),
+            // '--tw-prose-bullets': theme('colors.gray.300'),
+            // '--tw-prose-hr': theme('colors.gray.200'),
+            // '--tw-prose-quotes': theme('colors.gray.900'),
+            // '--tw-prose-quote-borders': theme('colors.gray.200'),
+            // '--tw-prose-captions': theme('colors.gray.500'),
+            // '--tw-prose-kbd': theme('colors.gray.900'),
+            // '--tw-prose-kbd-shadows': hexToRgb(theme('colors.gray.900')),
+            // '--tw-prose-code': theme('colors.gray.900'),
+            // '--tw-prose-pre-code': theme('colors.gray.200'),
+            // '--tw-prose-pre-bg': theme('colors.gray.700'),
+            // '--tw-prose-th-borders': theme('colors.gray.300'),
+            // '--tw-prose-td-borders': theme('colors.gray.200'),
+            // '--tw-prose-invert-body': theme('colors.gray.50'),
+            // '--tw-prose-invert-headings': theme('colors.gray.50'),
+            // '--tw-prose-invert-lead': theme('colors.gray.400'),
+            // '--tw-prose-invert-links': theme('colors.gray.50'),
+            // '--tw-prose-invert-bold': theme('colors.gray.50'),
+            // '--tw-prose-invert-counters': theme('colors.gray.400'),
+            // '--tw-prose-invert-bullets': theme('colors.gray.600'),
+            // '--tw-prose-invert-hr': theme('colors.gray.700'),
+            // '--tw-prose-invert-quotes': theme('colors.gray.100'),
+            // '--tw-prose-invert-quote-borders': theme('colors.gray.700'),
+            // '--tw-prose-invert-captions': theme('colors.gray.400'),
+            // '--tw-prose-invert-kbd': theme('colors.gray.50'),
+            // '--tw-prose-invert-kbd-shadows': hexToRgb(theme('colors.gray.50')),
+            // '--tw-prose-invert-code': theme('colors.gray.50'),
+            // '--tw-prose-invert-pre-code': theme('colors.gray.300'),
+            // '--tw-prose-invert-pre-bg': theme('colors.gray.950'),
+            // '--tw-prose-invert-th-borders': theme('colors.gray.600'),
+            // '--tw-prose-invert-td-borders': theme('colors.gray.700'),
           },
         },
       }),

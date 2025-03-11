@@ -9,7 +9,7 @@
 
     <div class="flex items-center space-x-8">
       <div class="flex items-center space-x-3">
-        <!--        <NuxtLink :to="{ name: 'blog' }" class="main-menu">Blog</NuxtLink>-->
+        <!--                <NuxtLink :to="{ name: 'blog' }" class="main-menu">Blog</NuxtLink>-->
       </div>
 
       <div>

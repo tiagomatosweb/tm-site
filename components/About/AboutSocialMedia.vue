@@ -24,29 +24,29 @@ import IconWhatsapp from '~/common/components/Icons/IconWhatsapp.vue';
 
 const items = [
   {
-    icon: IconInstagram,
-    icon_class: 'size-6',
-    link: 'https://www.instagram.com/tiagomatosweb/'
-  },
-  {
     icon: IconYoutube,
-    icon_class: 'size-7',
-    link: 'https://www.youtube.com/tiagomatosweb?sub_confirmation=1'
+    icon_class: '!size-7',
+    link: 'https://www.youtube.com/tiagomatosweb?sub_confirmation=1',
   },
   {
-    icon: IconDiscord,
-    icon_class: 'size-7',
-    link: 'https://tmdev.link/dd-discord'
+    icon: IconInstagram,
+    icon_class: '!size-6',
+    link: 'https://www.instagram.com/tiagomatosweb/',
   },
+  // {
+  //   icon: IconDiscord,
+  //   icon_class: 'size-7',
+  //   link: 'https://tmdev.link/dd-discord'
+  // },
   {
     icon: IconWhatsapp,
-    icon_class: 'size-6',
-    link: 'https://tmdev.link/dd-whatsapp'
+    icon_class: '!size-6',
+    link: 'https://tmdev.link/dd-whatsapp',
   },
-  {
-    icon: IconTelegram,
-    icon_class: 'size-6',
-    link: 'https://tmdev.link/dd-telegram'
-  },
+  // {
+  //   icon: IconTelegram,
+  //   icon_class: 'size-6',
+  //   link: 'https://tmdev.link/dd-telegram'
+  // },
 ]
 </script>
