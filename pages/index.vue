@@ -1,6 +1,6 @@
 <template>
   <LandingSection root-class="md:py-12">
-    <div>
+    <div class="max-w-2xl">
       <AboutGreetings/>
       <AboutBioShort class="mt-6"/>
       <AboutSocialMedia class="mt-4"/>
