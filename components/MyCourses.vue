@@ -14,7 +14,7 @@
       <NuxtLink :to="{ name: 'jornada-vue'}">
         <img
           src="@/assets/img/jornada-vue-banner.webp"
-          alt="Jornada Laravel">
+          alt="Jornada Vue">
       </NuxtLink>
     </div>
   </div>
