@@ -1,43 +1,12 @@
 <template>
   <form @submit="submit" class="space-y-6">
-    <FormField v-slot="{ componentField }" name="name">
-      <FormItem>
-        <FormLabel>Primeiro nome <span class="text-red-400">*</span></FormLabel>
-        <FormControl>
-          <Input
-            type="text"
-            v-bind="componentField"
-            class="h-12 text-lg text-white border-gray-600 focus-visible:ring-gray-400 font-medium"
-          />
-        </FormControl>
-        <FormMessage/>
-      </FormItem>
-    </FormField>
-
     <FormField v-slot="{ componentField }" name="email">
       <FormItem>
-        <FormLabel>Seu melhor e-mail <span class="text-red-400">*</span></FormLabel>
         <FormControl>
           <Input
             type="text"
-            placeholder="Aquele e-mail que você abre todo dia"
+            placeholder="Seu e-mail"
             v-bind="componentField"
-            class="h-12 text-lg text-white border-gray-600 focus-visible:ring-gray-400"
-          />
-        </FormControl>
-        <FormMessage/>
-      </FormItem>
-    </FormField>
-
-    <FormField name="phone">
-      <FormItem>
-        <FormLabel>Número do WhatsApp</FormLabel>
-        <FormControl>
-          <Input
-            type="tel"
-            id="phoneRef"
-            v-model="phone"
-            placeholder="+55 99 999999999"
             class="h-12 text-lg text-white border-gray-600 focus-visible:ring-gray-400"
           />
         </FormControl>
