@@ -1,7 +1,7 @@
 <template>
   <NuxtLink
     :to="to"
-    class="flex items-center justify-center rounded-full size-10 bg-gray-200/20 border border-gray-200 dark:bg-gray-800/50 dark:border-gray-700/50"
+    class="flex items-center justify-center rounded-full size-10 border border-gray-200 dark:border-gray-800 hover:bg-gray-100 dark:hover:bg-gray-800"
   >
 
     <ChevronLeftIcon class="size-4 text-gray-400"/>
