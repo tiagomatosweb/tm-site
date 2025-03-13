@@ -1,7 +1,7 @@
 <template>
   <ConfigProvider :use-id="useIdFunction">
+    <NuxtLoadingIndicator/>
     <NuxtLayout>
-      <!--        <SeoKit />-->
       <NuxtPage/>
     </NuxtLayout>
   </ConfigProvider>
