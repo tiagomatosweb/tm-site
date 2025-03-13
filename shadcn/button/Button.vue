@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { HTMLAttributes } from 'vue'
-import { cn } from '@/lib/utils'
-import { Primitive, type PrimitiveProps } from 'reka-ui'
-import { type ButtonVariants, buttonVariants } from '.'
+import type {HTMLAttributes} from 'vue';
+import {cn} from '@/lib/utils';
+import {Primitive, type PrimitiveProps} from 'reka-ui';
+import {type ButtonVariants, buttonVariants} from '.';
 import Spinner from '~/common/components/Ui/Spinner.vue';
 
 interface Props extends PrimitiveProps {
@@ -15,7 +15,7 @@ interface Props extends PrimitiveProps {
 
 const props = withDefaults(defineProps<Props>(), {
   as: 'button',
-})
+});
 </script>
 
 <template>
@@ -26,9 +26,9 @@ const props = withDefaults(defineProps<Props>(), {
   >
     <Spinner
       v-if="loading"
-      :class="cn('-ml-1 mr-3 size-4 text-inherit', props.loadingClass)"
+      :class="cn('-ml-1 mr-0.5 size-4 text-inherit', props.loadingClass)"
     />
 
-    <slot />
+    <slot/>
   </Primitive>
 </template>

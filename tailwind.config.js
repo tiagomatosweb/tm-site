@@ -30,6 +30,35 @@ module.exports = {
       },
     },
     extend: {
+      fontSize: {
+        'xs': ['.8125rem', {
+          lineHeight: '1.5rem',
+        }],
+        'sm': ['.875rem', {
+          lineHeight: '1.5rem',
+        }],
+        'base': ['1rem', {
+          lineHeight: '1.75rem',
+        }],
+        'lg': ['.8125rem', {
+          lineHeight: '1.5rem',
+        }],
+        'xl': ['1.25rem', {
+          lineHeight: '2rem',
+        }],
+        '2xl': ['1.5rem', {
+          lineHeight: '2rem',
+        }],
+        '3xl': ['1.875rem', {
+          lineHeight: '2.25rem',
+        }],
+        '4xl': ['2rem', {
+          lineHeight: '2.5rem',
+        }],
+        '5xl': ['3rem', {
+          lineHeight: '3.5rem',
+        }],
+      },
       fontFamily: {
         'poppins': 'Poppins',
       },
@@ -113,3 +142,13 @@ module.exports = {
   },
   plugins: [animate, typography],
 }
+
+
+// --text-6xl: 3.75rem;
+// --text-6xl--line-height: 1;
+// --text-7xl: 4.5rem;
+// --text-7xl--line-height: 1;
+// --text-8xl: 6rem;
+// --text-8xl--line-height: 1;
+// --text-9xl: 8rem;
+// --text-9xl--line-height: 1;

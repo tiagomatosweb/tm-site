@@ -72,6 +72,7 @@ import {leadAPI} from '~/common/api/lead';
 import {cn} from '~/lib/utils';
 import CodeIDE from '~/common/components/Codesnippet/CodeIDE.vue';
 
+const emit = defineEmits(['done']);
 const props = defineProps({
   btnText: {
     type: String,
@@ -84,10 +85,6 @@ const props = defineProps({
   groupsId: {
     type: Array,
     default: () => [],
-  },
-  onDone: {
-    type: Function,
-    default: () => true,
   },
 })
 const validationSchema = object({
@@ -109,11 +106,10 @@ const {value: phone} = useField('phone')
 const submit = handleSubmit(async (values) => {
   try {
     await leadAPI.createSubscriber(values)
+    emit('done')
   } catch (e) {
     console.log(e)
   }
-
-  await props.onDone()
 })
 
 watch(phone, (vl) => {

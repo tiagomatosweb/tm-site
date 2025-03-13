@@ -1,6 +1,6 @@
-import { cva, type VariantProps } from 'class-variance-authority'
+import {cva, type VariantProps} from 'class-variance-authority';
 
-export { default as Button } from './Button.vue'
+export {default as Button} from './Button.vue';
 
 export const buttonVariants = cva(
   'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 dark:focus-visible:ring-gray-300',
@@ -16,9 +16,10 @@ export const buttonVariants = cva(
           'bg-gray-100 text-gray-900 shadow-sm hover:bg-gray-100/80 dark:bg-gray-800 dark:text-gray-50 dark:hover:bg-gray-800/80',
         ghost: 'hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-gray-800 dark:hover:text-gray-50',
         link: 'text-gray-900 underline-offset-4 hover:underline dark:text-gray-50',
+        marketing: 'text-gray-900 bg-gradient-to-r from-yellow-400 to-yellow-500 hover:bg-yellow-300 hover:shadow-lg hover:shadow-yellow-500/50 transition ease-in-out duration-1000 hover:duration-300 font-semibold',
       },
       size: {
-        default: 'h-9 px-4 py-2',
+        default: 'h-9 rounded-md px-4 py-2',
         xs: 'h-7 rounded px-2',
         sm: 'h-8 rounded-md px-3 text-xs',
         lg: 'h-10 rounded-md px-8',
@@ -30,6 +31,6 @@ export const buttonVariants = cva(
       size: 'default',
     },
   },
-)
+);
 
 export type ButtonVariants = VariantProps<typeof buttonVariants>

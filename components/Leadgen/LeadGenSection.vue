@@ -26,7 +26,7 @@
           :btn-text="props.leadBtnText"
           :btn-class="props.leadBtnClass"
           :groups-id="props.leadGroupsId"
-          :on-done="onDone"
+          @done="emit('done')"
         />
       </CodeIDE>
     </template>
@@ -38,6 +38,7 @@ import LeadGenForm from '~/components/Leadgen/LeadGenForm.vue';
 import LandingHero from '~/common/components/Landing/LandingHero.vue';
 import CodeIDE from '~/common/components/Codesnippet/CodeIDE.vue';
 
+const emit = defineEmits(['done']);
 const props = defineProps({
   title: String,
   titleClass: String,
@@ -46,6 +47,5 @@ const props = defineProps({
   leadGroupsId: Array,
   leadBtnText: String,
   leadBtnClass: String,
-  onDone: Function,
 })
 </script>

@@ -6,7 +6,7 @@
     <LeadGenSection
       title-class="text-4xl"
       :lead-groups-id="[mailerliteGroups.TM_MINHAHISTORIA]"
-      :on-done="onDone"
+      @done="onDone"
     >
       <template #title>
         Como saí da corrida dos ratos na Bahia para fazer projetos de até <span class="tm-gradient font-bold">80 mil dólares</span>
@@ -20,7 +20,7 @@
 
     <TestimonialSection/>
 
-    <AboutSection />
+    <AboutSection/>
   </NuxtLayout>
 </template>
 
@@ -48,6 +48,7 @@ definePageMeta({
 })
 
 const router = useRouter()
+
 function onDone() {
   return router.push({name: 'minha-historia-obrigado'})
 }

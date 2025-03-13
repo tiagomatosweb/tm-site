@@ -94,7 +94,7 @@ const topics = ref([
   // },
   // {
   //   id: 'tech',
-  //   mailerlite_group_id: mailerliteGroups.TM_MUNDODEV,
+  //   mailerlite_group_id: mailerliteGroups.TM_NEWSLETTER,
   //   title: 'Mundo dos Devs – Dicas, novidades e tendências do universo tech',
   //   description: 'Pra quem quer ficar por dentro das últimas novidades e tendências no mercado de tecnologia e desenvolvimento.',
   //   selected: false,
