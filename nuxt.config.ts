@@ -7,6 +7,8 @@ export default defineNuxtConfig({
     },
   },
 
+  css: ['~/assets/css/main.css'],
+
   components: {
     dirs: ['~/shadcn'],
   },
@@ -38,7 +40,7 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@nuxt/content', '@nuxtjs/tailwindcss', '@nuxtjs/color-mode', 'shadcn-nuxt', '@zadigetvoltaire/nuxt-gtm', '@nuxtjs/google-fonts', 'nuxt-lucide-icons', '@nuxt/image', 'dayjs-nuxt', 'nuxt-disqus'],
+  modules: ['@nuxt/ui-pro', '@nuxt/content', 'shadcn-nuxt', '@zadigetvoltaire/nuxt-gtm', '@nuxtjs/google-fonts', 'nuxt-lucide-icons', '@nuxt/image', 'dayjs-nuxt', 'nuxt-disqus'],
 
   dayjs: {
     locales: ['pt-br'],
@@ -95,4 +97,8 @@ export default defineNuxtConfig({
   },
 
   compatibilityDate: '2025-03-05',
+
+  // future: {
+  //   compatibilityVersion: 4,
+  // },
 });

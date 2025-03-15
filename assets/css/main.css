@@ -1,0 +1,64 @@
+@import "tailwindcss" theme(static);
+@import "@nuxt/ui-pro";
+
+/*@tailwind base;*/
+/*@tailwind components;*/
+/*@tailwind utilities;*/
+
+/*@layer base {*/
+/*  body {*/
+/*    @apply bg-white dark:bg-gray-950 antialiased text-gray-900 dark:text-gray-100*/
+/*  }*/
+/*  h1, h2, h3, h4, h5, h6 {*/
+/*    @apply font-poppins;*/
+/*  }*/
+/*  .heading-2 {*/
+/*    @apply text-2xl md:text-4xl font-extrabold;*/
+/*  }*/
+/*  .heading-3 {*/
+/*    @apply text-xl md:text-2xl font-bold;*/
+/*  }*/
+/*  .heading-4 {*/
+/*    @apply text-xl font-bold;*/
+/*  }*/
+/*  .heading-5 {*/
+/*    @apply text-lg md:text-xl font-medium;*/
+/*  }*/
+/*  .heading-6 {*/
+/*    @apply text-base font-medium;*/
+/*  }*/
+/*  .text-muted {*/
+/*    @apply text-gray-600 dark:text-gray-400;*/
+/*  }*/
+/*  :root {*/
+/*    --radius: 0.5rem;*/
+/*  }*/
+/*}*/
+
+/*.tm-gradient {*/
+/*  background-image: linear-gradient(90deg, rgba(0,158,226,1) 15%, rgba(12,172,206,1) 50%, rgba(23,216,181,1) 85%);*/
+/*  background-size: cover;*/
+/*  -webkit-background-clip: text;*/
+/*  background-clip: text;*/
+/*  -webkit-text-fill-color: transparent;*/
+/*  text-fill-color: transparent;*/
+/*}*/
+
+/*.bg-tm-gradient {*/
+/*  background-image: linear-gradient(90deg, rgba(0,158,226,1) 15%, rgba(12,172,206,1) 50%, rgba(23,216,181,1) 85%);*/
+/*}*/
+
+/*.main-menu {*/
+/*  @apply text-sm font-medium hover:text-primary transition duration-300;*/
+/*}*/
+
+/*.main-menu.router-link-active {*/
+/*  @apply text-primary*/
+/*}*/
+
+/*!*.laravel-api-gradient {*!*/
+/*!*    background: linear-gradient(to right, #dc3126 12%,#d5dda8 36%,#54be6f 68%);*!*/
+/*!*background: linear-gradient(45deg, #09009f, #00ff95 80%);*!*/
+/*!*-webkit-background-clip: text;*!*/
+/*!*-webkit-text-fill-color: transparent;*!*/
+/*!*}*!*/

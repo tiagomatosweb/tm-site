@@ -1,10 +1,12 @@
 <template>
-  <ConfigProvider :use-id="useIdFunction">
-    <NuxtLoadingIndicator/>
-    <NuxtLayout>
-      <NuxtPage/>
-    </NuxtLayout>
-  </ConfigProvider>
+  <UApp>
+    <ConfigProvider :use-id="useIdFunction">
+      <NuxtLoadingIndicator/>
+      <NuxtLayout>
+        <NuxtPage/>
+      </NuxtLayout>
+    </ConfigProvider>
+  </UApp>
 </template>
 
 <script setup>
