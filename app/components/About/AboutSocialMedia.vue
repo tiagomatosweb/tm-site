@@ -1,52 +1,38 @@
 <template>
   <div class="flex items-center space-x-3">
-    <Button
+    <UButton
       v-for="item in items"
       as="a"
       :href="item.link"
       target="_blank"
-      class="flex items-center justify-center size-16 text-gray-700 dark:text-gray-100 bg-gray-100 hover:bg-gray-200 dark:bg-gray-900 dark:hover:bg-gray-800 border border-gray-200 dark:border-gray-800 shadow-none"
+      color="neutral"
+      variant="subtle"
+      class="flex items-center justify-center size-16"
     >
-      <Component
-        :is="item.icon"
+      <UIcon
+        :name="item.icon_name"
         :class="item.icon_class"
       />
-    </Button>
+    </UButton>
   </div>
 </template>
 
 <script setup>
-import IconDiscord from '~/common/components/Icons/IconDiscord.vue';
-import IconTelegram from '~/common/components/Icons/IconTelegram.vue';
-import IconYoutube from '~/common/components/Icons/IconYoutube.vue';
-import IconInstagram from '~/common/components/Icons/IconInstagram.vue';
-import IconWhatsapp from '~/common/components/Icons/IconWhatsapp.vue';
-
 const items = [
   {
-    icon: IconYoutube,
+    icon_name: 'i-lucide-youtube',
     icon_class: '!size-7',
     link: 'https://www.youtube.com/tiagomatosweb?sub_confirmation=1',
   },
   {
-    icon: IconInstagram,
+    icon_name: 'i-lucide-instagram',
     icon_class: '!size-6',
     link: 'https://www.instagram.com/tiagomatosweb/',
   },
-  // {
-  //   icon: IconDiscord,
-  //   icon_class: 'size-7',
-  //   link: 'https://tmdev.link/dd-discord'
-  // },
   {
-    icon: IconWhatsapp,
+    icon_name: 'i-fa-brands-whatsapp',
     icon_class: '!size-6',
     link: 'https://tmdev.link/dd-whatsapp',
   },
-  // {
-  //   icon: IconTelegram,
-  //   icon_class: 'size-6',
-  //   link: 'https://tmdev.link/dd-telegram'
-  // },
 ]
 </script>

@@ -1,15 +1,9 @@
 <template>
-  <div class="flex flex-col h-screen">
-    <div>
-      <AppHeader/>
-
-      <main>
-        <slot/>
-      </main>
-    </div>
-
-    <AppFooter class="mt-auto"/>
-  </div>
+  <AppHeader/>
+  <UMain>
+    <slot/>
+  </UMain>
+  <AppFooter/>
 </template>
 
 <script setup>

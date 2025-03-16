@@ -1,19 +1,19 @@
 <template>
-  <LandingSection root-class="md:py-12">
+  <UPageSection :ui="{ container: 'lg:py-12' }">
     <div class="max-w-2xl">
       <AboutGreetings/>
       <AboutBioShort class="mt-6"/>
       <AboutSocialMedia class="mt-4"/>
     </div>
-  </LandingSection>
+  </UPageSection>
 
-  <LandingSection root-class="md:py-12">
+  <UPageSection :ui="{ container: 'lg:py-12' }">
     <MyCourses/>
-  </LandingSection>
+  </UPageSection>
 
-  <LandingSection root-class="md:py-12">
+  <UPageSection :ui="{ container: 'lg:py-12' }">
     <YoutubeLatestVideos/>
-  </LandingSection>
+  </UPageSection>
 </template>
 
 <script setup>

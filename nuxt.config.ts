@@ -40,7 +40,7 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@nuxt/ui-pro', '@nuxt/content', 'shadcn-nuxt', '@zadigetvoltaire/nuxt-gtm', '@nuxtjs/google-fonts', 'nuxt-lucide-icons', '@nuxt/image', 'dayjs-nuxt', 'nuxt-disqus'],
+  modules: ['@nuxt/ui-pro', '@nuxt/content', 'shadcn-nuxt', '@zadigetvoltaire/nuxt-gtm', '@nuxtjs/google-fonts', 'nuxt-lucide-icons', '@nuxt/image', 'dayjs-nuxt', 'nuxt-disqus', '@nuxt/scripts'],
 
   dayjs: {
     locales: ['pt-br'],
@@ -60,9 +60,9 @@ export default defineNuxtConfig({
   //   defaultLocale: 'pt-br',
   // },
 
-  // routeRules: {
-  //   '/**/obrigado': { robots: false },
-  // },
+  routeRules: {
+    '/**/obrigado': {robots: false},
+  },
 
   content: {
     build: {
