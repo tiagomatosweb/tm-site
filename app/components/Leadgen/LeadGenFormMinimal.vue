@@ -1,31 +1,56 @@
 <template>
-  <form @submit="submit" class="flex items-start gap-1.5">
-    <FormField v-slot="{ componentField }" name="email">
-      <FormItem class="w-full">
-        <FormControl>
-          <Input
-            type="text"
-            placeholder="Seu melhor e-mail"
-            v-bind="componentField"
-          />
-        </FormControl>
-        <FormMessage/>
-      </FormItem>
-    </FormField>
+  <UForm
+    :schema="schema"
+    :state="state"
+    class="flex items-start gap-1.5"
+    @submit="onSubmit"
+  >
+    <UFormField
+      name="email"
+      class="w-full"
+    >
+      <UInput
+        v-model="state.email"
+        placeholder="Seu melhor e-mail"
+        class="w-full"
+      />
+    </UFormField>
 
-    <Button
-      variant="secondary"
+    <UButton
       type="submit"
+      variant="subtle"
       :loading="isSubmitting"
     >
       {{ props.btnText }}
-    </Button>
-  </form>
+    </UButton>
+  </UForm>
+
+  <!--  <form @submit="submit" class="flex items-start gap-1.5">-->
+  <!--    <FormField v-slot="{ componentField }" name="email">-->
+  <!--      <FormItem class="w-full">-->
+  <!--        <FormControl>-->
+  <!--          <Input-->
+  <!--            type="text"-->
+  <!--            placeholder="Seu melhor e-mail"-->
+  <!--            v-bind="componentField"-->
+  <!--          />-->
+  <!--        </FormControl>-->
+  <!--        <FormMessage/>-->
+  <!--      </FormItem>-->
+  <!--    </FormField>-->
+
+  <!--    <Button-->
+  <!--      variant="secondary"-->
+  <!--      type="submit"-->
+  <!--      :loading="isSubmitting"-->
+  <!--    >-->
+  <!--      {{ props.btnText }}-->
+  <!--    </Button>-->
+  <!--  </form>-->
 </template>
 
 <script setup>
-import {useForm} from 'vee-validate';
-import {object, string} from 'yup';
+import {string, object} from 'zod'
 import {leadAPI} from '~/common/api/lead';
 
 const emit = defineEmits(['done']);
@@ -43,25 +68,25 @@ const props = defineProps({
     default: () => [],
   },
 })
-const validationSchema = object({
-  email: string().required().email().label('E-mail'),
-})
-const {handleSubmit, isSubmitting, resetForm} = useForm({
-  validationSchema,
-  initialValues: {
-    email: '',
-    groups: props.groupsId.length ? props.groupsId : undefined,
-  },
+
+const schema = object({
+  email: string().email(),
 })
 
-const submit = handleSubmit(async (values) => {
+const state = ref({
+  email: '',
+})
+const isSubmitting = ref(false)
+
+async function onSubmit({data}) {
   try {
-    await leadAPI.createSubscriber(values)
-    resetForm()
+    isSubmitting.value = true
+    await leadAPI.createSubscriber(data)
     emit('done')
   } catch (e) {
     console.log(e)
   }
 
-})
+  isSubmitting.value = false
+}
 </script>

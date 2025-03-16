@@ -36,7 +36,8 @@
         "tailwindcss-animate": "^1.0.7",
         "vee-validate": "^4.13.2",
         "yup": "^1.4.0",
-        "yup-locale-pt": "^0.0.9"
+        "yup-locale-pt": "^0.0.9",
+        "zod": "^3.24.2"
     },
     "devDependencies": {
         "@iconify-json/fa": "^1.2.1",
