@@ -3,7 +3,7 @@
     <BackBtn :to="{ name: 'blog' }"/>
 
     <div
-      class="mt-10 prose prose-gray dark:prose-invert dark:prose-p:text-gray-300 prose-p:my-8 prose-pre:bg-gray-900 dark:prose-pre:bg-gray-50/5 prose-pre:px-4 prose-pre:py-6 max-w-none">
+      class="mt-10 max-w-none">
       <time
         :datetime="$dayjs(data.date).format('DD MMMM YYYY')"
         class="text-sm text-gray-500"

@@ -1,5 +1,9 @@
 <template>
-  <UHeader>
+  <UHeader
+    :toggle="{
+      class: 'hidden'
+    }"
+  >
     <template #left>
       <AppLogo
         logo-type="icon"

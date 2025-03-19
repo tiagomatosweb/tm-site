@@ -69,8 +69,8 @@ import {object, string} from 'yup';
 import intlTelInput from 'intl-tel-input';
 import {ref} from 'vue';
 import {leadAPI} from '~/common/api/lead';
+import {FormField} from '~/shadcn/form';
 import {cn} from '~/lib/utils';
-import CodeIDE from '~/common/components/Codesnippet/CodeIDE.vue';
 
 const emit = defineEmits(['done']);
 const props = defineProps({

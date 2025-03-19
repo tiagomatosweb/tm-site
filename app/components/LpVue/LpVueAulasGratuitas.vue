@@ -1,5 +1,6 @@
 <template>
   <FreeLectureSection
+    v-if="data"
     headline="Experimente Antes de Decidir"
     title="Ainda em dúvida sobre se matricular?"
     description="Assista às nossas aulas gratuitas e descubra como a Jornada Vue pode transformar suas habilidades em desenvolvimento web!"

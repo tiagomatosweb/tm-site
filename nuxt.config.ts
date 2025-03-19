@@ -92,7 +92,6 @@ export default defineNuxtConfig({
   },
 
   colorMode: {
-    classSuffix: '',
     storageKey: '_tm_theme',
   },
 

@@ -1,70 +1,68 @@
 <template>
-  <NuxtLayout name="lp">
-    <LandingHero
-      title="Jornada Laravel: do Zero ao Mestre"
-      description="Desperte seu potencial em PHP e abra portas para novas oportunidades! Aprenda Laravel de forma prática e crie aplicações web rápidas e robustas."
-    >
-      <template #before-title>
-        <IconLaravel class="mb-2"/>
-      </template>
+  <LandingHero
+    title="Jornada Laravel: do Zero ao Mestre"
+    description="Desperte seu potencial em PHP e abra portas para novas oportunidades! Aprenda Laravel de forma prática e crie aplicações web rápidas e robustas."
+  >
+    <template #before-title>
+      <IconLaravel class="mb-2"/>
+    </template>
 
-      <template #after-description>
-        <div class="flex justify-center flex-wrap lg:justify-start gap-6 mt-6">
-          <BadgeCourseCount :number="stats.courses_count"/>
-          <BadgeLectureCount :number="stats.lectures_count"/>
-          <BadgeDuration :duration="stats.duration" />
-        </div>
+    <template #after-description>
+      <div class="flex justify-center flex-wrap lg:justify-start gap-6 mt-6">
+        <BadgeCourseCount :number="stats.courses_count"/>
+        <BadgeLectureCount :number="stats.lectures_count"/>
+        <BadgeDuration :duration="stats.duration"/>
+      </div>
 
-        <Button
-          as="a"
-          variant="marketing"
-          size="lg"
-          class="h-16 text-2xl font-bold rounded-xl mt-10"
-          href="https://pay.hotmart.com/S96627323M?checkoutMode=10"
-        >
-          Matricule-se agora
-        </Button>
-        <!--        <div class="text-muted mt-6">-->
-        <!--          Aprenda conceitos fundamentais como MVC - Model View e Controller e também tópicos avançados como Arquitetura-->
-        <!--          API, Autenticação, Fila, Query Builder e muito mais.-->
-        <!--        </div>-->
-      </template>
+      <Button
+        as="a"
+        variant="marketing"
+        size="lg"
+        class="h-16 text-2xl font-bold rounded-xl mt-10"
+        href="https://pay.hotmart.com/S96627323M?checkoutMode=10"
+      >
+        Matricule-se agora
+      </Button>
+      <!--        <div class="text-muted mt-6">-->
+      <!--          Aprenda conceitos fundamentais como MVC - Model View e Controller e também tópicos avançados como Arquitetura-->
+      <!--          API, Autenticação, Fila, Query Builder e muito mais.-->
+      <!--        </div>-->
+    </template>
 
-      <template #content-right>
-        <CodeSnippetLaravel/>
-      </template>
-    </LandingHero>
+    <template #content-right>
+      <CodeSnippetLaravel/>
+    </template>
+  </LandingHero>
 
-    <LpLaravelOQueE/>
+  <LpLaravelOQueE/>
 
-    <LpLaravelParaQuemE/>
+  <LpLaravelParaQuemE/>
 
-    <!--    <LpLaravelOQueVouAprender/>-->
+  <!--    <LpLaravelOQueVouAprender/>-->
 
-    <LpLaravelModulos/>
+  <LpLaravelModulos/>
 
-    <LpLaravelProjetosReais />
+  <LpLaravelProjetosReais/>
 
-    <LpLaravelPorqueAprenderComigo/>
+  <LpLaravelPorqueAprenderComigo/>
 
-    <TestimonialSection
-      headline="Histórias de Sucesso"
-      title="Transforme sua carreira com a Jornada Laravel"
-      description="Junte-se a mais de 1k alunos que mudaram suas vidas profissionais e alcançaram novos patamares na programação. Veja como eles se destacaram no mercado!"
-    />
+  <TestimonialSection
+    headline="Histórias de Sucesso"
+    title="Transforme sua carreira com a Jornada Laravel"
+    description="Junte-se a mais de 1k alunos que mudaram suas vidas profissionais e alcançaram novos patamares na programação. Veja como eles se destacaram no mercado!"
+  />
 
-    <LpLaravelOQuePossoConstruir/>
+  <LpLaravelOQuePossoConstruir/>
 
-    <LpLaravelPrequisitos/>
+  <LpLaravelPrequisitos/>
 
-    <LpLaravelFaq/>
+  <LpLaravelFaq/>
 
-    <LpLaravelAulasGratuitas/>
+  <LpLaravelAulasGratuitas/>
 
-    <LpLaravelOffer id="offer"/>
+  <LpLaravelOffer id="offer"/>
 
-    <AboutSection />
-  </NuxtLayout>
+  <AboutSection/>
 </template>
 
 <script setup>
@@ -89,10 +87,25 @@ import BadgeLectureCount from '~/common/components/Ui/BadgeLectureCount.vue';
 import BadgeCourseCount from '~/common/components/Ui/BadgeCourseCount.vue';
 
 definePageMeta({
-  layout: false,
+  layout: 'lp',
 })
 
-const {data: stats} = useLazyAsyncData('laravel-journey-stats', () => journeyAPI.getStats('laravel'))
+const links = ref([
+  {
+    label: 'Get started',
+    to: '/getting-started',
+    icon: 'i-lucide-square-play',
+  },
+  {
+    label: 'Learn more',
+    to: '/getting-started/theme',
+    color: 'neutral',
+    variant: 'subtle',
+    trailingIcon: 'i-lucide-arrow-right',
+  },
+])
+
+const {data: stats} = await useAsyncData('laravel-journey-stats', () => journeyAPI.getStats('laravel'))
 
 useHead({
   title: 'Domine o Laravel: Transforme sua Carreira em Desenvolvimento Web',

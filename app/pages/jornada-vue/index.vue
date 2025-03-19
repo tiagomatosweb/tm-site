@@ -1,66 +1,64 @@
 <template>
-  <NuxtLayout name="lp">
-    <LandingHero
-      title="Jornada Vue: da Raiz ao Avançado"
-      description="Aprenda Vue.js sem atalhos, entendendo cada recurso do zero. Domine o essencial e avance para técnicas modernas com confiança."
-    >
-      <template #before-title>
-        <IconVue class="mb-2"/>
-      </template>
+  <LandingHero
+    title="Jornada Vue: da Raiz ao Avançado"
+    description="Aprenda Vue.js sem atalhos, entendendo cada recurso do zero. Domine o essencial e avance para técnicas modernas com confiança."
+  >
+    <template #before-title>
+      <IconVue class="mb-2"/>
+    </template>
 
-      <template #after-description>
-        <div class="flex justify-center flex-wrap lg:justify-start gap-6 mt-6">
-          <BadgeCourseCount :number="stats.courses_count"/>
-          <BadgeLectureCount :number="stats.lectures_count"/>
-          <BadgeDuration :duration="stats.duration" />
-        </div>
+    <template #after-description>
+      <div class="flex justify-center flex-wrap lg:justify-start gap-6 mt-6">
+        <BadgeCourseCount :number="stats.courses_count"/>
+        <BadgeLectureCount :number="stats.lectures_count"/>
+        <BadgeDuration :duration="stats.duration"/>
+      </div>
 
-        <Button
-          as="a"
-          variant="marketing"
-          size="lg"
-          class="h-16 text-2xl font-bold rounded-xl mt-10"
-          href="https://pay.hotmart.com/U96627395Y?checkoutMode=10"
-        >
-          Matricule-se agora
-        </Button>
-      </template>
+      <Button
+        as="a"
+        variant="marketing"
+        size="lg"
+        class="h-16 text-2xl font-bold rounded-xl mt-10"
+        href="https://pay.hotmart.com/U96627395Y?checkoutMode=10"
+      >
+        Matricule-se agora
+      </Button>
+    </template>
 
-      <template #content-right>
-        <CodeSnippetVue/>
-      </template>
-    </LandingHero>
+    <template #content-right>
+      <CodeSnippetVue/>
+    </template>
+  </LandingHero>
 
-    <LpVueOQueE/>
+  <LpVueOQueE/>
 
-    <LpVueParaQuemE/>
+  <LpVueParaQuemE/>
 
-<!--    <LpVueOQueVouAprender/>-->
+  <!--    <LpVueOQueVouAprender/>-->
 
-    <LpVueModulos />
+  <LpVueModulos/>
 
-    <LpVueProjetosReais />
+  <LpVueProjetosReais/>
 
-    <LpVuePorqueAprenderComigo/>
+  <LpVuePorqueAprenderComigo/>
 
-    <TestimonialSection
-      headline="Depoimentos Inspiradores"
-      title="Alavanque sua carreira com a Jornada Vue"
-      description="Junte-se a mais de 1k alunos que elevaram suas habilidades em Vue.js e conquistaram novas oportunidades. Confira histórias reais de sucesso no mercado!"
-    />
+  <TestimonialSection
+    headline="Depoimentos Inspiradores"
+    title="Alavanque sua carreira com a Jornada Vue"
+    description="Junte-se a mais de 1k alunos que elevaram suas habilidades em Vue.js e conquistaram novas oportunidades. Confira histórias reais de sucesso no mercado!"
+  />
 
-    <LpVueOQuePossoConstruir />
+  <LpVueOQuePossoConstruir/>
 
-    <LpVuePrequisitos />
+  <LpVuePrequisitos/>
 
-    <LpVueFaq />
+  <LpVueFaq/>
 
-    <LpVueAulasGratuitas />
+  <LpVueAulasGratuitas/>
 
-    <LpVueOffer id="offer" />
+  <LpVueOffer id="offer"/>
 
-    <AboutSection />
-  </NuxtLayout>
+  <AboutSection/>
 </template>
 
 <script setup>
@@ -85,16 +83,16 @@ import BadgeLectureCount from '~/common/components/Ui/BadgeLectureCount.vue';
 import {journeyAPI} from '~/common/api/journey';
 
 definePageMeta({
-  layout: false,
+  layout: 'lp',
 })
 
-const {data: stats} = useLazyAsyncData('vue-journey-stats', () => journeyAPI.getStats('vue'))
+const {data: stats} = await useAsyncData('vue-journey-stats', () => journeyAPI.getStats('vue'))
 
 useHead({
   title: 'Aprenda Vue.js: Torne-se um Especialista em Desenvolvimento de Aplicações Web',
   meta: {
-    description: 'Descubra a Jornada Vue e desenvolva aplicações dinâmicas e interativas. Aulas práticas, projetos reais e uma comunidade engajada esperam por você para transformar suas habilidades em programação.'
-  }
+    description: 'Descubra a Jornada Vue e desenvolva aplicações dinâmicas e interativas. Aulas práticas, projetos reais e uma comunidade engajada esperam por você para transformar suas habilidades em programação.',
+  },
 })
 
 </script>
