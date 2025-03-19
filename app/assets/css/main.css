@@ -1,39 +1,53 @@
 @import "tailwindcss" theme(static);
 @import "@nuxt/ui-pro";
 
-@theme {
+@source "../../../content";
+
+@theme static {
   --font-poppins: "Poppins", sans-serif;
+  --font-sans: 'Public Sans', sans-serif;
+
+  --breakpoint-3xl: 1920px;
+
+  --color-gray-50: #FAFAFA;
+  --color-gray-100: #F4F4F5;
+  --color-gray-200: #E3E5E8;
+  --color-gray-300: #D2D5DA;
+  --color-gray-400: #9DA3AE;
+  --color-gray-500: #6C727F;
+  --color-gray-600: #4F545E;
+  --color-gray-700: #3D4148;
+  --color-gray-800: #25272C;
+  --color-gray-900: #17191C;
+  --color-gray-950: #111213;
 }
+
 
 /*@tailwind base;*/
 /*@tailwind components;*/
 /*@tailwind utilities;*/
 
+h1, h2, h3, h4, h5, h6 {
+  @apply font-poppins;
+}
+
 @layer base {
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-poppins;
-  }
 
-  .heading-2 {
-    @apply text-2xl md:text-4xl font-extrabold;
-  }
-
-  .heading-3 {
-    @apply text-xl md:text-2xl font-bold;
-  }
-
-  .heading-4 {
-    @apply text-xl font-bold;
-  }
-
-  .heading-5 {
-    @apply text-lg md:text-xl font-medium;
-  }
-
-  .heading-6 {
-    @apply text-base font-medium;
-  }
-
+  /*.heading-2 {*/
+  /*  @apply text-2xl md:text-4xl font-extrabold;*/
+  /*}*/
+  /*.heading-3 {*/
+  /*  @apply text-xl md:text-2xl font-bold;*/
+  /*}*/
+  /*.heading-4 {*/
+  /*  @apply text-xl font-bold;*/
+  /*}*/
+  /*.heading-5 {*/
+  /*  @apply text-lg md:text-xl font-medium;*/
+  /*}*/
+  /*.heading-6 {*/
+  /*  @apply text-base font-medium;*/
+  /*}*/
   /*  .text-muted {*/
   /*    @apply text-gray-600 dark:text-gray-400;*/
   /*  }*/
@@ -42,7 +56,7 @@
   /*  }*/
 }
 
-/*.tm-gradient {*/
+/*.gray-gradient {*/
 /*  background-image: linear-gradient(90deg, rgba(0,158,226,1) 15%, rgba(12,172,206,1) 50%, rgba(23,216,181,1) 85%);*/
 /*  background-size: cover;*/
 /*  -webkit-background-clip: text;*/
@@ -51,7 +65,7 @@
 /*  text-fill-color: transparent;*/
 /*}*/
 
-/*.bg-tm-gradient {*/
+/*.bg-gray-gradient {*/
 /*  background-image: linear-gradient(90deg, rgba(0,158,226,1) 15%, rgba(12,172,206,1) 50%, rgba(23,216,181,1) 85%);*/
 /*}*/
 

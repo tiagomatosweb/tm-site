@@ -11,7 +11,7 @@
         {{ $dayjs(data.date).format('DD MMMM YYYY') }}
       </time>
 
-      <h1 class="mt-3">{{ data.title }}</h1>
+      <ProseH1>{{ data.title }}</ProseH1>
 
       <ContentRenderer
         :value="data"

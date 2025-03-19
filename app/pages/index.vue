@@ -27,6 +27,7 @@ import IconLaravel from '~/common/components/Icons/IconLaravel.vue';
 import IconVue from '~/common/components/Icons/IconVue.vue';
 import AboutBioShort from '~/components/About/AboutBioShort.vue';
 import MyCourses from '~/components/MyCourses.vue';
+import axios from 'axios';
 // import BannerSaas from '@/components/BannerSaas.vue';
 // import dayjs from 'dayjs';
 //
