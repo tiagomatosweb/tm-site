@@ -64,18 +64,21 @@ export default defineNuxtConfig({
     '/**/obrigado': {robots: false},
   },
 
-  // content: {
-  //   build: {
-  //     markdown: {
-  //       highlight: {
-  //         // theme: 'github-light',
-  //         theme: 'material-theme-palenight',
-  //         // theme: 'github-dark',
-  //         langs: ['json', 'js', 'ts', 'html', 'css', 'vue', 'shell', 'php'],
-  //       },
-  //     },
-  //   },
-  // },
+  content: {
+    build: {
+      markdown: {
+        toc: {
+          searchDepth: 1,
+        },
+        highlight: {
+          // theme: 'github-light',
+          theme: 'material-theme-palenight',
+          // theme: 'github-dark',
+          langs: ['json', 'js', 'ts', 'html', 'css', 'vue', 'shell', 'php'],
+        },
+      },
+    },
+  },
 
   googleFonts: {
     families: {

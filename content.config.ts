@@ -11,6 +11,20 @@ export default defineContentConfig({
         date: z.date(),
       }),
     }),
+    jornadaLaravel: defineCollection({
+      type: 'page',
+      source: {
+        include: 'jornada-laravel/**',
+      },
+      schema: z.object({
+        links: z.array(z.object({
+          label: z.string(),
+          icon: z.string(),
+          to: z.string(),
+          target: z.string().optional(),
+        })).optional(),
+      }),
+    }),
     instagram: defineCollection({
       type: 'data',
       source: 'instagram/**/*.md',

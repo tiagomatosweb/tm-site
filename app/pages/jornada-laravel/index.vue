@@ -90,21 +90,6 @@ definePageMeta({
   layout: 'lp',
 })
 
-const links = ref([
-  {
-    label: 'Get started',
-    to: '/getting-started',
-    icon: 'i-lucide-square-play',
-  },
-  {
-    label: 'Learn more',
-    to: '/getting-started/theme',
-    color: 'neutral',
-    variant: 'subtle',
-    trailingIcon: 'i-lucide-arrow-right',
-  },
-])
-
 const {data: stats} = await useAsyncData('laravel-journey-stats', () => journeyAPI.getStats('laravel'))
 
 useHead({

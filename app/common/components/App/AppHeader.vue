@@ -24,6 +24,16 @@ import AppLogo from '~/common/components/App/AppLogo.vue';
 const route = useRoute()
 
 const navigationMenu = computed(() => [
+  // {
+  //   label: 'Jornada Laravel',
+  //   to: '/blog',
+  //   active: route.path.startsWith('/blog'),
+  // },
+  // {
+  //   label: 'Jornada Vue',
+  //   to: '/blog',
+  //   active: route.path.startsWith('/blog'),
+  // },
   {
     label: 'Blog',
     to: '/blog',

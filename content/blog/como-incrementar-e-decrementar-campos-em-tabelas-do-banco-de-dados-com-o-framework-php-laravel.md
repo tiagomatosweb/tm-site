@@ -5,9 +5,8 @@ date: '2025-03-08'
 ---
 
 Fala jovem! Hoje eu vou falar um pouco sobre como incrementar e decrementar campos da
-tabela com o
-framework PHP Laravel
-Eloquent. Essa é uma tarefa bem comum em projetos web, e o Eloquent torna esse processo muito mais fácil e rápido.
+tabela com o framework PHP Laravel Eloquent. Essa é uma tarefa bem comum em projetos web, e o Eloquent torna esse
+processo muito mais fácil e rápido.
 
 Mas antes de começarmos, é importante entendermos o que é o Eloquent. O Eloquent é o ORM (Object-Relational Mapping)
 

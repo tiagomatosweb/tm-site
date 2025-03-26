@@ -24,33 +24,10 @@
       {{ props.btnText }}
     </UButton>
   </UForm>
-
-  <!--  <form @submit="submit" class="flex items-start gap-1.5">-->
-  <!--    <FormField v-slot="{ componentField }" name="email">-->
-  <!--      <FormItem class="w-full">-->
-  <!--        <FormControl>-->
-  <!--          <Input-->
-  <!--            type="text"-->
-  <!--            placeholder="Seu melhor e-mail"-->
-  <!--            v-bind="componentField"-->
-  <!--          />-->
-  <!--        </FormControl>-->
-  <!--        <FormMessage/>-->
-  <!--      </FormItem>-->
-  <!--    </FormField>-->
-
-  <!--    <Button-->
-  <!--      variant="secondary"-->
-  <!--      type="submit"-->
-  <!--      :loading="isSubmitting"-->
-  <!--    >-->
-  <!--      {{ props.btnText }}-->
-  <!--    </Button>-->
-  <!--  </form>-->
 </template>
 
 <script setup>
-import {string, object} from 'zod'
+import {string, object} from 'yup'
 import {leadAPI} from '~/common/api/lead';
 
 const emit = defineEmits(['done']);
@@ -70,7 +47,7 @@ const props = defineProps({
 })
 
 const schema = object({
-  email: string().email(),
+  email: string().required().email().label('E-mail'),
 })
 
 const state = ref({
