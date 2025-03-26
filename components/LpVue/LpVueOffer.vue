@@ -6,7 +6,7 @@
     offer-price="397"
     offer-installment-price="39,62"
     :offer-benefits="benefits"
-    offer-link="https://pay.hotmart.com/U96627395Y?checkoutMode=10"
+    offer-link="https://pay.hotmart.com/U96627395Y?checkoutMode=10&sck=website-offer"
   />
 </template>
 
@@ -14,12 +14,12 @@
 import OfferSection from '~/components/Offer/OfferSection.vue';
 
 const benefits = [
-  { label: '1 ano de acesso ilimitado' },
-  { label: 'Todos os cursos de Vue incluídos' },
-  { label: 'Comunidade exclusiva de alunos' },
-  { label: 'Suporte direto comigo via Discord' },
-  { label: 'Certificado digital de conclusão' },
-  { label: 'Acesso a MasterClasses exclusivas' },
-  { label: 'Novas aulas e cursos sempre disponíveis' },
+  {label: '1 ano de acesso ilimitado'},
+  {label: 'Todos os cursos de Vue incluídos'},
+  {label: 'Comunidade exclusiva de alunos'},
+  {label: 'Suporte direto comigo via Discord'},
+  {label: 'Certificado digital de conclusão'},
+  {label: 'Acesso a MasterClasses exclusivas'},
+  {label: 'Novas aulas e cursos sempre disponíveis'},
 ]
 </script>

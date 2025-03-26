@@ -12,7 +12,7 @@
         <div class="flex justify-center flex-wrap lg:justify-start gap-6 mt-6">
           <BadgeCourseCount :number="stats.courses_count"/>
           <BadgeLectureCount :number="stats.lectures_count"/>
-          <BadgeDuration :duration="stats.duration" />
+          <BadgeDuration :duration="stats.duration"/>
         </div>
 
         <Button
@@ -20,7 +20,7 @@
           variant="marketing"
           size="lg"
           class="h-16 text-2xl font-bold rounded-xl mt-10"
-          href="https://pay.hotmart.com/S96627323M?checkoutMode=10"
+          href="https://pay.hotmart.com/S96627323M?checkoutMode=10&sck=website-hero"
         >
           Matricule-se agora
         </Button>
@@ -43,7 +43,7 @@
 
     <LpLaravelModulos/>
 
-    <LpLaravelProjetosReais />
+    <LpLaravelProjetosReais/>
 
     <LpLaravelPorqueAprenderComigo/>
 
@@ -63,7 +63,7 @@
 
     <LpLaravelOffer id="offer"/>
 
-    <AboutSection />
+    <AboutSection/>
   </NuxtLayout>
 </template>
 
