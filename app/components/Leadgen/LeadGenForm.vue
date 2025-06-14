@@ -1,76 +1,72 @@
 <template>
-  <form @submit="submit" class="space-y-6">
-    <FormField v-slot="{ componentField }" name="name">
-      <FormItem>
-        <FormLabel>Primeiro nome <span class="text-red-400">*</span></FormLabel>
-        <FormControl>
-          <Input
-            type="text"
-            v-bind="componentField"
-            class="h-12 text-lg text-white border-gray-600 focus-visible:ring-gray-400 font-medium"
-          />
-        </FormControl>
-        <FormMessage/>
-      </FormItem>
-    </FormField>
+  <UForm
+    class="flex flex-col gap-6"
+    :schema="schema"
+    :state="state"
+    @submit="onSubmit"
+  >
+    <UFormField
+      label="Primeiro Nome"
+      required
+      name="name"
+    >
+      <UInput
+        v-model="state.name"
+        size="xl"
+        :ui="{
+          root: 'w-full',
+          base: 'h-12 w-full'
+        }"
+      />
+    </UFormField>
 
-    <FormField v-slot="{ componentField }" name="email">
-      <FormItem>
-        <FormLabel>Seu melhor e-mail <span class="text-red-400">*</span></FormLabel>
-        <FormControl>
-          <Input
-            type="text"
-            placeholder="Aquele e-mail que você abre todo dia"
-            v-bind="componentField"
-            class="h-12 text-lg text-white border-gray-600 focus-visible:ring-gray-400"
-          />
-        </FormControl>
-        <FormMessage/>
-      </FormItem>
-    </FormField>
+    <UFormField
+      label="Seu melhor e-mail"
+      required
+      name="email"
+    >
+      <UInput
+        v-model="state.email"
+        placeholder="Aquele e-mail que você abre todos os dias"
+        size="xl"
+        :ui="{
+          root: 'w-full',
+          base: 'h-12 w-full'
+        }"
+      />
+    </UFormField>
 
-    <FormField name="phone">
-      <FormItem>
-        <FormLabel>Número do WhatsApp</FormLabel>
-        <FormControl>
-          <Input
-            type="tel"
-            id="phoneRef"
-            v-model="phone"
-            placeholder="+55 99 999999999"
-            class="h-12 text-lg text-white border-gray-600 focus-visible:ring-gray-400"
-          />
-        </FormControl>
-        <FormMessage/>
-      </FormItem>
-    </FormField>
+    <UFormField
+      label="Número do WhatsApp"
+      required
+      name="phone"
+    >
+      <UInput
+        id="phoneRef"
+        v-model="state.phone"
+        placeholder="+55 99 999999999"
+        size="xl"
+        :ui="{
+          root: 'w-full',
+          base: 'h-12 w-full'
+        }"
+      />
+    </UFormField>
 
     <div>
-      <Button
-        variant="marketing"
-        type="submit"
-        size="lg"
-        :loading="isSubmitting"
-        :class="cn('w-full text-wrap min-h-16 h-auto mt-6 text-2xl font-bold rounded-xl', props.btnClass)"
-      >
-        {{ props.btnText }}
-      </Button>
+      <UButton v-bind="defaultButtonProps"/>
     </div>
-  </form>
+  </UForm>
 
-  <div class="text-center text-gray-400 text-sm mt-4">Não se preocupe que eu também odeio SPAM.
-    Comprometo te enviar apenas conteúdos que agregam valor à sua carreira como dev Laravel e/ou Vue.
+  <div class="text-center text-muted text-sm mt-4">Prometo que não envio SPAM. Só conteúdos úteis que podem mudar a
+    forma como você codifica com Laravel/Vue — direto ao ponto e aplicável.
   </div>
 </template>
 
 <script setup>
-import {useField, useForm} from 'vee-validate';
 import {object, string} from 'yup';
 import intlTelInput from 'intl-tel-input';
-import {ref} from 'vue';
 import {leadAPI} from '~/common/api/lead';
-import {FormField} from '~/shadcn/form';
-import {cn} from '~/lib/utils';
 
 const emit = defineEmits(['done']);
 const props = defineProps({
@@ -82,38 +78,52 @@ const props = defineProps({
     type: String,
     default: null,
   },
+  buttonProps: {
+    type: Object,
+    default: () => ({}),
+  },
   groupsId: {
     type: Array,
     default: () => [],
   },
 })
-const validationSchema = object({
+const defaultButtonProps = computed(() => {
+  return {
+    type: 'submit',
+    color: 'cta',
+    size: '2xl',
+    label: 'Cadastrar',
+    block: true,
+    loading: isLoading.value,
+    ...props.buttonProps,
+  }
+})
+const isLoading = ref(false)
+const state = ref({
+  name: '',
+  email: '',
+  phone: '',
+})
+const schema = object({
   name: string().required().label('Primeiro nome'),
   email: string().required().email().label('E-mail'),
   phone: string().label('WhatsApp'),
 })
-const {handleSubmit, isSubmitting} = useForm({
-  validationSchema,
-  initialValues: {
-    name: '',
-    email: '',
-    phone: '',
-    groups: props.groupsId.length ? props.groupsId : undefined,
-  },
-})
 
-const {value: phone} = useField('phone')
-const submit = handleSubmit(async (values) => {
+async function onSubmit({data}) {
   try {
-    await leadAPI.createSubscriber(values)
-    emit('done')
+    isLoading.value = true
+    await leadAPI.createSubscriber(data)
+    emit('done', data)
   } catch (e) {
     console.log(e)
+  } finally {
+    isLoading.value = false
   }
-})
+}
 
-watch(phone, (vl) => {
-  phone.value = vl.startsWith('+') ? vl : '+' + vl
+watch(() => state.value.phone, (vl) => {
+  state.value.phone = vl.startsWith('+') ? vl : '+' + vl
 })
 
 const intInput = ref()

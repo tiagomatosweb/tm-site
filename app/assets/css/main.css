@@ -7,8 +7,7 @@
   --font-poppins: "Poppins", sans-serif;
   --font-sans: 'Public Sans', sans-serif;
 
-  --breakpoint-3xl: 1920px;
-
+  /*--breakpoint-3xl: 1920px;*/
   --color-gray-50: #FAFAFA;
   --color-gray-100: #F4F4F5;
   --color-gray-200: #E3E5E8;
@@ -20,6 +19,7 @@
   --color-gray-800: #25272C;
   --color-gray-900: #17191C;
   --color-gray-950: #111213;
+  --ui-container: 90rem;
 }
 
 
@@ -32,29 +32,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @layer base {
+  .heading-2 {
+    @apply text-2xl md:text-4xl font-extrabold;
+  }
 
-  /*.heading-2 {*/
-  /*  @apply text-2xl md:text-4xl font-extrabold;*/
-  /*}*/
-  /*.heading-3 {*/
-  /*  @apply text-xl md:text-2xl font-bold;*/
-  /*}*/
-  /*.heading-4 {*/
-  /*  @apply text-xl font-bold;*/
-  /*}*/
+  .heading-3 {
+    @apply text-xl md:text-2xl font-bold;
+  }
+
+  .heading-4 {
+    @apply text-xl font-bold;
+  }
+
   .heading-5 {
     @apply text-lg md:text-xl font-medium;
   }
 
-  /*.heading-6 {*/
-  /*  @apply text-base font-medium;*/
-  /*}*/
-  /*  .text-muted {*/
-  /*    @apply text-gray-600 dark:text-gray-400;*/
-  /*  }*/
-  /*  :root {*/
-  /*    --radius: 0.5rem;*/
-  /*  }*/
+  .heading-6 {
+    @apply text-base font-medium;
+  }
 }
 
 .tm-gradient {
@@ -84,3 +80,7 @@ h1, h2, h3, h4, h5, h6 {
 /*!*-webkit-background-clip: text;*!*/
 /*!*-webkit-text-fill-color: transparent;*!*/
 /*!*}*!*/
+
+.iti {
+  width: 100%;
+}

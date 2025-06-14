@@ -11,9 +11,9 @@
     </div>
 
     <div>
-        <span class="text-gray-900 dark:text-gray-50">
-          <span class="font-bold text-2xl">Fala jovem  👋🏼,</span>
-          <br><b class="font-black text-3xl">Tiago Matos aqui...</b>
+        <span class="text-highlighted">
+          <span class="font-bold text-2xl font-poppins">Fala jovem  👋🏼,</span>
+          <br><b class="font-black text-3xl font-poppins">Tiago Matos aqui...</b>
         </span>
     </div>
   </div>

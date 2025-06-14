@@ -1,8 +1,11 @@
 <template>
-  <LandingSection
-    :headline="props.headline"
+  <UPageSection
+    headline="Depoimentos"
     :title="props.title"
     :description="props.description"
+    :ui="{
+      root: 'bg-gradient-to-b border-t border-default from-muted dark:from-muted/40 to-default',
+    }"
   >
     <div class="max-w-5xl mx-auto space-y-20">
       <div class="flex flex-wrap items-center justify-center gap-8">
@@ -25,78 +28,71 @@
       </div>
     </div>
 
-    <div class="column-1 md:columns-2 lg:columns-3 xl:columns-4 gap-8 space-y-8 mt-24">
-      <Card
-        v-for="item in items"
-        class="break-inside-avoid"
+    <UPageColumns class="xl:columns-4">
+      <UPageCard
+        v-for="(testimonial, index) in items"
+        :key="index"
+        variant="subtle"
+        :description="testimonial.comment"
+        :ui="{
+          description: 'before:content-[open-quote] after:content-[close-quote]'
+        }"
       >
-        <CardContent>
-          <div class="text-gray-700 dark:text-gray-300 text-sm">
-            ”<span v-html="item.comment" />"
-          </div>
-
-          <div class="text-gray-900 dark:text-gray-100 text-base font-semibold leading-tight mt-4">
-            {{ item.author }}
-          </div>
-        </CardContent>
-      </Card>
-    </div>
-  </LandingSection>
+        <template #footer>
+          {{ testimonial.author }}
+          <!--        <UUser v-bind="testimonial.user" size="xl" />-->
+        </template>
+      </UPageCard>
+    </UPageColumns>
+  </UPageSection>
 </template>
 
 <script setup>
-import LandingSection from '~/common/components/Landing/LandingSection.vue';
-
 const props = defineProps({
-  headline: {
-    type: String,
-    default: 'Depoimentos'
-  },
   title: {
     type: String,
-    default: 'Milhares de carreiras transformadas'
+    default: 'O que dizem os alunos da Jornada',
   },
   description: {
     type: String,
-    default: 'Mais de 1K alunos que alavancaram suas carreiras na programação'
+    default: 'Não sou eu que tô dizendo — são os próprios devs que passaram por aqui e hoje tão codando com mais segurança, clareza e até pegando vaga no mercado.',
   },
 })
-
 const items = [
   {
     author: 'Mauricio Testa',
     comment: 'Faaaala irmão blza??? Gostaria de deixar aqui meu agradecimento pelas tuas aulas "VueJS do jeito ninja".. graças a elas hj estou consolidado em uma multinacional\n' +
       'americana trabalhando 100%\n' +
       'home office..\n' +
-      'Muito obrigado !!!'
+      'Muito obrigado !!!',
   },
   {
     author: 'Matheus Thurler',
-    comment: 'No sei curso de cara já gostei foi da abordagem de como armazenar o token pelo cookie, foi uma imensa ajuda'
+    comment: 'No sei curso de cara já gostei foi da abordagem de como armazenar o token pelo cookie, foi uma imensa ajuda',
   },
   {
     author: 'Vinicus Dutra',
-    comment: 'Excelente aula. Que didática phoda! Vai direto ao ponto e de forma super clara! Parabéns e obrigado por compartilhar com a gente esse conhecimento.'
+    comment: 'Excelente aula. Que didática phoda! Vai direto ao ponto e de forma super clara! Parabéns e obrigado por compartilhar com a gente esse conhecimento.',
   },
   {
     author: 'Débora Taveira',
-    comment: 'Sua didática é sensacional!'
+    comment: 'Sua didática é sensacional!',
   },
   {
     author: 'João Teves',
-    comment: 'Uhuuuuul Esperando meu primeiro salário cair pra comprar no cartão hahaha Consegui uma vaga de Jr e você me ajudou muito com as suas aulas gratuitas no YouTube'
+    comment: 'Uhuuuuul Esperando meu primeiro salário cair pra comprar no cartão hahaha Consegui uma vaga de Jr e você me ajudou muito com as suas aulas gratuitas no YouTube',
   },
   {
     author: 'Lucas Gomes',
-    comment: 'Cara, é incrível como vc explica bem.. Eu achava o Vuex super complicado mas com essas duas lives que vc fez eu aprendi e agora acho Vuex incrível! Muito obrigado pelos seus vídeos, continue assim que vc está ajudando muita gente.. vc é top! Agora irei praticar bastante pra fixar bem o conteúdo e depois partir para seus videos de nuxt! Abraços !'
+    comment: 'Cara, é incrível como vc explica bem.. Eu achava o Vuex super complicado mas com essas duas lives que vc fez eu aprendi e agora acho Vuex incrível! Muito obrigado pelos seus vídeos, continue assim que vc está ajudando muita gente.. vc é top! Agora irei praticar bastante pra fixar bem o conteúdo e depois partir para seus videos de nuxt! Abraços !',
   },
   {
     author: 'Felipe Gourlart',
-    comment: 'Monstro! Sensacional, obrigado pelo conteúdo!!!'
+    comment: 'Monstro! Sensacional, obrigado pelo conteúdo!!!',
   },
   {
     author: 'Débora Taveira',
-    comment: 'Sua didática é sensacional!'
+    comment: 'Sua didática é sensacional!',
   },
   {
     author: 'Mauricio Testa',
@@ -104,19 +100,19 @@ const items = [
       'Cara, gostaria muito de te agradecer pelo curso de laravel + vue. Didática sensacional e organização de código fantástica aproveitando tudo que o framework tem a oferecer!\n' +
       'Acabei de terminar o curso aqui e fiquei muito satisfeito com o que aprendi. Aproveitei e adicionei alguns recursos a mais, como auto login ao criar conta e redefinição de senha sem precisar inserir e-mail (apenas pelo token).\n' +
       'Aproveitando, gostaria de saber se o curso tem certificado e como faço pra obtê-lo.\n' +
-      'Sucesso!'
+      'Sucesso!',
   },
   {
     author: 'Ricardo Soares',
-    comment: 'Grande Tiago...parabens por seus conteúdos... tem me ajudado muito...Jesus abençoe muito a sua vida e abra excelentes portas'
+    comment: 'Grande Tiago...parabens por seus conteúdos... tem me ajudado muito...Jesus abençoe muito a sua vida e abra excelentes portas',
   },
   {
     author: 'Roger Santos',
-    comment: 'Já tinha lido na documentação, mas não havia entendido muito bem. Agora ficou super claro, Obrigado :)'
+    comment: 'Já tinha lido na documentação, mas não havia entendido muito bem. Agora ficou super claro, Obrigado :)',
   },
   {
     author: 'Alano Morais',
-    comment: 'Cara teu conteúdo é muito massa e a didática, nem se fala.'
+    comment: 'Cara teu conteúdo é muito massa e a didática, nem se fala.',
   },
 ]
 </script>

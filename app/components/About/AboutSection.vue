@@ -1,23 +1,17 @@
 <template>
-  <LandingSection
-    :root-class="props.rootClass"
-    :wrap-class="cn('max-w-2xl', props.wrapClass)"
+  <UPageSection
+    :ui="{
+      root: 'bg-gradient-to-b border-t border-default from-muted dark:from-muted/40 to-default',
+    }"
   >
-    <AboutGreetings avatar-size="lg" />
-
-    <AboutBio class="mt-6" />
-  </LandingSection>
+    <div class="max-w-2xl mx-auto">
+      <AboutGreetings avatar-size="lg"/>
+      <AboutBio class="mt-6"/>
+    </div>
+  </UPageSection>
 </template>
 
 <script setup lang="ts">
-import {cn} from '~/lib/utils';
-import { type HTMLAttributes } from 'vue'
-import LandingSection from '~/common/components/Landing/LandingSection.vue';
 import AboutGreetings from '~/components/About/AboutGreetings.vue';
 import AboutBio from '~/components/About/AboutBio.vue';
-
-const props = defineProps<{
-  rootClass?: HTMLAttributes['class'],
-  wrapClass?: HTMLAttributes['class'],
-}>()
 </script>

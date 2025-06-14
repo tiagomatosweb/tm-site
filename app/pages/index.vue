@@ -7,9 +7,9 @@
         <AboutSocialMedia class="mt-4"/>
       </div>
 
-      <div class="w-full lg:max-w-md lg:ml-auto">
-        <NewsletterSignup/>
-      </div>
+      <!--      <div class="w-full lg:max-w-md lg:ml-auto">-->
+      <!--        <NewsletterSignup/>-->
+      <!--      </div>-->
     </div>
   </UPageSection>
 

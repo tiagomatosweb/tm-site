@@ -1,12 +1,17 @@
 <template>
-  <div class="bg-white shadow-xl border border-gray-200 rounded-lg p-6 md:p-10">
-    <h2 class="text-gray-900 font-extrabold text-3xl leading-8">
+  <UCard
+    variant="solid"
+    :ui="{
+      root: 'bg-white dark:bg-white p-6 rounded-xl',
+    }"
+  >
+    <h2 class="text-inverted font-extrabold text-3xl leading-8">
       1 ano de progresso acelerado
     </h2>
 
     <OfferBenefits :benefits="benefits"/>
 
-    <div class="mt-6 flex flex-col items-center gap-1 text-gray-900">
+    <div class="mt-8 flex flex-col items-center gap-1 text-inverted">
       <div class="flex items-center gap-2 text-2xl font-bold">
         TOTAL: de
 
@@ -33,21 +38,24 @@
     </div>
 
     <div class="mt-8">
-      <Button
-        variant="marketing"
-        size="lg"
-        class="w-full h-16 mt-6 text-2xl font-bold rounded-xl"
-        as="a"
-        :href="props.link"
+      <UButton
+        color="cta"
+        size="3xl"
+        block
+        :to="props.link"
       >
-        Matricule-se agora
-      </Button>
+        Quero entrar na Jornada
+      </UButton>
+
+      <div class="text-center text-inverted mt-2">
+        ⚡ Acesso instantâneo + todos os bônus já inclusos.
+      </div>
     </div>
-  </div>
+  </UCard>
 </template>
 
 <script setup>
-import OfferBenefits from '~/components/Offer/OfferBenefits.vue';
+import OfferBenefits from './OfferBenefits.vue';
 
 const props = defineProps({
   fullPrice: {

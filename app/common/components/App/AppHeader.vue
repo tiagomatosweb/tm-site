@@ -34,10 +34,10 @@ const navigationMenu = computed(() => [
   //   to: '/blog',
   //   active: route.path.startsWith('/blog'),
   // },
-  {
-    label: 'Blog',
-    to: '/blog',
-    active: route.path.startsWith('/blog'),
-  },
+  // {
+  //   label: 'Blog',
+  //   to: '/blog',
+  //   active: route.path.startsWith('/blog'),
+  // },
 ])
 </script>

@@ -3,26 +3,27 @@
     <UPage>
       <template #left>
         <UPageAside>
-          <UContentNavigation
-            highlight
-            :navigation="navigation[0].children"
-          />
+          <!--          <UContentNavigation-->
+          <!--            highlight-->
+          <!--            :navigation="navigation[0].children"-->
+          <!--          />-->
         </UPageAside>
       </template>
 
       <UPage>
-        <UPageHeader
-          :title="page.title"
-          :description="page.description"
-          :links="page.links"
-          :headline="headline"
-        />
+        <!--        <UPageHeader-->
+        <!--          :title="page.title"-->
+        <!--          :description="page.description"-->
+        <!--          :links="page.links"-->
+        <!--          :headline="headline"-->
+        <!--        />-->
 
         <UPageBody>
-          <ContentRenderer
-            v-if="page"
-            :value="page"
-          />
+          sdsd223232
+          <!--          <ContentRenderer-->
+          <!--            v-if="page"-->
+          <!--            :value="page"-->
+          <!--          />-->
         </UPageBody>
       </UPage>
     </UPage>
@@ -41,8 +42,9 @@ provide('navigation', navigation);
 
 
 const route = useRoute();
-const {data: page} = await useAsyncData(route.path, () => queryCollection('jornadaLaravel').path(route.path).first());
-const headline = computed(() => findPageHeadline(navigation.value[0].children, page.value));
+console.log(route.path);
+// const {data: page} = await useAsyncData(route.path, () => queryCollection('jornadaLaravel').path(route.path).first());
+// const headline = computed(() => findPageHeadline(navigation.value[0].children, page.value));
 // if (!page.value) {
 //   throw createError({statusCode: 404, statusMessage: 'Page not found', fatal: true});
 // }
