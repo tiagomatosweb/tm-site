@@ -7,10 +7,10 @@
 <script setup>
 import RealProjectSection from '~/components/RealProjects/RealProjectSection.vue';
 import {coursesAPI} from '~/common/api/courses';
-import ScreenshotAgendaMe from '@/assets/img/screenshot-agendame.webp';
+import ScreenshotAgendaMe from 'assets/img/screenshot-agendame.webp';
 
 const {data} = useLazyAsyncData(() => coursesAPI.getCourses({
-  'filter[ids]': '28'
+  'filter[ids]': '28',
 }).then(r => r.data))
 
 const items = computed(() => !data.value?.length ? [] : data.value?.map(o => {

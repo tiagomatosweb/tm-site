@@ -373,11 +373,10 @@
 </template>
 
 <script setup>
-import CodeSnippetLaravel from '~/common/components/Codesnippet/CodeSnippetLaravel.vue';
+import CodeSnippetLaravel from '~/components/Codesnippet/CodeSnippetLaravel.vue';
 import IconLaravel from '~/common/components/Icons/IconLaravel.vue';
 import AboutSection from '~/components/About/AboutSection.vue';
 import TestimonialSection from '~/components/Testimonial/TestimonialSection.vue';
-import LpLaravelOffer from '~/components/LpLaravel/LpLaravelOffer.vue';
 import OfferSection from '~/components/Offer/OfferSection.vue';
 import {journeyAPI} from '~/common/api/journey';
 import BadgeDuration from '~/common/components/Ui/BadgeDuration.vue';

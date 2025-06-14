@@ -6,7 +6,7 @@
     @submit="onSubmit"
   >
     <UFormField
-      label="Primeiro Nome"
+      label="Primeiro nome"
       required
       name="name"
     >

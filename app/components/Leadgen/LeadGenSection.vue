@@ -36,7 +36,7 @@
 <script setup>
 import LeadGenForm from '~/components/Leadgen/LeadGenForm.vue';
 import LandingHero from '~/common/components/Landing/LandingHero.vue';
-import CodeIDE from '~/common/components/Codesnippet/CodeIDE.vue';
+import CodeIDE from '~/components/Codesnippet/CodeIDE.vue';
 
 const emit = defineEmits(['done']);
 const props = defineProps({

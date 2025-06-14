@@ -64,7 +64,7 @@
 <script setup>
 import LandingHero from '~/common/components/Landing/LandingHero.vue';
 import IconVue from '~/common/components/Icons/IconVue.vue';
-import CodeSnippetVue from '~/common/components/Codesnippet/CodeSnippetVue.vue';
+import CodeSnippetVue from '~/components/Codesnippet/CodeSnippetVue.vue';
 import LpVueOQueE from '~/components/LpVue/LpVueOQueE.vue';
 import LpVueParaQuemE from '~/components/LpVue/LpVueParaQuemE.vue';
 import LpVueModulos from '~/components/LpVue/LpVueModulos.vue';

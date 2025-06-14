@@ -44,7 +44,7 @@
 </template>
 
 <script setup>
-import CodeIDE from '~/common/components/Codesnippet/CodeIDE.vue';
+import CodeIDE from '~/components/Codesnippet/CodeIDE.vue';
 import LeadGenForm from '~/components/Leadgen/LeadGenForm.vue';
 import TestimonialSection from '~/components/Testimonial/TestimonialSection.vue';
 import {mailerliteGroups} from '~/common/utils/mailerlite-groups';
