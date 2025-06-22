@@ -1,7 +1,10 @@
 <template>
   <div class="shrink-0 flex items-center space-x-2 text-left">
     <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-purple-500/20">
-      <LucideVideo class="size-6 text-purple-400"/>
+      <Icon
+        name="i-lucide-video"
+        class="size-6 text-purple-400"
+      />
     </div>
 
     <div>
@@ -13,6 +16,6 @@
 
 <script setup>
 const props = defineProps({
-  number: Number
+  number: Number,
 })
 </script>

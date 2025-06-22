@@ -6,13 +6,6 @@
 
 <script setup lang="ts">
 import {cn} from '~/lib/utils';
-import type { PrimitiveProps } from 'radix-vue'
-import type { HTMLAttributes } from 'vue'
 
-interface Props extends PrimitiveProps {
-  text?: string,
-  class?: HTMLAttributes['class']
-}
-
-const props = defineProps<Props>()
+const props = defineProps(['text', 'class']);
 </script>

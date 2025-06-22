@@ -8,6 +8,5 @@ definePageMeta({
 })
 
 const {data: navigation} = await useAsyncData('navigation', () => queryCollectionNavigation('jornadaLaravel'));
-console.log(navigation.value)
 provide('navigation', navigation);
 </script>

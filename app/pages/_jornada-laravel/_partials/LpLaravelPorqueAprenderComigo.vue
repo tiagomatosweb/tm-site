@@ -5,14 +5,12 @@
     description="Aqui estão algumas razões que fazem da minha metodologia a escolha ideal para você dominar Laravel."
   >
     <div class="column-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
-      <Card
+      <UCard
         v-for="item in items"
         class="break-inside-avoid"
       >
-        <CardContent>
-          <span class="font-bold">{{ item.title }}:</span> <span class="text-muted">{{ item.description }}</span>
-        </CardContent>
-      </Card>
+        <span class="font-bold">{{ item.title }}:</span> <span class="text-muted">{{ item.description }}</span>
+      </UCard>
     </div>
   </LandingSection>
 </template>

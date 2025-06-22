@@ -5,25 +5,22 @@
     description="A Jornada Vue é um curso completo que vai do básico ao avançado, ensinando você a criar interfaces modernas e dinâmicas na prática!"
   >
     <div class="max-w-4xl mx-auto">
-      <Card>
-        <CardContent>
-          <p class="text-xl font-medium text-center">Na Jornada Vue, meu objetivo é que você compreenda os fundamentos profundos do Vue.js, desde a raiz. Cada módulo foi cuidadosamente elaborado para que você aprenda a filosofia e a essência de cada recurso do framework, antes de avançar para técnicas mais avançadas e modernas.</p>
-        </CardContent>
-      </Card>
+      <UCard variant="soft">
+        <p class="text-xl font-medium text-center">Na Jornada Vue, meu objetivo é que você compreenda os fundamentos
+          profundos do Vue.js, desde a raiz. Cada módulo foi cuidadosamente elaborado para que você aprenda a filosofia
+          e a essência de cada recurso do framework, antes de avançar para técnicas mais avançadas e modernas.</p>
+      </UCard>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-16">
-        <Card
-          v-for="item in items"
-          class="bg-transparent dark:bg-transparent border border-gray-300 dark:border-gray-700"
-        >
-          <CardContent>
-            <h3 class="text-lg font-bold">{{ item.title }}</h3>
-            <p class="text-gray-500 dark:text-gray-400 mt-2">{{ item.description }}</p>
-          </CardContent>
-        </Card>
+        <UCard v-for="item in items">
+          <h3 class="text-lg font-bold">{{ item.title }}</h3>
+          <p class="text-gray-500 dark:text-gray-400 mt-2">{{ item.description }}</p>
+        </UCard>
       </div>
 
-      <p>A Jornada Vue não é apenas sobre aprender um framework; é sobre desenvolver uma base sólida, sem atalhos, e transformá-lo em um desenvolvedor Vue.js completo e confiante. Venha fazer parte dessa jornada e prepare-se para conquistar o mercado!</p>
+      <p>A Jornada Vue não é apenas sobre aprender um framework; é sobre desenvolver uma base sólida, sem atalhos, e
+        transformá-lo em um desenvolvedor Vue.js completo e confiante. Venha fazer parte dessa jornada e prepare-se para
+        conquistar o mercado!</p>
     </div>
   </LandingSection>
 </template>

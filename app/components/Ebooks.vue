@@ -5,7 +5,7 @@
     </Heading>
 
     <div class="grid sm:grid-cols-2 gap-5">
-      <Card
+      <UCard
         tag="a"
         href="https://lp.laravue.com.br/ebook-laravel"
         target="_blank"
@@ -20,9 +20,9 @@
           alt="Laravel e-book"
           class="dark:hidden"
         >
-      </Card>
+      </UCard>
 
-      <Card
+      <UCard
         tag="a"
         href="https://lp.laravue.com.br/ebook-vue"
         target="_blank"
@@ -37,7 +37,7 @@
           alt="Vue.js e-book"
           class="dark:hidden"
         >
-      </Card>
+      </UCard>
     </div>
   </div>
 </template>

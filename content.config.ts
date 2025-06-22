@@ -19,6 +19,7 @@ export default defineContentConfig({
       type: 'page',
       source: {
         include: 'jornada-laravel/**',
+        exclude: ['jornada-laravel/index.md'],
       },
       schema: z.object({
         links: z.array(z.object({

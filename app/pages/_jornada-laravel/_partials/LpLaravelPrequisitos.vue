@@ -5,13 +5,14 @@
     description="Antes de iniciar sua Jornada Laravel, é importante que você tenha alguns fundamentos essenciais. Estes conhecimentos vão te ajudar a aproveitar ao máximo cada módulo do curso!"
   >
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <Card v-for="item in items">
-        <CardContent>
-          <Component :is="item.icon"/>
-          <h3 class="text-lg font-medium mt-6">{{ item.title }}</h3>
-          <p class="text-gray-500 dark:text-gray-400 mt-2">{{ item.description }}</p>
-        </CardContent>
-      </Card>
+      <UCard
+        v-for="item in items"
+        variant="soft"
+      >
+        <Component :is="item.icon"/>
+        <h3 class="text-lg font-medium mt-6">{{ item.title }}</h3>
+        <p class="text-gray-500 dark:text-gray-400 mt-2">{{ item.description }}</p>
+      </UCard>
     </div>
   </LandingSection>
 </template>
@@ -44,7 +45,7 @@ const items = [
   {
     icon: IconCode,
     title: 'Noções Básicas de Lógica de Programação',
-    description: 'É fundamental entender conceitos de lógica de programação, como estruturas condicionais, loops e funções. Isso ajudará você a acompanhar melhor o conteúdo e resolver problemas de forma mais eficiente.'
+    description: 'É fundamental entender conceitos de lógica de programação, como estruturas condicionais, loops e funções. Isso ajudará você a acompanhar melhor o conteúdo e resolver problemas de forma mais eficiente.',
   },
   {
     icon: IconHtml5,

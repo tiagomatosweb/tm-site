@@ -5,16 +5,14 @@
     description="Ao longo do curso, você adquirirá as habilidades necessárias para criar aplicações web dinâmicas e interativas. Prepare-se para desenvolver projetos que impressionam! Aqui estão alguns exemplos do que você poderá construir:"
   >
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <Card
-        v-for="item in items"
-        class="bg-transparent dark:bg-transparent"
-      >
+      <UCard v-for="item in items">
         <h3 class="text-lg font-bold">{{ item.title }}</h3>
         <p class="text-gray-500 dark:text-gray-400 mt-2">{{ item.description }}</p>
-      </Card>
+      </UCard>
     </div>
 
-    <p class="text-center text-xl mt-16">Com a Jornada Vue, suas ideias ganharão vida e você estará pronto para enfrentar desafios reais no desenvolvimento web!</p>
+    <p class="text-center text-xl mt-16">Com a Jornada Vue, suas ideias ganharão vida e você estará pronto para
+      enfrentar desafios reais no desenvolvimento web!</p>
   </LandingSection>
 </template>
 

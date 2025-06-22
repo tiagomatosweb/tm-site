@@ -14,15 +14,15 @@
         <BadgeDuration :duration="stats.duration"/>
       </div>
 
-      <Button
-        as="a"
-        variant="marketing"
-        size="lg"
-        class="h-16 text-2xl font-bold rounded-xl mt-10"
+      <UButton
+        size="3xl"
+        color="cta"
+        trailing-icon="i-lucide-arrow-right"
+        class="mt-10"
         href="https://pay.hotmart.com/S96627323M?checkoutMode=10"
-      >
-        Matricule-se agora
-      </Button>
+        label="Matricule-se agora"
+      />
+
       <!--        <div class="text-muted mt-6">-->
       <!--          Aprenda conceitos fundamentais como MVC - Model View e Controller e também tópicos avançados como Arquitetura-->
       <!--          API, Autenticação, Fila, Query Builder e muito mais.-->

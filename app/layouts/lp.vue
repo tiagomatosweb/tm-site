@@ -29,15 +29,17 @@
 
 <script setup lang="ts">
 import {cn} from '~/lib/utils';
-import type {PrimitiveProps} from 'radix-vue';
-import type {HTMLAttributes} from 'vue';
 import AppFooter from '~/common/components/App/AppFooter.vue';
 import AppLogo from '~/common/components/App/AppLogo.vue';
 
-interface Props extends PrimitiveProps {
-  background?: string,
-  backgroundClass?: HTMLAttributes['class'],
-}
-
-const props = defineProps<Props>();
+const props = defineProps({
+  background: {
+    type: String,
+    default: '',
+  },
+  backgroundClass: {
+    type: String,
+    default: '',
+  },
+});
 </script>

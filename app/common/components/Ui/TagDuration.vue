@@ -1,6 +1,9 @@
 <template>
   <div class="flex items-center text-xs font-medium text-gray-500 dark:text-gray-400 gap-x-1">
-    <LucideClock5 class="size-3.5 text-gray-400 dark:text-gray-500 "/>
+    <Icon
+      name="i-lucide-clock-5"
+      class="size-3.5 text-gray-400 dark:text-gray-500"
+    />
 
     <div v-if="hours">{{ hours }}h</div>
     <div v-if="minutes">{{ minutes }}m</div>

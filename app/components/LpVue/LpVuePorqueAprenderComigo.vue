@@ -5,14 +5,12 @@
     description="Conheça as razões que tornam a minha metodologia ideal para transformar você em um verdadeiro especialista em Vue.js!"
   >
     <div class="column-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
-      <Card
+      <UCard
         v-for="item in items"
         class="break-inside-avoid"
       >
-        <CardContent>
-          <span class="font-bold">{{ item.title }}:</span> <span class="text-muted">{{ item.description }}</span>
-        </CardContent>
-      </Card>
+        <span class="font-bold">{{ item.title }}:</span> <span class="text-muted">{{ item.description }}</span>
+      </UCard>
     </div>
   </LandingSection>
 </template>

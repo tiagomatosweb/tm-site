@@ -9,9 +9,6 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
-  components: {
-    dirs: ['~/shadcn'],
-  },
   imports: {
     // autoImport: false,
   },
@@ -40,7 +37,16 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@nuxt/ui-pro', '@nuxt/content', 'shadcn-nuxt', '@zadigetvoltaire/nuxt-gtm', '@nuxtjs/google-fonts', 'nuxt-lucide-icons', '@nuxt/image', 'dayjs-nuxt', 'nuxt-disqus', '@nuxt/scripts'],
+  modules: [
+    '@nuxt/ui-pro',
+    '@nuxt/content',
+    '@zadigetvoltaire/nuxt-gtm',
+    '@nuxtjs/google-fonts',
+    '@nuxt/image',
+    'dayjs-nuxt',
+    'nuxt-disqus',
+    '@nuxt/scripts',
+  ],
 
   dayjs: {
     locales: ['pt-br'],

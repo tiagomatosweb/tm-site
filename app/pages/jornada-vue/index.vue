@@ -14,15 +14,14 @@
         <BadgeDuration :duration="stats.duration"/>
       </div>
 
-      <Button
-        as="a"
-        variant="marketing"
-        size="lg"
-        class="h-16 text-2xl font-bold rounded-xl mt-10"
+      <UButton
+        size="3xl"
+        color="cta"
+        trailing-icon="i-lucide-arrow-right"
+        class="mt-10"
         href="https://pay.hotmart.com/U96627395Y?checkoutMode=10"
-      >
-        Matricule-se agora
-      </Button>
+        label="Matricule-se agora"
+      />
     </template>
 
     <template #content-right>

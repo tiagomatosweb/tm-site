@@ -5,15 +5,14 @@
     description="Conheça o percurso que preparei para você, desde os conceitos básicos até técnicas avançadas. Cada módulo foi projetado para garantir que você domine o Vue.js de maneira prática e eficaz."
   >
     <div class="column-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
-      <Card
+      <UCard
         v-for="(item, index) in items?.sections"
+        variant="soft"
         class="break-inside-avoid"
       >
-        <CardContent>
-          <div class="text-xs text-gray-400 dark:text-gray-400 font-bold -mt-1">MODULO {{ index + 1 }}</div>
-          <div class="font-bold">{{ item.title }}</div>
-        </CardContent>
-      </Card>
+        <div class="text-xs text-gray-400 dark:text-gray-400 font-bold -mt-1">MODULO {{ index + 1 }}</div>
+        <div class="font-bold">{{ item.title }}</div>
+      </UCard>
     </div>
 
     <div class="flex flex-col items-center my-16">
