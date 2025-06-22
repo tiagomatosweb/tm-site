@@ -19,7 +19,7 @@
 </template>
 
 <script setup>
-import AppLogo from '~/common/components/App/AppLogo.vue';
+import AppLogo from '~/components/App/AppLogo.vue';
 
 const route = useRoute()
 

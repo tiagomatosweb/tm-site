@@ -1,3 +1,7 @@
+import {createResolver} from 'nuxt/kit';
+
+const {resolve} = createResolver(import.meta.url);
+
 export default defineNuxtConfig({
   runtimeConfig: {
     public: {
@@ -48,6 +52,17 @@ export default defineNuxtConfig({
     '@nuxt/scripts',
   ],
 
+  icon: {
+    customCollections: [{
+      prefix: 'custom',
+      dir: resolve('./app/assets/icons'),
+    }],
+    clientBundle: {
+      scan: true,
+      includeCustomCollections: true,
+    },
+  },
+
   dayjs: {
     locales: ['pt-br'],
     plugins: ['utc', 'timezone', 'isBetween', 'duration', 'relativeTime'],
@@ -94,14 +109,6 @@ export default defineNuxtConfig({
 
   gtm: {
     id: 'GTM-PG5CMBN',
-  },
-
-  shadcn: {
-    componentDir: './shadcn',
-  },
-
-  colorMode: {
-    storageKey: '_tm_theme',
   },
 
   compatibilityDate: '2025-03-05',

@@ -1,11 +1,11 @@
 <template>
-  <FaqSection
+  <PageFaq
     :items="items"
   />
 </template>
 
 <script setup>
-import FaqSection from '~/components/Faq/FaqSection.vue';
+import PageFaq from '~/components/Page/PageFAQ.vue';
 
 const items = ref([
   {

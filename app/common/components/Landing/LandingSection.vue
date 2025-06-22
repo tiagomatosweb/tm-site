@@ -9,15 +9,14 @@
       />
 
       <div>
-        <slot />
+        <slot/>
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import {cn} from '~/lib/utils';
-import { type HTMLAttributes } from 'vue'
+import {type HTMLAttributes} from 'vue';
 import LandingSectionHeader from '~/common/components/Landing/LandingSectionHeader.vue';
 
 const props = defineProps<{
@@ -26,5 +25,5 @@ const props = defineProps<{
   title?: string,
   description?: string,
   headline?: string,
-}>()
+}>();
 </script>

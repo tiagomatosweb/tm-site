@@ -28,7 +28,6 @@
 </template>
 
 <script setup lang="ts">
-import {mailerliteGroups} from '~/common/utils/mailerlite-groups';
 import LeadGenFormMinimal from '~/components/Leadgen/LeadGenFormMinimal.vue';
 
 const showMessage = ref(false);

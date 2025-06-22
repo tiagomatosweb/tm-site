@@ -1,8 +1,8 @@
 <template>
   <div>
-    <Heading tag="h2">
+    <h2 class="heading-5 mb-4">
       📚&nbsp;&nbsp;<span class="tm-gradient">Baixe meus e-books gratuitos</span>
-    </Heading>
+    </h2>
 
     <div class="grid sm:grid-cols-2 gap-5">
       <UCard
@@ -41,3 +41,5 @@
     </div>
   </div>
 </template>
+<script setup lang="ts">
+</script>

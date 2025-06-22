@@ -1,18 +1,18 @@
 <template>
-  <RealProjectSection
+  <PageProjects
     :items="items"
   />
 </template>
 
 <script setup>
-import RealProjectSection from '~/components/RealProjects/RealProjectSection.vue';
+import PageProjects from '~/components/Page/PageProjects.vue';
 import {coursesAPI} from '~/common/api/courses';
-import ScreenshotAgendaMe from '@/assets/img/screenshot-agendame.webp';
-import ScreenshotOrdemDeServico from '@/assets/img/screenshot-ordem-de-servico.webp';
-import ScreenshotVuetifyCart from '@/assets/img/screenshot-vuetify-cart.webp';
+import ScreenshotAgendaMe from 'assets/img/screenshot-agendame.webp';
+import ScreenshotOrdemDeServico from 'assets/img/screenshot-ordem-de-servico.webp';
+import ScreenshotVuetifyCart from 'assets/img/screenshot-vuetify-cart.webp';
 
 const {data} = useLazyAsyncData(() => coursesAPI.getCourses({
-  'filter[ids]': '28,34,14'
+  'filter[ids]': '28,34,14',
 }).then(r => r.data))
 
 const items = computed(() => !data.value?.length ? [] : data.value?.map(o => {

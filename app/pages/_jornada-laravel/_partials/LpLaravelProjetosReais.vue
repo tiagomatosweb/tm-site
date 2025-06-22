@@ -1,11 +1,11 @@
 <template>
-  <RealProjectSection
+  <PageProjects
     :items="items"
   />
 </template>
 
 <script setup>
-import RealProjectSection from '~/components/RealProjects/RealProjectSection.vue';
+import PageProjects from '~/components/Page/PageProjects.vue';
 import {coursesAPI} from '~/common/api/courses';
 import ScreenshotAgendaMe from 'assets/img/screenshot-agendame.webp';
 

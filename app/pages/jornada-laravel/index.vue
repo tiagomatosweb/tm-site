@@ -324,7 +324,7 @@
     </template>
   </UPageSection>
 
-  <TestimonialSection/>
+  <PageTestimonial/>
 
   <OfferSection
     offer-invite-title="Junte-se à Elite dos Devs Laravel"
@@ -345,7 +345,7 @@
     offer-link="https://pay.hotmart.com/S96627323M?checkoutMode=10"
   />
 
-  <AboutSection/>
+  <PageAbout/>
 
   <UPageCTA
     title="Quer explorar tudo com calma?"
@@ -375,15 +375,16 @@
 <script setup>
 import CodeSnippetLaravel from '~/components/Codesnippet/CodeSnippetLaravel.vue';
 import IconLaravel from '~/common/components/Icons/IconLaravel.vue';
-import AboutSection from '~/components/About/AboutSection.vue';
-import TestimonialSection from '~/components/Testimonial/TestimonialSection.vue';
+import PageAbout from '~/components/Page/PageAbout.vue';
+import PageTestimonial from '~/components/Page/PageTestimonial.vue';
 import OfferSection from '~/components/Offer/OfferSection.vue';
 import {journeyAPI} from '~/common/api/journey';
-import BadgeDuration from '~/common/components/Ui/BadgeDuration.vue';
-import BadgeCourseCount from '~/common/components/Ui/BadgeCourseCount.vue';
-import BadgeLectureCount from '~/common/components/Ui/BadgeLectureCount.vue';
+import BadgeDuration from '~/components/BadgeDuration.vue';
+import BadgeCourseCount from '~/components/BadgeCourseCount.vue';
+import BadgeLectureCount from '~/components/BadgeLectureCount.vue';
 
 // const {data: stats} = await useAsyncData('laravel-journey-stats', () => journeyAPI.getStats('laravel'))
+
 
 useHead({
   title: 'Jornada Laravel: Domine Laravel com Projeto Real e Suporte',

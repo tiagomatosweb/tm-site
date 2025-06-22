@@ -39,15 +39,14 @@
       </CodeIDE>
     </UPageSection>
 
-    <TestimonialSection/>
+    <PageTestimonial/>
   </div>
 </template>
 
 <script setup>
 import CodeIDE from '~/components/Codesnippet/CodeIDE.vue';
 import LeadGenForm from '~/components/Leadgen/LeadGenForm.vue';
-import TestimonialSection from '~/components/Testimonial/TestimonialSection.vue';
-import {mailerliteGroups} from '~/common/utils/mailerlite-groups';
+import PageTestimonial from '~/components/Page/PageTestimonial.vue';
 
 definePageMeta({
   layout: 'lp',

@@ -9,6 +9,10 @@
   >
     <div class="max-w-5xl mx-auto space-y-20">
       <div class="flex flex-wrap items-center justify-center gap-8">
+        <!--        <div class="w-[225px] h-[400px]">-->
+        <!--          <PlayerYoutube video-id="9GNqY_uKyic" :width="225" :height="400"/>-->
+        <!--        </div>-->
+
         <iframe width="225" height="400" src="https://www.youtube.com/embed/9GNqY_uKyic?si=YMefGPPPyNGVG1tQ"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -40,7 +44,6 @@
       >
         <template #footer>
           {{ testimonial.author }}
-          <!--        <UUser v-bind="testimonial.user" size="xl" />-->
         </template>
       </UPageCard>
     </UPageColumns>

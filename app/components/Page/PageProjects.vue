@@ -48,9 +48,9 @@
 
 <script setup>
 import LandingSection from '~/common/components/Landing/LandingSection.vue';
-import Headline from '~/common/components/Ui/Headline.vue';
-import TagLectureCount from '~/common/components/Ui/TagLectureCount.vue';
-import TagDuration from '~/common/components/Ui/TagDuration.vue';
+import Headline from '~/components/Headline.vue';
+import TagLectureCount from '~/components/TagLectureCount.vue';
+import TagDuration from '~/components/TagDuration.vue';
 
 const props = defineProps({
   headline: {

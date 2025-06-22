@@ -28,9 +28,8 @@
 </template>
 
 <script setup lang="ts">
-import {cn} from '~/lib/utils';
-import AppFooter from '~/common/components/App/AppFooter.vue';
-import AppLogo from '~/common/components/App/AppLogo.vue';
+import AppFooter from '~/components/App/AppFooter.vue';
+import AppLogo from '~/components/App/AppLogo.vue';
 
 const props = defineProps({
   background: {

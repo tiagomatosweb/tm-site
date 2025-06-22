@@ -1,5 +1,5 @@
 <template>
-  <FaqSection
+  <PageFaq
     title="Ainda tem alguma dúvida? 🤔"
     description="Aqui estão as perguntas mais comuns sobre o curso. Se você ainda tiver alguma dúvida, não hesite em entrar em contato!"
     :items="items"
@@ -7,7 +7,7 @@
 </template>
 
 <script setup>
-import FaqSection from '~/components/Faq/FaqSection.vue';
+import PageFaq from '~/components/Page/PageFAQ.vue';
 
 const items = ref([
   {

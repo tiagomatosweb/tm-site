@@ -6,7 +6,6 @@
         logo-width="40"
       />
     </template>
-
     <UNavigationMenu
       :items="items"
       variant="link"
@@ -19,27 +18,20 @@
         color="neutral"
         trailing-icon="i-lucide-arrow-right"
       />
+
+      <UColorModeButton/>
     </template>
 
     <template #body>
-      <!--      sdsdsdsd-->
-      <!--      <UContentNavigation-->
-      <!--        highlight-->
-      <!--        :navigation="navigation"-->
-      <!--      />-->
+      <UNavigationMenu
+        :items="items"
+        orientation="vertical"
+        class="-mx-2.5"
+      />
     </template>
   </UHeader>
 
   <UMain>
-    <!--        <template #left>-->
-    <!--          <UPageAside>-->
-    <!--            <UContentNavigation-->
-    <!--              highlight-->
-    <!--              :navigation="navigation"-->
-    <!--            />-->
-    <!--          </UPageAside>-->
-    <!--        </template>-->
-
     <slot/>
   </UMain>
 
@@ -55,8 +47,9 @@
 </template>
 
 <script setup>
-import AppLogo from '~/common/components/App/AppLogo.vue';
+import AppLogo from '~/components/App/AppLogo.vue';
 
+const test = inject('test')
 const route = useRoute()
 const items = computed(() => [
   {label: 'Conteúdo do curso', to: '/curriculo'},

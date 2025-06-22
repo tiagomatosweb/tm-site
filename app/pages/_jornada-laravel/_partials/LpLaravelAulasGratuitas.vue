@@ -1,5 +1,5 @@
 <template>
-  <FreeLectureSection
+  <PageFreeLectures
     v-if="data"
     headline="Experimente Agora"
     title="Ainda em dúvida se vale a pena?"
@@ -10,7 +10,7 @@
 
 <script setup>
 import {coursesAPI} from '~/common/api/courses';
-import FreeLectureSection from '~/components/Lectures/FreeLectureSection.vue';
+import PageFreeLectures from '~/components/Page/PageFreeLectures.vue';
 
 const {data} = useLazyAsyncData(() => coursesAPI.getFreeLectures({
   'filter[course_id]': 32,

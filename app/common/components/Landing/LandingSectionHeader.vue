@@ -4,7 +4,7 @@
       v-if="props.headline"
       class="mb-2"
     >
-       {{ props.headline }}
+      {{ props.headline }}
     </Headline>
 
     <h2
@@ -23,13 +23,13 @@
 </template>
 
 <script setup lang="ts">
-import { type HTMLAttributes } from 'vue'
-import Headline from '~/common/components/Ui/Headline.vue';
+import {type HTMLAttributes} from 'vue';
+import Headline from '~/components/Headline.vue';
 
 const props = defineProps<{
   class?: HTMLAttributes['class'],
   title?: string,
   description?: string,
   headline?: string,
-}>()
+}>();
 </script>

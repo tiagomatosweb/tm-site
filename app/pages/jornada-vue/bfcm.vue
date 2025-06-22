@@ -21,42 +21,43 @@
 
       <template #after-description>
         <p class="mt-8 text-gray-700 dark:text-gray-300">
-          Essa promoção especial de Black Friday só estará disponível pelo WhatsApp! Para garantir o desconto e receber todas as instruções, preencha o formulário ao lado e entre para o nosso grupo exclusivo no WhatsApp. Lá, você terá acesso à oferta imperdível e poderá tirar todas as suas dúvidas!
+          Essa promoção especial de Black Friday só estará disponível pelo WhatsApp! Para garantir o desconto e receber
+          todas as instruções, preencha o formulário ao lado e entre para o nosso grupo exclusivo no WhatsApp. Lá, você
+          terá acesso à oferta imperdível e poderá tirar todas as suas dúvidas!
         </p>
       </template>
     </LeadGenSection>
 
-    <TestimonialSection />
+    <PageTestimonial/>
 
-    <AboutSection/>
+    <PageAbout/>
   </NuxtLayout>
 </template>
 
 <script setup>
 import LeadGenSection from '~/components/Leadgen/LeadGenSection.vue';
-import {mailerliteGroups} from '~/common/utils/mailerlite-groups';
 import IconVue from '~/common/components/Icons/IconVue.vue';
-import TestimonialSection from '~/components/Testimonial/TestimonialSection.vue';
-import AboutSection from '~/components/About/AboutSection.vue';
+import PageTestimonial from '~/components/Page/PageTestimonial.vue';
+import PageAbout from '~/components/Page/PageAbout.vue';
 import {navigateTo} from '#app';
 
 definePageMeta({
   layout: false,
   middleware: () => {
-    return navigateTo({ name: 'jornada-vue'})
-  }
+    return navigateTo({name: 'jornada-vue'})
+  },
 })
 
 useHead({
   title: 'Aprenda Vue.js: Torne-se um Especialista em Desenvolvimento de Aplicações Web',
   meta: {
-    description: 'Descubra a Jornada Vue e desenvolva aplicações dinâmicas e interativas. Aulas práticas, projetos reais e uma comunidade engajada esperam por você para transformar suas habilidades em programação.'
-  }
+    description: 'Descubra a Jornada Vue e desenvolva aplicações dinâmicas e interativas. Aulas práticas, projetos reais e uma comunidade engajada esperam por você para transformar suas habilidades em programação.',
+  },
 })
 
 function onDone() {
   return navigateTo('https://chat.whatsapp.com/Lw8LQh3VA1j2Xdvconq6qj', {
-    external: true
+    external: true,
   })
 }
 </script>

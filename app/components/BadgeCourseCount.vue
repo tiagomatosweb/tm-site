@@ -1,7 +1,7 @@
 <template>
   <div class="shrink-0 flex items-center space-x-2 text-left">
     <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-violet-500/20">
-      <Icon
+      <UIcon
         name="i-lucide-graduation-cap"
         class="size-6 text-violet-400"
       />

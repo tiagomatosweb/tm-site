@@ -46,7 +46,7 @@
 
   <LpLaravelPorqueAprenderComigo/>
 
-  <TestimonialSection
+  <PageTestimonial
     headline="Histórias de Sucesso"
     title="Transforme sua carreira com a Jornada Laravel"
     description="Junte-se a mais de 1k alunos que mudaram suas vidas profissionais e alcançaram novos patamares na programação. Veja como eles se destacaram no mercado!"
@@ -62,7 +62,7 @@
 
   <LpLaravelOffer id="offer"/>
 
-  <AboutSection/>
+  <PageAbout/>
 </template>
 
 <script setup>
@@ -73,18 +73,18 @@ import LpLaravelOQueE from './_partials/LpLaravelOQueE.vue';
 import LpLaravelParaQuemE from './_partials/LpLaravelParaQuemE.vue';
 import LpLaravelModulos from './_partials/LpLaravelModulos.vue';
 import LpLaravelPorqueAprenderComigo from './_partials/LpLaravelPorqueAprenderComigo.vue';
-import TestimonialSection from '~/components/Testimonial/TestimonialSection.vue';
+import PageTestimonial from '~/components/Page/PageTestimonial.vue';
 import LpLaravelOQuePossoConstruir from './_partials/LpLaravelOQuePossoConstruir.vue';
 import LpLaravelPrequisitos from './_partials/LpLaravelPrequisitos.vue';
 import LpLaravelFaq from './_partials/LpLaravelFaq.vue';
 import LpLaravelAulasGratuitas from './_partials/LpLaravelAulasGratuitas.vue';
 import LpLaravelOffer from './_partials/LpLaravelOffer.vue';
-import AboutSection from '~/components/About/AboutSection.vue';
+import PageAbout from '~/components/Page/PageAbout.vue';
 import LpLaravelProjetosReais from './_partials/LpLaravelProjetosReais.vue';
 import {journeyAPI} from '~/common/api/journey';
-import BadgeDuration from '~/common/components/Ui/BadgeDuration.vue';
-import BadgeLectureCount from '~/common/components/Ui/BadgeLectureCount.vue';
-import BadgeCourseCount from '~/common/components/Ui/BadgeCourseCount.vue';
+import BadgeDuration from '~/components/BadgeDuration.vue';
+import BadgeLectureCount from '~/components/BadgeLectureCount.vue';
+import BadgeCourseCount from '~/components/BadgeCourseCount.vue';
 
 definePageMeta({
   layout: 'lp',

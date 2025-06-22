@@ -12,7 +12,7 @@
       >
         <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10">
           <div>
-            <Icon
+            <UIcon
               name="i-lucide-mail"
               class="size-10 text-primary"
             />
@@ -22,7 +22,7 @@
           </div>
 
           <div>
-            <Icon
+            <UIcon
               name="i-lucide-mail-open"
               class="size-10 text-primary"
             />
@@ -31,7 +31,7 @@
           </div>
 
           <div>
-            <Icon
+            <UIcon
               name="i-lucide-reply"
               class="size-10 text-primary"
             />

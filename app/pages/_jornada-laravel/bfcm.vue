@@ -21,30 +21,31 @@
 
       <template #after-description>
         <p class="mt-8 text-gray-700 dark:text-gray-300">
-          Essa promoção especial de Black Friday só estará disponível pelo WhatsApp! Para garantir o desconto e receber todas as instruções, preencha o formulário ao lado e entre para o nosso grupo exclusivo no WhatsApp. Lá, você terá acesso à oferta imperdível e poderá tirar todas as suas dúvidas!
+          Essa promoção especial de Black Friday só estará disponível pelo WhatsApp! Para garantir o desconto e receber
+          todas as instruções, preencha o formulário ao lado e entre para o nosso grupo exclusivo no WhatsApp. Lá, você
+          terá acesso à oferta imperdível e poderá tirar todas as suas dúvidas!
         </p>
       </template>
     </LeadGenSection>
 
-    <TestimonialSection />
+    <PageTestimonial/>
 
-    <AboutSection/>
+    <PageAbout/>
   </NuxtLayout>
 </template>
 
 <script setup>
-import {mailerliteGroups} from '~/common/utils/mailerlite-groups';
 import LeadGenSection from '~/components/Leadgen/LeadGenSection.vue';
 import IconLaravel from '~/common/components/Icons/IconLaravel.vue';
-import TestimonialSection from '~/components/Testimonial/TestimonialSection.vue';
-import AboutSection from '~/components/About/AboutSection.vue';
+import PageTestimonial from '~/components/Page/PageTestimonial.vue';
+import PageAbout from '~/components/Page/PageAbout.vue';
 import {navigateTo} from '#app';
 
 definePageMeta({
   layout: false,
   middleware: () => {
-    return navigateTo({ name: 'jornada-laravel'})
-  }
+    return navigateTo({name: 'jornada-laravel'})
+  },
 })
 
 useHead({
@@ -56,7 +57,7 @@ useHead({
 
 function onDone() {
   return navigateTo('https://chat.whatsapp.com/GeSQUChzMbv2kNsS18IPpa', {
-    external: true
+    external: true,
   })
 }
 </script>

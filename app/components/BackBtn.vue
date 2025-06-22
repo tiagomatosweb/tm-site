@@ -5,8 +5,7 @@
     size="lg"
     variant="soft"
     :ui="{ base: 'rounded-full' }"
-  >
-  </UButton>
+  />
 </template>
 
 <script setup>

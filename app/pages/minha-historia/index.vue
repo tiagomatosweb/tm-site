@@ -18,19 +18,18 @@
       </template>
     </LeadGenSection>
 
-    <TestimonialSection/>
+    <PageTestimonial/>
 
-    <AboutSection/>
+    <PageAbout/>
   </NuxtLayout>
 </template>
 
 <script setup>
 import operahouse from '@/assets/img/opera-house.webp'
 import {leadAPI} from '~/common/api/lead';
-import AboutSection from '~/components/About/AboutSection.vue';
-import TestimonialSection from '~/components/Testimonial/TestimonialSection.vue';
+import PageAbout from '~/components/Page/PageAbout.vue';
+import PageTestimonial from '~/components/Page/PageTestimonial.vue';
 import LeadGenSection from '~/components/Leadgen/LeadGenSection.vue';
-import {mailerliteGroups} from '~/common/utils/mailerlite-groups';
 
 definePageMeta({
   layout: false,

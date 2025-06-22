@@ -5,7 +5,7 @@
       :key="index"
       class="flex items-start gap-x-2 text-inverted"
     >
-      <Icon name="i-lucide-circle-check" class="text-primary size-5 shrink-0"/>
+      <UIcon name="i-lucide-circle-check" class="text-primary size-5 shrink-0"/>
       {{ benefit }}
     </li>
   </ul>

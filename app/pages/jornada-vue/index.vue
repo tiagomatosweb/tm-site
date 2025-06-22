@@ -9,9 +9,9 @@
 
     <template #after-description>
       <div class="flex justify-center flex-wrap lg:justify-start gap-6 mt-6">
-        <BadgeCourseCount :number="stats.courses_count"/>
-        <BadgeLectureCount :number="stats.lectures_count"/>
-        <BadgeDuration :duration="stats.duration"/>
+        <BadgeCourseCount :number="stats?.courses_count"/>
+        <BadgeLectureCount :number="stats?.lectures_count"/>
+        <BadgeDuration :duration="stats?.duration"/>
       </div>
 
       <UButton
@@ -41,7 +41,7 @@
 
   <LpVuePorqueAprenderComigo/>
 
-  <TestimonialSection
+  <PageTestimonial
     headline="Depoimentos Inspiradores"
     title="Alavanque sua carreira com a Jornada Vue"
     description="Junte-se a mais de 1k alunos que elevaram suas habilidades em Vue.js e conquistaram novas oportunidades. Confira histórias reais de sucesso no mercado!"
@@ -57,29 +57,30 @@
 
   <LpVueOffer id="offer"/>
 
-  <AboutSection/>
+  <PageAbout/>
 </template>
 
 <script setup>
 import LandingHero from '~/common/components/Landing/LandingHero.vue';
 import IconVue from '~/common/components/Icons/IconVue.vue';
 import CodeSnippetVue from '~/components/Codesnippet/CodeSnippetVue.vue';
-import LpVueOQueE from '~/components/LpVue/LpVueOQueE.vue';
-import LpVueParaQuemE from '~/components/LpVue/LpVueParaQuemE.vue';
-import LpVueModulos from '~/components/LpVue/LpVueModulos.vue';
-import LpVuePorqueAprenderComigo from '~/components/LpVue/LpVuePorqueAprenderComigo.vue';
-import TestimonialSection from '~/components/Testimonial/TestimonialSection.vue';
-import LpVueOQuePossoConstruir from '~/components/LpVue/LpVueOQuePossoConstruir.vue';
-import LpVuePrequisitos from '~/components/LpVue/LpVuePrequisitos.vue';
-import LpVueFaq from '~/components/LpVue/LpVueFaq.vue';
-import LpVueAulasGratuitas from '~/components/LpVue/LpVueAulasGratuitas.vue';
-import LpVueOffer from '~/components/LpVue/LpVueOffer.vue';
-import AboutSection from '~/components/About/AboutSection.vue';
-import LpVueProjetosReais from '~/components/LpVue/LpVueProjetosReais.vue';
-import BadgeCourseCount from '~/common/components/Ui/BadgeCourseCount.vue';
-import BadgeDuration from '~/common/components/Ui/BadgeDuration.vue';
-import BadgeLectureCount from '~/common/components/Ui/BadgeLectureCount.vue';
+import LpVueOQueE from '~/pages/jornada-vue/_partials/LpVueOQueE.vue';
+import LpVueParaQuemE from '~/pages/jornada-vue/_partials/LpVueParaQuemE.vue';
+import LpVueModulos from '~/pages/jornada-vue/_partials/LpVueModulos.vue';
+import LpVuePorqueAprenderComigo from '~/pages/jornada-vue/_partials/LpVuePorqueAprenderComigo.vue';
+import PageTestimonial from '~/components/Page/PageTestimonial.vue';
+import LpVueOQuePossoConstruir from '~/pages/jornada-vue/_partials/LpVueOQuePossoConstruir.vue';
+import LpVuePrequisitos from '~/pages/jornada-vue/_partials/LpVuePrequisitos.vue';
+import LpVueFaq from '~/pages/jornada-vue/_partials/LpVueFaq.vue';
+import LpVueAulasGratuitas from '~/pages/jornada-vue/_partials/LpVueAulasGratuitas.vue';
+import LpVueOffer from '~/pages/jornada-vue/_partials/LpVueOffer.vue';
+import PageAbout from '~/components/Page/PageAbout.vue';
+import LpVueProjetosReais from '~/pages/jornada-vue/_partials/LpVueProjetosReais.vue';
+import BadgeCourseCount from '~/components/BadgeCourseCount.vue';
+import BadgeDuration from '~/components/BadgeDuration.vue';
+import BadgeLectureCount from '~/components/BadgeLectureCount.vue';
 import {journeyAPI} from '~/common/api/journey';
+import IconDatabase from '~/common/components/Icons/IconDatabase.vue';
 
 definePageMeta({
   layout: 'lp',

@@ -10,7 +10,7 @@
           v-for="lecture in props.lectures"
           :key="lecture.id"
         >
-          <Vimeo
+          <PlayerVimeo
             :id="lecture.video_id"
             class="shadow-2xl shadow-primary/10"
           />
@@ -25,20 +25,20 @@
 
 <script setup>
 import LandingSection from '~/common/components/Landing/LandingSection.vue';
-import Vimeo from '~/common/components/Videoplay/Vimeo.vue';
+import PlayerVimeo from '~/components/PlayerVimeo.vue';
 
 const props = defineProps({
   headline: {
     type: String,
-    default: 'Experimente Agora'
+    default: 'Experimente Agora',
   },
   title: {
     type: String,
-    default: 'Aulas gratuitas'
+    default: 'Aulas gratuitas',
   },
   description: {
     type: String,
-    default: 'Assista a estas aulas gratuitas.'
+    default: 'Assista a estas aulas gratuitas.',
   },
   lectures: {
     type: Array,

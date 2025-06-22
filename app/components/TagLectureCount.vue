@@ -1,6 +1,6 @@
 <template>
   <div class="flex items-center text-xs font-medium text-gray-500 dark:text-gray-400 gap-x-1">
-    <Icon
+    <UIcon
       name="i-lucide-video"
       class="size-4 text-gray-400 dark:text-gray-500"
     />
