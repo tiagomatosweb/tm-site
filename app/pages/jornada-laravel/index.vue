@@ -15,7 +15,7 @@
 
     <template #links>
       <div>
-        <div class="flex flex-col lg:flex-row lg:flex-wrap items-center w-full gap-2">
+        <div class="flex flex-col lg:flex-row lg:flex-wrap items-start lg:items-center w-full gap-2">
           <UButton
             size="3xl"
             color="cta"
