@@ -25,9 +25,6 @@
       </div>
 
       <div class="relative w-full lg:w-1/2 max-w-xl lg:max-w-none mx-auto">
-        <div
-          class="absolute left-1/2 transform -translate-x-1/2 w-36 h-64 origin-top-left rotate-[35.87deg] opacity-40 bg-gradient-to-b from-blue-400 to-sky-600 rounded-full blur-3xl"/>
-
         <slot name="content-right"/>
       </div>
     </div>

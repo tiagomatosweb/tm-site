@@ -8,7 +8,7 @@
       :on-done="onDone"
     >
       <template #before-title>
-        <IconLaravel class="mb-2"/>
+        <UIcon name="i-custom-laravel" class="size-[56px] mb-2"/>
       </template>
 
       <template #title>
@@ -36,7 +36,6 @@
 
 <script setup>
 import LeadGenSection from '~/components/Leadgen/LeadGenSection.vue';
-import IconLaravel from '~/common/components/Icons/IconLaravel.vue';
 import PageTestimonial from '~/components/Page/PageTestimonial.vue';
 import PageAbout from '~/components/Page/PageAbout.vue';
 import {navigateTo} from '#app';
@@ -48,16 +47,14 @@ definePageMeta({
   },
 })
 
-useHead({
-  title: 'Domine o Laravel: Transforme sua Carreira em Desenvolvimento Web',
-  meta: {
-    description: 'Aprenda Laravel do zero ao avançado com a Jornada Laravel. Cursos práticos, suporte contínuo e projetos reais para impulsionar sua carreira como desenvolvedor.',
-  },
-})
-
 function onDone() {
   return navigateTo('https://chat.whatsapp.com/GeSQUChzMbv2kNsS18IPpa', {
     external: true,
   })
 }
+
+useSeoMeta({
+  title: 'Domine o Laravel: Transforme sua Carreira em Desenvolvimento Web',
+  description: 'Aprenda Laravel do zero ao avançado com a Jornada Laravel. Cursos práticos, suporte contínuo e projetos reais para impulsionar sua carreira como desenvolvedor.',
+})
 </script>

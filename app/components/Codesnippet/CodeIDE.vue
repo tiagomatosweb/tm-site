@@ -7,6 +7,9 @@
       <div class="size-3 bg-green-400 rounded-full"></div>
     </div>
 
+    <div
+      class="absolute transform translate-x-[200px] translate-y-[50px] w-[130px] h-[350px] origin-top-left rotate-[35.87deg] opacity-25 bg-gradient-to-b from-blue-400 to-sky-600 rounded-full blur-3xl"/>
+
     <slot/>
   </div>
 </template>

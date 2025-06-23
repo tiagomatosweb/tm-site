@@ -10,7 +10,7 @@
     </template>
 
     <template #headline>
-      <IconLaravel/>
+      <UIcon name="i-custom-laravel" class="size-[56px]"/>
     </template>
 
     <template #links>
@@ -374,7 +374,6 @@
 
 <script setup>
 import CodeSnippetLaravel from '~/components/Codesnippet/CodeSnippetLaravel.vue';
-import IconLaravel from '~/common/components/Icons/IconLaravel.vue';
 import PageAbout from '~/components/Page/PageAbout.vue';
 import PageTestimonial from '~/components/Page/PageTestimonial.vue';
 import OfferSection from '~/components/Offer/OfferSection.vue';
@@ -386,10 +385,8 @@ import BadgeLectureCount from '~/components/BadgeLectureCount.vue';
 // const {data: stats} = await useAsyncData('laravel-journey-stats', () => journeyAPI.getStats('laravel'))
 
 
-useHead({
+useSeoMeta({
   title: 'Jornada Laravel: Domine Laravel com Projeto Real e Suporte',
-  meta: {
-    description: 'Transforme sua carreira com um curso prático de Laravel. Aprenda do zero, crie um projeto SaaS, receba suporte real e evolua sem depender de IA.',
-  },
+  description: 'Transforme sua carreira com um curso prático de Laravel. Aprenda do zero, crie um projeto SaaS, receba suporte real e evolua sem depender de IA.',
 })
 </script>

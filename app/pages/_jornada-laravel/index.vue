@@ -4,7 +4,7 @@
     description="Desperte seu potencial em PHP e abra portas para novas oportunidades! Aprenda Laravel de forma prática e crie aplicações web rápidas e robustas."
   >
     <template #before-title>
-      <IconLaravel class="mb-2"/>
+      <UIcon name="i-custom-laravel" class="size-[56px] mb-2"/>
     </template>
 
     <template #after-description>
@@ -67,7 +67,6 @@
 
 <script setup>
 import LandingHero from '~/common/components/Landing/LandingHero.vue';
-import IconLaravel from '~/common/components/Icons/IconLaravel.vue';
 import CodeSnippetLaravel from '~/components/Codesnippet/CodeSnippetLaravel.vue';
 import LpLaravelOQueE from './_partials/LpLaravelOQueE.vue';
 import LpLaravelParaQuemE from './_partials/LpLaravelParaQuemE.vue';
@@ -92,10 +91,8 @@ definePageMeta({
 
 const {data: stats} = await useAsyncData('laravel-journey-stats', () => journeyAPI.getStats('laravel'))
 
-useHead({
+useSeoMeta({
   title: 'Domine o Laravel: Transforme sua Carreira em Desenvolvimento Web',
-  meta: {
-    description: 'Aprenda Laravel do zero ao avançado com a Jornada Laravel. Cursos práticos, suporte contínuo e projetos reais para impulsionar sua carreira como desenvolvedor.',
-  },
+  description: 'Aprenda Laravel do zero ao avançado com a Jornada Laravel. Cursos práticos, suporte contínuo e projetos reais para impulsionar sua carreira como desenvolvedor.',
 })
 </script>

@@ -8,7 +8,7 @@
       :on-done="onDone"
     >
       <template #before-title>
-        <IconVue class="mb-2"/>
+        <UIcon name="i-custom-vue" class="size-[56px] mb-2"/>
       </template>
 
       <template #title>
@@ -36,7 +36,6 @@
 
 <script setup>
 import LeadGenSection from '~/components/Leadgen/LeadGenSection.vue';
-import IconVue from '~/common/components/Icons/IconVue.vue';
 import PageTestimonial from '~/components/Page/PageTestimonial.vue';
 import PageAbout from '~/components/Page/PageAbout.vue';
 import {navigateTo} from '#app';
@@ -48,16 +47,14 @@ definePageMeta({
   },
 })
 
-useHead({
-  title: 'Aprenda Vue.js: Torne-se um Especialista em Desenvolvimento de Aplicações Web',
-  meta: {
-    description: 'Descubra a Jornada Vue e desenvolva aplicações dinâmicas e interativas. Aulas práticas, projetos reais e uma comunidade engajada esperam por você para transformar suas habilidades em programação.',
-  },
-})
-
 function onDone() {
   return navigateTo('https://chat.whatsapp.com/Lw8LQh3VA1j2Xdvconq6qj', {
     external: true,
   })
 }
+
+useSeoMeta({
+  title: 'Aprenda Vue.js: Torne-se um Especialista em Desenvolvimento de Aplicações Web',
+  description: 'Descubra a Jornada Vue e desenvolva aplicações dinâmicas e interativas. Aulas práticas, projetos reais e uma comunidade engajada esperam por você para transformar suas habilidades em programação.',
+})
 </script>

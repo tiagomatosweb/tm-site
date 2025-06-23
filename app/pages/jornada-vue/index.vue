@@ -4,7 +4,7 @@
     description="Aprenda Vue.js sem atalhos, entendendo cada recurso do zero. Domine o essencial e avance para técnicas modernas com confiança."
   >
     <template #before-title>
-      <IconVue class="mb-2"/>
+      <UIcon name="i-custom-vue" class="size-[56px] mb-2"/>
     </template>
 
     <template #after-description>
@@ -62,7 +62,6 @@
 
 <script setup>
 import LandingHero from '~/common/components/Landing/LandingHero.vue';
-import IconVue from '~/common/components/Icons/IconVue.vue';
 import CodeSnippetVue from '~/components/Codesnippet/CodeSnippetVue.vue';
 import LpVueOQueE from '~/pages/jornada-vue/_partials/LpVueOQueE.vue';
 import LpVueParaQuemE from '~/pages/jornada-vue/_partials/LpVueParaQuemE.vue';
@@ -80,7 +79,6 @@ import BadgeCourseCount from '~/components/BadgeCourseCount.vue';
 import BadgeDuration from '~/components/BadgeDuration.vue';
 import BadgeLectureCount from '~/components/BadgeLectureCount.vue';
 import {journeyAPI} from '~/common/api/journey';
-import IconDatabase from '~/common/components/Icons/IconDatabase.vue';
 
 definePageMeta({
   layout: 'lp',
@@ -88,11 +86,9 @@ definePageMeta({
 
 const {data: stats} = await useAsyncData('vue-journey-stats', () => journeyAPI.getStats('vue'))
 
-useHead({
+useSeoMeta({
   title: 'Aprenda Vue.js: Torne-se um Especialista em Desenvolvimento de Aplicações Web',
-  meta: {
-    description: 'Descubra a Jornada Vue e desenvolva aplicações dinâmicas e interativas. Aulas práticas, projetos reais e uma comunidade engajada esperam por você para transformar suas habilidades em programação.',
-  },
+  description: 'Descubra a Jornada Vue e desenvolva aplicações dinâmicas e interativas. Aulas práticas, projetos reais e uma comunidade engajada esperam por você para transformar suas habilidades em programação.',
 })
 
 </script>

@@ -1,13 +1,14 @@
 ```vue
 <script setup>
+  import axios from 'axios'
+
   const props = defineProps({
     id: Number
   })
 
-  const {$apiFetch} = useNuxtApp()
-  const {data: course, pending} = useLazyAsyncData(
+  const {data, status} = useLazyAsyncData(
     'course',
-    () => $apiFetch(`api/courses/${props.id}`)
+    () => axios.get(`api/courses/${props.id}`)
   )
 </script>
 ```
