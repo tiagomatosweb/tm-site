@@ -66,7 +66,7 @@
 </template>
 
 <script setup>
-import LandingHero from '~/common/components/Landing/LandingHero.vue';
+import LandingHero from '~/components/Landing/LandingHero.vue';
 import CodeSnippetLaravel from '~/components/Codesnippet/CodeSnippetLaravel.vue';
 import LpLaravelOQueE from './_partials/LpLaravelOQueE.vue';
 import LpLaravelParaQuemE from './_partials/LpLaravelParaQuemE.vue';
@@ -80,16 +80,17 @@ import LpLaravelAulasGratuitas from './_partials/LpLaravelAulasGratuitas.vue';
 import LpLaravelOffer from './_partials/LpLaravelOffer.vue';
 import PageAbout from '~/components/Page/PageAbout.vue';
 import LpLaravelProjetosReais from './_partials/LpLaravelProjetosReais.vue';
-import {journeyAPI} from '~/common/api/journey';
 import BadgeDuration from '~/components/BadgeDuration.vue';
 import BadgeLectureCount from '~/components/BadgeLectureCount.vue';
 import BadgeCourseCount from '~/components/BadgeCourseCount.vue';
+import axios from 'axios';
 
 definePageMeta({
   layout: 'lp',
 })
 
-const {data: stats} = await useAsyncData('laravel-journey-stats', () => journeyAPI.getStats('laravel'))
+const endpoint = 'api/journeys/laravel/stats'
+const {data: stats} = await useAsyncData(endpoint, () => axios.get(endpoint))
 
 useSeoMeta({
   title: 'Domine o Laravel: Transforme sua Carreira em Desenvolvimento Web',

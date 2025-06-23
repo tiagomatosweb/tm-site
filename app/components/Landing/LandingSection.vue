@@ -17,7 +17,7 @@
 
 <script setup lang="ts">
 import {type HTMLAttributes} from 'vue';
-import LandingSectionHeader from '~/common/components/Landing/LandingSectionHeader.vue';
+import LandingSectionHeader from '~/components/Landing/LandingSectionHeader.vue';
 
 const props = defineProps<{
   rootClass?: HTMLAttributes['class'],

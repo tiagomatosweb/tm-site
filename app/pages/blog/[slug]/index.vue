@@ -26,7 +26,7 @@
 
 <script setup>
 import BackBtn from '@/components/BackBtn.vue';
-import LandingSection from '~/common/components/Landing/LandingSection.vue';
+import LandingSection from '~/components/Landing/LandingSection.vue';
 
 const route = useRoute()
 const {data} = await useAsyncData(route.path, () => queryCollection('blog').path(route.path).first())

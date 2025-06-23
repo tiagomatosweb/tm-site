@@ -4,6 +4,11 @@ export default defineAppConfig({
       primary: 'blue',
       neutral: 'gray',
     },
+    input: {
+      slots: {
+        root: 'w-full',
+      },
+    },
     button: {
       variants: {
         color: {

@@ -6,12 +6,16 @@
 
 <script setup>
 import PageProjects from '~/components/Page/PageProjects.vue';
-import {coursesAPI} from '~/common/api/courses';
+import {coursesAPI} from '~/api/courses';
 import ScreenshotAgendaMe from 'assets/img/screenshot-agendame.webp';
+import axios from 'axios';
 
-const {data} = useLazyAsyncData(() => coursesAPI.getCourses({
-  'filter[ids]': '28',
-}).then(r => r.data))
+const {data} = useLazyAsyncData('vue-projects', () => axios.get('api/courses', {
+  params: {
+    'filter[ids]': '28',
+  },
+}).then((res) => res.data))
+
 
 const items = computed(() => !data.value?.length ? [] : data.value?.map(o => {
   if (o.id === 28) {

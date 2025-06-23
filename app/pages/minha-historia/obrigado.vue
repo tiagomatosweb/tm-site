@@ -47,7 +47,7 @@
 
 <script setup>
 import operahouse from 'assets/img/opera-house.webp';
-import LandingSection from '~/common/components/Landing/LandingSection.vue';
+import LandingSection from '~/components/Landing/LandingSection.vue';
 
 definePageMeta({
   layout: false,

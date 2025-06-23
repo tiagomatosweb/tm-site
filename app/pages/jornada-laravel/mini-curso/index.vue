@@ -33,7 +33,7 @@
           :button-props="{
             label: 'Começar o minicurso gratuito'
           }"
-          :groups-id="[mailerliteGroups.LARAVEL_INTERESSE]"
+          :group-ids="[mailerliteGroups.LARAVEL_INTERESSE]"
           @done="onDone"
         />
       </CodeIDE>

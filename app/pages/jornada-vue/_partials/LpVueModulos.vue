@@ -6,7 +6,7 @@
   >
     <div class="column-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
       <UCard
-        v-for="(item, index) in items?.sections"
+        v-for="(item, index) in data?.sections"
         variant="soft"
         class="break-inside-avoid"
       >
@@ -32,12 +32,11 @@
 </template>
 
 <script setup>
-import {coursesAPI} from '~/common/api/courses';
-import LandingSection from '~/common/components/Landing/LandingSection.vue';
+import LandingSection from '~/components/Landing/LandingSection.vue';
+import axios from 'axios';
 
-const {data: items} = useLazyAsyncData(() => coursesAPI.getCourse('vue-pro'), {
-  transform: r => r.data,
-})
+const endpoint = 'api/courses/vue-pro'
+const {data} = useLazyAsyncData(endpoint, () => axios.get(endpoint).then(r => r.data))
 
 const futureModules = [
   'Vue Router',

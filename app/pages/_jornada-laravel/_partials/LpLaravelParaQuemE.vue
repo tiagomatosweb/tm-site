@@ -35,7 +35,7 @@
 import Junior from 'assets/img/programador-junior.webp'
 import Pleno from 'assets/img/programador-pleno.webp'
 import Senior from 'assets/img/programador-senior.webp'
-import LandingSection from '~/common/components/Landing/LandingSection.vue';
+import LandingSection from '~/components/Landing/LandingSection.vue';
 
 const items = [
   {

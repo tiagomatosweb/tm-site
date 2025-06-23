@@ -1,7 +1,7 @@
 <template>
   <NuxtLayout name="lp">
     <LeadGenSection
-      :lead-groups-id="[mailerliteGroups.LARAVEL_BFCM]"
+      :lead-group-ids="[mailerliteGroups.LARAVEL_BFCM]"
       title-class="text-4xl"
       lead-btn-text="Entrar para o grupo do WhatsApp"
       lead-btn-class="bg-gradient-to-r from-emerald-400 to-emerald-600 hover:bg-emerald-300 hover:shadow-emerald-500/50"

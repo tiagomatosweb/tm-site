@@ -24,7 +24,7 @@
 </template>
 
 <script setup>
-import LandingSection from '~/common/components/Landing/LandingSection.vue';
+import LandingSection from '~/components/Landing/LandingSection.vue';
 import PlayerVimeo from '~/components/PlayerVimeo.vue';
 
 const props = defineProps({

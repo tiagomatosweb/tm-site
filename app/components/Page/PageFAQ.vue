@@ -21,7 +21,7 @@
 
 <script setup>
 import {ref} from 'vue';
-import LandingSection from '~/common/components/Landing/LandingSection.vue';
+import LandingSection from '~/components/Landing/LandingSection.vue';
 
 const props = defineProps({
   headline: {

@@ -25,7 +25,7 @@
         <LeadGenForm
           :btn-text="props.leadBtnText"
           :btn-class="props.leadBtnClass"
-          :groups-id="props.leadGroupsId"
+          :group-ids="props.leadGroupsId"
           @done="emit('done')"
         />
       </CodeIDE>
@@ -35,7 +35,7 @@
 
 <script setup>
 import LeadGenForm from '~/components/Leadgen/LeadGenForm.vue';
-import LandingHero from '~/common/components/Landing/LandingHero.vue';
+import LandingHero from '~/components/Landing/LandingHero.vue';
 import CodeIDE from '~/components/Codesnippet/CodeIDE.vue';
 
 const emit = defineEmits(['done']);

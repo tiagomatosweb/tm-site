@@ -32,9 +32,9 @@
 </template>
 
 <script setup>
-import LandingSection from '~/common/components/Landing/LandingSection.vue';
-import LandingHeroTitle from '~/common/components/Landing/LandingHeroTitle.vue';
-import LandingHeroDescription from '~/common/components/Landing/LandingHeroDescription.vue';
+import LandingSection from '~/components/Landing/LandingSection.vue';
+import LandingHeroTitle from '~/components/Landing/LandingHeroTitle.vue';
+import LandingHeroDescription from '~/components/Landing/LandingHeroDescription.vue';
 
 const props = defineProps({
   title: String,

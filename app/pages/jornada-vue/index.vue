@@ -61,7 +61,7 @@
 </template>
 
 <script setup>
-import LandingHero from '~/common/components/Landing/LandingHero.vue';
+import LandingHero from '~/components/Landing/LandingHero.vue';
 import CodeSnippetVue from '~/components/Codesnippet/CodeSnippetVue.vue';
 import LpVueOQueE from '~/pages/jornada-vue/_partials/LpVueOQueE.vue';
 import LpVueParaQuemE from '~/pages/jornada-vue/_partials/LpVueParaQuemE.vue';
@@ -78,13 +78,14 @@ import LpVueProjetosReais from '~/pages/jornada-vue/_partials/LpVueProjetosReais
 import BadgeCourseCount from '~/components/BadgeCourseCount.vue';
 import BadgeDuration from '~/components/BadgeDuration.vue';
 import BadgeLectureCount from '~/components/BadgeLectureCount.vue';
-import {journeyAPI} from '~/common/api/journey';
+import axios from 'axios';
 
 definePageMeta({
   layout: 'lp',
 })
 
-const {data: stats} = await useAsyncData('vue-journey-stats', () => journeyAPI.getStats('vue'))
+const endpoint = 'api/journeys/vue/stats'
+const {data: stats} = await useAsyncData(endpoint, () => axios.get(endpoint))
 
 useSeoMeta({
   title: 'Aprenda Vue.js: Torne-se um Especialista em Desenvolvimento de Aplicações Web',

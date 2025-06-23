@@ -9,12 +9,12 @@
 </template>
 
 <script setup>
-import {coursesAPI} from '~/common/api/courses';
 import PageFreeLectures from '~/components/Page/PageFreeLectures.vue';
+import axios from 'axios';
 
-const {data} = useLazyAsyncData(() => coursesAPI.getFreeLectures({
-  'filter[course_id]': '14,30,34',
-}), {
-  transform: r => r.data,
-})
+const {data} = useLazyAsyncData('vue-free-lecture', () => axios.get('api/lectures/free', {
+  params: {
+    'filter[course_id]': '14,30,34',
+  },
+}).then((res) => res.data))
 </script>

@@ -47,7 +47,7 @@
 </template>
 
 <script setup>
-import LandingSection from '~/common/components/Landing/LandingSection.vue';
+import LandingSection from '~/components/Landing/LandingSection.vue';
 import Headline from '~/components/Headline.vue';
 import TagLectureCount from '~/components/TagLectureCount.vue';
 import TagDuration from '~/components/TagDuration.vue';

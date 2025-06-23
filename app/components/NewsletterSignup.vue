@@ -13,29 +13,11 @@
 
     <LeadGenFormMinimal
       class="mt-6"
-      :groups-id="[mailerliteGroups.TM_NEWSLETTER]"
-      @done="onDone"
-    />
-
-    <UAlert
-      v-if="showMessage"
-      variant="subtle"
-      color="success"
-      description="Boa jovem, cadastro realizado com sucesso!"
-      class="mt-4"
+      :group-ids="[mailerliteGroups.TM_NEWSLETTER]"
     />
   </UCard>
 </template>
 
 <script setup lang="ts">
 import LeadGenFormMinimal from '~/components/Leadgen/LeadGenFormMinimal.vue';
-
-const showMessage = ref(false);
-
-function onDone() {
-  showMessage.value = true;
-  setTimeout(() => {
-    showMessage.value = false;
-  }, 3000);
-}
 </script>

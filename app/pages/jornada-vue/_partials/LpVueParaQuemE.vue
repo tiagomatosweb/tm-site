@@ -5,7 +5,8 @@
     description="Identifique-se com os tipos de alunos que já deram um salto em suas habilidades e carreiras com este curso prático e abrangente."
   >
     <div class="max-w-4xl mx-auto">
-      <p class="text-xl mb-4">A Jornada Vue foi criada para ensinar o framework desde os fundamentos até as técnicas mais avançadas. Ou seja, é para você que:</p>
+      <p class="text-xl mb-4">A Jornada Vue foi criada para ensinar o framework desde os fundamentos até as técnicas
+        mais avançadas. Ou seja, é para você que:</p>
 
       <div class="space-y-20">
         <div
@@ -33,7 +34,7 @@
 import Junior from 'assets/img/programador-junior.webp'
 import Pleno from 'assets/img/programador-pleno.webp'
 import Senior from 'assets/img/programador-senior.webp'
-import LandingSection from '~/common/components/Landing/LandingSection.vue';
+import LandingSection from '~/components/Landing/LandingSection.vue';
 
 const items = [
   {

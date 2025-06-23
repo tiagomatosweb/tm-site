@@ -14,8 +14,7 @@
         v-model="state.name"
         size="xl"
         :ui="{
-          root: 'w-full',
-          base: 'h-12 w-full'
+          base: 'h-12'
         }"
       />
     </UFormField>
@@ -30,8 +29,7 @@
         placeholder="Aquele e-mail que você abre todos os dias"
         size="xl"
         :ui="{
-          root: 'w-full',
-          base: 'h-12 w-full'
+          base: 'h-12'
         }"
       />
     </UFormField>
@@ -47,11 +45,17 @@
         placeholder="+55 99 999999999"
         size="xl"
         :ui="{
-          root: 'w-full',
-          base: 'h-12 w-full'
+          base: 'h-12',
         }"
       />
     </UFormField>
+
+    <UAlert
+      v-if="errorMessage"
+      variant="soft"
+      color="error"
+      :description="errorMessage"
+    />
 
     <div>
       <UButton v-bind="defaultButtonProps"/>
@@ -66,7 +70,7 @@
 <script setup>
 import {object, string} from 'yup';
 import intlTelInput from 'intl-tel-input';
-import {leadAPI} from '~/common/api/lead';
+import axios from 'axios';
 
 const emit = defineEmits(['done']);
 const props = defineProps({
@@ -82,7 +86,7 @@ const props = defineProps({
     type: Object,
     default: () => ({}),
   },
-  groupsId: {
+  groupIds: {
     type: Array,
     default: () => [],
   },
@@ -99,6 +103,7 @@ const defaultButtonProps = computed(() => {
   }
 })
 const isLoading = ref(false)
+const errorMessage = ref('')
 const state = ref({
   name: '',
   email: '',
@@ -112,11 +117,15 @@ const schema = object({
 
 async function onSubmit({data}) {
   try {
+    errorMessage.value = ''
     isLoading.value = true
-    await leadAPI.createSubscriber(data)
+    await axios.post('api/mailer/subscribers', {
+      group_ids: props.groupIds,
+      ...data,
+    })
     emit('done', data)
   } catch (e) {
-    console.log(e)
+    errorMessage.value = e.message
   } finally {
     isLoading.value = false
   }

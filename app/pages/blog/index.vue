@@ -17,7 +17,7 @@
 </template>
 
 <script setup>
-import LandingSection from '~/common/components/Landing/LandingSection.vue';
+import LandingSection from '~/components/Landing/LandingSection.vue';
 import NewsletterSignup from '~/components/NewsletterSignup.vue';
 import BlogPostCard from '~/components/Blog/BlogPostCard.vue';
 

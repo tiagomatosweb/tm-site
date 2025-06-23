@@ -5,7 +5,7 @@
   >
     <LeadGenSection
       title-class="text-4xl"
-      :lead-groups-id="[mailerliteGroups.TM_MINHAHISTORIA]"
+      :lead-group-ids="[mailerliteGroups.TM_MINHAHISTORIA]"
       @done="onDone"
     >
       <template #title>
@@ -26,24 +26,12 @@
 
 <script setup>
 import operahouse from '@/assets/img/opera-house.webp'
-import {leadAPI} from '~/common/api/lead';
 import PageAbout from '~/components/Page/PageAbout.vue';
 import PageTestimonial from '~/components/Page/PageTestimonial.vue';
 import LeadGenSection from '~/components/Leadgen/LeadGenSection.vue';
 
 definePageMeta({
   layout: false,
-  middleware: async (to) => {
-    if (to.query?.email) {
-      const data = {
-        email: to.query?.email,
-        groups: [mailerliteGroups.TM_MINHAHISTORIA],
-      }
-
-      await leadAPI.createSubscriber(data)
-      return navigateTo({name: 'minha-historia-obrigado'})
-    }
-  },
 })
 
 const router = useRouter()
