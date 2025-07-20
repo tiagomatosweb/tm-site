@@ -10,6 +10,10 @@ export default defineNuxtConfig({
     },
   },
 
+  nitro: {
+    preset: 'cloudflare_pages',
+  },
+
   css: ['~/assets/css/main.css'],
 
   imports: {
@@ -111,7 +115,7 @@ export default defineNuxtConfig({
           langs: ['json', 'js', 'ts', 'html', 'css', 'vue', 'shell', 'php'],
         },
       },
-    },
+    }
   },
 
   googleFonts: {
