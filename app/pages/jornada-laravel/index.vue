@@ -380,10 +380,9 @@ import CodeSnippetLaravel from '~/components/Codesnippet/CodeSnippetLaravel.vue'
 import PageAbout from '~/components/Page/PageAbout.vue';
 import PageTestimonial from '~/components/Page/PageTestimonial.vue';
 import OfferSection from '~/components/Offer/OfferSection.vue';
-import BadgeDuration from '~/components/BadgeDuration.vue';
-import BadgeCourseCount from '~/components/BadgeCourseCount.vue';
-import BadgeLectureCount from '~/components/BadgeLectureCount.vue';
-import axios from 'axios';
+// import BadgeDuration from '~/components/BadgeDuration.vue';
+// import BadgeCourseCount from '~/components/BadgeCourseCount.vue';
+// import BadgeLectureCount from '~/components/BadgeLectureCount.vue';
 
 // const endpoint = 'api/journeys/laravel/stats'
 // const {data: stats} = await useAsyncData(endpoint, () => axios.get(endpoint))
