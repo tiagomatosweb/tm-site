@@ -1,0 +1,65 @@
+- label: Fase 1
+  items:
+    - name: Laravel PRO
+      short_description: Fundamentos sólidos do framework
+      description: |
+        O curso essencial pra dominar o básico bem feito e já sair codando.
+
+        Aqui você vai construir o projeto **Dashboard AdminLTE**, com um CRUD completo de usuários e relacionamentos `1:1`, `1:N`, `N:N`, já aplicando tudo o que aprendeu com Blade, controllers e models.
+      badges:
+        - label: Disponível
+          color: success
+    - name: Laravel Sanctum
+      short_description: Autenticação para SPA e APIs moderna.
+      description: |
+        Um mini-curso direto ao ponto pra te ensinar autenticação API com Sanctum, explicando login, registro e proteção de rotas de forma moderna e segura.
+      badges:
+        - label: Disponível
+          color: success
+    - name: Laravel Auth PRO
+      short_description: Fluxo de autenticação avançado.
+      description: |
+        Curso completo sobre autenticação com Laravel. Você vai aprender login tradicional com Blade, autenticação API com Sanctum, e integração com redes sociais como Google e Facebook usando Socialite.
+      badges:
+        - label: Em breve
+          color: warning
+
+- label: Fase 2
+  items:
+    - name: Dashboard AdminLTE
+      short_description: O Básico bem feito para aprender CRUDs, autenticação e relacionamentos.
+      description: |
+        O projeto **Dashboard AdminLTE** é um CRUD completo de usuários e relacionamentos `1:1`, `1:N`, `N:N`, já aplicando tudo o que aprendeu com Blade, controllers e models.
+      badges:
+        - label: Disponível
+          color: success
+    - name: BlogZito
+      short_description: Um projeto monolítico com Blade, ideal pra quem quer entender o potencial do Laravel sem front separado.
+      description:
+      badges:
+        - label: Em breve
+          color: warning
+    - name: BookHub
+      short_description: Uma API completa pra controle de empréstimos de livros, ideal pra quem quer trabalhar com APIs modernas.
+      description:
+      badges:
+        - label: Em breve
+          color: warning
+    - name: AgendaMe
+      short_description: Um sistema SaaS com múltiplos usuários, autenticação via API e frontend em Vue.js.
+      description:
+      badges:
+        - label: Disponível
+          color: success
+        - label: 🎁 Bônus
+          color: info
+
+- label: Fase 3
+  items:
+    - name: Laravel Forge
+      short_description: Deploy e infraestrutura profissional.
+      description: |
+        Aprenda a fazer deploy real usando o **Laravel Forge**, a ferramenta oficial do framework. Crie servidores, conecte repositórios, configure ambiente `.env`, execute migrations e monitore sua aplicação com deploy contínuo.
+      badges:
+        - label: Em breve
+          color: warning

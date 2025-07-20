@@ -38,14 +38,7 @@
     </div>
 
     <div class="mt-8">
-      <UButton
-        color="cta"
-        size="3xl"
-        block
-        :to="props.link"
-      >
-        Quero entrar na Jornada
-      </UButton>
+      <UButton v-bind="defaultButtonProps"/>
 
       <div class="text-center text-inverted mt-2">
         ⚡ Acesso instantâneo + todos os bônus já inclusos.
@@ -71,6 +64,17 @@ const props = defineProps({
     default: '0',
   },
   benefits: Array,
-  link: String,
+  buttonProps: {
+    type: Object,
+    required: true,
+  },
 })
+
+const defaultButtonProps = computed(() => ({
+  color: 'cta',
+  size: '3xl',
+  block: true,
+  label: 'Quero entrar na Jornada',
+  ...props.buttonProps,
+}))
 </script>

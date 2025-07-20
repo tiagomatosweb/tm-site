@@ -38,5 +38,12 @@ export default defineContentConfig({
         // image: z.string(),
       }),
     }),
+    database: defineCollection({
+      type: 'data',
+      source: 'database/**/*.yml',
+      schema: z.object({
+        slug: z.string(),
+      }),
+    }),
   },
 });

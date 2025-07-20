@@ -22,7 +22,9 @@
         :offer-price="props.offerPrice"
         :installment-price="props.offerInstallmentPrice"
         :benefits="props.offerBenefits"
-        :link="props.offerLink"
+        :button-props="{
+          href: props.offerLink,
+        }"
       />
     </div>
   </UPageSection>

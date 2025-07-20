@@ -5,7 +5,7 @@
     <div class="text-center py-6">
       <AppLogo
         logo-type="icon"
-        logo-width="40"
+        logo-width="30"
       />
     </div>
   </footer>

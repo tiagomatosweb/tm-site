@@ -2,16 +2,21 @@
   <div>
     <UPageSection
       orientation="horizontal"
-      title="Descubra os 7 Princípios Essenciais do Laravel."
+      headline="🎁 Minicurso gratuito"
+      title="Domine os 7 princípios que sustentam o Laravel moderno"
       :ui="{
         title: 'lg:text-4xl'
       }"
     >
+      <template #leading>
+        <UIcon name="i-custom-laravel" class="size-[56px]"/>
+      </template>
+      
       <template #description>
         <div class="heading-3 text-toned">Aprenda o que separa o dev que copia do que domina de verdade.</div>
 
         <div class="mt-3">
-          Mais de <span class="tm-gradient">4.000 devs</span> já estão recebendo dicas práticas por e-mail.
+          Mais de <span class="tm-gradient font-bold">4K devs</span> já estão recebendo dicas práticas por e-mail.
           Entre pro grupo que está elevando o nível com fundamentos sólidos e aplicáveis no mundo real.
         </div>
       </template>

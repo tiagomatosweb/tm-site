@@ -1,0 +1,23 @@
+- title: Laravel PRO
+  short_description: Fundamentos sólidos do framework
+  description: |
+    O curso essencial pra dominar o básico bem feito e já sair codando.
+
+    Aqui você vai construir o projeto **Dashboard AdminLTE**, com um CRUD completo de usuários e relacionamentos `1:1`, `1:N`, `N:N`, já aplicando tudo o que aprendeu com Blade, controllers e models.
+  badges:
+    - label: Disponível
+      color: success
+- title: Laravel Sanctum
+  short_description: Autenticação para SPA e APIs moderna.
+  description: |
+    Um mini-curso direto ao ponto pra te ensinar autenticação API com Sanctum, explicando login, registro e proteção de rotas de forma moderna e segura.
+  badges:
+    - label: Disponível
+      color: success
+- title: Laravel Auth PRO
+  short_description: Fluxo de autenticação avançado.
+  description: |
+    Curso completo sobre autenticação com Laravel. Você vai aprender login tradicional com Blade, autenticação API com Sanctum, e integração com redes sociais como Google e Facebook usando Socialite.
+  badges:
+    - label: Em breve
+      color: warning

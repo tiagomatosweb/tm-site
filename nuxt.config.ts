@@ -15,7 +15,9 @@ export default defineNuxtConfig({
 
   imports: {
     // autoImport: false,
+    dirs: ['enums'],
   },
+  
   app: {
     head: {
       // title: 'Tiago Matos',
@@ -74,6 +76,10 @@ export default defineNuxtConfig({
     shortname: 'tiagomatosweb-blog',
   },
 
+  colorMode: {
+    storageKey: 'tm-color-mode',
+  },
+
   // site: {
   //   url: process.env.NUXT_PUBLIC_SITE_URL,
   //   name: 'Tiago Matos',
@@ -83,14 +89,22 @@ export default defineNuxtConfig({
 
   routeRules: {
     '/**/obrigado': {robots: false},
+    '/jornada-laravel/conteudo': {redirect: '/jornada-laravel/conteudo/estrutura-da-jornada', prerender: false},
+    '/jornada-laravel/sobre': {redirect: '/jornada-laravel/sobre/o-que-e-a-jornada-laravel', prerender: false},
+    '/jornada-laravel/cursos': {redirect: '/jornada-laravel/cursos/laravel-pro', prerender: false},
+    '/jornada-laravel/projetos': {redirect: '/jornada-laravel/projetos/agendame-saas', prerender: false},
+    '/jornada-laravel/outras-informacoes': {
+      redirect: '/jornada-laravel/outras-informacoes/sobre-o-professor',
+      prerender: false,
+    },
   },
 
   content: {
     build: {
       markdown: {
-        toc: {
-          searchDepth: 1,
-        },
+        // toc: {
+        //   searchDepth: 1,
+        // },
         highlight: {
           // theme: 'github-light',
           theme: 'material-theme-palenight',

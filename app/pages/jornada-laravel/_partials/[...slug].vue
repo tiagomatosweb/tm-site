@@ -1,6 +1,15 @@
 <template>
-  <NuxtLayout name="docs">
+  <UContainer>
     <UPage v-if="page">
+      <template #left>
+        <UPageAside>
+          <UContentNavigation
+            highlight
+            :navigation="navigation[0].children"
+          />
+        </UPageAside>
+      </template>
+
       <UPageHeader
         :title="page.title"
         :description="page.description"
@@ -19,20 +28,14 @@
         <UContentSurround :surround="surround"/>
       </UPageBody>
     </UPage>
-  </NuxtLayout>
+  </UContainer>
 </template>
 
 <script setup>
 import {findPageHeadline} from '#ui-pro/utils/content'
 
-
-definePageMeta({
-  layout: false,
-})
-
 const route = useRoute()
 const navigation = inject('navigation')
-
 const {data: page} = await useAsyncData(route.path, () => queryCollection('jornadaLaravel').path(route.path).first())
 if (!page.value) {
   throw createError({statusCode: 404, statusMessage: 'Page not found', fatal: true})

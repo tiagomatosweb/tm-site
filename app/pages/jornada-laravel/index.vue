@@ -21,25 +21,24 @@
             color="cta"
             trailing-icon="i-lucide-arrow-right"
             class="order-1"
-          >
-            Quero começar agora
-          </UButton>
+            label="Quero começar agora"
+            :href="offerLink.LARAVEL"
+          />
 
-          <UButton
+          <!-- <UButton
             size="xl"
             color="neutral"
             variant="subtle"
             icon="i-lucide-book-open"
             class="order-3 xl:order-2 mt-6 xl:mt-0"
-          >
-            Ver conteúdo do curso
-          </UButton>
+            label="Ver conteúdo do curso"
+          /> -->
 
-          <div class="text-sm text-muted order-2 xl:order-3 lg:w-full lg:justify-start mt-1">
+          <!-- <div class="text-sm text-muted order-2 xl:order-3 lg:w-full lg:justify-start mt-1">
             ✅ Acesso imediato com
             <ULink class="underline" to="#bonus">bônus</ULink>
             já liberados.
-          </div>
+          </div> -->
         </div>
 
         <!--        <div class="flex justify-center flex-wrap lg:justify-start gap-6 mt-10">-->
@@ -81,6 +80,7 @@
         label="Garantir minha vaga"
         trailing-icon="i-lucide-arrow-right"
         size="xl"
+        :href="offerLink.LARAVEL"
       />
     </template>
 
@@ -128,10 +128,10 @@
         </template>
 
         <template #description>
-          <p>Se você está começando no mundo do Laravel, aqui é o lugar certo.</p>
-          <p class="mt-4">Você vai entender cada etapa com clareza e construir seu primeiro projeto do zero, sem
-            confusão e sem
-            depender de fórmulas prontas.</p>
+          <ProseP class="mt-0">Se você está começando no mundo do Laravel, aqui é o lugar certo.</ProseP>
+          <ProseP>Você vai entender cada etapa com clareza e construir seu primeiro projeto do zero, sem
+            confusão e sem depender de fórmulas prontas.
+          </ProseP>
         </template>
       </UPageCard>
 
@@ -151,9 +151,11 @@
         </template>
 
         <template #description>
-          <p>Você já codou com Laravel, mas ainda sente insegurança ou precisa de ajuda constante?</p>
-          <p class="mt-4">A Jornada vai te dar autonomia pra tocar suas próprias tarefas, seguir sprints sem travar, e
-            parar de correr pro Stack Overflow a cada endpoint.</p>
+          <ProseP class="mt-0">Você já codou com Laravel, mas ainda sente insegurança ou precisa de ajuda constante?
+          </ProseP>
+          <ProseP>A Jornada vai te dar autonomia pra tocar suas próprias tarefas, seguir sprints sem travar, e
+            parar de correr pro Stack Overflow a cada endpoint.
+          </ProseP>
         </template>
       </UPageCard>
 
@@ -174,20 +176,22 @@
         </template>
 
         <template #description>
-          <p>Você já resolve muita coisa no Laravel, mas sente falta de organização, visão de projeto completo ou
-            prática com SaaS moderno?</p>
-          <p class="mt-4">Aqui você vai lapidar seu código, dominar boas práticas e liderar com mais confiança.</p>
+          <ProseP class="mt-0">Você já resolve muita coisa no Laravel, mas sente falta de organização, visão de projeto
+            completo ou
+            prática com SaaS moderno?
+          </ProseP>
+          <ProseP>Aqui você vai lapidar seu código, dominar boas práticas e liderar com mais confiança.</ProseP>
         </template>
       </UPageCard>
     </template>
 
     <div class="text-center">
-      <UButton
+      <!-- <UButton
         label="Ver como é por dentro"
         size="xl"
         variant="soft"
         icon="i-lucide-code-xml"
-      />
+      /> -->
     </div>
   </UPageSection>
 
@@ -256,18 +260,18 @@
           title: 'text-lg font-semibold'
         }"
       >
-        <template #header>
+        <!-- <template #header>
           <img src="@/assets/img/screenshot-agendame.webp" alt="" class="rounded-t-md">
-        </template>
+        </template> -->
 
         <template #description>
           <p>Construa um sistema completo de agendamento com múltiplos usuários, planos e permissões.</p>
-          <UButton
+          <!-- <UButton
             label="Explorar o projeto"
             variant="link"
             color="solid"
             class="p-0 underline hover:no-underline mt-4"
-          />
+          /> -->
           <!--          <p class="mt-4">Do backend ao deploy, com tudo que um SaaS de verdade precisa.</p>-->
 
           <!--          🔐 Autenticação com múltiplos perfis-->
@@ -291,12 +295,12 @@
         <template #description>
           <p>Tenha acesso a aulas especiais sobre temas modernos que fazem
             diferença no seu dia a dia como dev.</p>
-          <UButton
+          <!-- <UButton
             label="Ver temas das masterclasses"
             color="solid"
             variant="link"
             class="p-0 underline hover:no-underline mt-4"
-          />
+          /> -->
         </template>
         <!--        🧠 APIs modernas e boas práticas-->
 
@@ -308,7 +312,7 @@
       </UPageCard>
     </template>
 
-    <template #links>
+    <!-- <template #links>
       <div class="text-center flex flex-col items-center gap-4">
         <div>
           Quer ver todos os bônus em detalhes?
@@ -321,7 +325,7 @@
           icon="i-lucide-gift"
         />
       </div>
-    </template>
+    </template> -->
   </UPageSection>
 
   <PageTestimonial/>
@@ -342,12 +346,12 @@
       'Novas aulas e cursos sempre disponíveis',
       'Certificado digital de conclusão',
     ]"
-    offer-link="https://pay.hotmart.com/S96627323M?checkoutMode=10"
+    :offer-link="offerLink.LARAVEL"
   />
 
   <PageAbout/>
 
-  <UPageCTA
+  <!-- <UPageCTA
     title="Quer explorar tudo com calma?"
     :ui="{
         container: 'sm:py-12 lg:py-12 sm:gap-8',
@@ -368,8 +372,7 @@
         variant="soft"
       />
     </template>
-  </UPageCTA>
-
+  </UPageCTA> -->
 </template>
 
 <script setup>
@@ -384,8 +387,6 @@ import axios from 'axios';
 
 // const endpoint = 'api/journeys/laravel/stats'
 // const {data: stats} = await useAsyncData(endpoint, () => axios.get(endpoint))
-
-
 useSeoMeta({
   title: 'Jornada Laravel: Domine Laravel com Projeto Real e Suporte',
   description: 'Transforme sua carreira com um curso prático de Laravel. Aprenda do zero, crie um projeto SaaS, receba suporte real e evolua sem depender de IA.',
