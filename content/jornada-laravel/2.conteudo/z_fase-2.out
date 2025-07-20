@@ -1,0 +1,81 @@
+---
+title: Fase 2 – Vamos Praticar
+description: "Aplique tudo o que aprendeu em projetos reais com Laravel: monolito, API e SaaS."
+navigation.icon: i-lucide-terminal-square
+---
+
+## Fase 2 – Vamos Praticar
+
+É aqui que você começa a codar com o peso de quem sabe o que tá fazendo.  
+Nesta fase, você aplica todo o conhecimento dos fundamentos em **projetos reais**, focados em cenários que você vai
+viver como dev no mercado.
+
+Os projetos cobrem diferentes estilos de aplicação — monolítica, API desacoplada e SaaS completo.
+
+---
+
+### 📅 Projeto AgendaMe – SaaS de agendamentos (Frontend + Backend desacoplados)
+
+Você vai criar um sistema de agendamentos real com múltiplos usuários (multi-tenant), focando em backend com API e
+frontend independente.
+
+**Você aprende a:**
+
+- Criar uma API completa usando Laravel Sanctum
+- Autenticação, gerenciamento de usuários e permissões
+- Cargos e times com controle de acesso
+- Implementar planos de assinatura
+- Separar inquilinos com segurança e escalabilidade
+
+[→ Ver mais sobre o AgendaMe](/projetos/agenda-me)
+
+---
+
+### 📰 Projeto Blogzito – Blog com Blade (monolito) *(em breve)*
+
+Esse projeto é ideal pra quem quer dominar **Laravel em sua forma monolítica**, aproveitando ao máximo o poder do Blade.
+
+**Você vai aprender:**
+
+- Arquitetar um site/blog do zero com Blade
+- Utilizar layouts, componentes e stacks avançados
+- Criar um painel administrativo completo sem API
+- Aplicar autenticação, proteção de rotas e permissões
+
+[→ Ver mais sobre o Blogzito](/projetos/blogzito)
+
+---
+
+### 📚 Projeto BookHub – API de empréstimos de livros
+
+Um projeto focado em quem quer **dominar o desenvolvimento de APIs com Laravel**.
+
+**Você vai aprender:**
+
+- Criar endpoints RESTful com Resource Controllers
+- Organizar sua API com form requests, DTOs e resources
+- Implementar autenticação e proteção com Sanctum
+- Trabalhar com relacionamento entre entidades (livros, usuários, empréstimos)
+- Versionamento e boas práticas de documentação
+
+[→ Ver mais sobre o BookHub](/projetos/bookhub)
+
+---
+
+### 🔐 Projeto Laravel Auth Pro – Domine Autenticação *(em breve)*
+
+Nesse módulo especial, você vai mergulhar a fundo nas diferentes formas de implementar autenticação com Laravel.
+
+**Você vai aprender:**
+
+- Autenticação tradicional com Laravel monolítico (Blade)
+- Autenticação com APIs usando Sanctum
+- Fluxo completo de login com redes sociais (Facebook e Google) usando Laravel Socialite
+- Boas práticas de segurança e controle de sessão
+
+[→ Ver mais sobre o Laravel Auth Pro](/projetos/auth-pro)
+
+---
+
+> Esses projetos são muito mais do que prática — são aplicações completas que vão compor seu portfólio e mostrar para o
+> mercado o que você sabe fazer com Laravel.

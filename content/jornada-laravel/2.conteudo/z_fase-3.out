@@ -1,0 +1,32 @@
+---
+title: Fase 3 – Deploy
+description: Aprenda a colocar seu projeto Laravel no ar com qualidade e as melhores práticas de deploy.
+navigation.icon: i-lucide-upload-cloud
+---
+
+### Seu projeto no ar com Segurança e profissionalismo
+
+Codar é só parte do trabalho. Saber publicar e manter um projeto no ar com segurança, performance e escalabilidade é o
+que te diferencia como dev completo.
+
+Nesta fase, você vai aprender exatamente como tirar seus projetos do localhost e colocar no mundo real com confiança.
+
+---
+
+### 🚀 Curso de Deploy com Laravel Forge
+
+Aprenda a usar o **Laravel Forge**, a ferramenta oficial da comunidade Laravel para gerenciar e automatizar servidores
+com facilidade.
+
+**Você vai aprender:**
+
+- Como configurar servidores de produção (DigitalOcean, Hetzner, etc.)
+- Deploy automatizado com Git
+- Configurações de domínio, SSL, ambiente `.env` e filas
+- Otimização de performance e cache
+- Monitoramento e boas práticas de manutenção
+
+---
+
+> Depois dessa fase, você não só desenvolve com qualidade — você entrega projetos prontos para rodar em produção como um
+> verdadeiro profissional.

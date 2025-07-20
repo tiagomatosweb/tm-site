@@ -1,0 +1,7 @@
+- title: Laravel Forge
+  short_description: Deploy e infraestrutura profissional.
+  description: |
+    Aprenda a fazer deploy real usando o **Laravel Forge**, a ferramenta oficial do framework. Crie servidores, conecte repositórios, configure ambiente `.env`, execute migrations e monitore sua aplicação com deploy contínuo.
+  badges:
+    - label: Em breve
+      color: warning

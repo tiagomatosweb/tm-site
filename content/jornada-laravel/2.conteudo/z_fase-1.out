@@ -1,0 +1,43 @@
+---
+title: Fase 1 – Fundamentos
+description: Construa uma base sólida em Laravel com os conceitos essenciais e já desenvolva seu primeiro projeto real.
+navigation.icon: i-lucide-book-open-check
+---
+
+### A base bem forte
+
+Nada de só teoria.  
+A Fase 1 foi criada pra te ensinar o essencial do Laravel **e já te colocar em movimento** com um projeto real.
+
+Você vai começar preparando seu ambiente:
+
+- Instalação do Laravel com clareza
+- Configuração completa para **Windows e Linux**
+- Uso de ferramentas modernas como **Laravel Sail (Docker)** e **Laravel Herd**
+
+Depois, segue direto pro módulo:
+
+### 🧱 O Básico Bem Feito
+
+Aqui você aprende os conceitos fundamentais que já te permitem tirar o carro da garagem e codar de verdade:
+
+- Estrutura de pastas e ciclo de requisição
+- Rotas, controllers, views e Blade
+- Validação de dados, middlewares e formulários
+- Introdução ao Eloquent ORM
+
+Com essa base, você parte pro seu **primeiro projeto real**:
+
+### 🧩 Projeto Dashboard com AdminLTE
+
+- Dashboard funcional com layout moderno e responsivo
+- CRUD de usuários completo
+- Relacionamentos 1:1, 1:N e N:N
+- Organização de código com boas práticas
+- Aplicação real para incluir no portfólio
+
+Depois disso, você estará pronto pra mergulhar nos módulos mais avançados — como Jobs, filas, Events, API, Reverb e
+muito mais.
+
+> Ao final da Fase 1, você já terá construído uma aplicação de verdade, com código limpo, funcional e pronto pra mostrar
+> no seu GitHub ou currículo.

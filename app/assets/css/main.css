@@ -1,0 +1,86 @@
+@import 'tailwindcss' theme(static);
+@import '@nuxt/ui-pro';
+
+@source '../../../content';
+
+@theme static {
+  --font-poppins: "Poppins", sans-serif;
+  --font-sans: 'Public Sans', sans-serif;
+
+  /*--breakpoint-3xl: 1920px;*/
+  --color-gray-50: #FAFAFA;
+  --color-gray-100: #F4F4F5;
+  --color-gray-200: #E3E5E8;
+  --color-gray-300: #D2D5DA;
+  --color-gray-400: #9DA3AE;
+  --color-gray-500: #6C727F;
+  --color-gray-600: #4F545E;
+  --color-gray-700: #3D4148;
+  --color-gray-800: #25272C;
+  --color-gray-900: #17191C;
+  --color-gray-950: #111213;
+  --ui-container: 90rem;
+}
+
+
+/*@tailwind base;*/
+/*@tailwind components;*/
+/*@tailwind utilities;*/
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-poppins;
+}
+
+@layer base {
+  .heading-2 {
+    @apply text-2xl md:text-4xl font-extrabold;
+  }
+
+  .heading-3 {
+    @apply text-xl md:text-2xl font-bold;
+  }
+
+  .heading-4 {
+    @apply text-xl font-bold;
+  }
+
+  .heading-5 {
+    @apply text-lg md:text-xl font-medium;
+  }
+
+  .heading-6 {
+    @apply text-base font-medium;
+  }
+}
+
+.tm-gradient {
+  background-image: linear-gradient(90deg, rgba(0, 158, 226, 1) 15%, rgba(12, 172, 206, 1) 50%, rgba(23, 216, 181, 1) 85%);
+  background-size: cover;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+.bg-tm-gradient {
+  background-image: linear-gradient(90deg, rgba(0, 158, 226, 1) 15%, rgba(12, 172, 206, 1) 50%, rgba(23, 216, 181, 1) 85%);
+}
+
+/*.main-menu {*/
+/*  @apply text-sm font-medium hover:text-primary transition duration-300;*/
+/*}*/
+
+/*.main-menu.router-link-active {*/
+/*  @apply text-primary*/
+/*}*/
+
+/*!*.laravel-api-gradient {*!*/
+/*!*    background: linear-gradient(to right, #dc3126 12%,#d5dda8 36%,#54be6f 68%);*!*/
+/*!*background: linear-gradient(45deg, #09009f, #00ff95 80%);*!*/
+/*!*-webkit-background-clip: text;*!*/
+/*!*-webkit-text-fill-color: transparent;*!*/
+/*!*}*!*/
+
+.iti {
+  width: 100%;
+}
