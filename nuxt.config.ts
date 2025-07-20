@@ -5,7 +5,6 @@ const {resolve} = createResolver(import.meta.url);
 export default defineNuxtConfig({
   runtimeConfig: {
     public: {
-      n8nUrl: process.env.NUXT_PUBLIC_N8N_URL,
       apiURL: process.env.NUXT_PUBLIC_API_URL,
       youtubeApiKey: process.env.NUXT_PUBLIC_YOUTUBE_API_KEY,
     },
