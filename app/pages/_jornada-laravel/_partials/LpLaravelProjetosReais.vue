@@ -6,7 +6,6 @@
 
 <script setup>
 import PageProjects from '~/components/Page/PageProjects.vue';
-import {coursesAPI} from '~/api/courses';
 import ScreenshotAgendaMe from 'assets/img/screenshot-agendame.webp';
 import axios from 'axios';
 
