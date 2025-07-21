@@ -10,14 +10,13 @@ export default defineNuxtConfig({
     },
   },
 
-  nitro: {
-    preset: 'cloudflare_pages',
-  },
+  // nitro: {
+    // preset: 'cloudflare_pages',
+  // },
 
   css: ['~/assets/css/main.css'],
 
   imports: {
-    // autoImport: false,
     dirs: ['enums'],
   },
   
@@ -49,7 +48,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/ui-pro',
     '@nuxt/content',
-    '@zadigetvoltaire/nuxt-gtm',
+    // '@zadigetvoltaire/nuxt-gtm',
     '@nuxtjs/google-fonts',
     '@nuxt/image',
     'dayjs-nuxt',
@@ -133,4 +132,8 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
+
+    build: {
+      transpile: ['form-data'], // TODO: Added because of the form-data bug, test it later
+    },
 });

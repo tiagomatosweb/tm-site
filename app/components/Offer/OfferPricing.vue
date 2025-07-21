@@ -2,7 +2,7 @@
   <UCard
     variant="solid"
     :ui="{
-      root: 'bg-white dark:bg-white p-6 rounded-xl',
+      root: 'bg-white dark:bg-white md:p-6 rounded-xl',
     }"
   >
     <h2 class="text-inverted font-extrabold text-3xl leading-8">
@@ -75,6 +75,9 @@ const defaultButtonProps = computed(() => ({
   size: '3xl',
   block: true,
   label: 'Quero entrar na Jornada',
+  ui: {
+    base: 'text-xl md:text-2xl'
+  },
   ...props.buttonProps,
 }))
 </script>
