@@ -32,7 +32,7 @@
 </template>
 
 <script setup>
-import {findPageHeadline} from '#ui-pro/utils/content'
+import { findPageHeadline } from '@nuxt/content/utils'
 
 const route = useRoute()
 const navigation = inject('navigation')
