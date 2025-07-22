@@ -336,16 +336,6 @@
     offer-full-price="697"
     offer-price="397"
     offer-installment-price="39,62"
-    :offer-benefits="[
-      '1 ano de acesso ilimitado',
-      'Todos os cursos de Laravel incluídos',
-      'Comunidade exclusiva de alunos',
-      'Suporte direto comigo via WhatsApp',
-      'Projeto SaaS incluído',
-      'Acesso a MasterClasses exclusivas',
-      'Novas aulas e cursos sempre disponíveis',
-      'Certificado digital de conclusão',
-    ]"
     :offer-link="offerLink.LARAVEL"
   />
 

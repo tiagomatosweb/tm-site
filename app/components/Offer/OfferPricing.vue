@@ -9,7 +9,7 @@
       1 ano de progresso acelerado
     </h2>
 
-    <OfferBenefits :benefits="benefits"/>
+    <OfferBenefits />
 
     <div class="mt-8 flex flex-col items-center gap-1 text-inverted">
       <div class="flex items-center gap-2 text-2xl font-bold">
@@ -63,7 +63,6 @@ const props = defineProps({
     type: String,
     default: '0',
   },
-  benefits: Array,
   buttonProps: {
     type: Object,
     required: true,

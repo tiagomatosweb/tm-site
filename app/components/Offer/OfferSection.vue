@@ -21,7 +21,6 @@
         :full-price="props.offerFullPrice"
         :offer-price="props.offerPrice"
         :installment-price="props.offerInstallmentPrice"
-        :benefits="props.offerBenefits"
         :button-props="{
           href: props.offerLink,
         }"
@@ -41,7 +40,6 @@ const props = defineProps({
   offerFullPrice: String,
   offerPrice: String,
   offerInstallmentPrice: String,
-  offerBenefits: Array,
   offerLink: String,
 })
 </script>
