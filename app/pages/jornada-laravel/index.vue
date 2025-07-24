@@ -25,14 +25,16 @@
             :href="offerLink.LARAVEL"
           />
 
-          <!-- <UButton
+          <UButton
             size="xl"
             color="neutral"
             variant="subtle"
             icon="i-lucide-book-open"
             class="order-3 xl:order-2 mt-6 xl:mt-0"
-            label="Ver conteúdo do curso"
-          /> -->
+            label="Ver os cursos da Jornada"
+            to="jornada-laravel/sobre/o-que-e-a-jornada-laravel#cursos-da-jornada"
+            />
+            <!-- label="Ver conteúdo do curso" -->
 
           <!-- <div class="text-sm text-muted order-2 xl:order-3 lg:w-full lg:justify-start mt-1">
             ✅ Acesso imediato com
@@ -136,7 +138,7 @@
       </UPageCard>
 
       <UPageCard
-        title="Se você é um Dev Júnior."
+        title="Se você é um Dev Júnior"
         :ui="{
           root: 'rounded-none bg-gradient-to-tl from-[#A156FE]/10 from-5% via-transparent via-50% to-transparent',
           container: 'sm:p-4',
@@ -160,7 +162,7 @@
       </UPageCard>
 
       <UPageCard
-        title="Se você é um Dev Pleno."
+        title="Se você é um Dev Pleno"
         :ui="{
           root: 'rounded-l-none bg-gradient-to-tl from-[#F93920]/10 from-5% via-transparent via-50% to-transparent',
           container: 'sm:p-4',

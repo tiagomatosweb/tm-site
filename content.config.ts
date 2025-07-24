@@ -19,7 +19,17 @@ export default defineContentConfig({
       type: 'page',
       source: {
         include: 'jornada-laravel/**',
-        exclude: ['jornada-laravel/index.md'],
+        exclude: [
+          'jornada-laravel/index.md',
+          'jornada-laravel/2.conteudo/**.md',
+          'jornada-laravel/3.cursos/**.md',
+          'jornada-laravel/4.projetos/**.md',
+          'jornada-laravel/5.outras-informacoes/**.md',
+          // 'jornada-laravel/2.conteudo/estrutura-da-jornada.md',
+          // 'jornada-laravel/2.conteudo/z_fase-1.out',
+          // 'jornada-laravel/2.conteudo/z_fase-2.out',
+          // 'jornada-laravel/2.conteudo/z_fase-3.out',
+        ],
       },
       schema: z.object({
         links: z.array(z.object({

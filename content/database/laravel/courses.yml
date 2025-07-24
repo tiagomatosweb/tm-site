@@ -1,7 +1,7 @@
 - label: Fase 1
   items:
     - name: Laravel PRO
-      short_description: Fundamentos sólidos do framework
+      short_description: Aprenda os fundamentos essenciais do Laravel para criar projetos reais.
       description: |
         O curso essencial pra dominar o básico bem feito e já sair codando.
 
@@ -10,14 +10,14 @@
         - label: Disponível
           color: success
     - name: Laravel Sanctum
-      short_description: Autenticação para SPA e APIs moderna.
+      short_description: Autenticação moderna para SPAs e APIs seguras com Laravel.
       description: |
         Um mini-curso direto ao ponto pra te ensinar autenticação API com Sanctum, explicando login, registro e proteção de rotas de forma moderna e segura.
       badges:
         - label: Disponível
           color: success
     - name: Laravel Auth PRO
-      short_description: Fluxo de autenticação avançado.
+      short_description: Login avançado com API, Socialite, 2FA e boas práticas de segurança.
       description: |
         Curso completo sobre autenticação com Laravel. Você vai aprender login tradicional com Blade, autenticação API com Sanctum, e integração com redes sociais como Google e Facebook usando Socialite.
       badges:
@@ -34,13 +34,13 @@
         - label: Disponível
           color: success
     - name: BlogZito
-      short_description: Um projeto monolítico com Blade, ideal pra quem quer entender o potencial do Laravel sem front separado.
+      short_description: Projeto com Blade pra aprender Laravel sem frontend separado.
       description:
       badges:
         - label: Em breve
           color: warning
     - name: BookHub
-      short_description: Uma API completa pra controle de empréstimos de livros, ideal pra quem quer trabalhar com APIs modernas.
+      short_description: Projeto focado em API com controle de livros e usuários.
       description:
       badges:
         - label: Em breve
@@ -56,10 +56,10 @@
 
 - label: Fase 3
   items:
-    - name: Laravel Forge
-      short_description: Deploy e infraestrutura profissional.
+    - name: Deploy PRO
+      short_description: Deploy em hospedagem compartilhada, VPS e serviços como Forge.
       description: |
-        Aprenda a fazer deploy real usando o **Laravel Forge**, a ferramenta oficial do framework. Crie servidores, conecte repositórios, configure ambiente `.env`, execute migrations e monitore sua aplicação com deploy contínuo.
+        Curso completo sobre deploy com Laravel. Aprenda a publicar projetos em hospedagem compartilhada, VPS e serviços como Forge, com configuração de ambiente, comandos Artisan, filas e deploy contínuo.
       badges:
         - label: Em breve
           color: warning

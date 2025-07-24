@@ -1,5 +1,5 @@
 <template>
-  <UHeader :toggle="false">
+  <UHeader>
     <template #left>
       <AppLogo
         logo-type="icon"
@@ -18,12 +18,12 @@
       <UColorModeButton/>
     </template>
 
-    <!-- <template #body>
+    <template #body>
       <UContentNavigation
         highlight
         :navigation="navigation[0].children"
       />
-    </template> -->
+    </template>
   </UHeader>
 
   <UMain>

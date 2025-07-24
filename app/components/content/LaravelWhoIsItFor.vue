@@ -1,6 +1,6 @@
 <template>
   <UPageGrid>
-    <UPageCard title="Se você ainda é um Dev Iniciante.">
+    <UPageCard title="Se você ainda é um Dev Iniciante">
       <template #header>
         <img
           src="@/assets/img/programador-junior.webp"
@@ -22,7 +22,7 @@
       </template>
     </UPageCard>
 
-    <UPageCard title="Se você é um Dev Júnior.">
+    <UPageCard title="Se você é um Dev Júnior">
       <template #header>
         <img
           src="@/assets/img/programador-pleno.webp"
@@ -49,7 +49,7 @@
       </template>
     </UPageCard>
 
-    <UPageCard title="Se você é um Dev Pleno.">
+    <UPageCard title="Se você é um Dev Pleno">
       <template #header>
         <img
           src="@/assets/img/programador-senior.webp"
@@ -59,7 +59,7 @@
       </template>
 
       <template #description>
-        <ProseP>Já domina a base do Laravel, mas sente que falta organização ou visão de produto completo?</ProseP>
+        <ProseP class="mt-0">Já domina a base do Laravel, mas sente que falta organização ou visão de produto completo?</ProseP>
         <ProseP>Aqui você vai:
           <ProseUl>
             <ProseLi>Lapidar seu código com <strong>boas práticas modernas</strong></ProseLi>
