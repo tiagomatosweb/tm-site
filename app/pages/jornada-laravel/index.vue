@@ -188,12 +188,13 @@
     </template>
 
     <div class="text-center">
-      <!-- <UButton
-        label="Ver como é por dentro"
+      <UButton
+        label="Ainda na dúvida? Saiba mais..."
         size="xl"
         variant="soft"
         icon="i-lucide-code-xml"
-      /> -->
+        to="/jornada-laravel/sobre/para-quem-e-indicado"
+      />
     </div>
   </UPageSection>
 
@@ -235,7 +236,8 @@
     title: 'Bônus inclusos na Jornada',
     description: 'Você ganha acesso a conteúdos extras que ampliam o curso principal e aceleram sua evolução como dev.',
     icon: 'i-lucide-gift',
-    orientation: 'vertical'
+    orientation: 'vertical',
+    to: '/jornada-laravel/conteudo/bonus'
   }
 ]"
     :ui="{
@@ -314,7 +316,7 @@
       </UPageCard>
     </template>
 
-    <!-- <template #links>
+    <template #links>
       <div class="text-center flex flex-col items-center gap-4">
         <div>
           Quer ver todos os bônus em detalhes?
@@ -325,9 +327,10 @@
           size="xl"
           variant="soft"
           icon="i-lucide-gift"
+          to="/jornada-laravel/conteudo/bonus"
         />
       </div>
-    </template> -->
+    </template>
   </UPageSection>
 
   <PageTestimonial/>

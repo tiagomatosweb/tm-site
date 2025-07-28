@@ -21,7 +21,7 @@ export default defineContentConfig({
         include: 'jornada-laravel/**',
         exclude: [
           'jornada-laravel/index.md',
-          'jornada-laravel/2.conteudo/**.md',
+          // 'jornada-laravel/2.conteudo/**.md',
           'jornada-laravel/3.cursos/**.md',
           'jornada-laravel/4.projetos/**.md',
           'jornada-laravel/5.outras-informacoes/**.md',

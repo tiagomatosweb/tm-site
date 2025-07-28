@@ -35,19 +35,22 @@
           color: success
     - name: BlogZito
       short_description: Projeto com Blade pra aprender Laravel sem frontend separado.
-      description:
+      description: |
+        Um blog **monolítico com Blade**, ideal pra dominar o poder do Blade, rotas web, componentes reutilizáveis, exibição de posts e boas práticas em um site institucional simples e funcional.
       badges:
         - label: Em breve
           color: warning
     - name: BookHub
       short_description: Projeto focado em API com controle de livros e usuários.
-      description:
+      description: |
+        Uma **API de empréstimos de livros** feita 100% com Laravel. Você vai aprender a construir endpoints seguros, recursos com API Resources, relacionamentos bem definidos e estrutura organizada para um backend real.
       badges:
         - label: Em breve
           color: warning
     - name: AgendaMe
       short_description: Um sistema SaaS com múltiplos usuários, autenticação via API e frontend em Vue.js.
-      description:
+      description: |
+        Um sistema completo de agendamento com **frontend em Vue** e **backend em Laravel API**. Projeto completo, multi-tenant, com autenticação e organização em times.
       badges:
         - label: Disponível
           color: success
@@ -61,5 +64,5 @@
       description: |
         Curso completo sobre deploy com Laravel. Aprenda a publicar projetos em hospedagem compartilhada, VPS e serviços como Forge, com configuração de ambiente, comandos Artisan, filas e deploy contínuo.
       badges:
-        - label: Em breve
-          color: warning
+        - label: Disponível
+          color: success

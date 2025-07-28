@@ -91,7 +91,7 @@ export default defineNuxtConfig({
 
   routeRules: {
     '/**/obrigado': {robots: false},
-    '/jornada-laravel/conteudo': {redirect: '/jornada-laravel/conteudo/estrutura-da-jornada', prerender: false},
+    '/jornada-laravel/conteudo': {redirect: '/jornada-laravel/conteudo/fases-da-jornada', prerender: false},
     '/jornada-laravel/sobre': {redirect: '/jornada-laravel/sobre/o-que-e-a-jornada-laravel', prerender: false},
     '/jornada-laravel/cursos': {redirect: '/jornada-laravel/cursos/laravel-pro', prerender: false},
     '/jornada-laravel/projetos': {redirect: '/jornada-laravel/projetos/agendame-saas', prerender: false},
