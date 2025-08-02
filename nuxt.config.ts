@@ -1,4 +1,5 @@
 import {createResolver} from 'nuxt/kit';
+import {sentryVitePlugin} from "@sentry/vite-plugin";
 
 const {resolve} = createResolver(import.meta.url);
 
@@ -46,7 +47,9 @@ export default defineNuxtConfig({
   },
 
   modules: ['@nuxt/ui-pro', '@nuxt/content', // '@zadigetvoltaire/nuxt-gtm',
-  '@nuxtjs/google-fonts', '@nuxt/image', 'dayjs-nuxt', 'nuxt-disqus', '@nuxt/scripts', '@sentry/nuxt/module'],
+  '@nuxtjs/google-fonts', '@nuxt/image', 'dayjs-nuxt', 'nuxt-disqus', '@nuxt/scripts', 
+  // '@sentry/nuxt/module'
+],
 
   icon: {
     customCollections: [{
@@ -129,12 +132,28 @@ export default defineNuxtConfig({
     transpile: ['form-data'], // TODO: Added because of the form-data bug, test it later
   },
 
-  sentry: {
-    sourceMapsUploadOptions: {
-      authToken: process.env.SENTRY_AUTH_TOKEN,
-      org: 'tiagomatosweb',
-      project: 'tm-site',
-    },
+  // sentry: {
+  //   sourceMapsUploadOptions: {
+  //     authToken: process.env.SENTRY_AUTH_TOKEN,
+  //     org: 'tiagomatosweb',
+  //     project: 'tm-site',
+  //   },
+  // },
+
+  vite: {
+    plugins: [
+      sentryVitePlugin({
+        org: 'tiagomatosweb',
+        project: 'tm-app',
+        authToken: process.env.SENTRY_AUTH_TOKEN,
+        debug: true,
+        sourcemaps: {
+          assets: './.nuxt/dist/client/_nuxt/*',
+          // filesToDeleteAfterUpload: './.nuxt/dist/client/_nuxt/**/*.map',
+        },
+        telemetry: true,
+      }),
+    ],
   },
 
   sourcemap: {
