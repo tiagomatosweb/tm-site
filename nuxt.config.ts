@@ -122,7 +122,7 @@ export default defineNuxtConfig({
     id: 'GTM-PG5CMBN',
   },
 
-  compatibilityDate: '2025-03-05',
+  compatibilityDate: '2025-08-02',
 
   future: {
     compatibilityVersion: 4,
