@@ -148,7 +148,7 @@ export default defineNuxtConfig({
         authToken: process.env.SENTRY_AUTH_TOKEN,
         debug: true,
         sourcemaps: {
-          assets: './.nuxt/dist/client/_nuxt/*',
+          assets: './node_modules/.cache/nuxt/.nuxt/dist/client/_nuxt/*',
           // filesToDeleteAfterUpload: './.nuxt/dist/client/_nuxt/**/*.map',
         },
         telemetry: true,
