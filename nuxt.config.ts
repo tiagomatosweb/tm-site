@@ -17,7 +17,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
 
   imports: {
-    dirs: ['enums'],
+    dirs: ['enums', 'api'],
   },
   
   app: {

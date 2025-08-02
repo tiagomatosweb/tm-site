@@ -1,68 +1,124 @@
-- label: Fase 1
-  items:
-    - name: Laravel PRO
-      short_description: Aprenda os fundamentos essenciais do Laravel para criar projetos reais.
-      description: |
-        O curso essencial pra dominar o básico bem feito e já sair codando.
+- name: Laravel PRO
+  short_description: Aprenda os fundamentos essenciais do Laravel para criar projetos reais.
+  description: |
+    O curso essencial pra dominar o básico bem feito e já sair codando.
 
-        Aqui você vai construir o projeto **Dashboard AdminLTE**, com um CRUD completo de usuários e relacionamentos `1:1`, `1:N`, `N:N`, já aplicando tudo o que aprendeu com Blade, controllers e models.
-      badges:
-        - label: Disponível
-          color: success
-    - name: Laravel Sanctum
-      short_description: Autenticação moderna para SPAs e APIs seguras com Laravel.
-      description: |
-        Um mini-curso direto ao ponto pra te ensinar autenticação API com Sanctum, explicando login, registro e proteção de rotas de forma moderna e segura.
-      badges:
-        - label: Disponível
-          color: success
-    - name: Laravel Auth PRO
-      short_description: Login avançado com API, Socialite, 2FA e boas práticas de segurança.
-      description: |
-        Curso completo sobre autenticação com Laravel. Você vai aprender login tradicional com Blade, autenticação API com Sanctum, e integração com redes sociais como Google e Facebook usando Socialite.
-      badges:
-        - label: Em breve
-          color: warning
+    Aqui você vai construir o projeto **Dashboard AdminLTE**, com um CRUD completo de usuários e relacionamentos `1:1`, `1:N`, `N:N`, já aplicando tudo o que aprendeu com Blade, controllers e models.
 
-- label: Fase 2
-  items:
-    - name: Dashboard AdminLTE
-      short_description: O Básico bem feito para aprender CRUDs, autenticação e relacionamentos.
-      description: |
-        O projeto **Dashboard AdminLTE** é um CRUD completo de usuários e relacionamentos `1:1`, `1:N`, `N:N`, já aplicando tudo o que aprendeu com Blade, controllers e models.
-      badges:
-        - label: Disponível
-          color: success
-    - name: BlogZito
-      short_description: Projeto com Blade pra aprender Laravel sem frontend separado.
-      description: |
-        Um blog **monolítico com Blade**, ideal pra dominar o poder do Blade, rotas web, componentes reutilizáveis, exibição de posts e boas práticas em um site institucional simples e funcional.
-      badges:
-        - label: Em breve
-          color: warning
-    - name: BookHub
-      short_description: Projeto focado em API com controle de livros e usuários.
-      description: |
-        Uma **API de empréstimos de livros** feita 100% com Laravel. Você vai aprender a construir endpoints seguros, recursos com API Resources, relacionamentos bem definidos e estrutura organizada para um backend real.
-      badges:
-        - label: Em breve
-          color: warning
-    - name: AgendaMe
-      short_description: Um sistema SaaS com múltiplos usuários, autenticação via API e frontend em Vue.js.
-      description: |
-        Um sistema completo de agendamento com **frontend em Vue** e **backend em Laravel API**. Projeto completo, multi-tenant, com autenticação e organização em times.
-      badges:
-        - label: Disponível
-          color: success
-        - label: 🎁 Bônus
-          color: info
+- name: Laravel Sanctum
+  short_description: Autenticação moderna para SPAs e APIs seguras com Laravel.
+  description: |
+    Um mini-curso direto ao ponto pra te ensinar autenticação API com Sanctum, explicando login, registro e proteção de rotas de forma moderna e segura.
 
-- label: Fase 3
-  items:
-    - name: Deploy PRO
-      short_description: Deploy em hospedagem compartilhada, VPS e serviços como Forge.
-      description: |
-        Curso completo sobre deploy com Laravel. Aprenda a publicar projetos em hospedagem compartilhada, VPS e serviços como Forge, com configuração de ambiente, comandos Artisan, filas e deploy contínuo.
-      badges:
-        - label: Disponível
-          color: success
+- name: Laravel Auth PRO
+  short_description: Login avançado com API, Socialite, 2FA e boas práticas de segurança.
+  description: |
+    Curso completo sobre autenticação com Laravel. Você vai aprender login tradicional com Blade, autenticação API com Sanctum, e integração com redes sociais como Google e Facebook usando Socialite.
+  badges:
+    - label: Em breve
+      color: warning
+
+- name: Dashboard AdminLTE
+  short_description: O Básico bem feito para aprender CRUDs, autenticação e relacionamentos.
+  description: |
+    O projeto **Dashboard AdminLTE** é um CRUD completo de usuários e relacionamentos `1:1`, `1:N`, `N:N`, já aplicando tudo o que aprendeu com Blade, controllers e models.
+
+- name: BlogZito
+  short_description: Projeto com Blade pra aprender Laravel sem frontend separado.
+  description: |
+    Um blog **monolítico com Blade**, ideal pra dominar o poder do Blade, rotas web, componentes reutilizáveis, exibição de posts e boas práticas em um site institucional simples e funcional.
+  badges:
+    - label: Em breve
+      color: warning
+
+- name: BookHub
+  short_description: Projeto focado em API com controle de livros e usuários.
+  description: |
+    Uma **API de empréstimos de livros** feita 100% com Laravel. Você vai aprender a construir endpoints seguros, recursos com API Resources, relacionamentos bem definidos e estrutura organizada para um backend real.
+  badges:
+    - label: Em breve
+      color: warning
+
+- name: AgendaMe
+  short_description: Um sistema SaaS com múltiplos usuários, autenticação via API e frontend em Vue.js.
+  description: |
+    Um sistema completo de agendamento com **frontend em Vue** e **backend em Laravel API**. Projeto completo, multi-tenant, com autenticação e organização em times.
+  badges:
+    - label: 🎁 Bônus
+      color: info
+
+- name: Deploy PRO
+  short_description: Deploy em hospedagem compartilhada, VPS e serviços como Forge.
+  description: |
+    Curso completo sobre deploy com Laravel. Aprenda a publicar projetos em hospedagem compartilhada, VPS e serviços como Forge, com configuração de ambiente, comandos Artisan, filas e deploy contínuo.
+
+
+
+# - label: Fase 1
+#   items:
+#     - name: Laravel PRO
+#       short_description: Aprenda os fundamentos essenciais do Laravel para criar projetos reais.
+#       description: |
+#         O curso essencial pra dominar o básico bem feito e já sair codando.
+
+#         Aqui você vai construir o projeto **Dashboard AdminLTE**, com um CRUD completo de usuários e relacionamentos `1:1`, `1:N`, `N:N`, já aplicando tudo o que aprendeu com Blade, controllers e models.
+#       badges:
+#         - label: Disponível
+#           color: success
+#     - name: Laravel Sanctum
+#       short_description: Autenticação moderna para SPAs e APIs seguras com Laravel.
+#       description: |
+#         Um mini-curso direto ao ponto pra te ensinar autenticação API com Sanctum, explicando login, registro e proteção de rotas de forma moderna e segura.
+#       badges:
+#         - label: Disponível
+#           color: success
+#     - name: Laravel Auth PRO
+#       short_description: Login avançado com API, Socialite, 2FA e boas práticas de segurança.
+#       description: |
+#         Curso completo sobre autenticação com Laravel. Você vai aprender login tradicional com Blade, autenticação API com Sanctum, e integração com redes sociais como Google e Facebook usando Socialite.
+#       badges:
+#         - label: Em breve
+#           color: warning
+
+# - label: Fase 2
+#   items:
+#     - name: Dashboard AdminLTE
+#       short_description: O Básico bem feito para aprender CRUDs, autenticação e relacionamentos.
+#       description: |
+#         O projeto **Dashboard AdminLTE** é um CRUD completo de usuários e relacionamentos `1:1`, `1:N`, `N:N`, já aplicando tudo o que aprendeu com Blade, controllers e models.
+#       badges:
+#         - label: Disponível
+#           color: success
+#     - name: BlogZito
+#       short_description: Projeto com Blade pra aprender Laravel sem frontend separado.
+#       description: |
+#         Um blog **monolítico com Blade**, ideal pra dominar o poder do Blade, rotas web, componentes reutilizáveis, exibição de posts e boas práticas em um site institucional simples e funcional.
+#       badges:
+#         - label: Em breve
+#           color: warning
+#     - name: BookHub
+#       short_description: Projeto focado em API com controle de livros e usuários.
+#       description: |
+#         Uma **API de empréstimos de livros** feita 100% com Laravel. Você vai aprender a construir endpoints seguros, recursos com API Resources, relacionamentos bem definidos e estrutura organizada para um backend real.
+#       badges:
+#         - label: Em breve
+#           color: warning
+#     - name: AgendaMe
+#       short_description: Um sistema SaaS com múltiplos usuários, autenticação via API e frontend em Vue.js.
+#       description: |
+#         Um sistema completo de agendamento com **frontend em Vue** e **backend em Laravel API**. Projeto completo, multi-tenant, com autenticação e organização em times.
+#       badges:
+#         - label: Disponível
+#           color: success
+#         - label: 🎁 Bônus
+#           color: info
+
+# - label: Fase 3
+#   items:
+#     - name: Deploy PRO
+#       short_description: Deploy em hospedagem compartilhada, VPS e serviços como Forge.
+#       description: |
+#         Curso completo sobre deploy com Laravel. Aprenda a publicar projetos em hospedagem compartilhada, VPS e serviços como Forge, com configuração de ambiente, comandos Artisan, filas e deploy contínuo.
+#       badges:
+#         - label: Disponível
+#           color: success

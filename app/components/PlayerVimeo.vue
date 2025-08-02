@@ -5,7 +5,6 @@
   >
     <template #placeholder="{ placeholder }">
       <div class="relative w-full h-full flex items-center justify-center cursor-pointer">
-        <pre>{{ placeholder }}</pre>
         <img
           :src="placeholder"
           alt="Video Placeholder"
