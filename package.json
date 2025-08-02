@@ -18,6 +18,7 @@
     "@nuxt/ui-pro": "^3.2.0",
     "@nuxtjs/google-fonts": "^3.2.0",
     "@nuxtjs/mdc": "^0.17.2",
+    "@sentry/nuxt": "^10.0.0",
     "@vimeo/player": "^2.24.0",
     "@vueuse/core": "^11.3.0",
     "axios": "^1.10.0",
@@ -39,5 +40,8 @@
     "@types/youtube": "^0.1.0",
     "shiki": "^3.8.1",
     "typescript": "^5.6.2"
+  },
+  "overrides": {
+    "@vercel/nft": "^0.27.4"
   }
 }

@@ -19,7 +19,7 @@ export default defineNuxtConfig({
   imports: {
     dirs: ['enums'],
   },
-  
+
   app: {
     head: {
       // title: 'Tiago Matos',
@@ -45,16 +45,8 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: [
-    '@nuxt/ui-pro',
-    '@nuxt/content',
-    // '@zadigetvoltaire/nuxt-gtm',
-    '@nuxtjs/google-fonts',
-    '@nuxt/image',
-    'dayjs-nuxt',
-    'nuxt-disqus',
-    '@nuxt/scripts',
-  ],
+  modules: ['@nuxt/ui-pro', '@nuxt/content', // '@zadigetvoltaire/nuxt-gtm',
+  '@nuxtjs/google-fonts', '@nuxt/image', 'dayjs-nuxt', 'nuxt-disqus', '@nuxt/scripts', '@sentry/nuxt/module'],
 
   icon: {
     customCollections: [{
@@ -133,7 +125,19 @@ export default defineNuxtConfig({
     compatibilityVersion: 4,
   },
 
-    build: {
-      transpile: ['form-data'], // TODO: Added because of the form-data bug, test it later
+  build: {
+    transpile: ['form-data'], // TODO: Added because of the form-data bug, test it later
+  },
+
+  sentry: {
+    sourceMapsUploadOptions: {
+      authToken: process.env.SENTRY_AUTH_TOKEN,
+      org: 'tiagomatosweb',
+      project: 'tm-site',
     },
+  },
+
+  sourcemap: {
+    client: 'hidden',
+  },
 });
