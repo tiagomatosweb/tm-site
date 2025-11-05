@@ -25,7 +25,7 @@
           v-if="isSent"
           class="text-lg flex flex-col gap-4"
         >
-          <p>Boa {{ user?.first_name || 'jovem' }}, sua conta foi criada com sucesso!</p>
+          <p>Boa {{ user?.first_name || 'jovem' }}, seu teste grátis foi iniciado com sucesso!</p>
           <p>Você vai receber em breve um e-mail com todas as instruções para começar a usar seus 2 dias grátis no Vue PRO.</p>
           <p>Prepare-se pra elevar seu nível com Vue.js! 💻🔥</p>
           <p>Abs, TM</p>

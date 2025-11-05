@@ -25,7 +25,7 @@
           v-if="isSent"
           class="text-lg flex flex-col gap-4"
         >
-          <p>Boa {{ user?.first_name || 'jovem' }}, sua conta foi criada com sucesso!</p>
+          <p>Boa {{ user?.first_name || 'jovem' }}, seu teste grátis foi iniciado com sucesso!</p>
           <p>Em breve você vai receber as instruções para acessar seus 2 dias grátis no Laravel PRO.</p>
           <p>Bora dominar esse framework do jeito certo! 💻🔥</p>
           <p>Abs, TM</p>
