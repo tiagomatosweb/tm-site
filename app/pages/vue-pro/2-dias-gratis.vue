@@ -31,11 +31,11 @@
           <p>Abs, TM</p>
         </div>
 
-        <RegisterForm
+        <StartTrialForm
           v-else
-          :trial-product-id="2"
+          :product-id="2"
           :button-props="{
-            label: 'Começar teste grátis'
+            label: 'Garantir 2 dias grátis'
           }"
           @done="onDone"
         />
@@ -48,7 +48,7 @@
 
 <script setup>
 import CodeIDE from '~/components/Codesnippet/CodeIDE.vue';
-import RegisterForm from '~/components/Leadgen/RegisterForm.vue';
+import StartTrialForm from '~/components/Leadgen/StartTrialForm.vue';
 import PageTestimonial from '~/components/Page/PageTestimonial.vue';
 
 definePageMeta({

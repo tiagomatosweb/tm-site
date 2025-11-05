@@ -35,22 +35,6 @@
       />
     </UFormField>
 
-    <UFormField
-      label="Senha"
-      required
-      name="password"
-    >
-      <UInput
-        v-model="state.password"
-        placeholder="Crie uma senha segura"
-        size="xl"
-        type="password"
-        :ui="{
-          base: 'h-12'
-        }"
-      />
-    </UFormField>
-
     <UAlert
       v-if="errorMessage"
       variant="soft"
@@ -74,9 +58,9 @@ const props = defineProps({
     type: Object,
     default: () => ({}),
   },
-  trialProductId: {
+  productId: {
     type: [String, Number],
-    default: null,
+    required: true,
   },
 })
 
@@ -85,7 +69,7 @@ const defaultButtonProps = computed(() => {
     type: 'submit',
     color: 'cta',
     size: '2xl',
-    label: 'Criar conta',
+    label: 'Iniciar teste',
     block: true,
     loading: isLoading.value,
     ...props.buttonProps,
@@ -97,13 +81,11 @@ const errorMessage = ref('')
 const state = ref({
   first_name: '',
   email: '',
-  password: '',
 })
 
 const schema = object({
   first_name: string().required().label('Primeiro nome'),
   email: string().required().email().label('E-mail'),
-  password: string().required().min(8).label('Senha'),
 })
 
 async function onSubmit({data}) {
@@ -111,9 +93,10 @@ async function onSubmit({data}) {
     errorMessage.value = ''
     isLoading.value = true
     await axios.get('sanctum/csrf-cookie')
-    await axios.post('register', {
-      ...data,
-      ...(props.trialProductId && { trial_product_id: props.trialProductId }),
+    await axios.post('api/products/trial', {
+      first_name: data.first_name,
+      email: data.email,
+      product_id: props.productId,
     })
     emit('done', data)
   } catch (e) {
