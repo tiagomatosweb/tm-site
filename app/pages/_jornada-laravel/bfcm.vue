@@ -43,7 +43,7 @@ import {navigateTo} from '#app';
 definePageMeta({
   layout: false,
   middleware: () => {
-    return navigateTo({name: 'jornada-laravel'})
+    return navigateTo({ name: 'laravel-pro' })
   },
 })
 

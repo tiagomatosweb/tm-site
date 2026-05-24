@@ -12,7 +12,7 @@ export default defineAppConfig({
     button: {
       variants: {
         color: {
-          cta: 'text-gray-900 bg-gradient-to-r from-yellow-400 to-yellow-500 hover:bg-yellow-300 hover:shadow-lg hover:shadow-yellow-500/50 transition ease-in-out duration-1000 hover:duration-300',
+          cta: 'rounded-xl text-gray-900 bg-gradient-to-r from-yellow-400 to-yellow-500 hover:bg-yellow-300 hover:shadow-lg hover:shadow-yellow-500/50 transition ease-in-out duration-1000 hover:duration-300',
         },
         size: {
           '2xl': {
