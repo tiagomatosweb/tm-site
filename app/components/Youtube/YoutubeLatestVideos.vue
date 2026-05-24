@@ -38,40 +38,16 @@
 </template>
 
 <script setup>
-import {ref, onMounted} from 'vue'
+const config = useRuntimeConfig()
 
-const videos = ref()
-
-onMounted(() => {
-  // eslint-disable-next-line
-  gapi.load('client', initGapi);
-})
-
-function initGapi() {
-  const config = useRuntimeConfig()
-
-  // eslint-disable-next-line
-  gapi.client.init({
-    apiKey: config.public.youtubeApiKey,
-  }).then(() => {
-    // eslint-disable-next-line
-    return gapi.client.request({
-      method: 'GET',
-      path: '/youtube/v3/playlistItems',
-      params: {
-        part: 'snippet',
-        playlistId: 'UUXUWGUoYNwtRxaRPoB4KocA',
-        // playlistId: 'PLcoYAcR89n-qbO7YAVj5S0alABLis_QVU',
-        maxResults: 2,
-      },
-    });
-    // Playlist live
-    // PLcoYAcR89n-qbO7YAVj5S0alABLis_QVU
-  }).then((response) => {
-    // console.log(response.result);
-    videos.value = response.result.items.map(o => o.snippet);
-  }, function (reason) {
-    console.log('Error:', reason);
-  });
-}
+const { data: videos } = await useAsyncData('youtube-latest-videos', () =>
+  $fetch('https://www.googleapis.com/youtube/v3/playlistItems', {
+    params: {
+      part: 'snippet',
+      playlistId: 'UUXUWGUoYNwtRxaRPoB4KocA',
+      maxResults: 2,
+      key: config.public.youtubeApiKey,
+    },
+  }).then(res => res.items.map(o => o.snippet)),
+)
 </script>
