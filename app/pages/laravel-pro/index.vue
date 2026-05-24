@@ -877,7 +877,6 @@
                 block
                 trailing-icon="i-lucide-arrow-right"
                 :label="ctaPrimaryLabel"
-                class="rounded-sm font-bold"
               />
 
               <div class="space-y-2 text-center">
@@ -998,7 +997,6 @@
           :href="offerLink.LARAVEL"
           color="cta"
           size="lg"
-          class="rounded-sm font-bold"
           trailing-icon="i-lucide-arrow-right"
           :label="ctaPrimaryLabel"
         />
