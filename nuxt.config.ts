@@ -73,6 +73,7 @@ export default defineNuxtConfig({
 
   colorMode: {
     storageKey: 'tm-color-mode',
+    fallback: 'dark',
   },
 
   // site: {

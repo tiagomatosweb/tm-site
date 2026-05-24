@@ -1020,7 +1020,6 @@ import laravelProLogo from '~/assets/img/LaravelPro-WhiteColor.svg'
 
 definePageMeta({
   layout: false,
-  colorMode: 'dark',
 })
 
 function scrollMotion(delay = 0) {

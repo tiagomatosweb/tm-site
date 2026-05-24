@@ -1,5 +1,5 @@
-@import 'tailwindcss' theme(static);
-@import '@nuxt/ui';
+@import "tailwindcss";
+@import "@nuxt/ui";
 
 @theme static {
   --font-poppins: "Poppins", sans-serif;
