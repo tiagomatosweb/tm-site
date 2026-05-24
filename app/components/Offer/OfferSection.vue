@@ -23,6 +23,7 @@
         :installment-price="props.offerInstallmentPrice"
         :button-props="{
           href: props.offerLink,
+          ...(props.offerButtonLabel ? { label: props.offerButtonLabel } : {}),
         }"
       />
     </div>
@@ -41,5 +42,6 @@ const props = defineProps({
   offerPrice: String,
   offerInstallmentPrice: String,
   offerLink: String,
+  offerButtonLabel: String,
 })
 </script>

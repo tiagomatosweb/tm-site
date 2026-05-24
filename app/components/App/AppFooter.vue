@@ -1,6 +1,9 @@
 <template>
   <footer>
-    <hr class="border border-gray-100 dark:border-gray-800 mt-16">
+    <hr
+      v-if="divider"
+      class="mt-16 border border-gray-100 dark:border-gray-800"
+    >
 
     <div class="text-center py-6">
       <AppLogo
@@ -12,5 +15,12 @@
 </template>
 
 <script setup>
-import AppLogo from '~/components/App/AppLogo.vue';
+import AppLogo from '~/components/App/AppLogo.vue'
+
+defineProps({
+  divider: {
+    type: Boolean,
+    default: true,
+  },
+})
 </script>

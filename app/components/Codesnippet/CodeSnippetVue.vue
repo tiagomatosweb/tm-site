@@ -1,20 +1,29 @@
 <template>
   <CodeIDE>
     <div class="code">
-      <ContentRenderer
-        :value="data"
-      />
+      <CodeSnippetMarkdown :markdown="snippet" />
     </div>
   </CodeIDE>
 </template>
 
 <script setup>
 import CodeIDE from './CodeIDE.vue';
+import CodeSnippetMarkdown from './CodeSnippetMarkdown.vue';
 
-const path = '/snippets/vue-datafetch'
-const {data} = await useAsyncData(path, () =>
-  queryCollection('snippets').path(path).first(),
-)
+const snippet = [
+  '```vue',
+  '<script setup>',
+  '  const props = defineProps({',
+  '    id: Number',
+  '  })',
+  '',
+  '  const {data, status} = useLazyAsyncData(',
+  "    'courses',",
+  '    () => $fetch(`api/courses/${props.id}`)',
+  '  )',
+  '</' + 'script>',
+  '```',
+].join('\n')
 </script>
 
 <style scoped>

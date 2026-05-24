@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     public: {
       apiURL: process.env.NUXT_PUBLIC_API_URL,
       youtubeApiKey: process.env.NUXT_PUBLIC_YOUTUBE_API_KEY,
+      whatsappPhone: process.env.NUXT_PUBLIC_WHATSAPP_PHONE,
     },
   },
 
@@ -18,7 +19,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
 
   imports: {
-    dirs: ['enums'],
+    dirs: ['constants'],
   },
 
   app: {
@@ -46,8 +47,9 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@nuxt/ui-pro', '@nuxt/content', // '@zadigetvoltaire/nuxt-gtm',
-  '@nuxtjs/google-fonts', '@nuxt/image', 'dayjs-nuxt', 'nuxt-disqus', '@nuxt/scripts', 
+  modules: ['@nuxt/ui', '@comark/nuxt', // '@zadigetvoltaire/nuxt-gtm',
+  '@nuxtjs/google-fonts', 'dayjs-nuxt', '@nuxt/scripts',
+  'motion-v/nuxt',
   // '@sentry/nuxt/module'
 ],
 
@@ -67,10 +69,6 @@ export default defineNuxtConfig({
     plugins: ['utc', 'timezone', 'isBetween', 'duration', 'relativeTime'],
     defaultLocale: 'pt-br',
     defaultTimezone: 'America/Sao_Paulo',
-  },
-
-  disqus: {
-    shortname: 'tiagomatosweb-blog',
   },
 
   colorMode: {
@@ -94,22 +92,6 @@ export default defineNuxtConfig({
       redirect: '/jornada-laravel/outras-informacoes/sobre-o-professor',
       prerender: false,
     },
-  },
-
-  content: {
-    build: {
-      markdown: {
-        // toc: {
-        //   searchDepth: 1,
-        // },
-        highlight: {
-          // theme: 'github-light',
-          theme: 'material-theme-palenight',
-          // theme: 'github-dark',
-          langs: ['json', 'js', 'ts', 'html', 'css', 'vue', 'shell', 'php'],
-        },
-      },
-    }
   },
 
   googleFonts: {

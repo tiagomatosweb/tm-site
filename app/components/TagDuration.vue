@@ -12,10 +12,7 @@
 </template>
 
 <script setup>
-import dayjs from 'dayjs';
-import dayjsDuration from 'dayjs/plugin/duration'
-
-dayjs.extend(dayjsDuration);
+const dayjs = useDayjs()
 
 const props = defineProps({
   duration: [Number, String],

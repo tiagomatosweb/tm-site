@@ -1,7 +1,5 @@
 @import 'tailwindcss' theme(static);
-@import '@nuxt/ui-pro';
-
-@source '../../../content';
+@import '@nuxt/ui';
 
 @theme static {
   --font-poppins: "Poppins", sans-serif;
@@ -20,6 +18,8 @@
   --color-gray-900: #17191C;
   --color-gray-950: #111213;
   --ui-container: 90rem;
+
+  --color-laravel: #FF7A5C;
 }
 
 
@@ -83,4 +83,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .iti {
   width: 100%;
+}
+
+html.dark .shiki span {
+  color: var(--shiki-dark) !important;
+  background-color: var(--shiki-dark-bg) !important;
+  font-style: var(--shiki-dark-font-style) !important;
+  font-weight: var(--shiki-dark-font-weight) !important;
+  text-decoration: var(--shiki-dark-text-decoration) !important;
 }

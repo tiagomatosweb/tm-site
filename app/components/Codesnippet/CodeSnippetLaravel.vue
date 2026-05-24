@@ -1,20 +1,30 @@
 <template>
   <CodeIDE>
     <div class="code">
-      <ContentRenderer
-        :value="data"
-      />
+      <CodeSnippetMarkdown :markdown="snippet" />
     </div>
   </CodeIDE>
 </template>
 
 <script setup>
 import CodeIDE from './CodeIDE.vue';
+import CodeSnippetMarkdown from './CodeSnippetMarkdown.vue';
 
-const path = '/snippets/laravel-controller'
-const {data} = await useAsyncData(path, () =>
-  queryCollection('snippets').path(path).first(),
-)
+const snippet = [
+  '```php',
+  'class UserController',
+  '{',
+  '    public function _invoke(Request $request)',
+  '    {',
+  '        $devs = User::query()',
+  "            ->where('wants_to_stop_suffering', true)",
+  '            ->get();',
+  '',
+  '        return UserResource::collection($devs);',
+  '    }',
+  '}',
+  '```',
+].join('\n')
 </script>
 
 <style scoped>

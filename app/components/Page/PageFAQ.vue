@@ -6,14 +6,16 @@
   >
     <div class="max-w-4xl mx-auto">
       <div class="space-y-3">
-        <UPageAccordion
+        <UAccordion
           default-value="0"
+          :unmount-on-hide="false"
+          :ui="{ trigger: 'text-base', body: 'text-base text-muted' }"
           :items="faqs"
         >
           <template #body="{ item }">
             <span v-html="item.content"/>
           </template>
-        </UPageAccordion>
+        </UAccordion>
       </div>
     </div>
   </LandingSection>
@@ -27,6 +29,10 @@ const props = defineProps({
   headline: {
     type: String,
     default: 'FAQ',
+  },
+  title: {
+    type: String,
+    default: '',
   },
   label: {
     type: String,

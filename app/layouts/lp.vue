@@ -13,7 +13,10 @@
       <div class="flex flex-col min-h-screen">
         <div class="text-center py-6">
           <AppLogo
-            logo-width="120"
+            :logo-src="logo?.src"
+            :logo-alt="logo?.alt"
+            :logo-width="logo?.width"
+            :logo-to="logo?.to"
           />
         </div>
 
@@ -30,6 +33,22 @@
 <script setup lang="ts">
 import AppFooter from '~/components/App/AppFooter.vue';
 import AppLogo from '~/components/App/AppLogo.vue';
+
+const route = useRoute();
+
+const logo = computed(() => {
+  const key = route.meta.logo as string | undefined;
+  if (!key || !(key in lpLogos)) {
+    return { width: '120' };
+  }
+
+  const preset = lpLogos[key as keyof typeof lpLogos];
+  return {
+    ...preset,
+    width: (route.meta.logoWidth as string | undefined) ?? preset.width,
+    to: (route.meta.logoTo as string | { name: string } | undefined) ?? preset.to,
+  };
+});
 
 const props = defineProps({
   background: {
