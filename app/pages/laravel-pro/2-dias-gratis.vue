@@ -57,7 +57,7 @@
           </p>
 
           <StartTrialForm
-            :course-id="1"
+            :product-id="1"
             :button-props="{
               label: 'Liberar meus 2 dias grátis',
             }"

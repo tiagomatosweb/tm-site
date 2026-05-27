@@ -58,7 +58,7 @@ const props = defineProps({
     type: Object,
     default: () => ({}),
   },
-  courseId: {
+  productId: {
     type: [String, Number],
     required: true,
   },
@@ -93,10 +93,10 @@ async function onSubmit({data}) {
     errorMessage.value = ''
     isLoading.value = true
     await axios.get('sanctum/csrf-cookie')
-    await axios.post('api/trials', {
+    await axios.post('api/products/trial', {
       first_name: data.first_name,
       email: data.email,
-      course_id: props.courseId,
+      product_id: props.productId,
     })
     emit('done', data)
   } catch (e) {
