@@ -11,11 +11,7 @@ export default defineNuxtConfig({
       whatsappPhone: process.env.NUXT_PUBLIC_WHATSAPP_PHONE,
     },
   },
-
-  nitro: {
-    preset: 'cloudflare_pages',
-  },
-
+  
   css: ['~/assets/css/main.css'],
 
   imports: {
