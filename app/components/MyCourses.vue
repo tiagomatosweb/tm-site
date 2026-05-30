@@ -7,7 +7,7 @@
     <div class="grid sm:grid-cols-2 gap-8">
       <NuxtLink :to="{ name: 'laravel-pro' }">
         <img
-          src="@/assets/img/jornada-laravel-banner.webp"
+          src="@/assets/img/laravelpro-banner.webp"
           alt="Laravel PRO">
       </NuxtLink>
 
