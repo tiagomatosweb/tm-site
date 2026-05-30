@@ -28,11 +28,10 @@
 import AboutGreetings from '~/components/About/AboutGreetings.vue';
 import AboutSocialMedia from '~/components/About/AboutSocialMedia.vue';
 import YoutubeLatestVideos from '~/components/Youtube/YoutubeLatestVideos.vue';
-import LandingSection from '~/components/Landing/LandingSection.vue';
+// import LandingSection from '~/components/Landing/LandingSection.vue';
 import AboutBioShort from '~/components/About/AboutBioShort.vue';
 import MyCourses from '~/components/MyCourses.vue';
-import axios from 'axios';
-import NewsletterSignup from '~/components/NewsletterSignup.vue';
+// import NewsletterSignup from '~/components/NewsletterSignup.vue';
 // import BannerSaas from '@/components/BannerSaas.vue';
 // import dayjs from 'dayjs';
 //
