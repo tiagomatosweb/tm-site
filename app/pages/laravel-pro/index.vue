@@ -1375,7 +1375,7 @@ html {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  animation: hero-shimmer 8s ease-in-out infinite alternate;
+  animation: hero-shimmer 4s ease-in-out infinite alternate;
 }
 
 .excalidraw-flow {
