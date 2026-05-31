@@ -9,12 +9,13 @@
 </template>
 
 <script setup>
-import axios from 'axios';
 import PageFreeLectures from '~/components/Page/PageFreeLectures.vue';
 
-const {data} = useLazyAsyncData('laravel-free-lecture', () => axios.get('api/lectures/free', {
-  params: {
+const { data } = useApiFetch('api/lectures/free', {
+  lazy: true,
+  query: {
     'filter[course_id]': 32,
   },
-}).then((res) => res.data))
+  transform: (response) => response.data,
+})
 </script>

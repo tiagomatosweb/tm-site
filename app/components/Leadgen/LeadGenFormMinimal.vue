@@ -36,7 +36,8 @@
 
 <script setup>
 import {string, object} from 'yup'
-import axios from 'axios';
+
+const api = useApi()
 
 const emit = defineEmits(['done']);
 const props = defineProps({
@@ -71,9 +72,12 @@ async function onSubmit({data}) {
   try {
     resetFeedbackMessage()
     isLoading.value = true
-    await axios.post('api/mailer/subscribers', {
-      group_ids: props.groupIds,
-      ...data,
+    await api('api/mailer/subscribers', {
+      method: 'POST',
+      body: {
+        group_ids: props.groupIds,
+        ...data,
+      },
     })
     feedbackMessage.value.message = 'Boa jovem, cadastro realizado com sucesso!'
     feedbackMessage.value.status = 'success'

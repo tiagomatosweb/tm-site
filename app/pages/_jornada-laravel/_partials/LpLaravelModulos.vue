@@ -33,10 +33,10 @@
 
 <script setup>
 import LandingSection from '~/components/Landing/LandingSection.vue';
-import axios from 'axios';
-
-const endpoint = 'api/courses/laravel-pro'
-const {data} = useLazyAsyncData(endpoint, () => axios.get(endpoint).then(r => r.data))
+const { data } = useApiFetch('api/courses/laravel-pro', {
+  lazy: true,
+  transform: (response) => response.data,
+})
 
 const futureModules = [
   'Sanctum',

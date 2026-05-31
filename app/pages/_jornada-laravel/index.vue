@@ -83,14 +83,11 @@ import LpLaravelProjetosReais from './_partials/LpLaravelProjetosReais.vue';
 import BadgeDuration from '~/components/BadgeDuration.vue';
 import BadgeLectureCount from '~/components/BadgeLectureCount.vue';
 import BadgeCourseCount from '~/components/BadgeCourseCount.vue';
-import axios from 'axios';
-
 definePageMeta({
   layout: 'lp',
 })
 
-const endpoint = 'api/journeys/laravel/stats'
-const {data: stats} = await useAsyncData(endpoint, () => axios.get(endpoint))
+const { data: stats } = await useApiFetch('api/journeys/laravel/stats')
 
 useSeoMeta({
   title: 'Domine o Laravel: Transforme sua Carreira em Desenvolvimento Web',

@@ -96,13 +96,6 @@ export default defineNuxtConfig({
     transpile: ['form-data'], // TODO: Added because of the form-data bug, test it later
   },
 
-  nitro: {
-    // Node axios build pulls agent-base/https-proxy-agent, which break on Cloudflare Workers
-    alias: {
-      axios: resolve('./node_modules/axios/dist/esm/axios.js'),
-    },
-  },
-
   // sentry: {
   //   sourceMapsUploadOptions: {
   //     authToken: process.env.SENTRY_AUTH_TOKEN,
@@ -112,11 +105,6 @@ export default defineNuxtConfig({
   // },
 
   vite: {
-    resolve: {
-      alias: {
-        axios: resolve('./node_modules/axios/dist/esm/axios.js'),
-      },
-    },
     plugins: [
       sentryVitePlugin({
         org: 'tiagomatosweb',

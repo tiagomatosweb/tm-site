@@ -78,14 +78,11 @@ import LpVueProjetosReais from '~/pages/jornada-vue/_partials/LpVueProjetosReais
 import BadgeCourseCount from '~/components/BadgeCourseCount.vue';
 import BadgeDuration from '~/components/BadgeDuration.vue';
 import BadgeLectureCount from '~/components/BadgeLectureCount.vue';
-import axios from 'axios';
-
 definePageMeta({
   layout: 'lp',
 })
 
-const endpoint = 'api/journeys/vue/stats'
-const {data: stats} = await useAsyncData(endpoint, () => axios.get(endpoint))
+const { data: stats } = await useApiFetch('api/journeys/vue/stats')
 
 useSeoMeta({
   title: 'Aprenda Vue.js: Torne-se um Especialista em Desenvolvimento de Aplicações Web',

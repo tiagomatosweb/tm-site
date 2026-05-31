@@ -70,7 +70,8 @@
 <script setup>
 import {object, string} from 'yup';
 import intlTelInput from 'intl-tel-input';
-import axios from 'axios';
+
+const api = useApi()
 
 const emit = defineEmits(['done']);
 const props = defineProps({
@@ -119,9 +120,12 @@ async function onSubmit({data}) {
   try {
     errorMessage.value = ''
     isLoading.value = true
-    await axios.post('api/mailer/subscribers', {
-      group_ids: props.groupIds,
-      ...data,
+    await api('api/mailer/subscribers', {
+      method: 'POST',
+      body: {
+        group_ids: props.groupIds,
+        ...data,
+      },
     })
     emit('done', data)
   } catch (e) {

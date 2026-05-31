@@ -50,7 +50,8 @@
 
 <script setup>
 import {object, string} from 'yup';
-import axios from 'axios';
+
+const api = useApi()
 
 const emit = defineEmits(['done']);
 const props = defineProps({
@@ -92,11 +93,14 @@ async function onSubmit({data}) {
   try {
     errorMessage.value = ''
     isLoading.value = true
-    await axios.get('sanctum/csrf-cookie')
-    await axios.post('api/products/trial', {
-      first_name: data.first_name,
-      email: data.email,
-      product_id: props.productId,
+    await api('sanctum/csrf-cookie')
+    await api('api/products/trial', {
+      method: 'POST',
+      body: {
+        first_name: data.first_name,
+        email: data.email,
+        product_id: props.productId,
+      },
     })
     emit('done', data)
   } catch (e) {

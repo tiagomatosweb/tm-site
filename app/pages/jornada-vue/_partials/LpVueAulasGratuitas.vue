@@ -10,11 +10,12 @@
 
 <script setup>
 import PageFreeLectures from '~/components/Page/PageFreeLectures.vue';
-import axios from 'axios';
 
-const {data} = useLazyAsyncData('vue-free-lecture', () => axios.get('api/lectures/free', {
-  params: {
+const { data } = useApiFetch('api/lectures/free', {
+  lazy: true,
+  query: {
     'filter[course_id]': '14,30,34',
   },
-}).then((res) => res.data))
+  transform: (response) => response.data,
+})
 </script>

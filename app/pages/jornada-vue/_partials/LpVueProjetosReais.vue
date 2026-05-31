@@ -9,13 +9,13 @@ import PageProjects from '~/components/Page/PageProjects.vue';
 import ScreenshotAgendaMe from 'assets/img/screenshot-agendame.webp';
 import ScreenshotOrdemDeServico from 'assets/img/screenshot-ordem-de-servico.webp';
 import ScreenshotVuetifyCart from 'assets/img/screenshot-vuetify-cart.webp';
-import axios from 'axios';
-
-const {data} = useLazyAsyncData('vue-projects', () => axios.get('api/courses', {
-  params: {
+const { data } = useApiFetch('api/courses', {
+  lazy: true,
+  query: {
     'filter[ids]': '28,34,14',
   },
-}).then((res) => res.data))
+  transform: (response) => response.data,
+})
 
 const items = computed(() => !data.value?.length ? [] : data.value?.map(o => {
   if (o.id === 28) {
