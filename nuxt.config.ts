@@ -2,6 +2,7 @@ import {createResolver} from 'nuxt/kit';
 import {sentryVitePlugin} from "@sentry/vite-plugin";
 
 const {resolve} = createResolver(import.meta.url);
+const isProd = process.env.NODE_ENV === 'production';
 
 export default defineNuxtConfig({
   runtimeConfig: {
@@ -105,19 +106,21 @@ export default defineNuxtConfig({
   // },
 
   vite: {
-    plugins: [
-      sentryVitePlugin({
-        org: 'tiagomatosweb',
-        project: 'tm-app',
-        authToken: process.env.SENTRY_AUTH_TOKEN,
-        debug: true,
-        sourcemaps: {
-          assets: './node_modules/.cache/nuxt/.nuxt/dist/client/_nuxt/*',
-          // filesToDeleteAfterUpload: './.nuxt/dist/client/_nuxt/**/*.map',
-        },
-        telemetry: true,
-      }),
-    ],
+    plugins: isProd
+      ? [
+          sentryVitePlugin({
+            org: 'tiagomatosweb',
+            project: 'tm-app',
+            authToken: process.env.SENTRY_AUTH_TOKEN,
+            debug: true,
+            sourcemaps: {
+              assets: './node_modules/.cache/nuxt/.nuxt/dist/client/_nuxt/*',
+              // filesToDeleteAfterUpload: './.nuxt/dist/client/_nuxt/**/*.map',
+            },
+            telemetry: true,
+          }),
+        ]
+      : [],
   },
 
   sourcemap: {

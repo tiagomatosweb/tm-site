@@ -1,6 +1,10 @@
 import * as Sentry from '@sentry/vue';
 
 export default defineNuxtPlugin((nuxtApp) => {
+  if (import.meta.dev) {
+    return;
+  }
+
   Sentry.init({
     app: nuxtApp.vueApp,
     dsn: 'https://309c24e8980b0cbb9a7024a128c3e971@o527354.ingest.us.sentry.io/4509773465845760',
