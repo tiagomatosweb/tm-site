@@ -101,7 +101,7 @@
           </div>
 
           <p class="text-sm text-muted">
-            Comprar agora ou testar grátis por 2 dias, sem cartão.
+            Entrar agora ou testar grátis por 2 dias, sem cartão.
           </p>
 
           <div class="mt-5 flex w-full flex-wrap gap-2">
