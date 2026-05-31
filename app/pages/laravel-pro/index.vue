@@ -88,7 +88,7 @@
               color="cta"
               size="xl"
               trailing-icon="i-lucide-arrow-right"
-              :label="ctaPrimaryLabel"
+              label="Quero entrar no Laravel PRO"
             />
             <UButton
               :to="freeTrialLink"
@@ -96,7 +96,6 @@
               variant="outline"
               size="xl"
               label="Testar 2 dias grátis"
-              class="ring-1 ring-default"
             />
           </div>
 
@@ -876,8 +875,10 @@
                 size="3xl"
                 block
                 trailing-icon="i-lucide-arrow-right"
-                :label="ctaPrimaryLabel"
-              />
+              >
+                <span class="sm:hidden">Quero entrar</span>
+                <span class="hidden sm:inline">Quero entrar no Laravel PRO</span>
+              </UButton>
 
               <div class="space-y-2 text-center">
                 <p class="text-sm text-muted">
@@ -998,7 +999,7 @@
           color="cta"
           size="lg"
           trailing-icon="i-lucide-arrow-right"
-          :label="ctaPrimaryLabel"
+          label="Quero entrar no Laravel PRO"
         />
         <p class="mt-8 w-full border-t border-default pt-5 text-sm text-dimmed">
           Acesso imediato · Garantia de 7 dias · Devolução 100% sem burocracia
@@ -1071,7 +1072,6 @@ function priceMotion() {
   }
 }
 
-const ctaPrimaryLabel = 'Quero entrar no Laravel PRO'
 const freeTrialLink = { name: 'laravel-pro-2-dias-gratis' }
 const whatsappLink = useWhatsappLink('Olá Tiago! Tenho uma dúvida sobre o Laravel PRO.')
 
@@ -1122,7 +1122,8 @@ onMounted(() => {
 
 const learnCtaLinks = [{
   to: '#trilha',
-  color: 'cta',
+  color: 'neutral',
+  variant: 'outline',
   size: 'lg',
   trailingIcon: 'i-lucide-arrow-right',
   label: 'Ver trilha do curso',
