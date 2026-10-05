@@ -18,27 +18,11 @@
         class="hidden md:flex"
       />
 
-      <template #right>
-        <UButton
-          :href="offerLink.VUE"
-          color="cta"
-          label="Quero entrar"
-          class="hidden sm:inline-flex"
-        />
-      </template>
-
       <template #body>
         <UNavigationMenu
           :items="headerMenu"
           orientation="vertical"
           class="-mx-2.5"
-        />
-        <UButton
-          :href="offerLink.VUE"
-          color="cta"
-          block
-          label="Quero entrar"
-          class="mt-4"
         />
       </template>
     </UHeader>
@@ -82,23 +66,6 @@
 
       <template #footer>
         <div class="flex flex-col gap-4">
-          <div class="flex flex-wrap items-center gap-3">
-            <UButton
-              :href="offerLink.VUE"
-              color="cta"
-              size="xl"
-              trailing-icon="i-lucide-arrow-right"
-              label="Quero entrar no Vue PRO"
-            />
-            <UButton
-              :to="freeTrialLink"
-              color="neutral"
-              variant="outline"
-              size="xl"
-              label="Testar 2 dias grátis"
-            />
-          </div>
-
           <p class="text-sm text-muted">
             Entrar agora ou testar grátis por 2 dias, sem cartão.
           </p>
@@ -872,17 +839,6 @@
                 </div>
               </div>
 
-              <UButton
-                :href="offerLink.VUE"
-                color="cta"
-                size="3xl"
-                block
-                trailing-icon="i-lucide-arrow-right"
-              >
-                <span class="sm:hidden">Quero entrar</span>
-                <span class="hidden sm:inline">Quero entrar no Vue PRO</span>
-              </UButton>
-
               <div class="space-y-2 text-center">
                 <p class="text-sm text-muted">
                   Quer conhecer antes de entrar?
@@ -890,14 +846,6 @@
                 <p class="text-sm text-muted">
                   Teste por 2 dias grátis, sem cartão.
                 </p>
-                <UButton
-                  :to="freeTrialLink"
-                  color="neutral"
-                  variant="ghost"
-                  size="sm"
-                  label="Experimentar grátis"
-                  class="self-center font-medium text-toned underline-offset-4 hover:underline"
-                />
 
                 <p class="pt-2 text-xs text-muted">
                   Precisa falar comigo? Chama no
@@ -997,14 +945,7 @@
           v-bind="scrollMotion(0.28)"
           class="block"
         >
-        <UButton
-          :href="offerLink.VUE"
-          color="cta"
-          size="lg"
-          trailing-icon="i-lucide-arrow-right"
-          label="Quero entrar no Vue PRO"
-        />
-        <p class="mt-8 w-full border-t border-default pt-5 text-sm text-dimmed">
+        <p class="w-full border-t border-default pt-5 text-sm text-dimmed">
           Acesso imediato · Garantia de 7 dias · Devolução 100% sem burocracia
         </p>
         </Motion>
@@ -1338,7 +1279,7 @@ const faqItems = [
   },
   {
     label: 'Posso testar antes de comprar?',
-    content: `<p>Sim. 2 dias grátis no Vue PRO, sem cartão e sem compromisso — pra ver a didática e a trilha de frontend antes de entrar.</p><p><a href="/vue-pro/2-dias-gratis" class="font-semibold text-vue underline underline-offset-4">Testar 2 dias grátis</a></p>`,
+    content: `<p>Sim. 2 dias grátis no Vue PRO, sem cartão e sem compromisso — pra ver a didática e a trilha de frontend antes de entrar.</p>`,
   },
   {
     label: 'Posso tirar dúvidas antes de entrar?',
