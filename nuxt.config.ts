@@ -83,10 +83,14 @@ export default defineNuxtConfig({
 
   routeRules: {
     '/**/obrigado': {robots: false},
-    '/jornada-laravel': { redirect: '/laravel-pro', prerender: false },
-    '/jornada-laravel/**': { redirect: '/laravel-pro', prerender: false },
-    '/jornada-vue': { redirect: '/vue-pro', prerender: false },
-    '/jornada-vue/**': { redirect: '/vue-pro', prerender: false },
+    '/laravel-pro': { redirect: { to: '/', statusCode: 301 } },
+    '/laravel-pro/**': { redirect: { to: '/', statusCode: 301 } },
+    '/vue-pro': { redirect: { to: '/', statusCode: 301 } },
+    '/vue-pro/**': { redirect: { to: '/', statusCode: 301 } },
+    '/jornada-laravel': { redirect: { to: '/', statusCode: 301 } },
+    '/jornada-laravel/**': { redirect: { to: '/', statusCode: 301 } },
+    '/jornada-vue': { redirect: { to: '/', statusCode: 301 } },
+    '/jornada-vue/**': { redirect: { to: '/', statusCode: 301 } },
   },
 
   googleFonts: {

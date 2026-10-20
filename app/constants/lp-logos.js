@@ -6,12 +6,12 @@ export const lpLogos = {
     src: laravelProLogo,
     alt: 'Laravel PRO',
     width: '105',
-    to: { name: 'laravel-pro' },
+    to: '/',
   },
   'vue-pro': {
     src: vueProLogo,
     alt: 'Vue PRO',
     width: '70',
-    to: { name: 'vue-pro' },
+    to: '/',
   },
 }
